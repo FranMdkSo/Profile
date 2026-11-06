@@ -680,7 +680,7 @@ const UI = {
      chips:{intro:"Introduction",path:"My journey",looking:"What I'm looking for",contact:"Contact"}, topics:"Explore by topic", seePath:"See my full path →",
      ask:"Ask me", profile:"Profile", light:"☀ Light", dark:"☾ Dark", themeLabel:"Toggle light or dark mode", langLabel:"Language",
      fallback:["I don't have a prepared answer for that one yet, and I'd rather not guess.","Try one of these questions, or ask me directly."],
-     openProfile:"Open full profile →", email:"Email"},
+     openProfile:"Open full profile →", seeStory:"Read the full story →", email:"Email"},
  ca:{title:"Fran Mondaca — Global Learning & Talent Development Leader",
      desc:"Fran Mondaca, Global Learning & Talent Development Leader. Pregunta'm sobre talent, lideratge, aprenentatge i adopció de la IA. Cada resposta surt de la meva experiència real.",
      open:"Amb curiositat per nous projectes", place:"Barcelona · Espanya",
@@ -691,7 +691,7 @@ const UI = {
      chips:{intro:"Presentació",path:"El meu camí",looking:"Què busco",contact:"Contacte"}, topics:"Explora per temes", seePath:"Mira tot el meu camí →",
      ask:"Pregunta'm", profile:"Perfil", light:"☀ Clar", dark:"☾ Fosc", themeLabel:"Canvia entre mode clar i fosc", langLabel:"Idioma",
      fallback:["Encara no tinc una resposta preparada per a això, i prefereixo no endevinar.","Prova amb una d'aquestes preguntes o pregunta'm directament."],
-     openProfile:"Obre el perfil complet →", email:"Correu"},
+     openProfile:"Obre el perfil complet →", seeStory:"Llegeix la història completa →", email:"Correu"},
  es:{title:"Fran Mondaca — Global Learning & Talent Development Leader",
      desc:"Fran Mondaca, Global Learning & Talent Development Leader. Pregúntame sobre talento, liderazgo, aprendizaje y adopción de IA. Cada respuesta sale de mi experiencia real.",
      open:"Con curiosidad por nuevos proyectos", place:"Barcelona · España",
@@ -702,7 +702,7 @@ const UI = {
      chips:{intro:"Presentación",path:"Mi camino",looking:"Qué busco",contact:"Contacto"}, topics:"Explora por temas", seePath:"Ver todo mi camino →",
      ask:"Pregúntame", profile:"Perfil", light:"☀ Claro", dark:"☾ Oscuro", themeLabel:"Cambiar entre modo claro y oscuro", langLabel:"Idioma",
      fallback:["Todavía no tengo una respuesta preparada para eso, y prefiero no adivinar.","Prueba con una de estas preguntas o pregúntame directamente."],
-     openProfile:"Abrir el perfil completo →", email:"Email"}
+     openProfile:"Abrir el perfil completo →", seeStory:"Leer la historia completa →", email:"Email"}
 };
 
 /* Dimensions (topics) shown under "Explore by topic" and used for follow-ups */
@@ -809,12 +809,14 @@ const QA = [
   q:{en:"A project you're proud of?", ca:"Un projecte del qual estiguis orgullós?", es:"¿Un proyecto del que estés orgulloso?"},
   a:{en:["Building Ricoh's EMEA Digital Academy from scratch: people, processes and technology in one academy-style model, with role-based pathways, hands-on practice and shared standards across countries.","I like it because it began with the business's demand, not with a catalogue. It also became a talent pipeline, preparing people for their next role and future leadership."],
      ca:["Crear des de zero l'EMEA Digital Academy de Ricoh: persones, processos i tecnologia en un sol model tipus acadèmia, amb itineraris per rol, pràctica real i estàndards compartits entre països.","M'agrada perquè va començar per la demanda del negoci, no per un catàleg. I es va convertir en una pedrera de talent que preparava la gent per al següent rol i per al lideratge futur."],
-     es:["Crear desde cero la EMEA Digital Academy de Ricoh: personas, procesos y tecnología en un solo modelo tipo academia, con itinerarios por rol, práctica real y estándares compartidos entre países.","Me gusta porque empezó por la demanda del negocio, no por un catálogo. Y se convirtió en una cantera de talento que preparaba a la gente para su siguiente rol y para el liderazgo futuro."]}},
+     es:["Crear desde cero la EMEA Digital Academy de Ricoh: personas, procesos y tecnología en un solo modelo tipo academia, con itinerarios por rol, práctica real y estándares compartidos entre países.","Me gusta porque empezó por la demanda del negocio, no por un catálogo. Y se convirtió en una cantera de talento que preparaba a la gente para su siguiente rol y para el liderazgo futuro."]},
+  actions:[{label:"seeStory", mode:"profile", proj:"academy"}]},
  {id:"molnlycke", d:"wins", k:["molnlycke","health","care","gothenburg","gotemburgo","goteborg","sweden","suecia","healthcare","salud","salut","medtech"],
   q:{en:"What did you do at Mölnlycke?", ca:"Què vas fer a Mölnlycke?", es:"¿Qué hiciste en Mölnlycke?"},
   a:{en:["I led global talent, capability and organisational development for around 10,000 employees. I built a Capabilities Pipeline roadmap linking skills, career paths, leadership and manager enablement with succession, internal mobility and workforce planning.","I also set up global learning and talent governance across People & Culture, Operations, Quality, Compliance, R&D and IT, retired over 40% of legacy content, and shaped the AI-enabled digital learning ecosystem."],
      ca:["Vaig liderar el desenvolupament global del talent, les capacitats i l'organització per a uns 10.000 empleats. Vaig construir un full de ruta de Capabilities Pipeline que connecta competències, itineraris de carrera, lideratge i desenvolupament de managers amb la successió, la mobilitat interna i la planificació de plantilles.","També vaig posar en marxa la governança global de l'aprenentatge i el talent amb People & Culture, Operacions, Qualitat, Compliance, R+D i IT, vaig retirar més del 40% del contingut obsolet i vaig dissenyar l'ecosistema digital d'aprenentatge amb IA."],
-     es:["Lideré el desarrollo global del talento, las capacidades y la organización para unos 10.000 empleados. Construí una hoja de ruta de Capabilities Pipeline que conecta competencias, itinerarios de carrera, liderazgo y desarrollo de managers con la sucesión, la movilidad interna y la planificación de plantillas.","También puse en marcha la gobernanza global del aprendizaje y el talento con People & Culture, Operaciones, Calidad, Compliance, I+D e IT, retiré más del 40% del contenido obsoleto y diseñé el ecosistema digital de aprendizaje con IA."]}},
+     es:["Lideré el desarrollo global del talento, las capacidades y la organización para unos 10.000 empleados. Construí una hoja de ruta de Capabilities Pipeline que conecta competencias, itinerarios de carrera, liderazgo y desarrollo de managers con la sucesión, la movilidad interna y la planificación de plantillas.","También puse en marcha la gobernanza global del aprendizaje y el talento con People & Culture, Operaciones, Calidad, Compliance, I+D e IT, retiré más del 40% del contenido obsoleto y diseñé el ecosistema digital de aprendizaje con IA."]},
+  actions:[{label:"seeStory", mode:"profile", proj:"global"}]},
 
  /* ---------- EDUCATION & RESEARCH ---------- */
  {id:"education", d:"edu", k:["educat","study","studies","degree","phd","doctor","master","mba","university","universi","formacion","formacio","estudi","research","investigacion","recerca","academic"],
@@ -894,7 +896,7 @@ function bubble(role,parts,{actions}={}){
   const body=el("div","body"); (parts||[]).forEach(p=>body.appendChild(el("p",null,p))); d.appendChild(body);
   if(actions&&actions.length){const a=el("div","actions"); actions.forEach(x=>{
     const lbl = T()[x.label] || x.label;
-    if(x.mode){const b=el("button",x.anchor?"big":null,lbl); b.type="button"; b.onclick=()=>goTo(x.mode,x.anchor); a.appendChild(b)}
+    if(x.mode){const b=el("button",(x.anchor||x.proj)?"big":null,lbl); b.type="button"; b.onclick=()=>goTo(x.mode,x.anchor,x.proj); a.appendChild(b)}
     else{const l=el("a",null,lbl); l.href=x.href; if(/^https?:/.test(x.href)){l.target="_blank";l.rel="noopener"} a.appendChild(l)}
   }); d.appendChild(a)}
   thread.appendChild(d); d.scrollIntoView({behavior:reduce.matches?"auto":"smooth",block:"nearest"}); return d;
@@ -920,7 +922,7 @@ function offerFollowups(){
   thread.appendChild(d);
 }
 /* topics */
-let openDim="lead";
+let openDim="who";
 function renderTopics(){
   const pills=$("#topic-pills"), qs=$("#topic-qs"); pills.innerHTML="";
   DIMS.forEach(dm=>{const b=el("button","topic",dm.l[lang]); b.type="button"; b.setAttribute("aria-pressed",String(openDim===dm.id));
@@ -956,7 +958,8 @@ form.addEventListener("submit",e=>{e.preventDefault(); const v=ta.value; ta.valu
 document.querySelectorAll("[data-chip]").forEach(b=>b.addEventListener("click",()=>{const it=QA.find(x=>x.id===b.dataset.chip); ask(it.q[lang],it)}));
 
 /* mode switch (Ask / Profile) via #hash */
-function goTo(mode,anchor){
+function goTo(mode,anchor,proj){
+  if(proj){projSel=proj; renderProjects(); anchor="proj-feature-"+lang;}
   setMode(mode);
   if(anchor) setTimeout(()=>{const t=document.querySelector('.l-block[data-l="'+lang+'"] [id^="'+anchor+'"]'); if(t) t.scrollIntoView({behavior:reduce.matches?"auto":"smooth",block:"start"})},120);
 }
