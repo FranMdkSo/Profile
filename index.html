@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fran Mondaca — Global Learning & Talent Development Leader</title>
+<meta name="description" content="Fran Mondaca, Global Learning &amp; Talent Development Leader. Ask me about talent, leadership, learning and AI adoption. Every answer comes from my real experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F5F2EC;--surface:#FFFFFF;--ink:#1C2430;--muted:#5E6673;--rule:#DDD7CC;
+  --signal:#0E7C6B;--signal-soft:#DDEFEA;--bubble-me:#1C2430;--bubble-me-ink:#F5F2EC;
+  --blob1:#BFE3DA;--blob2:#F1D9C4;
+  --display:"Fraunces",Georgia,serif;
+  --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#11161D;--surface:#19202A;--ink:#ECE8E1;--muted:#A3AAB5;--rule:#2C3542;
+    --signal:#4CC7B0;--signal-soft:#16332E;--bubble-me:#ECE8E1;--bubble-me-ink:#11161D;
+    --blob1:#123C35;--blob2:#3A2A1E;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#11161D;--surface:#19202A;--ink:#ECE8E1;--muted:#A3AAB5;--rule:#2C3542;
+  --signal:#4CC7B0;--signal-soft:#16332E;--bubble-me:#ECE8E1;--bubble-me-ink:#11161D;
+  --blob1:#123C35;--blob2:#3A2A1E;color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:880px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px));position:relative;z-index:1}
+a{color:inherit;text-decoration-color:var(--signal);text-underline-offset:3px}
+h1,h2,h3,h4{font-family:var(--display);margin:0;line-height:1;text-wrap:balance}
+p{margin:0}
+button{font:inherit}
+.label{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--signal);display:inline-block;box-shadow:0 0 0 4px var(--signal-soft)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+[hidden]{display:none!important}
+
+/* ---------- top bar ---------- */
+.topbar{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:color-mix(in srgb,var(--paper) 78%,transparent);border-bottom:1px solid color-mix(in srgb,var(--rule) 60%,transparent)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:62px}
+.brand{font-family:var(--display);font-weight:800;font-size:20px;text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+.brand i{width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--paper);display:inline-grid;place-items:center;font-style:normal;font-size:14px;letter-spacing:.02em}
+.switch{display:inline-flex;background:var(--surface);border:1px solid var(--rule);border-radius:999px;padding:3px}
+.switch button{border:0;background:transparent;color:var(--muted);padding:7px 16px;border-radius:999px;cursor:pointer;font-weight:600;font-size:14.5px}
+.switch button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.tools{display:flex;align-items:center;gap:8px}
+.langs-switch button{padding:6px 10px;font-size:12.5px;font-family:var(--mono)}
+.modes{display:inline-flex;align-items:center;gap:6px}
+.modes button{border:0;cursor:pointer;font-weight:600;border-radius:999px;display:inline-flex;align-items:center;gap:8px;transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+.mode-ask{background:var(--signal);color:#fff;font-size:16px;padding:11px 22px;box-shadow:0 6px 18px -8px color-mix(in srgb,var(--signal) 80%,transparent)}
+.mode-ask:hover{transform:translateY(-1px);box-shadow:0 10px 24px -10px color-mix(in srgb,var(--signal) 90%,transparent)}
+.mode-ask[aria-pressed="true"]{box-shadow:0 0 0 3px var(--paper),0 0 0 5px var(--signal)}
+:root[data-theme="dark"] .mode-ask{color:#0B1A17}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .mode-ask{color:#0B1A17}}
+.mode-profile{background:transparent;color:var(--muted);font-size:14.5px;padding:9px 14px}
+.mode-profile:hover{color:var(--ink)}
+.mode-profile[aria-pressed="true"]{color:var(--ink);text-decoration:underline;text-decoration-color:var(--signal);text-decoration-thickness:2px;text-underline-offset:6px}
+.theme{width:34px;height:34px;display:inline-grid;place-items:center;font:500 15px var(--mono);letter-spacing:.06em;text-transform:uppercase;background:transparent;color:var(--muted);border:1px solid var(--rule);border-radius:999px;padding:0;cursor:pointer}
+
+/* ---------- ambient background ---------- */
+.ambient{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.ambient i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.75}
+.ambient i:nth-child(1){width:46vmax;height:46vmax;background:var(--blob1);top:-12vmax;left:-10vmax}
+.ambient i:nth-child(2){width:38vmax;height:38vmax;background:var(--blob2);bottom:-14vmax;right:-8vmax}
+@media (prefers-reduced-motion:no-preference){
+  .ambient i:nth-child(1){animation:drift1 26s ease-in-out infinite alternate}
+  .ambient i:nth-child(2){animation:drift2 32s ease-in-out infinite alternate}
+}
+@keyframes drift1{to{transform:translate(14vmax,10vmax) scale(1.1)}}
+@keyframes drift2{to{transform:translate(-12vmax,-8vmax) scale(1.15)}}
+body.is-profile .ambient{opacity:.35}
+
+
+/* ---------- portrait (Ask view) ---------- */
+.portrait{position:fixed;right:max(1vw,calc((100vw - 1320px)/2));bottom:-2vh;height:min(96vh,1020px);z-index:0;pointer-events:none;will-change:transform;transition:opacity .5s ease,visibility .5s}
+.portrait img{height:100%;width:auto;display:block;opacity:.6;filter:blur(1.4px) saturate(.9) contrast(.96);
+  -webkit-mask-image:linear-gradient(to bottom,#000 52%,rgba(0,0,0,.55) 74%,transparent 96%);mask-image:linear-gradient(to bottom,#000 52%,rgba(0,0,0,.55) 74%,transparent 96%)}
+.portrait::before{content:"";position:absolute;inset:8% -12% 20% -12%;background:radial-gradient(closest-side,var(--signal-soft),transparent 70%);z-index:-1;opacity:.9}
+@media (prefers-reduced-motion:no-preference){.portrait img{animation:portraitIn 1.1s cubic-bezier(.2,.7,.2,1) both .15s}}
+@keyframes portraitIn{from{opacity:0;transform:translateX(40px);filter:blur(8px)}}
+body.is-profile .portrait-ask,body:not(.is-profile) .portrait-profile{opacity:0;visibility:hidden}
+:root[data-theme="dark"] .portrait img{opacity:.42;filter:blur(1.4px) saturate(.8) brightness(.9)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .portrait img{opacity:.42;filter:blur(1.4px) saturate(.8) brightness(.9)}}
+@media (max-width:1180px){.portrait img{opacity:.3;filter:blur(2.2px) saturate(.85)}}
+@media (max-width:720px){.portrait{right:-22vw;height:80vh}.portrait img{opacity:.18;filter:blur(2.6px)}}
+
+/* ---------- ASK view ---------- */
+#view-ask{min-height:calc(100vh - 62px);display:flex;flex-direction:column;justify-content:center;padding-block:40px 32px}
+.ask{max-width:760px;width:100%;margin:0 auto}
+.ask .label{display:flex;flex-wrap:wrap;gap:6px 18px}
+.ask .label span{display:inline-flex;align-items:center;gap:10px}
+.ask h1{font-size:clamp(40px,7.4vw,72px);font-weight:800;letter-spacing:-.02em;margin-top:20px;line-height:1.02}
+.ask h1 em{font-style:italic;font-weight:500;color:var(--signal)}
+.promise{font-size:clamp(18px,2.2vw,20px);color:var(--muted);margin-top:16px;max-width:52ch}
+.promise b{color:var(--ink);font-weight:600}
+#view-ask.started h1{font-size:clamp(28px,4.4vw,40px)}
+#view-ask.started{justify-content:flex-start}
+
+.thread{display:flex;flex-direction:column;gap:12px;margin-top:28px}
+.msg{max-width:min(620px,92%);padding:12px 16px;border-radius:16px}
+.msg .who{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.msg.q{align-self:flex-end;background:var(--bubble-me);color:var(--bubble-me-ink);border-bottom-right-radius:4px;font-weight:500}
+.msg.q .who{color:inherit;opacity:.7}
+.msg.a{align-self:flex-start;background:var(--surface);border:1px solid var(--rule);border-bottom-left-radius:4px}
+.msg.a p+p{margin-top:10px}
+.msg .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.msg .actions a,.msg .actions button{font:600 14px var(--body);text-decoration:none;color:var(--signal);background:var(--signal-soft);border:0;border-radius:999px;padding:7px 13px;cursor:pointer}
+.dots{display:inline-flex;gap:4px;padding:4px 0}
+.dots i{width:7px;height:7px;border-radius:50%;background:var(--muted);opacity:.4}
+@media (prefers-reduced-motion:no-preference){
+  .msg.new{animation:rise .35s ease-out}
+  .dots i{animation:blink 1s infinite}.dots i:nth-child(2){animation-delay:.15s}.dots i:nth-child(3){animation-delay:.3s}
+}
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes blink{50%{opacity:1}}
+
+.composer{position:relative;margin-top:26px;border-radius:24px;padding:1.5px;background:linear-gradient(120deg,var(--signal),var(--blob2),var(--signal-soft),var(--signal));background-size:300% 300%}
+@media (prefers-reduced-motion:no-preference){.composer{animation:glow 9s ease-in-out infinite}}
+@keyframes glow{50%{background-position:100% 50%}}
+.composer-inner{background:var(--surface);border-radius:22.5px;padding:14px 14px 12px 18px}
+.composer textarea{width:100%;border:0;outline:0;resize:none;background:transparent;color:var(--ink);font:400 18px/1.45 var(--body);min-height:56px;max-height:180px}
+.composer textarea::placeholder{color:var(--muted)}
+.composer-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.counter{font:400 12px var(--mono);color:var(--muted)}
+.send{width:40px;height:40px;border-radius:50%;border:0;background:var(--ink);color:var(--paper);cursor:pointer;display:grid;place-items:center}
+.send[disabled]{background:var(--rule);color:var(--muted);cursor:not-allowed}
+.composer:focus-within{box-shadow:0 8px 30px -12px color-mix(in srgb,var(--signal) 55%,transparent)}
+
+.shortcuts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{display:inline-flex;align-items:center;gap:8px;font:500 15px/1.2 var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--rule);border-radius:999px;padding:9px 14px;cursor:pointer;text-align:left}
+.chip svg{width:16px;height:16px;flex:none;color:var(--signal)}
+.chip:hover{border-color:var(--signal);background:var(--signal-soft)}
+
+
+.topics{margin-top:26px}
+.topic-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.topic{font:500 13.5px var(--body);color:var(--muted);background:color-mix(in srgb,var(--surface) 70%,transparent);border:1px dashed var(--rule);border-radius:999px;padding:6px 12px;cursor:pointer}
+.topic:hover{color:var(--ink);border-color:var(--signal)}
+.topic[aria-pressed="true"]{color:var(--signal);border-style:solid;border-color:var(--signal);background:var(--signal-soft)}
+.topic-qs{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.msg .actions button.big{font-size:15px;padding:10px 16px;background:var(--signal);color:#fff}
+
+/* ---------- PROFILE view ---------- */
+section{scroll-margin-top:76px;padding-block:64px;border-bottom:1px solid var(--rule)}
+.sec-head .label{color:var(--signal)}
+.sec-head h2{font-size:clamp(40px,7vw,60px);font-weight:800;margin-top:10px;letter-spacing:-.01em}
+.sec-head p{color:var(--muted);max-width:60ch;margin-top:14px}
+.motto{padding-top:34px;font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(20px,3.4vw,26px);color:var(--signal)}
+.hero{padding-block:24px 48px;border-bottom:1px solid var(--rule)}
+.hero .label{display:flex;flex-wrap:wrap;gap:6px 20px}
+.hero .label span{display:inline-flex;align-items:center;gap:10px}
+.hero h1{font-size:clamp(60px,14vw,136px);font-weight:800;letter-spacing:-.025em;margin-top:22px;line-height:.9}
+.hero h1 .last{color:var(--signal);display:block}
+.claim{font-family:var(--mono);font-size:15px;letter-spacing:.06em;text-transform:uppercase;margin-top:22px}
+.pitch{font-size:clamp(19px,2.4vw,22px);max-width:58ch;margin-top:18px}
+.pitch em{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:40px;border-top:1px solid var(--rule)}
+.stats div{padding:16px 14px 0 0}
+.stats div+div{border-left:1px solid var(--rule);padding-left:14px}
+.stats b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(34px,5vw,48px);line-height:1;font-variant-numeric:tabular-nums}
+.stats b.word{font-size:clamp(24px,3.4vw,34px);line-height:1.05;padding-top:6px}
+.stats small{display:block;margin-top:6px;font-size:12.5px;line-height:1.35;color:var(--muted)}
+.stats span{display:block;margin-top:8px;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.stage{margin-top:40px}
+.stage>.label{color:var(--signal);padding-bottom:10px;border-bottom:1px solid var(--rule)}
+.job{display:grid;grid-template-columns:170px minmax(0,1fr);gap:20px;padding-block:20px;border-bottom:1px dashed var(--rule)}
+.job:last-child{border-bottom:0}
+.job .when{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:4px}
+.job h3{font-size:24px;font-weight:700}
+.job .org{font-family:var(--mono);font-size:13px;color:var(--muted);margin-top:6px}
+.job p{margin-top:10px;max-width:60ch}
+.feature{margin-top:36px;background:var(--ink);color:var(--paper);border-radius:18px;padding:28px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px}
+.feature .label{color:inherit;opacity:.7}
+.feature h3{font-size:clamp(28px,4.4vw,40px);font-weight:700;margin-top:10px}
+.feature p{margin-top:12px;max-width:56ch}
+.feature .nums{display:flex;flex-direction:column;gap:14px;justify-content:center}
+.feature .nums div{border-top:1px solid color-mix(in srgb,var(--paper) 30%,transparent);padding-top:10px}
+.feature .nums b{display:block;font-family:var(--display);font-weight:800;font-size:60px;line-height:.9;color:var(--signal)}
+.group{margin-top:36px}
+.group>.label{color:var(--signal)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:12px}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:18px}
+.card h4{font-size:21px;font-weight:700;margin-top:8px}
+.card p{margin-top:8px;color:var(--muted);font-size:16px}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;margin-top:36px}
+.cols h3{font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--signal);padding-bottom:10px;border-bottom:1px solid var(--rule)}
+.cols ul{list-style:none;padding:0;margin:0}
+.cols li{padding-block:12px;border-bottom:1px dashed var(--rule)}
+.cols li b{display:block;font-weight:600;line-height:1.3}
+.cols li span{display:block;font-family:var(--mono);font-size:12.5px;color:var(--muted);margin-top:4px}
+footer{padding-block:72px 56px}
+footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
+.cta{display:inline-flex;align-items:center;gap:10px;margin-top:24px;background:var(--signal);color:#fff;font-weight:600;padding:13px 22px;border-radius:999px;text-decoration:none}
+.cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink);margin-left:8px}
+.cta-alt{display:block;margin-top:14px;font-family:var(--mono);font-size:14px;color:var(--muted)}
+.langs{margin-top:28px;color:var(--muted);font-size:15px}
+
+@media (max-width:420px){
+  .topbar .wrap{gap:6px}
+  .brand i{display:none}
+  .langs-switch button{padding:5px 7px}
+}
+@media (max-width:720px){
+  .topbar .brand span{display:none}
+  .topbar .switch button{padding:6px 9px}
+  .mode-ask{font-size:15px;padding:10px 16px}
+  .mode-profile{padding:8px 8px}
+  .brand i{width:30px;height:30px;font-size:12px}
+
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stats div:nth-child(3){border-left:0;padding-left:0}
+  .feature{grid-template-columns:1fr}
+  .grid,.cols{grid-template-columns:1fr}
+  .job{grid-template-columns:1fr;gap:6px}
+  .cta.ghost{margin-left:0}
+}
+</style>
+</head>
+<body>
+<div class="ambient" aria-hidden="true"><i></i><i></i></div>
+<div class="portrait portrait-ask" aria-hidden="true"><img src="fran.webp" alt="" width="379" height="1100" decoding="async"></div>
+<div class="portrait portrait-profile" aria-hidden="true"><img src="fran-laptop.webp" alt="" width="495" height="1100" decoding="async"></div>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#ask" aria-label="Fran Mondaca, home"><i>FM</i><span>Fran Mondaca</span></a>
+    <div class="modes" role="group" aria-label="Experience mode">
+      <button type="button" class="mode-ask" data-mode="ask" aria-pressed="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></svg><span data-i18n="ask">Ask me</span></button>
+      <button type="button" class="mode-profile" data-mode="profile" aria-pressed="false"><span data-i18n="profile">Profile</span></button>
+    </div>
+    <div class="tools">
+      <div class="switch langs-switch" id="lang-group" role="group" aria-label="Language">
+        <button type="button" data-lang-btn="en" aria-pressed="true" lang="en">EN</button>
+        <button type="button" data-lang-btn="es" aria-pressed="false" lang="es">ES</button>
+        <button type="button" data-lang-btn="ca" aria-pressed="false" lang="ca">CA</button>
+      </div>
+      <button class="theme" id="theme" type="button" aria-label="Toggle light or dark mode">Theme</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ASK ================= -->
+<main id="view-ask" class="wrap" aria-labelledby="h-ask">
+  <div class="ask">
+    <p class="label"><span><i class="dot"></i><span data-i18n="open">Curious about new projects</span></span><span data-i18n="place">Barcelona · Spain</span></p>
+    <h1 id="h-ask" data-i18n="h1">Hi, I'm Fran's <em>professional profile.</em></h1>
+    <p class="promise" data-i18n="promise">Ask me anything about talent, leadership, learning or AI adoption. <b>Every answer comes from my real experience.</b></p>
+
+    <div class="thread" id="thread" aria-live="polite"></div>
+
+    <form class="composer" id="composer" autocomplete="off">
+      <div class="composer-inner">
+        <label for="q" class="sr" id="q-label">Your question</label>
+        <textarea id="q" rows="2" maxlength="400" placeholder="Ask me anything about my work…"></textarea>
+        <div class="composer-row">
+          <span class="counter" id="counter">Press Enter to send</span>
+          <button class="send" id="send" type="submit" aria-label="Send" disabled>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10l7-7 7 7M12 3v18"/></svg>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <div class="shortcuts" id="shortcuts">
+      <button class="chip" type="button" data-chip="intro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M6 21v-1a6 6 0 0 1 12 0v1"/></svg><span>Introduction</span></button>
+      <button class="chip" type="button" data-chip="path"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg><span>My journey</span></button>
+      <button class="chip" type="button" data-chip="looking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>What I'm looking for</span></button>
+      <button class="chip" type="button" data-chip="contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>Contact</span></button>
+    </div>
+    <div class="topics" id="topics">
+      <p class="label" id="topics-label" data-i18n="topics">Explore by topic</p>
+      <div class="topic-pills" id="topic-pills" role="group" aria-labelledby="topics-label"></div>
+      <div class="topic-qs" id="topic-qs" hidden></div>
+    </div>
+  </div>
+</main>
+
+<!-- ================= PROFILE ================= -->
+<div id="view-profile" class="wrap" hidden>
+<div class="l-block" data-l="en" lang="en-GB">
+  <p class="motto">Talent, the currency of the future of work.</p>
+
+  <header class="hero">
+    <div class="label"><span><i class="dot"></i>Curious about new projects</span><span>Barcelona · Spain</span></div>
+    <h1>Fran<span class="last">Mondaca</span></h1>
+    <p class="claim">Global Learning &amp; Talent Development Leader</p>
+    <p class="pitch">I design and scale learning, talent and organisational development that turns business priorities into stronger leadership, critical capabilities and internal career growth. Across healthcare, workplace technology and services, I connect workforce planning, skills, succession and governance, so that people are ready for what comes next and culture holds as the business scales. <em>Platforms and AI come second: they are the means, never the starting point.</em></p>
+    <div class="stats">
+      <div><b>15+</b><span>Years in talent &amp; learning</span></div>
+      <div><b>15k</b><span>Employees in regional &amp; global scope</span></div>
+      <div><b>5</b><span>Industries, one people craft</span><small>Healthcare · IT · Services · Education · Product</small></div>
+      <div><b class="word">AI × Talent</b><span>Pragmatic in practice, grounded in research</span></div>
+    </div>
+  </header>
+
+  <section id="capabilities" aria-labelledby="h-cap">
+    <div class="sec-head">
+      <p class="label">What I do</p>
+      <h2 id="h-cap">Six things I'm known for</h2>
+      <p>The work changes with each organisation. The thread stays the same: turn business priorities into people who are ready, leaders who grow their teams, and learning that shows its impact.</p>
+    </div>
+    <div class="grid" style="margin-top:32px">
+      <div class="card"><p class="label">01 · Skills</p><h4>Skills architecture &amp; workforce planning</h4><p>Capability frameworks, role levels, career paths and skills-gap analysis, connected to strategic workforce plans.</p></div>
+      <div class="card"><p class="label">02 · Adoption</p><h4>AI adoption &amp; work redesign</h4><p>AI-enabled learning and talent ecosystems, LMS and platform optimisation, knowledge management and AI-ready content, onboarding and learning in the flow of work.</p></div>
+      <div class="card"><p class="label">03 · Talent</p><h4>Talent, succession &amp; mobility</h4><p>Executive and non-executive talent reviews, critical-role pipelines, high-potential development, career coaching and internal mobility.</p></div>
+      <div class="card"><p class="label">04 · Governance</p><h4>Learning governance &amp; partnerships</h4><p>Operating models, decision forums, standards, KPIs and supplier portfolios that turn learning investment into fewer, better choices.</p></div>
+      <div class="card"><p class="label">05 · Leadership</p><h4>Leaders who grow their teams</h4><p>Leadership development and manager enablement: coaching, feedback and values that carry the culture as the business scales.</p></div>
+      <div class="card"><p class="label">06 · Evidence</p><h4>People analytics &amp; change</h4><p>Learning analytics and Power BI dashboards, change management and continuous improvement, measuring application rather than attendance.</p></div>
+    </div>
+  </section>
+
+  <section id="route" aria-labelledby="h-route">
+    <div class="sec-head">
+      <p class="label">Career</p>
+      <h2 id="h-route">The path</h2>
+      <p>More than twenty years across education, workplace technology and services, and healthcare, in three stages: teaching and delivering, building talent and capability across Europe, and leading talent development at global scale.</p>
+    </div>
+    <div class="stage">
+      <p class="label">Stage 3 · Lead talent development at global scale</p>
+      <div class="job"><p class="when">Dec 2024 – Apr 2026</p><div>
+        <h3>Global Learning &amp; Talent Development Manager</h3>
+        <p class="org">Mölnlycke Health Care · Gothenburg (remote)</p>
+        <p>Led global talent, capability and organisational development for around 10,000 employees, partnering with senior leaders, Global HR Business Partners and local People &amp; Culture teams. Built a People Pipeline roadmap connecting skills frameworks, career paths, leadership and manager enablement with succession, internal mobility and workforce planning.</p>
+        <p>Set up global learning and talent governance across People &amp; Culture, Operations, Quality, Compliance, R&amp;D and IT, with clear ownership, decision forums and KPIs, and retired over 40% of legacy content. Shaped an AI-enabled digital learning and talent ecosystem, combining pilots, change management and people analytics.</p>
+      </div></div>
+    </div>
+    <div class="stage">
+      <p class="label">Stage 2 · Build talent and capability across Europe</p>
+      <div class="job"><p class="when">Jun 2023 – Dec 2024</p><div>
+        <h3>Learning &amp; Talent Development Manager, Iberia</h3>
+        <p class="org">Ricoh EMEA · Barcelona</p>
+        <p>Turned strategy and transformation into talent and capability priorities by function and country. Led regional talent initiatives connecting performance, talent reviews, succession and internal mobility, from identifying high-potentials to preparing successors for critical roles.</p>
+        <p>Built the EMEA Digital Academy from scratch, equipped managers with leadership, coaching and feedback skills, and managed the regional supplier portfolio and learning spend.</p>
+      </div></div>
+      <div class="job"><p class="when">Jan 2022 – Oct 2023</p><div>
+        <h3>EMEA Digital AI Academy Lead</h3>
+        <p class="org">Ricoh EMEA · Barcelona</p>
+        <p>Ran the academy as a talent pipeline engine for a multilingual technology-services business, building sales, service, AI and digital capabilities. Competency-based journeys with clear levels were linked to performance evidence, readiness for critical roles and faster time-to-competency.</p>
+      </div></div>
+      <div class="job"><p class="when">2014 – 2023</p><div>
+        <h3>Learning &amp; Talent Development Specialist → Senior Consultant</h3>
+        <p class="org">Ricoh · Barcelona · Europe-wide</p>
+        <p>Europe-wide talent, OD and leadership projects: talent reviews and pathways for high-potentials and future leaders, leadership and team-development programmes, onboarding and digital adoption for distributed teams.</p>
+      </div></div>
+    </div>
+    <div class="stage">
+      <p class="label">Stage 1 · Teach, coordinate, deliver</p>
+      <div class="job"><p class="when">Jan 2012 – Apr 2014</p><div>
+        <h3>Training Coordinator, Sales &amp; Service</h3>
+        <p class="org">Amalgama Agency · Barcelona</p>
+        <p>Ran seasonal training operations and workforce planning for a 500-person frontline workforce: fast hiring, role-based onboarding, spotting and developing team leads, and consistent service at peak periods.</p>
+      </div></div>
+      <div class="job"><p class="when">2003 – 2011</p><div>
+        <h3>Extended Learning Coordinator</h3>
+        <p class="org">University of Chile, School of Medicine · Santiago</p>
+        <p>Coordinated extended learning programmes across disciplines, from portfolio planning to delivery and learner support, while teaching cohorts and designing practice-led curricula.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <section id="projects" aria-labelledby="h-proj">
+    <div class="sec-head">
+      <p class="label">Projects</p>
+      <h2 id="h-proj">What I've built</h2>
+      <p>Talent pipelines, academies built from scratch, governance that makes decisions clearer, and digital ecosystems that people actually use.</p>
+    </div>
+    <div class="feature">
+      <div>
+        <p class="label">Global talent &amp; governance</p>
+        <h3>One people-development model for 10,000 people</h3>
+        <p>At Mölnlycke I connected a People Pipeline roadmap (skills, career paths, succession and mobility) with a federated governance model: a Learning Council, a Steering Committee and Advisory Boards. Global standards, with room for regional and local needs.</p>
+      </div>
+      <div class="nums">
+        <div><b>~10k</b>employees in one global model</div>
+        <div><b>40%+</b>of legacy content retired</div>
+      </div>
+    </div>
+    <div class="group"><p class="label">Governance &amp; partnerships</p><div class="grid">
+      <div class="card"><p class="label">With Procurement, Finance &amp; IT</p><h4>A portfolio of dozens of suppliers</h4><p>Sourced, specified and reviewed learning suppliers, from platforms and content to business schools and executive education.</p></div>
+      <div class="card"><p class="label">Mandatory learning</p><h4>Global standards &amp; frameworks</h4><p>A mandatory-training framework and shared standards, balanced with regional and local needs.</p></div>
+    </div></div>
+    <div class="group"><p class="label">Talent &amp; leadership</p><div class="grid">
+      <div class="card"><p class="label">Critical roles</p><h4>Talent reviews &amp; succession</h4><p>Regional talent reviews linking performance, high-potential identification, successors for critical roles and internal mobility.</p></div>
+      <div class="card"><p class="label">Managers</p><h4>Manager enablement</h4><p>Leadership, coaching and feedback skills so managers grow their teams and carry the culture through change.</p></div>
+    </div></div>
+    <div class="group"><p class="label">Digital, AI &amp; evidence</p><div class="grid">
+      <div class="card"><p class="label">Ecosystem</p><h4>AI roadmap for learning &amp; talent</h4><p>Task and process analysis, pilots and change management to simplify work and improve skills visibility.</p></div>
+      <div class="card"><p class="label">Analytics</p><h4>From attendance to application</h4><p>People and learning analytics, including Power BI dashboards, to measure application and impact and guide investment.</p></div>
+    </div></div>
+    <div class="group"><p class="label">Academies &amp; capability</p><div class="grid">
+      <div class="card"><p class="label">Built from scratch</p><h4>EMEA Digital Academy</h4><p>An academy-style model with role-based pathways, hands-on practice and shared standards across countries.</p></div>
+      <div class="card"><p class="label">Frontline</p><h4>Onboarding at peak scale</h4><p>Role-based onboarding, workforce planning and team-lead development for a 500-person seasonal team.</p></div>
+    </div></div>
+  </section>
+
+  <section id="learning" aria-labelledby="h-learn">
+    <div class="sec-head"><p class="label">Education &amp; giving back</p><h2 id="h-learn">Still learning</h2></div>
+    <div class="cols">
+      <div><h3>Research &amp; learning science</h3><ul>
+        <li><b>PhD Candidate in Business Organisation</b><span>UPC · 2026–present · Research: AI &amp; talent</span></li>
+        <li><b>PhD Programme in Learning Psychology (DEA)</b><span>UAB · 2010</span></li>
+        <li><b>Master's in Education &amp; Learning Psychology</b><span>UAB · 2007–2009</span></li>
+        <li><b>Bachelor's in Science Pedagogy</b><span>Universidad Mayor · 2001–2005</span></li>
+      </ul></div>
+      <div><h3>Business &amp; people</h3><ul>
+        <li><b>MBA</b><span>UNIR · 2015–2016</span></li>
+        <li><b>Master's in Human Resources Management</b><span>CEU San Pablo · 2014–2015</span></li>
+      </ul></div>
+      <div><h3>Volunteering &amp; mentoring</h3><ul>
+        <li><b>IT Mentor &amp; Judge</b><span>Technovation Girls · 2018–present</span></li>
+        <li><b>Students &amp; Families Mentor</b><span>AFS Intercultural · 2015–present</span></li>
+        <li><b>Music Production &amp; Kids' Bands Mentor</b><span>ValleStage, Barcelona · 2019–present</span></li>
+      </ul></div>
+    </div>
+  </section>
+
+  <footer aria-labelledby="h-foot">
+    <h2 id="h-foot">Shall we keep talking?</h2>
+    <a class="cta js-linkedin" href="https://www.linkedin.com/in/franmondaca/">Write to me on LinkedIn →</a>
+    <a class="cta ghost" href="#ask">Or ask me here</a>
+    <p class="langs">English · Spanish (native) · Catalan</p>
+  </footer>
+</div>
+<div class="l-block" data-l="ca" lang="ca" hidden>
+  <p class="motto">El talent, la moneda del futur del treball.</p>
+
+  <header class="hero">
+    <div class="label"><span><i class="dot"></i>Amb curiositat per nous projectes</span><span>Barcelona · Espanya</span></div>
+    <h1>Fran<span class="last">Mondaca</span></h1>
+    <p class="claim">Global Learning &amp; Talent Development Leader</p>
+    <p class="pitch">Dissenyo i escalo estratègies d'aprenentatge, talent i desenvolupament organitzatiu que converteixen les prioritats del negoci en un lideratge més sòlid, capacitats crítiques i creixement intern. En salut, tecnologia i serveis, connecto la planificació de plantilles, les competències, la successió i la governança perquè les persones estiguin preparades per al que ve i la cultura es mantingui mentre el negoci creix. <em>Les plataformes i la IA van després: són el mitjà, mai el punt de partida.</em></p>
+    <div class="stats">
+      <div><b>15+</b><span>Anys en talent i aprenentatge</span></div>
+      <div><b>15k</b><span>Empleats en abast regional i global</span></div>
+      <div><b>5</b><span>Sectors, un mateix ofici: les persones</span><small>Salut · IT · Serveis · Educació · Producte</small></div>
+      <div><b class="word">IA × Talent</b><span>Pragmàtica a la pràctica, fonamentada en la recerca</span></div>
+    </div>
+  </header>
+
+  <section id="capabilities-ca" aria-labelledby="h-cap-ca">
+    <div class="sec-head">
+      <p class="label">Què faig</p>
+      <h2 id="h-cap-ca">Sis coses per les quals se'm coneix</h2>
+      <p>La feina canvia amb cada organització, però el fil conductor és el mateix: convertir les prioritats del negoci en persones preparades, líders que fan créixer els seus equips i aprenentatge que demostra el seu impacte.</p>
+    </div>
+    <div class="grid" style="margin-top:32px">
+      <div class="card"><p class="label">01 · Competències</p><h4>Arquitectura de competències i planificació de plantilles</h4><p>Marcs de capacitats, nivells de rol, itineraris de carrera i anàlisi de mancances, connectats amb la planificació estratègica de plantilles.</p></div>
+      <div class="card"><p class="label">02 · Adopció</p><h4>Adopció de la IA i redisseny de la feina</h4><p>Ecosistemes d'aprenentatge i talent amb IA, optimització de LMS i plataformes, gestió del coneixement i contingut preparat per a la IA, onboarding i aprenentatge en el flux de treball.</p></div>
+      <div class="card"><p class="label">03 · Talent</p><h4>Talent, successió i mobilitat</h4><p>Revisions de talent de directius i no directius, pedrera per a llocs crítics, desenvolupament d'alt potencial, coaching de carrera i mobilitat interna.</p></div>
+      <div class="card"><p class="label">04 · Governança</p><h4>Governança de l'aprenentatge i aliances</h4><p>Models operatius, fòrums de decisió, estàndards, KPI i carteres de proveïdors per invertir en menys coses, però millors.</p></div>
+      <div class="card"><p class="label">05 · Lideratge</p><h4>Líders que fan créixer els seus equips</h4><p>Desenvolupament de lideratge i de managers: coaching, feedback i valors que sostenen la cultura mentre el negoci creix.</p></div>
+      <div class="card"><p class="label">06 · Evidència</p><h4>People analytics i gestió del canvi</h4><p>Analítica d'aprenentatge i quadres de comandament en Power BI, gestió del canvi i millora contínua: mesuro l'aplicació, no l'assistència.</p></div>
+    </div>
+  </section>
+
+  <section id="route-ca" aria-labelledby="h-route-ca">
+    <div class="sec-head">
+      <p class="label">Trajectòria</p>
+      <h2 id="h-route-ca">El camí</h2>
+      <p>Més de vint anys en educació, tecnologia i serveis per a l'entorn de treball, i salut, en tres etapes: ensenyar i executar, construir talent i capacitats a Europa, i liderar el desenvolupament del talent a escala global.</p>
+    </div>
+    <div class="stage">
+      <p class="label">Etapa 3 · Liderar el desenvolupament del talent a escala global</p>
+      <div class="job"><p class="when">des. 2024 – abr. 2026</p><div>
+        <h3>Global Learning &amp; Talent Development Manager</h3>
+        <p class="org">Mölnlycke Health Care · Göteborg (en remot)</p>
+        <p>Vaig liderar el desenvolupament global del talent, les capacitats i l'organització per a uns 10.000 empleats, amb l'alta direcció, els HR Business Partners globals i els equips locals de People &amp; Culture. Vaig construir un full de ruta de People Pipeline que connecta marcs de competències, itineraris de carrera, lideratge i desenvolupament de managers amb la successió, la mobilitat interna i la planificació de plantilles.</p>
+        <p>Vaig posar en marxa la governança global de l'aprenentatge i el talent amb People &amp; Culture, Operacions, Qualitat, Compliance, R+D i IT, amb responsabilitats clares, fòrums de decisió i KPI, i vaig retirar més del 40% del contingut obsolet. Vaig dissenyar un ecosistema digital d'aprenentatge i talent amb IA, combinant pilots, gestió del canvi i people analytics.</p>
+      </div></div>
+    </div>
+    <div class="stage">
+      <p class="label">Etapa 2 · Construir talent i capacitats a Europa</p>
+      <div class="job"><p class="when">juny 2023 – des. 2024</p><div>
+        <h3>Learning &amp; Talent Development Manager, Iberia</h3>
+        <p class="org">Ricoh EMEA · Barcelona</p>
+        <p>Vaig convertir l'estratègia i la transformació en prioritats de talent i capacitats per funció i país. Vaig liderar iniciatives regionals que connectaven rendiment, revisions de talent, successió i mobilitat interna, des d'identificar l'alt potencial fins a preparar successors per a llocs crítics.</p>
+        <p>Vaig crear l'EMEA Digital Academy des de zero, vaig formar els managers en lideratge, coaching i feedback, i vaig gestionar la cartera regional de proveïdors i el pressupost de formació.</p>
+      </div></div>
+      <div class="job"><p class="when">gen. 2022 – oct. 2023</p><div>
+        <h3>EMEA Digital AI Academy Lead</h3>
+        <p class="org">Ricoh EMEA · Barcelona</p>
+        <p>Vaig dirigir l'acadèmia com a motor de pedrera de talent en una empresa de serveis tecnològics multilingüe, desenvolupant capacitats comercials, de servei, digitals i d'IA. Els itineraris per competències, amb nivells clars, estaven lligats a evidències de rendiment, a la preparació per a llocs crítics i a un temps de capacitació més curt.</p>
+      </div></div>
+      <div class="job"><p class="when">2014 – 2023</p><div>
+        <h3>Learning &amp; Talent Development Specialist → Senior Consultant</h3>
+        <p class="org">Ricoh · Barcelona · àmbit europeu</p>
+        <p>Projectes europeus de talent, desenvolupament organitzatiu i lideratge: revisions de talent i itineraris per a l'alt potencial i futurs líders, programes de lideratge i desenvolupament d'equips, onboarding i adopció digital per a equips distribuïts.</p>
+      </div></div>
+    </div>
+    <div class="stage">
+      <p class="label">Etapa 1 · Ensenyar, coordinar, executar</p>
+      <div class="job"><p class="when">gen. 2012 – abr. 2014</p><div>
+        <h3>Training Coordinator, Sales &amp; Service</h3>
+        <p class="org">Amalgama Agency · Barcelona</p>
+        <p>Vaig dirigir la formació de temporada i la planificació d'una plantilla de primera línia de 500 persones: contractació ràpida, onboarding per rol, detecció i desenvolupament de caps d'equip i un servei consistent en els pics d'activitat.</p>
+      </div></div>
+      <div class="job"><p class="when">2003 – 2011</p><div>
+        <h3>Extended Learning Coordinator</h3>
+        <p class="org">Universitat de Xile, Facultat de Medicina · Santiago</p>
+        <p>Vaig coordinar programes d'extensió en diverses disciplines, des de la planificació de la cartera fins a la impartició i el suport a l'alumnat, mentre feia classe i dissenyava currículums basats en la pràctica.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <section id="projects-ca" aria-labelledby="h-proj-ca">
+    <div class="sec-head">
+      <p class="label">Projectes</p>
+      <h2 id="h-proj-ca">El que he construït</h2>
+      <p>Pedreres de talent, acadèmies creades des de zero, governança que aclareix les decisions i ecosistemes digitals que la gent fa servir de debò.</p>
+    </div>
+    <div class="feature">
+      <div>
+        <p class="label">Talent i governança global</p>
+        <h3>Un únic model de desenvolupament per a 10.000 persones</h3>
+        <p>A Mölnlycke vaig connectar un full de ruta de People Pipeline (competències, itineraris de carrera, successió i mobilitat) amb un model de governança federat: un Learning Council, un Steering Committee i Advisory Boards. Estàndards globals, amb espai per a les necessitats regionals i locals.</p>
+      </div>
+      <div class="nums">
+        <div><b>~10k</b>empleats en un únic model global</div>
+        <div><b>40%+</b>del contingut obsolet retirat</div>
+      </div>
+    </div>
+    <div class="group"><p class="label">Governança i aliances</p><div class="grid">
+      <div class="card"><p class="label">Amb Compres, Finances i IT</p><h4>Una cartera de desenes de proveïdors</h4><p>Selecció, especificació i revisió de proveïdors de formació: plataformes, continguts, escoles de negoci i formació de directius.</p></div>
+      <div class="card"><p class="label">Formació obligatòria</p><h4>Estàndards i marcs globals</h4><p>Un marc de formació obligatòria i estàndards compartits, equilibrats amb les necessitats regionals i locals.</p></div>
+    </div></div>
+    <div class="group"><p class="label">Talent i lideratge</p><div class="grid">
+      <div class="card"><p class="label">Llocs crítics</p><h4>Revisions de talent i successió</h4><p>Revisions regionals de talent que connecten rendiment, identificació de l'alt potencial, successors per a llocs crítics i mobilitat interna.</p></div>
+      <div class="card"><p class="label">Managers</p><h4>Desenvolupament de managers</h4><p>Lideratge, coaching i feedback perquè els managers facin créixer els seus equips i sostinguin la cultura durant el canvi.</p></div>
+    </div></div>
+    <div class="group"><p class="label">Digital, IA i evidència</p><div class="grid">
+      <div class="card"><p class="label">Ecosistema</p><h4>Full de ruta d'IA per a l'aprenentatge i el talent</h4><p>Anàlisi de tasques i processos, pilots i gestió del canvi per simplificar la feina i donar visibilitat a les competències.</p></div>
+      <div class="card"><p class="label">Analítica</p><h4>De l'assistència a l'aplicació</h4><p>People analytics i analítica d'aprenentatge, amb quadres de comandament en Power BI, per mesurar l'aplicació i l'impacte i orientar la inversió.</p></div>
+    </div></div>
+    <div class="group"><p class="label">Acadèmies i capacitats</p><div class="grid">
+      <div class="card"><p class="label">Des de zero</p><h4>EMEA Digital Academy</h4><p>Un model tipus acadèmia amb itineraris per rol, pràctica real i estàndards compartits entre països.</p></div>
+      <div class="card"><p class="label">Primera línia</p><h4>Onboarding en temporada alta</h4><p>Onboarding per rol, planificació de plantilla i desenvolupament de caps d'equip per a un equip de temporada de 500 persones.</p></div>
+    </div></div>
+  </section>
+
+  <section id="learning-ca" aria-labelledby="h-learn-ca">
+    <div class="sec-head"><p class="label">Formació i compromís social</p><h2 id="h-learn-ca">Continuo aprenent</h2></div>
+    <div class="cols">
+      <div><h3>Recerca i ciències de l'aprenentatge</h3><ul>
+        <li><b>Doctorand en Organització d'Empreses</b><span>UPC · 2026–actualitat · Recerca: IA i talent</span></li>
+        <li><b>Programa de Doctorat en Psicologia de l'Aprenentatge (DEA)</b><span>UAB · 2010</span></li>
+        <li><b>Màster en Educació i Psicologia de l'Aprenentatge</b><span>UAB · 2007–2009</span></li>
+        <li><b>Llicenciatura en Pedagogia en Ciències</b><span>Universidad Mayor · 2001–2005</span></li>
+      </ul></div>
+      <div><h3>Empresa i persones</h3><ul>
+        <li><b>MBA</b><span>UNIR · 2015–2016</span></li>
+        <li><b>Màster en Direcció de Recursos Humans</b><span>CEU San Pablo · 2014–2015</span></li>
+      </ul></div>
+      <div><h3>Voluntariat i mentoria</h3><ul>
+        <li><b>Mentor i jurat IT</b><span>Technovation Girls · 2018–actualitat</span></li>
+        <li><b>Mentor d'estudiants i famílies</b><span>AFS Intercultural · 2015–actualitat</span></li>
+        <li><b>Mentor de producció musical i bandes infantils</b><span>ValleStage, Barcelona · 2019–actualitat</span></li>
+      </ul></div>
+    </div>
+  </section>
+
+  <footer aria-labelledby="h-foot-ca">
+    <h2 id="h-foot-ca">Continuem parlant?</h2>
+    <a class="cta js-linkedin" href="https://www.linkedin.com/in/franmondaca/">Escriu-me a LinkedIn →</a>
+    <a class="cta ghost" href="#ask">O pregunta'm aquí</a>
+    <p class="langs">Anglès · Castellà (nadiu) · Català</p>
+  </footer>
+</div>
+<div class="l-block" data-l="es" lang="es" hidden>
+  <p class="motto">El talento, la moneda del futuro del trabajo.</p>
+
+  <header class="hero">
+    <div class="label"><span><i class="dot"></i>Con curiosidad por nuevos proyectos</span><span>Barcelona · España</span></div>
+    <h1>Fran<span class="last">Mondaca</span></h1>
+    <p class="claim">Global Learning &amp; Talent Development Leader</p>
+    <p class="pitch">Diseño y escalo estrategias de aprendizaje, talento y desarrollo organizativo que convierten las prioridades del negocio en mejor liderazgo, capacidades críticas y crecimiento interno. En salud, tecnología y servicios, conecto la planificación de plantillas, las competencias, la sucesión y la gobernanza para que las personas estén preparadas para lo que viene y la cultura se mantenga mientras el negocio crece. <em>Las plataformas y la IA van después: son el medio, nunca el punto de partida.</em></p>
+    <div class="stats">
+      <div><b>15+</b><span>Años en talento y aprendizaje</span></div>
+      <div><b>15k</b><span>Empleados en alcance regional y global</span></div>
+      <div><b>5</b><span>Sectores, un mismo oficio: las personas</span><small>Salud · IT · Servicios · Educación · Producto</small></div>
+      <div><b class="word">IA × Talento</b><span>Pragmática en la práctica, fundamentada en la investigación</span></div>
+    </div>
+  </header>
+
+  <section id="capabilities-es" aria-labelledby="h-cap-es">
+    <div class="sec-head">
+      <p class="label">Qué hago</p>
+      <h2 id="h-cap-es">Seis cosas por las que se me conoce</h2>
+      <p>El trabajo cambia con cada organización, pero el hilo conductor es el mismo: convertir las prioridades del negocio en personas preparadas, líderes que hacen crecer a sus equipos y aprendizaje que demuestra su impacto.</p>
+    </div>
+    <div class="grid" style="margin-top:32px">
+      <div class="card"><p class="label">01 · Competencias</p><h4>Arquitectura de competencias y planificación de plantillas</h4><p>Marcos de capacidades, niveles de rol, itinerarios de carrera y análisis de brechas, conectados con la planificación estratégica de plantillas.</p></div>
+      <div class="card"><p class="label">02 · Adopción</p><h4>Adopción de IA y rediseño del trabajo</h4><p>Ecosistemas de aprendizaje y talento con IA, optimización de LMS y plataformas, gestión del conocimiento y contenido preparado para IA, onboarding y aprendizaje en el flujo de trabajo.</p></div>
+      <div class="card"><p class="label">03 · Talento</p><h4>Talento, sucesión y movilidad</h4><p>Revisiones de talento de directivos y no directivos, cantera para puestos críticos, desarrollo de alto potencial, coaching de carrera y movilidad interna.</p></div>
+      <div class="card"><p class="label">04 · Gobernanza</p><h4>Gobernanza del aprendizaje y alianzas</h4><p>Modelos operativos, foros de decisión, estándares, KPIs y carteras de proveedores para invertir en menos cosas, pero mejores.</p></div>
+      <div class="card"><p class="label">05 · Liderazgo</p><h4>Líderes que hacen crecer a sus equipos</h4><p>Desarrollo de liderazgo y de managers: coaching, feedback y valores que sostienen la cultura mientras el negocio crece.</p></div>
+      <div class="card"><p class="label">06 · Evidencia</p><h4>People analytics y gestión del cambio</h4><p>Analítica de aprendizaje y cuadros de mando en Power BI, gestión del cambio y mejora continua: mido la aplicación, no la asistencia.</p></div>
+    </div>
+  </section>
+
+  <section id="route-es" aria-labelledby="h-route-es">
+    <div class="sec-head">
+      <p class="label">Trayectoria</p>
+      <h2 id="h-route-es">El camino</h2>
+      <p>Más de veinte años en educación, tecnología y servicios para el entorno de trabajo, y salud, en tres etapas: enseñar y ejecutar, construir talento y capacidades en Europa, y liderar el desarrollo del talento a escala global.</p>
+    </div>
+    <div class="stage">
+      <p class="label">Etapa 3 · Liderar el desarrollo del talento a escala global</p>
+      <div class="job"><p class="when">dic. 2024 – abr. 2026</p><div>
+        <h3>Global Learning &amp; Talent Development Manager</h3>
+        <p class="org">Mölnlycke Health Care · Gotemburgo (remoto)</p>
+        <p>Lideré el desarrollo global del talento, las capacidades y la organización para unos 10.000 empleados, junto con la alta dirección, los HR Business Partners globales y los equipos locales de People &amp; Culture. Construí una hoja de ruta de People Pipeline que conecta marcos de competencias, itinerarios de carrera, liderazgo y desarrollo de managers con la sucesión, la movilidad interna y la planificación de plantillas.</p>
+        <p>Puse en marcha la gobernanza global del aprendizaje y el talento con People &amp; Culture, Operaciones, Calidad, Compliance, I+D e IT, con responsabilidades claras, foros de decisión y KPIs, y retiré más del 40% del contenido obsoleto. Diseñé un ecosistema digital de aprendizaje y talento con IA, combinando pilotos, gestión del cambio y people analytics.</p>
+      </div></div>
+    </div>
+    <div class="stage">
+      <p class="label">Etapa 2 · Construir talento y capacidades en Europa</p>
+      <div class="job"><p class="when">jun. 2023 – dic. 2024</p><div>
+        <h3>Learning &amp; Talent Development Manager, Iberia</h3>
+        <p class="org">Ricoh EMEA · Barcelona</p>
+        <p>Convertí la estrategia y la transformación en prioridades de talento y capacidades por función y país. Lideré iniciativas regionales que conectaban desempeño, revisiones de talento, sucesión y movilidad interna, desde identificar el alto potencial hasta preparar sucesores para puestos críticos.</p>
+        <p>Creé la EMEA Digital Academy desde cero, formé a los managers en liderazgo, coaching y feedback, y gestioné la cartera regional de proveedores y el presupuesto de formación.</p>
+      </div></div>
+      <div class="job"><p class="when">ene. 2022 – oct. 2023</p><div>
+        <h3>EMEA Digital AI Academy Lead</h3>
+        <p class="org">Ricoh EMEA · Barcelona</p>
+        <p>Dirigí la academia como motor de cantera de talento en una empresa de servicios tecnológicos multilingüe, desarrollando capacidades comerciales, de servicio, digitales y de IA. Los itinerarios por competencias, con niveles claros, estaban ligados a evidencias de desempeño, a la preparación para puestos críticos y a un tiempo de capacitación más corto.</p>
+      </div></div>
+      <div class="job"><p class="when">2014 – 2023</p><div>
+        <h3>Learning &amp; Talent Development Specialist → Senior Consultant</h3>
+        <p class="org">Ricoh · Barcelona · ámbito europeo</p>
+        <p>Proyectos europeos de talento, desarrollo organizativo y liderazgo: revisiones de talento e itinerarios para alto potencial y futuros líderes, programas de liderazgo y desarrollo de equipos, onboarding y adopción digital para equipos distribuidos.</p>
+      </div></div>
+    </div>
+    <div class="stage">
+      <p class="label">Etapa 1 · Enseñar, coordinar, ejecutar</p>
+      <div class="job"><p class="when">ene. 2012 – abr. 2014</p><div>
+        <h3>Training Coordinator, Sales &amp; Service</h3>
+        <p class="org">Amalgama Agency · Barcelona</p>
+        <p>Dirigí la formación de temporada y la planificación de una plantilla de primera línea de 500 personas: contratación rápida, onboarding por rol, detección y desarrollo de jefes de equipo y un servicio consistente en los picos de actividad.</p>
+      </div></div>
+      <div class="job"><p class="when">2003 – 2011</p><div>
+        <h3>Extended Learning Coordinator</h3>
+        <p class="org">Universidad de Chile, Facultad de Medicina · Santiago</p>
+        <p>Coordiné programas de extensión en varias disciplinas, desde la planificación de la cartera hasta la impartición y el apoyo al alumnado, mientras daba clase y diseñaba currículos basados en la práctica.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <section id="projects-es" aria-labelledby="h-proj-es">
+    <div class="sec-head">
+      <p class="label">Proyectos</p>
+      <h2 id="h-proj-es">Lo que he construido</h2>
+      <p>Canteras de talento, academias creadas desde cero, gobernanza que aclara las decisiones y ecosistemas digitales que la gente usa de verdad.</p>
+    </div>
+    <div class="feature">
+      <div>
+        <p class="label">Talento y gobernanza global</p>
+        <h3>Un único modelo de desarrollo para 10.000 personas</h3>
+        <p>En Mölnlycke conecté una hoja de ruta de People Pipeline (competencias, itinerarios de carrera, sucesión y movilidad) con un modelo de gobernanza federado: un Learning Council, un Steering Committee y Advisory Boards. Estándares globales, con espacio para las necesidades regionales y locales.</p>
+      </div>
+      <div class="nums">
+        <div><b>~10k</b>empleados en un único modelo global</div>
+        <div><b>40%+</b>del contenido obsoleto retirado</div>
+      </div>
+    </div>
+    <div class="group"><p class="label">Gobernanza y alianzas</p><div class="grid">
+      <div class="card"><p class="label">Con Compras, Finanzas e IT</p><h4>Una cartera de decenas de proveedores</h4><p>Selección, especificación y revisión de proveedores de formación: plataformas, contenidos, escuelas de negocio y formación de directivos.</p></div>
+      <div class="card"><p class="label">Formación obligatoria</p><h4>Estándares y marcos globales</h4><p>Un marco de formación obligatoria y estándares compartidos, equilibrados con las necesidades regionales y locales.</p></div>
+    </div></div>
+    <div class="group"><p class="label">Talento y liderazgo</p><div class="grid">
+      <div class="card"><p class="label">Puestos críticos</p><h4>Revisiones de talento y sucesión</h4><p>Revisiones regionales de talento que conectan desempeño, identificación del alto potencial, sucesores para puestos críticos y movilidad interna.</p></div>
+      <div class="card"><p class="label">Managers</p><h4>Desarrollo de managers</h4><p>Liderazgo, coaching y feedback para que los managers hagan crecer a sus equipos y sostengan la cultura durante el cambio.</p></div>
+    </div></div>
+    <div class="group"><p class="label">Digital, IA y evidencia</p><div class="grid">
+      <div class="card"><p class="label">Ecosistema</p><h4>Hoja de ruta de IA para aprendizaje y talento</h4><p>Análisis de tareas y procesos, pilotos y gestión del cambio para simplificar el trabajo y dar visibilidad a las competencias.</p></div>
+      <div class="card"><p class="label">Analítica</p><h4>De la asistencia a la aplicación</h4><p>People analytics y analítica de aprendizaje, con cuadros de mando en Power BI, para medir la aplicación y el impacto y orientar la inversión.</p></div>
+    </div></div>
+    <div class="group"><p class="label">Academias y capacidades</p><div class="grid">
+      <div class="card"><p class="label">Desde cero</p><h4>EMEA Digital Academy</h4><p>Un modelo tipo academia con itinerarios por rol, práctica real y estándares compartidos entre países.</p></div>
+      <div class="card"><p class="label">Primera línea</p><h4>Onboarding en temporada alta</h4><p>Onboarding por rol, planificación de plantilla y desarrollo de jefes de equipo para un equipo de temporada de 500 personas.</p></div>
+    </div></div>
+  </section>
+
+  <section id="learning-es" aria-labelledby="h-learn-es">
+    <div class="sec-head"><p class="label">Formación y compromiso social</p><h2 id="h-learn-es">Sigo aprendiendo</h2></div>
+    <div class="cols">
+      <div><h3>Investigación y ciencias del aprendizaje</h3><ul>
+        <li><b>Doctorando en Organización de Empresas</b><span>UPC · 2026–actualidad · Investigación: IA y talento</span></li>
+        <li><b>Programa de Doctorado en Psicología del Aprendizaje (DEA)</b><span>UAB · 2010</span></li>
+        <li><b>Máster en Educación y Psicología del Aprendizaje</b><span>UAB · 2007–2009</span></li>
+        <li><b>Licenciatura en Pedagogía en Ciencias</b><span>Universidad Mayor · 2001–2005</span></li>
+      </ul></div>
+      <div><h3>Empresa y personas</h3><ul>
+        <li><b>MBA</b><span>UNIR · 2015–2016</span></li>
+        <li><b>Máster en Dirección de Recursos Humanos</b><span>CEU San Pablo · 2014–2015</span></li>
+      </ul></div>
+      <div><h3>Voluntariado y mentoría</h3><ul>
+        <li><b>Mentor y jurado IT</b><span>Technovation Girls · 2018–actualidad</span></li>
+        <li><b>Mentor de estudiantes y familias</b><span>AFS Intercultural · 2015–actualidad</span></li>
+        <li><b>Mentor de producción musical y bandas infantiles</b><span>ValleStage, Barcelona · 2019–actualidad</span></li>
+      </ul></div>
+    </div>
+  </section>
+
+  <footer aria-labelledby="h-foot-es">
+    <h2 id="h-foot-es">¿Seguimos hablando?</h2>
+    <a class="cta js-linkedin" href="https://www.linkedin.com/in/franmondaca/">Escríbeme en LinkedIn →</a>
+    <a class="cta ghost" href="#ask">O pregúntame aquí</a>
+    <p class="langs">Inglés · Castellano (nativo) · Catalán</p>
+  </footer>
+</div>
+</div>
+
+<script>
+/* =========================================================
+   1. CONTENT — edit here
+   ========================================================= */
+const CONTACT = { linkedin: "https://www.linkedin.com/in/franmondaca/" };
+const LANGS = { en:"en-GB", ca:"ca", es:"es" };
+
+/* Interface text */
+const UI = {
+ en:{title:"Fran Mondaca — Global Learning & Talent Development Leader",
+     desc:"Fran Mondaca, Global Learning & Talent Development Leader. Ask me about talent, leadership, learning and AI adoption. Every answer comes from my real experience.",
+     open:"Curious about new projects", place:"Barcelona · Spain",
+     h1:"Hi, I'm Fran's <em>professional profile.</em>",
+     promise:"Ask me anything about talent, leadership, learning or AI adoption. <b>Every answer comes from my real experience.</b>",
+     placeholder:"Ask me anything about my work…", hint:"Press Enter to send", left:n=>n+" characters left",
+     send:"Send", question:"Your question", you:"You", typing:"Fran is typing",
+     chips:{intro:"Introduction",path:"My journey",looking:"What I'm looking for",contact:"Contact"}, topics:"Explore by topic", seePath:"See my full path →",
+     ask:"Ask me", profile:"Profile", light:"☀ Light", dark:"☾ Dark", themeLabel:"Toggle light or dark mode", langLabel:"Language",
+     fallback:["I don't have a prepared answer for that one yet, and I'd rather not guess.","Try one of these questions, or ask me directly."],
+     openProfile:"Open full profile →", email:"Email"},
+ ca:{title:"Fran Mondaca — Global Learning & Talent Development Leader",
+     desc:"Fran Mondaca, Global Learning & Talent Development Leader. Pregunta'm sobre talent, lideratge, aprenentatge i adopció de la IA. Cada resposta surt de la meva experiència real.",
+     open:"Amb curiositat per nous projectes", place:"Barcelona · Espanya",
+     h1:"Hola, soc el <em>perfil professional</em> d'en Fran.",
+     promise:"Pregunta'm el que vulguis sobre talent, lideratge, aprenentatge o adopció de la IA. <b>Cada resposta surt de la meva experiència real.</b>",
+     placeholder:"Pregunta'm el que vulguis sobre la meva feina…", hint:"Prem Retorn per enviar", left:n=>"Queden "+n+" caràcters",
+     send:"Envia", question:"La teva pregunta", you:"Tu", typing:"En Fran està escrivint",
+     chips:{intro:"Presentació",path:"El meu camí",looking:"Què busco",contact:"Contacte"}, topics:"Explora per temes", seePath:"Mira tot el meu camí →",
+     ask:"Pregunta'm", profile:"Perfil", light:"☀ Clar", dark:"☾ Fosc", themeLabel:"Canvia entre mode clar i fosc", langLabel:"Idioma",
+     fallback:["Encara no tinc una resposta preparada per a això, i prefereixo no endevinar.","Prova amb una d'aquestes preguntes o pregunta'm directament."],
+     openProfile:"Obre el perfil complet →", email:"Correu"},
+ es:{title:"Fran Mondaca — Global Learning & Talent Development Leader",
+     desc:"Fran Mondaca, Global Learning & Talent Development Leader. Pregúntame sobre talento, liderazgo, aprendizaje y adopción de IA. Cada respuesta sale de mi experiencia real.",
+     open:"Con curiosidad por nuevos proyectos", place:"Barcelona · España",
+     h1:"Hola, soy el <em>perfil profesional</em> de Fran.",
+     promise:"Pregúntame lo que quieras sobre talento, liderazgo, aprendizaje o adopción de IA. <b>Cada respuesta sale de mi experiencia real.</b>",
+     placeholder:"Pregúntame lo que quieras sobre mi trabajo…", hint:"Pulsa Intro para enviar", left:n=>"Quedan "+n+" caracteres",
+     send:"Enviar", question:"Tu pregunta", you:"Tú", typing:"Fran está escribiendo",
+     chips:{intro:"Presentación",path:"Mi camino",looking:"Qué busco",contact:"Contacto"}, topics:"Explora por temas", seePath:"Ver todo mi camino →",
+     ask:"Pregúntame", profile:"Perfil", light:"☀ Claro", dark:"☾ Oscuro", themeLabel:"Cambiar entre modo claro y oscuro", langLabel:"Idioma",
+     fallback:["Todavía no tengo una respuesta preparada para eso, y prefiero no adivinar.","Prueba con una de estas preguntas o pregúntame directamente."],
+     openProfile:"Abrir el perfil completo →", email:"Email"}
+};
+
+/* Dimensions (topics) shown under "Explore by topic" and used for follow-ups */
+const DIMS = [
+ {id:"who",    l:{en:"Who I am", ca:"Qui soc", es:"Quién soy"}},
+ {id:"lead",   l:{en:"Senior talent & leadership", ca:"Talent i lideratge sènior", es:"Talento y liderazgo senior"}},
+ {id:"gov",    l:{en:"Governance, sponsors & partners", ca:"Governança, sponsors i partners", es:"Gobernanza, sponsors y partners"}},
+ {id:"org",    l:{en:"Organisation & change", ca:"Organització i canvi", es:"Organización y cambio"}},
+ {id:"ai",     l:{en:"Technology & AI", ca:"Tecnologia i IA", es:"Tecnología e IA"}},
+ {id:"impact", l:{en:"Impact", ca:"Impacte", es:"Impacto"}},
+ {id:"wins",   l:{en:"Achievements", ca:"Fites", es:"Logros"}},
+ {id:"edu",    l:{en:"Education & research", ca:"Formació i recerca", es:"Formación e investigación"}},
+ {id:"beyond", l:{en:"Beyond work", ca:"Més enllà de la feina", es:"Más allá del trabajo"}}
+];
+
+/* Prepared answers. `d` = dimension, `k` = keywords/stems in EN, ES and CA (lower case, no accents). */
+const QA = [
+ /* ---------- WHO I AM ---------- */
+ {id:"intro", d:"who", k:["who","you","introduc","about","yourself","short","quien","eres","presenta","summary","qui","ets","resum"],
+  q:{en:"Who are you, in short?", ca:"Qui ets, en poques paraules?", es:"¿Quién eres, en pocas palabras?"},
+  a:{en:["I'm a global learning and talent leader working where business strategy, people and technology meet. Over more than 15 years in healthcare, workplace technology and services, and education, I've helped organisations turn strategic priorities into stronger leadership, critical capabilities and the talent they'll need next.","What drives me is development that actually gets used: leaders who grow their teams, people ready for their next role, and people investment that shows its impact on the business."],
+     ca:["Soc un líder global d'aprenentatge i talent que treballa on es troben l'estratègia del negoci, les persones i la tecnologia. En més de 15 anys en salut, tecnologia i serveis, i educació, he ajudat les organitzacions a convertir les prioritats estratègiques en un lideratge més sòlid, capacitats crítiques i el talent que necessitaran demà.","El que em mou és un desenvolupament que de debò es fa servir: líders que fan créixer els seus equips, persones preparades per al següent pas i una inversió en persones que demostra el seu impacte en el negoci."],
+     es:["Soy un líder global de aprendizaje y talento que trabaja donde se cruzan la estrategia del negocio, las personas y la tecnología. En más de 15 años en salud, tecnología y servicios, y educación, he ayudado a las organizaciones a convertir sus prioridades estratégicas en mejor liderazgo, capacidades críticas y el talento que necesitarán mañana.","Lo que me mueve es un desarrollo que de verdad se usa: líderes que hacen crecer a sus equipos, personas preparadas para su siguiente paso y una inversión en personas que demuestra su impacto en el negocio."]}},
+ {id:"path", d:"who", k:["path","journey","career","cv","resume","curriculum","background","highlight","trayectoria","trajectoria","camino","cami","recorrido","recorregut","viaje","viatge","destac"],
+  q:{en:"What has your journey been?", ca:"Quin ha estat el teu camí?", es:"¿Cuál ha sido tu camino?"},
+  a:{en:["Three stages. I started in education: teaching and coordinating programmes at the University of Chile's School of Medicine, then running frontline training at scale. I then spent nearly a decade at Ricoh, building talent, leadership and digital capability across Iberia and EMEA, including an academy built from scratch. Most recently I led global learning and talent development for around 10,000 people at Mölnlycke Health Care.","The thread is the same at every scale: understand the business from the inside, then build the people systems it needs. The full path is in my profile."],
+     ca:["Tres etapes. Vaig començar en l'educació: fent classes i coordinant programes a la Facultat de Medicina de la Universitat de Xile, i després dirigint formació de primera línia a gran escala. Després vaig passar gairebé una dècada a Ricoh, construint talent, lideratge i capacitats digitals a Ibèria i EMEA, incloent-hi una acadèmia creada des de zero. L'última etapa, vaig liderar l'aprenentatge i el desenvolupament del talent global per a unes 10.000 persones a Mölnlycke Health Care.","El fil és el mateix a qualsevol escala: entendre el negoci des de dins i construir els sistemes de persones que necessita. Trobaràs tot el camí al meu perfil."],
+     es:["Tres etapas. Empecé en la educación: dando clase y coordinando programas en la Facultad de Medicina de la Universidad de Chile, y después dirigiendo formación de primera línea a gran escala. Luego pasé casi una década en Ricoh, construyendo talento, liderazgo y capacidades digitales en Iberia y EMEA, incluida una academia creada desde cero. En la última etapa lideré el aprendizaje y el desarrollo del talento global para unas 10.000 personas en Mölnlycke Health Care.","El hilo es el mismo a cualquier escala: entender el negocio desde dentro y construir los sistemas de personas que necesita. Tienes todo el camino en mi perfil."]},
+  actions:[{label:"seePath", mode:"profile", anchor:"route"}]},
+ {id:"looking", d:"who", k:["looking","next","search","seek","want","open","role","opportunit","busca","buscas","available","disponib","busques","busco","oportunitat","oportunidad"],
+  q:{en:"What are you looking for now?", ca:"Què busques ara?", es:"¿Qué buscas ahora?"},
+  a:{en:["Senior roles in global learning, talent and organisational development, where the people agenda is expected to move the business and has a seat at the leadership table.","I'm open to leadership roles, advisory work and collaborations, in organisations whose values show in how they behave."],
+     ca:["Rols sèniors en aprenentatge, talent i desenvolupament organitzatiu globals, on s'esperi que l'agenda de persones mogui el negoci i tingui un lloc a la taula de direcció.","Estic obert a rols de lideratge, assessorament i col·laboracions, en organitzacions on els valors es vegin en com es comporten."],
+     es:["Roles senior en aprendizaje, talento y desarrollo organizativo globales, donde se espere que la agenda de personas mueva el negocio y tenga un sitio en la mesa de dirección.","Estoy abierto a roles de dirección, asesoría y colaboraciones, en organizaciones cuyos valores se noten en cómo se comportan."]}},
+ {id:"location", d:"who", k:["where","based","location","remote","remoto","remot","relocat","travel","viaj","viatg","hybrid","hibrid","donde","ubicac","barcelona","language","idioma","speak","parles","hablas","vius","vives"],
+  q:{en:"Where are you based? Do you work remotely?", ca:"On vius? Treballes en remot?", es:"¿Dónde vives? ¿Trabajas en remoto?"},
+  a:{en:["I'm based in the Barcelona area. I've worked remotely for a global company headquartered in Sweden, and in hybrid roles across EMEA.","I work in English, Spanish and Catalan."],
+     ca:["Visc a l'àrea de Barcelona. He treballat en remot per a una empresa global amb seu a Suècia i en rols híbrids per a tot EMEA.","Treballo en anglès, castellà i català."],
+     es:["Vivo en el área de Barcelona. He trabajado en remoto para una empresa global con sede en Suecia y en roles híbridos para toda EMEA.","Trabajo en inglés, castellano y catalán."]}},
+ {id:"contact", d:"who", k:["contact","email","mail","reach","talk","call","linkedin","contacto","hablar","escrib","contacte","parlar","correu"],
+  q:{en:"How can I contact you?", ca:"Com puc contactar amb tu?", es:"¿Cómo puedo contactarte?"},
+  a:{en:["The best way is to write to me on LinkedIn. I read every message and I'm always happy to talk."],
+     ca:["El millor és que m'escriguis a LinkedIn. Llegeixo tots els missatges i sempre m'agrada parlar."],
+     es:["Lo mejor es que me escribas por LinkedIn. Leo todos los mensajes y siempre me encanta hablar."]},
+  actions:[{label:"LinkedIn →", href:CONTACT.linkedin}]},
+
+ /* ---------- SENIOR TALENT & LEADERSHIP ---------- */
+ {id:"talent", d:"lead", k:["talent","succession","sucesion","successio","pipeline","cantera","pedrera","career","carrera","mobility","movilidad","mobilitat","skill","competenc","workforce","plantilla","high potential","hipo","potencial","review","revision","leadership","liderazgo","lideratge","leader","lider","manager","coach","feedback"],
+  q:{en:"What's your experience with talent and succession?", ca:"Quina experiència tens en talent i successió?", es:"¿Qué experiencia tienes en talento y sucesión?"},
+  a:{en:["I treat talent as a business system, not an HR process. I've shaped enterprise talent strategy for around 10,000 people, connecting strategic workforce plans with skills architecture, executive and non-executive talent reviews, succession for critical roles and internal mobility.","With senior leaders, I make talent decisions explicit: who is ready, for what, and what it takes to close the gap. And I invest in managers, because they grow people every day and the culture travels through them."],
+     ca:["Entenc el talent com un sistema de negoci, no com un procés de RH. He definit l'estratègia de talent per a unes 10.000 persones, connectant la planificació estratègica de plantilles amb l'arquitectura de competències, les revisions de talent de directius i no directius, la successió per a llocs crítics i la mobilitat interna.","Amb l'alta direcció, faig explícites les decisions de talent: qui està preparat, per a què i què cal per tancar la distància. I inverteixo en els managers, perquè són ells qui fan créixer les persones cada dia i la cultura viatja a través d'ells."],
+     es:["Entiendo el talento como un sistema de negocio, no como un proceso de RR. HH. He definido la estrategia de talento para unas 10.000 personas, conectando la planificación estratégica de plantillas con la arquitectura de competencias, las revisiones de talento de directivos y no directivos, la sucesión para puestos críticos y la movilidad interna.","Con la alta dirección, hago explícitas las decisiones de talento: quién está preparado, para qué y qué hace falta para cerrar la brecha. Y invierto en los managers, porque son ellos quienes hacen crecer a las personas cada día y la cultura viaja a través de ellos."]}},
+ {id:"influence", d:"lead", k:["authority","autoridad","autoritat","stakeholder","influenc","matrix","matric","align","alinea","trust","confianza","confianca","hrbp","business partner","lead"],
+  q:{en:"How do you lead without formal authority?", ca:"Com lideres sense autoritat formal?", es:"¿Cómo lideras sin autoridad formal?"},
+  a:{en:["By earning a place in the conversations where decisions are made. I partner with executive leaders, Global HR Business Partners and functions such as Operations, Finance, Procurement, Quality and IT, and I bring them options, trade-offs and evidence rather than requests.","In matrixed, multi-country organisations, influence comes from clarity: shared priorities, clear ownership and data that shows what works."],
+     ca:["Guanyant-me un lloc a les converses on es prenen les decisions. Treballo amb la direcció executiva, els HR Business Partners globals i funcions com Operacions, Finances, Compres, Qualitat i IT, i els porto opcions, renúncies i evidència, no peticions.","En organitzacions matricials i multipaís, la influència neix de la claredat: prioritats compartides, responsabilitats clares i dades que mostren què funciona."],
+     es:["Ganándome un sitio en las conversaciones donde se toman las decisiones. Trabajo con la dirección ejecutiva, los HR Business Partners globales y funciones como Operaciones, Finanzas, Compras, Calidad e IT, y les llevo opciones, renuncias y evidencia, no peticiones.","En organizaciones matriciales y multipaís, la influencia nace de la claridad: prioridades compartidas, responsabilidades claras y datos que muestran qué funciona."]}},
+
+ /* ---------- GOVERNANCE, SPONSORS & PARTNERS ---------- */
+ {id:"sponsors", d:"gov", k:["sponsor","board","consejo","consell","executive","ejecutiv","executiu","ceo","committee","comite","senior","direccion","direccio","c-suite"],
+  q:{en:"How do you work with senior sponsors and the board?", ca:"Com treballes amb sponsors sèniors i el consell d'administració?", es:"¿Cómo trabajas con sponsors senior y el consejo de administración?"},
+  a:{en:["I see senior sponsors, executive committees and board members as co-owners of the people agenda, not as an audience for reports. I frame learning and talent in their language: risk, growth, capability for the strategy and return on investment.","That means a few clear decisions, honest trade-offs and evidence of impact, plus a technology view: how AI and digital platforms are changing the work, the skills we need and the way we develop people."],
+     ca:["Veig els sponsors sèniors, els comitès executius i els membres del consell com a copropietaris de l'agenda de persones, no com a públic d'informes. Plantejo l'aprenentatge i el talent en el seu llenguatge: risc, creixement, capacitats per a l'estratègia i retorn de la inversió.","Això vol dir poques decisions i clares, renúncies honestes i evidència d'impacte, amb una visió tecnològica: com la IA i les plataformes digitals estan canviant la feina, les competències que necessitem i la manera de desenvolupar les persones."],
+     es:["Veo a los sponsors senior, los comités ejecutivos y los miembros del consejo como copropietarios de la agenda de personas, no como público de informes. Planteo el aprendizaje y el talento en su lenguaje: riesgo, crecimiento, capacidades para la estrategia y retorno de la inversión.","Eso significa pocas decisiones y claras, renuncias honestas y evidencia de impacto, con una visión tecnológica: cómo la IA y las plataformas digitales están cambiando el trabajo, las competencias que necesitamos y la forma de desarrollar a las personas."]}},
+ {id:"governance", d:"gov", k:["governance","gobernanza","governanca","govern","decision","standard","estandar","portfolio","cartera","council","federat","operating","kpi"],
+  q:{en:"What does “learning governance” actually mean?", ca:"Què vol dir realment «governança de l'aprenentatge»?", es:"¿Qué significa realmente «gobernanza del aprendizaje»?"},
+  a:{en:["Clear answers to three questions: who decides, against which standards, and with what evidence. Without that, a decentralised organisation ends up buying the same thing five times.","In practice: a federated model with senior sponsorship, decision forums and KPIs, a single portfolio view across markets, and a technology roadmap that the business and IT own together. At Mölnlycke that meant a Learning Council, a Steering Committee and Advisory Boards, and retiring over 40% of legacy content."],
+     ca:["Respostes clares a tres preguntes: qui decideix, amb quins estàndards i amb quina evidència. Sense això, una organització descentralitzada acaba comprant el mateix cinc vegades.","A la pràctica: un model federat amb patrocini sènior, fòrums de decisió i KPI, una visió única de la cartera a tots els mercats i un full de ruta tecnològic que el negoci i IT comparteixen. A Mölnlycke això va ser un Learning Council, un Steering Committee i Advisory Boards, i retirar més del 40% del contingut obsolet."],
+     es:["Respuestas claras a tres preguntas: quién decide, con qué estándares y con qué evidencia. Sin eso, una organización descentralizada acaba comprando lo mismo cinco veces.","En la práctica: un modelo federado con patrocinio senior, foros de decisión y KPIs, una visión única de la cartera en todos los mercados y una hoja de ruta tecnológica que el negocio e IT comparten. En Mölnlycke eso fue un Learning Council, un Steering Committee y Advisory Boards, y retirar más del 40% del contenido obsoleto."]}},
+ {id:"suppliers", d:"gov", k:["supplier","vendor","partner","procure","provider","business school","proveedor","proveidor","contract","spend","budget","presupuest","pressupost","invest"],
+  q:{en:"How do you work with suppliers and partners?", ca:"Com treballes amb proveïdors i partners?", es:"¿Cómo trabajas con proveedores y partners?"},
+  a:{en:["I treat them as partners and hold them to clear expectations. Shared briefs, quality standards and regular reviews matter more than the contract.","Together with Procurement, Finance and IT, I've sourced and reviewed portfolios of dozens of providers, from platforms and content to international business schools and interim experts, always aligning spend with performance and growth."],
+     ca:["Els tracto com a socis i els demano expectatives clares. Els briefings compartits, els estàndards de qualitat i les revisions periòdiques compten més que el contracte.","Amb Compres, Finances i IT he seleccionat i revisat carteres de desenes de proveïdors, des de plataformes i continguts fins a escoles de negoci internacionals i experts interins, sempre alineant la despesa amb el rendiment i el creixement."],
+     es:["Los trato como socios y les pido expectativas claras. Los briefings compartidos, los estándares de calidad y las revisiones periódicas importan más que el contrato.","Con Compras, Finanzas e IT he seleccionado y revisado carteras de decenas de proveedores, desde plataformas y contenidos hasta escuelas de negocio internacionales y expertos interinos, siempre alineando el gasto con el rendimiento y el crecimiento."]}},
+
+ /* ---------- ORGANISATION & CHANGE ---------- */
+ {id:"od", d:"org", k:["organisational","organizational","organisation","organization","organis","organiz","organitz","od","operating model","structure","estructura","design","diseno","disseny","effectiveness","eficacia","eficacia","desarrollo organizativo","desenvolupament organitzatiu"],
+  q:{en:"How do you approach organisational development?", ca:"Com enfoques el desenvolupament organitzatiu?", es:"¿Cómo enfocas el desarrollo organizativo?"},
+  a:{en:["I start from the strategy and work back to the organisation it needs: operating model, roles and levels, capabilities, ways of working and the leadership to hold it all together.","Then I connect the people systems that make it real, such as workforce planning, career paths, succession, leadership development and engagement, so the organisation can scale without losing its culture or its quality."],
+     ca:["Començo per l'estratègia i treballo cap enrere fins a l'organització que necessita: model operatiu, rols i nivells, capacitats, maneres de treballar i el lideratge que ho sosté tot.","Després connecto els sistemes de persones que ho fan realitat, com la planificació de plantilles, els itineraris de carrera, la successió, el desenvolupament de lideratge i el compromís, perquè l'organització pugui créixer sense perdre la cultura ni la qualitat."],
+     es:["Empiezo por la estrategia y trabajo hacia atrás hasta la organización que necesita: modelo operativo, roles y niveles, capacidades, formas de trabajar y el liderazgo que lo sostiene todo.","Después conecto los sistemas de personas que lo hacen realidad, como la planificación de plantillas, los itinerarios de carrera, la sucesión, el desarrollo de liderazgo y el compromiso, para que la organización pueda crecer sin perder su cultura ni su calidad."]}},
+ {id:"change", d:"org", k:["change","cambio","canvi","culture","cultura","adoption","adopcion","adopcio","transform","engagement","compromiso","compromis","ways of working"],
+  q:{en:"How do you lead change and culture?", ca:"Com lideres el canvi i la cultura?", es:"¿Cómo lideras el cambio y la cultura?"},
+  a:{en:["Culture changes through what managers do every day, so that's where I put the effort: clear expectations, coaching and feedback skills, and visible sponsorship from the top.","I prefer to pilot first, learn fast and then scale, combining change management, manager support and data on adoption. New ways of working only stick when people can see why they matter and what's in it for them."],
+     ca:["La cultura canvia amb el que fan els managers cada dia, i és aquí on poso l'esforç: expectatives clares, habilitats de coaching i feedback i un patrocini visible des de dalt.","Prefereixo fer un pilot, aprendre de pressa i després escalar, combinant gestió del canvi, suport als managers i dades d'adopció. Les noves maneres de treballar només arrelen quan la gent veu per què importen i què hi guanya."],
+     es:["La cultura cambia con lo que hacen los managers cada día, y ahí es donde pongo el esfuerzo: expectativas claras, habilidades de coaching y feedback y un patrocinio visible desde arriba.","Prefiero pilotar primero, aprender rápido y después escalar, combinando gestión del cambio, apoyo a los managers y datos de adopción. Las nuevas formas de trabajar solo arraigan cuando la gente ve por qué importan y qué gana con ellas."]}},
+
+ /* ---------- TECHNOLOGY & AI ---------- */
+ {id:"ai", d:"ai", k:["ai","artificial","ia","genai","automat","technolog","tecnolog","digital","platform","plataform","tool","eina","herramient","lms","knowledge","conocimiento","coneixement","vision","future","futuro","futur"],
+  q:{en:"Where does AI fit in?", ca:"On encaixa la IA?", es:"¿Dónde encaja la IA?"},
+  a:{en:["AI is changing the work itself, not just how we learn. So I start with the work: which tasks will change, where value moves when parts of the work are automated, and which skills become critical.","From there I build AI-enabled learning and talent ecosystems: pilots, change management, AI-ready content, knowledge management and better visibility of skills. It's also my research field: my PhD explores the relationship between AI and talent."],
+     ca:["La IA està canviant la feina en si, no només com aprenem. Per això començo per la feina: quines tasques canviaran, cap on es desplaça el valor quan s'automatitzen parts de la feina i quines competències esdevenen crítiques.","A partir d'aquí construeixo ecosistemes d'aprenentatge i talent amb IA: pilots, gestió del canvi, contingut preparat per a la IA, gestió del coneixement i més visibilitat de les competències. També és el meu camp de recerca: el meu doctorat estudia la relació entre la IA i el talent."],
+     es:["La IA está cambiando el trabajo en sí, no solo cómo aprendemos. Por eso empiezo por el trabajo: qué tareas cambiarán, hacia dónde se desplaza el valor cuando se automatizan partes del trabajo y qué competencias se vuelven críticas.","A partir de ahí construyo ecosistemas de aprendizaje y talento con IA: pilotos, gestión del cambio, contenido preparado para IA, gestión del conocimiento y más visibilidad de las competencias. También es mi campo de investigación: mi doctorado estudia la relación entre la IA y el talento."]}},
+
+ /* ---------- IMPACT ---------- */
+ {id:"impact", d:"impact", k:["measur","impact","roi","evidence","evidencia","metric","data","dato","dade","analytic","analitic","result","medir","mesur","dashboard","power bi","quadre","cuadro"],
+  q:{en:"How do you measure impact?", ca:"Com mesures l'impacte?", es:"¿Cómo mides el impacto?"},
+  a:{en:["I measure application, not attendance: are people doing the work differently, and does it show in performance, readiness for critical roles, time-to-competency or internal mobility?","I combine people and learning analytics, including Power BI dashboards, with feedback from managers. Then I use that evidence to decide where to invest next and what to stop."],
+     ca:["Mesuro l'aplicació, no l'assistència: la gent treballa diferent? Es nota en el rendiment, en la preparació per a llocs crítics, en el temps de capacitació o en la mobilitat interna?","Combino people analytics i analítica d'aprenentatge, amb quadres de comandament en Power BI, amb el feedback dels managers. I faig servir aquesta evidència per decidir on invertir després i què aturar."],
+     es:["Mido la aplicación, no la asistencia: ¿la gente trabaja distinto? ¿Se nota en el rendimiento, en la preparación para puestos críticos, en el tiempo de capacitación o en la movilidad interna?","Combino people analytics y analítica de aprendizaje, con cuadros de mando en Power BI, con el feedback de los managers. Y uso esa evidencia para decidir dónde invertir después y qué parar."]}},
+
+ /* ---------- ACHIEVEMENTS (to be reworked) ---------- */
+ {id:"proud", d:"wins", k:["proud","project","proyecto","projecte","achiev","favourite","favorite","best","orgullo","orgull","logro","academy","academia"],
+  q:{en:"A project you're proud of?", ca:"Un projecte del qual estiguis orgullós?", es:"¿Un proyecto del que estés orgulloso?"},
+  a:{en:["Building Ricoh's EMEA Digital Academy from scratch: people, processes and technology in one academy-style model, with role-based pathways, hands-on practice and shared standards across countries.","I like it because it began with the business's demand, not with a catalogue. It also became a talent pipeline, preparing people for their next role and future leadership."],
+     ca:["Crear des de zero l'EMEA Digital Academy de Ricoh: persones, processos i tecnologia en un sol model tipus acadèmia, amb itineraris per rol, pràctica real i estàndards compartits entre països.","M'agrada perquè va començar per la demanda del negoci, no per un catàleg. I es va convertir en una pedrera de talent que preparava la gent per al següent rol i per al lideratge futur."],
+     es:["Crear desde cero la EMEA Digital Academy de Ricoh: personas, procesos y tecnología en un solo modelo tipo academia, con itinerarios por rol, práctica real y estándares compartidos entre países.","Me gusta porque empezó por la demanda del negocio, no por un catálogo. Y se convirtió en una cantera de talento que preparaba a la gente para su siguiente rol y para el liderazgo futuro."]}},
+ {id:"molnlycke", d:"wins", k:["molnlycke","health","care","gothenburg","gotemburgo","goteborg","sweden","suecia","healthcare","salud","salut","medtech"],
+  q:{en:"What did you do at Mölnlycke?", ca:"Què vas fer a Mölnlycke?", es:"¿Qué hiciste en Mölnlycke?"},
+  a:{en:["I led global talent, capability and organisational development for around 10,000 employees. I built a People Pipeline roadmap linking skills, career paths, leadership and manager enablement with succession, internal mobility and workforce planning.","I also set up global learning and talent governance across People & Culture, Operations, Quality, Compliance, R&D and IT, retired over 40% of legacy content, and shaped the AI-enabled digital learning ecosystem."],
+     ca:["Vaig liderar el desenvolupament global del talent, les capacitats i l'organització per a uns 10.000 empleats. Vaig construir un full de ruta de People Pipeline que connecta competències, itineraris de carrera, lideratge i desenvolupament de managers amb la successió, la mobilitat interna i la planificació de plantilles.","També vaig posar en marxa la governança global de l'aprenentatge i el talent amb People & Culture, Operacions, Qualitat, Compliance, R+D i IT, vaig retirar més del 40% del contingut obsolet i vaig dissenyar l'ecosistema digital d'aprenentatge amb IA."],
+     es:["Lideré el desarrollo global del talento, las capacidades y la organización para unos 10.000 empleados. Construí una hoja de ruta de People Pipeline que conecta competencias, itinerarios de carrera, liderazgo y desarrollo de managers con la sucesión, la movilidad interna y la planificación de plantillas.","También puse en marcha la gobernanza global del aprendizaje y el talento con People & Culture, Operaciones, Calidad, Compliance, I+D e IT, retiré más del 40% del contenido obsoleto y diseñé el ecosistema digital de aprendizaje con IA."]}},
+
+ /* ---------- EDUCATION & RESEARCH ---------- */
+ {id:"education", d:"edu", k:["educat","study","studies","degree","phd","doctor","master","mba","university","universi","formacion","formacio","estudi","research","investigacion","recerca","academic"],
+  q:{en:"What's your academic background?", ca:"Quina formació acadèmica tens?", es:"¿Qué formación académica tienes?"},
+  a:{en:["I'm a PhD candidate in Business Organisation at UPC, researching the relationship between AI and talent. Before that, I completed an MBA and a Master's in Human Resources Management.","My foundations are in pedagogy and learning psychology, at Universidad Mayor and UAB, so learning science shapes how I design everything."],
+     ca:["Soc doctorand en Organització d'Empreses a la UPC, amb una línia de recerca sobre la relació entre la IA i el talent. Abans vaig fer un MBA i un màster en Direcció de Recursos Humans.","Les meves bases són la pedagogia i la psicologia de l'aprenentatge, a la Universidad Mayor i a la UAB, i per això les ciències de l'aprenentatge marquen com ho dissenyo tot."],
+     es:["Soy doctorando en Organización de Empresas en la UPC, con una línea de investigación sobre la relación entre la IA y el talento. Antes hice un MBA y un máster en Dirección de Recursos Humanos.","Mis bases son la pedagogía y la psicología del aprendizaje, en la Universidad Mayor y la UAB, y por eso las ciencias del aprendizaje marcan cómo lo diseño todo."]}},
+
+ /* ---------- BEYOND WORK ---------- */
+ {id:"outside", d:"beyond", k:["outside","hobby","hobbies","free","personal","music","musica","volunteer","voluntari","mentor","fuera","fora","aficion","aficio","lliure","libre","beyond","enlla","alla"],
+  q:{en:"And outside work?", ca:"I fora de la feina?", es:"¿Y fuera del trabajo?"},
+  a:{en:["Music and mentoring. I mentor kids' bands and music production at ValleStage in Barcelona.","I'm also a mentor and judge for Technovation Girls, which encourages girls into STEM, and I support students and families on AFS intercultural exchanges."],
+     ca:["Música i mentoria. Soc mentor de bandes infantils i producció musical a ValleStage, a Barcelona.","També soc mentor i jurat de Technovation Girls, que anima les noies a estudiar STEM, i acompanyo estudiants i famílies en els intercanvis interculturals d'AFS."],
+     es:["Música y mentoría. Soy mentor de bandas infantiles y producción musical en ValleStage, en Barcelona.","También soy mentor y jurado de Technovation Girls, que anima a las chicas a estudiar STEM, y acompaño a estudiantes y familias en los intercambios interculturales de AFS."]}}
+];
+
+/* =========================================================
+   2. MATCHING
+   ========================================================= */
+const STOP=new Set("the and you your are for with what how can about does did do have has this that from into was were our tell me please its que como con para por una los las del eres sobre com amb per els les dels teu teva tens fas ha has sido sigut tu es el la de en mi un al lo le cual cuales quin quina is in on of to my at it be been has your an or".split(" "));
+const norm=s=>s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9\s]/g," ").replace(/\s+/g," ").trim();
+function match(text){
+  const n=norm(text); const toks=n.split(" ").filter(t=>t.length>1&&!STOP.has(t));
+  let best=null,score=0;
+  for(const item of QA){
+    let s=0;
+    for(const k of item.k){
+      if(k.includes(" ")){ if(n.includes(k)) s+=2; continue; }
+      if(toks.some(t=>t===k||(k.length>=4&&t.startsWith(k))||(t.length>=5&&k.startsWith(t)))) s+=1;
+    }
+    if(Object.values(item.q).some(q=>norm(q)===n)) s+=5;
+    if(s>score){score=s;best=item}
+  }
+  const needed = toks.length<=3 ? 1 : 2;
+  return score>=needed ? {item:best,score} : null;
+}
+
+/* =========================================================
+   3. UI
+   ========================================================= */
+const $=s=>document.querySelector(s);
+const thread=$("#thread"), form=$("#composer"), ta=$("#q"), send=$("#send"), viewAsk=$("#view-ask");
+const reduce=matchMedia("(prefers-reduced-motion: reduce)");
+let busy=false; const asked=new Set();
+
+let lang="en";
+try{const s=localStorage.getItem("lang"); if(s&&UI[s]) lang=s;}catch(e){}  /* English by default */
+const T=()=>UI[lang];
+
+/* theme */
+const root=document.documentElement,tb=$("#theme");
+function cur(){return root.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}
+function label(){tb.textContent=cur()==="dark"?"☀":"☾"; tb.title=cur()==="dark"?T().light.slice(2):T().dark.slice(2)}
+try{const s=localStorage.getItem("theme");if(s)root.dataset.theme=s}catch(e){}
+tb.addEventListener("click",()=>{root.dataset.theme=cur()==="dark"?"light":"dark";try{localStorage.setItem("theme",root.dataset.theme)}catch(e){}label()});
+
+function applyLang(){
+  const t=T();
+  document.documentElement.lang=LANGS[lang];
+  document.title=t.title;
+  document.querySelector('meta[name="description"]').setAttribute("content",t.desc);
+  document.querySelectorAll("[data-i18n]").forEach(n=>{const v=t[n.dataset.i18n]; if(typeof v==="string") n.innerHTML=v});
+  document.querySelectorAll("[data-chip]").forEach(n=>{n.querySelector("span").textContent=t.chips[n.dataset.chip]});
+  ta.placeholder=t.placeholder; send.setAttribute("aria-label",t.send); $("#q-label").textContent=t.question;
+  document.querySelectorAll("[data-lang-btn]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.langBtn===lang)));
+  document.querySelectorAll(".l-block").forEach(b=>b.hidden=b.dataset.l!==lang);
+  $("#lang-group").setAttribute("aria-label",t.langLabel); tb.setAttribute("aria-label",t.themeLabel);
+  label(); ta.dispatchEvent(new Event("input"));
+  if(thread.querySelector(".shortcuts")){clearFollowups(); offerFollowups()}
+  renderTopics();
+}
+
+function el(tag,cls,text){const d=document.createElement(tag); if(cls)d.className=cls; if(text!=null)d.textContent=text; return d}
+function bubble(role,parts,{actions}={}){
+  const d=el("div","msg "+(role==="user"?"q":"a")+" new");
+  d.appendChild(el("div","who",role==="user"?T().you:"Fran"));
+  const body=el("div","body"); (parts||[]).forEach(p=>body.appendChild(el("p",null,p))); d.appendChild(body);
+  if(actions&&actions.length){const a=el("div","actions"); actions.forEach(x=>{
+    const lbl = T()[x.label] || x.label;
+    if(x.mode){const b=el("button",x.anchor?"big":null,lbl); b.type="button"; b.onclick=()=>goTo(x.mode,x.anchor); a.appendChild(b)}
+    else{const l=el("a",null,lbl); l.href=x.href; if(/^https?:/.test(x.href)){l.target="_blank";l.rel="noopener"} a.appendChild(l)}
+  }); d.appendChild(a)}
+  thread.appendChild(d); d.scrollIntoView({behavior:reduce.matches?"auto":"smooth",block:"nearest"}); return d;
+}
+function typing(){const t=el("div","msg a new"); t.setAttribute("aria-label",T().typing); t.innerHTML='<div class="who">Fran</div><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>'; thread.appendChild(t); t.scrollIntoView({behavior:reduce.matches?"auto":"smooth",block:"nearest"}); return t}
+const wait=ms=>new Promise(r=>setTimeout(r,reduce.matches?0:ms));
+function nextQuestions(fromDim,n){
+  const order=DIMS.map(d=>d.id); let start=Math.max(0,order.indexOf(fromDim)); const out=[];
+  for(let r=0;r<2&&out.length<n;r++){
+    for(let i=1;i<=order.length&&out.length<n;i++){
+      const dim=order[(start+i)%order.length];
+      const q=QA.find(x=>x.d===dim&&!asked.has(x.id)&&x.id!=="contact"&&!out.includes(x));
+      if(q) out.push(q);
+    }
+  }
+  return out;
+}
+let lastDim="who";
+function offerFollowups(){
+  const s=nextQuestions(lastDim,3); if(!s.length) return;
+  const d=el("div","shortcuts"); d.style.marginTop="0";
+  s.forEach(x=>{const b=el("button","chip",x.q[lang]); b.type="button"; b.onclick=()=>{d.remove(); ask(x.q[lang],x)}; d.appendChild(b)});
+  thread.appendChild(d);
+}
+/* topics */
+let openDim=null;
+function renderTopics(){
+  const pills=$("#topic-pills"), qs=$("#topic-qs"); pills.innerHTML="";
+  DIMS.forEach(dm=>{const b=el("button","topic",dm.l[lang]); b.type="button"; b.setAttribute("aria-pressed",String(openDim===dm.id));
+    b.onclick=()=>{openDim=openDim===dm.id?null:dm.id; renderTopics()}; pills.appendChild(b)});
+  qs.innerHTML=""; qs.hidden=!openDim;
+  if(openDim) QA.filter(x=>x.d===openDim).forEach(x=>{const b=el("button","chip",x.q[lang]); b.type="button"; if(asked.has(x.id)) b.style.opacity=".55";
+    b.onclick=()=>{openDim=null; renderTopics(); ask(x.q[lang],x)}; qs.appendChild(b)});
+}
+function clearFollowups(){thread.querySelectorAll(".shortcuts").forEach(n=>n.remove())}
+
+async function ask(text, forced){
+  text=(text||"").trim(); if(!text||busy) return;
+  busy=true; send.disabled=true; clearFollowups(); viewAsk.classList.add("started");
+  bubble("user",[text]);
+  const t=typing(); await wait(800); t.remove();
+  const m = forced ? {item:forced} : match(text);
+  if(m){
+    asked.add(m.item.id); lastDim=m.item.d;
+    bubble("assistant",m.item.a[lang],{actions:m.item.actions});
+  }else{
+    bubble("assistant",T().fallback,{actions:[{label:"LinkedIn →",href:CONTACT.linkedin}]});
+  }
+  offerFollowups();
+  busy=false; ta.dispatchEvent(new Event("input"));
+}
+
+/* composer */
+ta.addEventListener("input",()=>{ta.style.height="auto"; ta.style.height=Math.min(ta.scrollHeight,180)+"px";
+  send.disabled=busy||!ta.value.trim(); $("#counter").textContent=ta.value.length>300?T().left(400-ta.value.length):T().hint});
+ta.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault(); form.requestSubmit()}});
+form.addEventListener("submit",e=>{e.preventDefault(); const v=ta.value; ta.value=""; ta.dispatchEvent(new Event("input")); ask(v)});
+document.querySelectorAll("[data-chip]").forEach(b=>b.addEventListener("click",()=>{const it=QA.find(x=>x.id===b.dataset.chip); ask(it.q[lang],it)}));
+
+/* mode switch (Ask / Profile) via #hash */
+function goTo(mode,anchor){
+  setMode(mode);
+  if(anchor) setTimeout(()=>{const t=document.querySelector('.l-block[data-l="'+lang+'"] [id^="'+anchor+'"]'); if(t) t.scrollIntoView({behavior:reduce.matches?"auto":"smooth",block:"start"})},120);
+}
+function setMode(mode){ if(location.hash!=="#"+mode) location.hash=mode; else render() }
+function render(){
+  const mode = location.hash==="#profile" ? "profile" : "ask";
+  $("#view-ask").hidden = mode!=="ask"; $("#view-profile").hidden = mode!=="profile";
+  document.body.classList.toggle("is-profile",mode==="profile");
+  document.querySelectorAll("[data-mode]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.mode===mode)));
+  const img=document.querySelector(".portrait-"+mode+" img"); if(img&&!reduce.matches){img.style.animation="none"; void img.offsetWidth; img.style.animation=""}
+  window.scrollTo(0,0); if(mode==="ask") setTimeout(()=>ta.focus({preventScroll:true}),50);
+}
+document.querySelectorAll("[data-mode]").forEach(b=>b.addEventListener("click",()=>setMode(b.dataset.mode)));
+addEventListener("hashchange",render);
+
+/* language */
+document.querySelectorAll("[data-lang-btn]").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.langBtn; try{localStorage.setItem("lang",lang)}catch(e){} applyLang()}));
+document.querySelectorAll(".js-linkedin").forEach(a=>a.href=CONTACT.linkedin);
+
+
+/* portrait parallax: wide, eased movement */
+(function(){
+  const pts=[...document.querySelectorAll(".portrait")]; if(!pts.length||reduce.matches) return;
+  const cur={x:0,y:0,s:1}, tgt={x:0,y:0,s:1}; let mx=0,my=0,running=false;
+  function targets(){
+    const max=Math.max(1,document.documentElement.scrollHeight-innerHeight);
+    const p=Math.min(1,scrollY/max);              // 0 → 1 over the page
+    const travel=innerHeight*0.22;                // up to ~22% of the screen
+    tgt.x=mx - p*48;                              // drifts gently left as you scroll
+    tgt.y=my - p*travel;
+    tgt.s=1 + p*0.07;
+    if(!running){running=true; requestAnimationFrame(loop)}
+  }
+  function loop(){
+    const k=0.055;                                // lower = smoother
+    cur.x+=(tgt.x-cur.x)*k; cur.y+=(tgt.y-cur.y)*k; cur.s+=(tgt.s-cur.s)*k;
+    const t="translate3d("+cur.x.toFixed(2)+"px,"+cur.y.toFixed(2)+"px,0) scale("+cur.s.toFixed(4)+")";
+    pts.forEach(pt=>pt.style.transform=t);
+    if(Math.abs(tgt.x-cur.x)+Math.abs(tgt.y-cur.y)+Math.abs(tgt.s-cur.s)*100>0.05) requestAnimationFrame(loop); else running=false;
+  }
+  addEventListener("scroll",targets,{passive:true});
+  addEventListener("resize",targets,{passive:true});
+  addEventListener("pointermove",e=>{if(e.pointerType!=="mouse")return; mx=(e.clientX/innerWidth-.5)*-44; my=(e.clientY/innerHeight-.5)*-26; targets()},{passive:true});
+  addEventListener("hashchange",()=>setTimeout(targets,30));
+  targets();
+})();
+applyLang(); render();
+</script>
+</body>
+</html>
