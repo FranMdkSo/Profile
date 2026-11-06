@@ -148,6 +148,19 @@ body.is-profile .portrait-ask,body:not(.is-profile) .portrait-profile{opacity:0;
 .msg .actions button.big{font-size:15px;padding:10px 16px;background:var(--signal);color:#fff}
 
 /* ---------- PROFILE view ---------- */
+.feature{scroll-margin-top:84px}
+.feature.no-nums{grid-template-columns:1fr}
+.feature h3{max-width:28ch}
+.star{margin-top:16px}
+.star-row{display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;padding:10px 0;border-top:1px solid color-mix(in srgb,var(--paper) 22%,transparent)}
+.star-row p{margin:0;max-width:62ch}
+.star-k{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--signal);padding-top:3px}
+.card-btn{font:inherit;color:inherit;text-align:left;cursor:pointer;display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
+.card-btn:hover{border-color:var(--signal);transform:translateY(-2px)}
+.card-more{margin-top:auto;padding-top:12px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--signal)}
+@media (prefers-reduced-motion:no-preference){.feature{animation:rise .45s ease-out}}
+@media (max-width:720px){.star-row{grid-template-columns:1fr;gap:2px}}
+
 section{scroll-margin-top:76px;padding-block:64px;border-bottom:1px solid var(--rule)}
 .sec-head .label{color:var(--signal)}
 .sec-head h2{font-size:clamp(40px,7vw,60px);font-weight:800;margin-top:10px;letter-spacing:-.01em}
@@ -327,7 +340,7 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
       <div class="job"><p class="when">Dec 2024 – Apr 2026</p><div>
         <h3>Global Learning &amp; Talent Development Manager</h3>
         <p class="org">Mölnlycke Health Care · Gothenburg (remote)</p>
-        <p>Led global talent, capability and organisational development for around 10,000 employees, partnering with senior leaders, Global HR Business Partners and local People &amp; Culture teams. Built a People Pipeline roadmap connecting skills frameworks, career paths, leadership and manager enablement with succession, internal mobility and workforce planning.</p>
+        <p>Led global talent, capability and organisational development for around 10,000 employees, partnering with senior leaders, Global HR Business Partners and local People &amp; Culture teams. Built a Capabilities Pipeline roadmap connecting skills frameworks, career paths, leadership and manager enablement with succession, internal mobility and workforce planning.</p>
         <p>Set up global learning and talent governance across People &amp; Culture, Operations, Quality, Compliance, R&amp;D and IT, with clear ownership, decision forums and KPIs, and retired over 40% of legacy content. Shaped an AI-enabled digital learning and talent ecosystem, combining pilots, change management and people analytics.</p>
       </div></div>
     </div>
@@ -371,33 +384,7 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
       <h2 id="h-proj">What I've built</h2>
       <p>Talent pipelines, academies built from scratch, governance that makes decisions clearer, and digital ecosystems that people actually use.</p>
     </div>
-    <div class="feature">
-      <div>
-        <p class="label">Global talent &amp; governance</p>
-        <h3>One people-development model for 10,000 people</h3>
-        <p>At Mölnlycke I connected a People Pipeline roadmap (skills, career paths, succession and mobility) with a federated governance model: a Learning Council, a Steering Committee and Advisory Boards. Global standards, with room for regional and local needs.</p>
-      </div>
-      <div class="nums">
-        <div><b>~10k</b>employees in one global model</div>
-        <div><b>40%+</b>of legacy content retired</div>
-      </div>
-    </div>
-    <div class="group"><p class="label">Governance &amp; partnerships</p><div class="grid">
-      <div class="card"><p class="label">With Procurement, Finance &amp; IT</p><h4>A portfolio of dozens of suppliers</h4><p>Sourced, specified and reviewed learning suppliers, from platforms and content to business schools and executive education.</p></div>
-      <div class="card"><p class="label">Mandatory learning</p><h4>Global standards &amp; frameworks</h4><p>A mandatory-training framework and shared standards, balanced with regional and local needs.</p></div>
-    </div></div>
-    <div class="group"><p class="label">Talent &amp; leadership</p><div class="grid">
-      <div class="card"><p class="label">Critical roles</p><h4>Talent reviews &amp; succession</h4><p>Regional talent reviews linking performance, high-potential identification, successors for critical roles and internal mobility.</p></div>
-      <div class="card"><p class="label">Managers</p><h4>Manager enablement</h4><p>Leadership, coaching and feedback skills so managers grow their teams and carry the culture through change.</p></div>
-    </div></div>
-    <div class="group"><p class="label">Digital, AI &amp; evidence</p><div class="grid">
-      <div class="card"><p class="label">Ecosystem</p><h4>AI roadmap for learning &amp; talent</h4><p>Task and process analysis, pilots and change management to simplify work and improve skills visibility.</p></div>
-      <div class="card"><p class="label">Analytics</p><h4>From attendance to application</h4><p>People and learning analytics, including Power BI dashboards, to measure application and impact and guide investment.</p></div>
-    </div></div>
-    <div class="group"><p class="label">Academies &amp; capability</p><div class="grid">
-      <div class="card"><p class="label">Built from scratch</p><h4>EMEA Digital Academy</h4><p>An academy-style model with role-based pathways, hands-on practice and shared standards across countries.</p></div>
-      <div class="card"><p class="label">Frontline</p><h4>Onboarding at peak scale</h4><p>Role-based onboarding, workforce planning and team-lead development for a 500-person seasonal team.</p></div>
-    </div></div>
+    <div class="proj-mount" data-l="en"></div>
   </section>
 
   <section id="learning" aria-labelledby="h-learn">
@@ -471,7 +458,7 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
       <div class="job"><p class="when">des. 2024 – abr. 2026</p><div>
         <h3>Global Learning &amp; Talent Development Manager</h3>
         <p class="org">Mölnlycke Health Care · Göteborg (en remot)</p>
-        <p>Vaig liderar el desenvolupament global del talent, les capacitats i l'organització per a uns 10.000 empleats, amb l'alta direcció, els HR Business Partners globals i els equips locals de People &amp; Culture. Vaig construir un full de ruta de People Pipeline que connecta marcs de competències, itineraris de carrera, lideratge i desenvolupament de managers amb la successió, la mobilitat interna i la planificació de plantilles.</p>
+        <p>Vaig liderar el desenvolupament global del talent, les capacitats i l'organització per a uns 10.000 empleats, amb l'alta direcció, els HR Business Partners globals i els equips locals de People &amp; Culture. Vaig construir un full de ruta de Capabilities Pipeline que connecta marcs de competències, itineraris de carrera, lideratge i desenvolupament de managers amb la successió, la mobilitat interna i la planificació de plantilles.</p>
         <p>Vaig posar en marxa la governança global de l'aprenentatge i el talent amb People &amp; Culture, Operacions, Qualitat, Compliance, R+D i IT, amb responsabilitats clares, fòrums de decisió i KPI, i vaig retirar més del 40% del contingut obsolet. Vaig dissenyar un ecosistema digital d'aprenentatge i talent amb IA, combinant pilots, gestió del canvi i people analytics.</p>
       </div></div>
     </div>
@@ -515,33 +502,7 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
       <h2 id="h-proj-ca">El que he construït</h2>
       <p>Pedreres de talent, acadèmies creades des de zero, governança que aclareix les decisions i ecosistemes digitals que la gent fa servir de debò.</p>
     </div>
-    <div class="feature">
-      <div>
-        <p class="label">Talent i governança global</p>
-        <h3>Un únic model de desenvolupament per a 10.000 persones</h3>
-        <p>A Mölnlycke vaig connectar un full de ruta de People Pipeline (competències, itineraris de carrera, successió i mobilitat) amb un model de governança federat: un Learning Council, un Steering Committee i Advisory Boards. Estàndards globals, amb espai per a les necessitats regionals i locals.</p>
-      </div>
-      <div class="nums">
-        <div><b>~10k</b>empleats en un únic model global</div>
-        <div><b>40%+</b>del contingut obsolet retirat</div>
-      </div>
-    </div>
-    <div class="group"><p class="label">Governança i aliances</p><div class="grid">
-      <div class="card"><p class="label">Amb Compres, Finances i IT</p><h4>Una cartera de desenes de proveïdors</h4><p>Selecció, especificació i revisió de proveïdors de formació: plataformes, continguts, escoles de negoci i formació de directius.</p></div>
-      <div class="card"><p class="label">Formació obligatòria</p><h4>Estàndards i marcs globals</h4><p>Un marc de formació obligatòria i estàndards compartits, equilibrats amb les necessitats regionals i locals.</p></div>
-    </div></div>
-    <div class="group"><p class="label">Talent i lideratge</p><div class="grid">
-      <div class="card"><p class="label">Llocs crítics</p><h4>Revisions de talent i successió</h4><p>Revisions regionals de talent que connecten rendiment, identificació de l'alt potencial, successors per a llocs crítics i mobilitat interna.</p></div>
-      <div class="card"><p class="label">Managers</p><h4>Desenvolupament de managers</h4><p>Lideratge, coaching i feedback perquè els managers facin créixer els seus equips i sostinguin la cultura durant el canvi.</p></div>
-    </div></div>
-    <div class="group"><p class="label">Digital, IA i evidència</p><div class="grid">
-      <div class="card"><p class="label">Ecosistema</p><h4>Full de ruta d'IA per a l'aprenentatge i el talent</h4><p>Anàlisi de tasques i processos, pilots i gestió del canvi per simplificar la feina i donar visibilitat a les competències.</p></div>
-      <div class="card"><p class="label">Analítica</p><h4>De l'assistència a l'aplicació</h4><p>People analytics i analítica d'aprenentatge, amb quadres de comandament en Power BI, per mesurar l'aplicació i l'impacte i orientar la inversió.</p></div>
-    </div></div>
-    <div class="group"><p class="label">Acadèmies i capacitats</p><div class="grid">
-      <div class="card"><p class="label">Des de zero</p><h4>EMEA Digital Academy</h4><p>Un model tipus acadèmia amb itineraris per rol, pràctica real i estàndards compartits entre països.</p></div>
-      <div class="card"><p class="label">Primera línia</p><h4>Onboarding en temporada alta</h4><p>Onboarding per rol, planificació de plantilla i desenvolupament de caps d'equip per a un equip de temporada de 500 persones.</p></div>
-    </div></div>
+    <div class="proj-mount" data-l="ca"></div>
   </section>
 
   <section id="learning-ca" aria-labelledby="h-learn-ca">
@@ -615,7 +576,7 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
       <div class="job"><p class="when">dic. 2024 – abr. 2026</p><div>
         <h3>Global Learning &amp; Talent Development Manager</h3>
         <p class="org">Mölnlycke Health Care · Gotemburgo (remoto)</p>
-        <p>Lideré el desarrollo global del talento, las capacidades y la organización para unos 10.000 empleados, junto con la alta dirección, los HR Business Partners globales y los equipos locales de People &amp; Culture. Construí una hoja de ruta de People Pipeline que conecta marcos de competencias, itinerarios de carrera, liderazgo y desarrollo de managers con la sucesión, la movilidad interna y la planificación de plantillas.</p>
+        <p>Lideré el desarrollo global del talento, las capacidades y la organización para unos 10.000 empleados, junto con la alta dirección, los HR Business Partners globales y los equipos locales de People &amp; Culture. Construí una hoja de ruta de Capabilities Pipeline que conecta marcos de competencias, itinerarios de carrera, liderazgo y desarrollo de managers con la sucesión, la movilidad interna y la planificación de plantillas.</p>
         <p>Puse en marcha la gobernanza global del aprendizaje y el talento con People &amp; Culture, Operaciones, Calidad, Compliance, I+D e IT, con responsabilidades claras, foros de decisión y KPIs, y retiré más del 40% del contenido obsoleto. Diseñé un ecosistema digital de aprendizaje y talento con IA, combinando pilotos, gestión del cambio y people analytics.</p>
       </div></div>
     </div>
@@ -659,33 +620,7 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
       <h2 id="h-proj-es">Lo que he construido</h2>
       <p>Canteras de talento, academias creadas desde cero, gobernanza que aclara las decisiones y ecosistemas digitales que la gente usa de verdad.</p>
     </div>
-    <div class="feature">
-      <div>
-        <p class="label">Talento y gobernanza global</p>
-        <h3>Un único modelo de desarrollo para 10.000 personas</h3>
-        <p>En Mölnlycke conecté una hoja de ruta de People Pipeline (competencias, itinerarios de carrera, sucesión y movilidad) con un modelo de gobernanza federado: un Learning Council, un Steering Committee y Advisory Boards. Estándares globales, con espacio para las necesidades regionales y locales.</p>
-      </div>
-      <div class="nums">
-        <div><b>~10k</b>empleados en un único modelo global</div>
-        <div><b>40%+</b>del contenido obsoleto retirado</div>
-      </div>
-    </div>
-    <div class="group"><p class="label">Gobernanza y alianzas</p><div class="grid">
-      <div class="card"><p class="label">Con Compras, Finanzas e IT</p><h4>Una cartera de decenas de proveedores</h4><p>Selección, especificación y revisión de proveedores de formación: plataformas, contenidos, escuelas de negocio y formación de directivos.</p></div>
-      <div class="card"><p class="label">Formación obligatoria</p><h4>Estándares y marcos globales</h4><p>Un marco de formación obligatoria y estándares compartidos, equilibrados con las necesidades regionales y locales.</p></div>
-    </div></div>
-    <div class="group"><p class="label">Talento y liderazgo</p><div class="grid">
-      <div class="card"><p class="label">Puestos críticos</p><h4>Revisiones de talento y sucesión</h4><p>Revisiones regionales de talento que conectan desempeño, identificación del alto potencial, sucesores para puestos críticos y movilidad interna.</p></div>
-      <div class="card"><p class="label">Managers</p><h4>Desarrollo de managers</h4><p>Liderazgo, coaching y feedback para que los managers hagan crecer a sus equipos y sostengan la cultura durante el cambio.</p></div>
-    </div></div>
-    <div class="group"><p class="label">Digital, IA y evidencia</p><div class="grid">
-      <div class="card"><p class="label">Ecosistema</p><h4>Hoja de ruta de IA para aprendizaje y talento</h4><p>Análisis de tareas y procesos, pilotos y gestión del cambio para simplificar el trabajo y dar visibilidad a las competencias.</p></div>
-      <div class="card"><p class="label">Analítica</p><h4>De la asistencia a la aplicación</h4><p>People analytics y analítica de aprendizaje, con cuadros de mando en Power BI, para medir la aplicación y el impacto y orientar la inversión.</p></div>
-    </div></div>
-    <div class="group"><p class="label">Academias y capacidades</p><div class="grid">
-      <div class="card"><p class="label">Desde cero</p><h4>EMEA Digital Academy</h4><p>Un modelo tipo academia con itinerarios por rol, práctica real y estándares compartidos entre países.</p></div>
-      <div class="card"><p class="label">Primera línea</p><h4>Onboarding en temporada alta</h4><p>Onboarding por rol, planificación de plantilla y desarrollo de jefes de equipo para un equipo de temporada de 500 personas.</p></div>
-    </div></div>
+    <div class="proj-mount" data-l="es"></div>
   </section>
 
   <section id="learning-es" aria-labelledby="h-learn-es">
@@ -826,9 +761,9 @@ const QA = [
      es:["Veo a los sponsors senior, los comités ejecutivos y los miembros del consejo como copropietarios de la agenda de personas, no como público de informes. Planteo el aprendizaje y el talento en su lenguaje: riesgo, crecimiento, capacidades para la estrategia y retorno de la inversión.","Eso significa pocas decisiones y claras, renuncias honestas y evidencia de impacto, con una visión tecnológica: cómo la IA y las plataformas digitales están cambiando el trabajo, las competencias que necesitamos y la forma de desarrollar a las personas."]}},
  {id:"governance", d:"gov", k:["governance","gobernanza","governanca","govern","decision","standard","estandar","portfolio","cartera","council","federat","operating","kpi"],
   q:{en:"What does “learning governance” actually mean?", ca:"Què vol dir realment «governança de l'aprenentatge»?", es:"¿Qué significa realmente «gobernanza del aprendizaje»?"},
-  a:{en:["Clear answers to three questions: who decides, against which standards, and with what evidence. Without that, a decentralised organisation ends up buying the same thing five times.","In practice: a federated model with senior sponsorship, decision forums and KPIs, a single portfolio view across markets, and a technology roadmap that the business and IT own together. At Mölnlycke that meant a Learning Council, a Steering Committee and Advisory Boards, and retiring over 40% of legacy content."],
-     ca:["Respostes clares a tres preguntes: qui decideix, amb quins estàndards i amb quina evidència. Sense això, una organització descentralitzada acaba comprant el mateix cinc vegades.","A la pràctica: un model federat amb patrocini sènior, fòrums de decisió i KPI, una visió única de la cartera a tots els mercats i un full de ruta tecnològic que el negoci i IT comparteixen. A Mölnlycke això va ser un Learning Council, un Steering Committee i Advisory Boards, i retirar més del 40% del contingut obsolet."],
-     es:["Respuestas claras a tres preguntas: quién decide, con qué estándares y con qué evidencia. Sin eso, una organización descentralizada acaba comprando lo mismo cinco veces.","En la práctica: un modelo federado con patrocinio senior, foros de decisión y KPIs, una visión única de la cartera en todos los mercados y una hoja de ruta tecnológica que el negocio e IT comparten. En Mölnlycke eso fue un Learning Council, un Steering Committee y Advisory Boards, y retirar más del 40% del contenido obsoleto."]}},
+  a:{en:["Clear answers to three questions: who decides, against which standards, and with what evidence. Without that, a decentralised organisation ends up buying the same thing five times.","In practice: a hybrid model with senior sponsorship, decision forums and KPIs, a single portfolio view across markets, and a technology roadmap that the business and IT own together. At Mölnlycke that meant a Learning Council, a Steering Committee and Advisory Boards, and retiring over 40% of legacy content."],
+     ca:["Respostes clares a tres preguntes: qui decideix, amb quins estàndards i amb quina evidència. Sense això, una organització descentralitzada acaba comprant el mateix cinc vegades.","A la pràctica: un model híbrid amb patrocini sènior, fòrums de decisió i KPI, una visió única de la cartera a tots els mercats i un full de ruta tecnològic que el negoci i IT comparteixen. A Mölnlycke això va ser un Learning Council, un Steering Committee i Advisory Boards, i retirar més del 40% del contingut obsolet."],
+     es:["Respuestas claras a tres preguntas: quién decide, con qué estándares y con qué evidencia. Sin eso, una organización descentralizada acaba comprando lo mismo cinco veces.","En la práctica: un modelo híbrido con patrocinio senior, foros de decisión y KPIs, una visión única de la cartera en todos los mercados y una hoja de ruta tecnológica que el negocio e IT comparten. En Mölnlycke eso fue un Learning Council, un Steering Committee y Advisory Boards, y retirar más del 40% del contenido obsoleto."]}},
  {id:"suppliers", d:"gov", k:["supplier","vendor","partner","procure","provider","business school","proveedor","proveidor","contract","spend","budget","presupuest","pressupost","invest"],
   q:{en:"How do you work with suppliers and partners?", ca:"Com treballes amb proveïdors i partners?", es:"¿Cómo trabajas con proveedores y partners?"},
   a:{en:["I treat them as partners and hold them to clear expectations. Shared briefs, quality standards and regular reviews matter more than the contract.","Together with Procurement, Finance and IT, I've sourced and reviewed portfolios of dozens of providers, from platforms and content to international business schools and interim experts, always aligning spend with performance and growth."],
@@ -869,9 +804,9 @@ const QA = [
      es:["Crear desde cero la EMEA Digital Academy de Ricoh: personas, procesos y tecnología en un solo modelo tipo academia, con itinerarios por rol, práctica real y estándares compartidos entre países.","Me gusta porque empezó por la demanda del negocio, no por un catálogo. Y se convirtió en una cantera de talento que preparaba a la gente para su siguiente rol y para el liderazgo futuro."]}},
  {id:"molnlycke", d:"wins", k:["molnlycke","health","care","gothenburg","gotemburgo","goteborg","sweden","suecia","healthcare","salud","salut","medtech"],
   q:{en:"What did you do at Mölnlycke?", ca:"Què vas fer a Mölnlycke?", es:"¿Qué hiciste en Mölnlycke?"},
-  a:{en:["I led global talent, capability and organisational development for around 10,000 employees. I built a People Pipeline roadmap linking skills, career paths, leadership and manager enablement with succession, internal mobility and workforce planning.","I also set up global learning and talent governance across People & Culture, Operations, Quality, Compliance, R&D and IT, retired over 40% of legacy content, and shaped the AI-enabled digital learning ecosystem."],
-     ca:["Vaig liderar el desenvolupament global del talent, les capacitats i l'organització per a uns 10.000 empleats. Vaig construir un full de ruta de People Pipeline que connecta competències, itineraris de carrera, lideratge i desenvolupament de managers amb la successió, la mobilitat interna i la planificació de plantilles.","També vaig posar en marxa la governança global de l'aprenentatge i el talent amb People & Culture, Operacions, Qualitat, Compliance, R+D i IT, vaig retirar més del 40% del contingut obsolet i vaig dissenyar l'ecosistema digital d'aprenentatge amb IA."],
-     es:["Lideré el desarrollo global del talento, las capacidades y la organización para unos 10.000 empleados. Construí una hoja de ruta de People Pipeline que conecta competencias, itinerarios de carrera, liderazgo y desarrollo de managers con la sucesión, la movilidad interna y la planificación de plantillas.","También puse en marcha la gobernanza global del aprendizaje y el talento con People & Culture, Operaciones, Calidad, Compliance, I+D e IT, retiré más del 40% del contenido obsoleto y diseñé el ecosistema digital de aprendizaje con IA."]}},
+  a:{en:["I led global talent, capability and organisational development for around 10,000 employees. I built a Capabilities Pipeline roadmap linking skills, career paths, leadership and manager enablement with succession, internal mobility and workforce planning.","I also set up global learning and talent governance across People & Culture, Operations, Quality, Compliance, R&D and IT, retired over 40% of legacy content, and shaped the AI-enabled digital learning ecosystem."],
+     ca:["Vaig liderar el desenvolupament global del talent, les capacitats i l'organització per a uns 10.000 empleats. Vaig construir un full de ruta de Capabilities Pipeline que connecta competències, itineraris de carrera, lideratge i desenvolupament de managers amb la successió, la mobilitat interna i la planificació de plantilles.","També vaig posar en marxa la governança global de l'aprenentatge i el talent amb People & Culture, Operacions, Qualitat, Compliance, R+D i IT, vaig retirar més del 40% del contingut obsolet i vaig dissenyar l'ecosistema digital d'aprenentatge amb IA."],
+     es:["Lideré el desarrollo global del talento, las capacidades y la organización para unos 10.000 empleados. Construí una hoja de ruta de Capabilities Pipeline que conecta competencias, itinerarios de carrera, liderazgo y desarrollo de managers con la sucesión, la movilidad interna y la planificación de plantillas.","También puse en marcha la gobernanza global del aprendizaje y el talento con People & Culture, Operaciones, Calidad, Compliance, I+D e IT, retiré más del 40% del contenido obsoleto y diseñé el ecosistema digital de aprendizaje con IA."]}},
 
  /* ---------- EDUCATION & RESEARCH ---------- */
  {id:"education", d:"edu", k:["educat","study","studies","degree","phd","doctor","master","mba","university","universi","formacion","formacio","estudi","research","investigacion","recerca","academic"],
@@ -1033,6 +968,110 @@ document.querySelectorAll("[data-lang-btn]").forEach(b=>b.addEventListener("clic
 document.querySelectorAll(".js-linkedin").forEach(a=>a.href=CONTACT.linkedin);
 
 
+
+
+/* =========================================================
+   WHAT I'VE BUILT — STAR stories (edit here)
+   ========================================================= */
+const PG = {
+ global:{en:"Global talent & governance", es:"Talento y gobernanza global", ca:"Talent i governança global"},
+ gov:{en:"Governance & partnerships", es:"Gobernanza y alianzas", ca:"Governança i aliances"},
+ talent:{en:"Talent & leadership", es:"Talento y liderazgo", ca:"Talent i lideratge"},
+ digital:{en:"Digital, AI & evidence", es:"Digital, IA y evidencia", ca:"Digital, IA i evidència"},
+ academy:{en:"Academies & capability", es:"Academias y capacidades", ca:"Acadèmies i capacitats"}
+};
+const STARK = {en:["Situation","Task","Action","Result"], es:["Situación","Tarea","Acción","Resultado"], ca:["Situació","Tasca","Acció","Resultat"]};
+const PROJ = [
+ {id:"global", g:"global",
+  m:[{n:"~10k",t:{en:"employees in one global model",es:"empleados en un único modelo global",ca:"empleats en un únic model global"}},
+     {n:"40%+",t:{en:"of legacy content retired",es:"del contenido obsoleto retirado",ca:"del contingut obsolet retirat"}}],
+  en:{t:"One hybrid people-development model for 10,000 people",
+      s:["A global company where learning and talent decisions were spread across functions and regions.","Build one global model linking skills, careers, succession and governance.","Designed a Capabilities Pipeline roadmap and a hybrid governance model: a Learning Council, a Steering Committee and Advisory Boards with People & Culture, Operations, Quality, Compliance, R&D and IT.","One global model with clear ownership, over 40% of legacy content retired, and global standards with room for local needs."]},
+  es:{t:"Un modelo híbrido de desarrollo para 10.000 personas",
+      s:["Una empresa global con las decisiones de aprendizaje y talento repartidas entre funciones y regiones.","Construir un único modelo global que conectara competencias, carreras, sucesión y gobernanza.","Diseñé una hoja de ruta de Capabilities Pipeline y un modelo de gobernanza híbrido: un Learning Council, un Steering Committee y Advisory Boards con People & Culture, Operaciones, Calidad, Compliance, I+D e IT.","Un único modelo global con responsabilidades claras, más del 40% del contenido obsoleto retirado y estándares globales con espacio para las necesidades locales."]},
+  ca:{t:"Un model híbrid de desenvolupament per a 10.000 persones",
+      s:["Una empresa global amb les decisions d'aprenentatge i talent repartides entre funcions i regions.","Construir un únic model global que connectés competències, carreres, successió i governança.","Vaig dissenyar un full de ruta de Capabilities Pipeline i un model de governança híbrid: un Learning Council, un Steering Committee i Advisory Boards amb People & Culture, Operacions, Qualitat, Compliance, R+D i IT.","Un únic model global amb responsabilitats clares, més del 40% del contingut obsolet retirat i estàndards globals amb espai per a les necessitats locals."]}},
+ {id:"suppliers", g:"gov",
+  m:[{n:"37%",t:{en:"cost saving in two years",es:"de ahorro en dos años",ca:"d'estalvi en dos anys"}}],
+  en:{t:"A portfolio of dozens of suppliers",
+      s:["Learning spend spread across many providers, with uneven quality and overlap.","Get more value and consistency from every learning investment.","With Procurement, Finance and IT Security, sourced, specified and reviewed the portfolio, and set shared briefs, quality standards and regular reviews.","Fewer, better investment choices, consistent quality across markets and a 37% cost saving in two years."]},
+  es:{t:"Una cartera de decenas de proveedores",
+      s:["Gasto en formación repartido entre muchos proveedores, con calidad desigual y solapamientos.","Obtener más valor y coherencia de cada inversión en aprendizaje.","Con Compras, Finanzas y Seguridad IT, seleccioné, especifiqué y revisé la cartera, y establecí briefings compartidos, estándares de calidad y revisiones periódicas.","Menos inversiones, pero mejores, calidad homogénea en todos los mercados y un 37% de ahorro en dos años."]},
+  ca:{t:"Una cartera de desenes de proveïdors",
+      s:["Despesa en formació repartida entre molts proveïdors, amb qualitat desigual i solapaments.","Obtenir més valor i coherència de cada inversió en aprenentatge.","Amb Compres, Finances i Seguretat IT, vaig seleccionar, especificar i revisar la cartera, i vaig establir briefings compartits, estàndards de qualitat i revisions periòdiques.","Menys inversions, però millors, qualitat homogènia a tots els mercats i un 37% d'estalvi en dos anys."]}},
+ {id:"standards", g:"gov",
+  en:{t:"Global standards & frameworks",
+      s:["A regulated healthcare environment with compliance needs in many countries.","Create one mandatory-training framework without ignoring local requirements.","Co-designed global standards and the framework with Quality, Compliance and regional stakeholders.","Shared standards, clear accountability and space for regional and local needs."]},
+  es:{t:"Estándares y marcos globales",
+      s:["Un entorno sanitario regulado, con requisitos de compliance en muchos países.","Crear un único marco de formación obligatoria sin ignorar los requisitos locales.","Codiseñé los estándares globales y el marco con Calidad, Compliance y los responsables regionales.","Estándares compartidos, responsabilidades claras y espacio para las necesidades regionales y locales."]},
+  ca:{t:"Estàndards i marcs globals",
+      s:["Un entorn sanitari regulat, amb requisits de compliance a molts països.","Crear un únic marc de formació obligatòria sense ignorar els requisits locals.","Vaig codissenyar els estàndards globals i el marc amb Qualitat, Compliance i els responsables regionals.","Estàndards compartits, responsabilitats clares i espai per a les necessitats regionals i locals."]}},
+ {id:"succession", g:"talent",
+  en:{t:"Talent reviews & succession",
+      s:["A matrixed, multilingual business with critical roles and thin succession.","Connect performance, talent and succession across Europe.","Ran regional talent reviews, identified high-potentials, built development pathways and prepared successors for critical roles.","Stronger leadership pipelines, more internal mobility and better-informed workforce planning."]},
+  es:{t:"Revisiones de talento y sucesión",
+      s:["Una organización matricial y multilingüe, con puestos críticos y poca cantera de sucesión.","Conectar desempeño, talento y sucesión en toda Europa.","Dirigí revisiones regionales de talento, identifiqué el alto potencial, construí itinerarios de desarrollo y preparé sucesores para puestos críticos.","Canteras de liderazgo más sólidas, más movilidad interna y una planificación de plantillas mejor informada."]},
+  ca:{t:"Revisions de talent i successió",
+      s:["Una organització matricial i multilingüe, amb llocs crítics i poca pedrera de successió.","Connectar rendiment, talent i successió a tot Europa.","Vaig dirigir revisions regionals de talent, vaig identificar l'alt potencial, vaig construir itineraris de desenvolupament i vaig preparar successors per a llocs crítics.","Pedreres de lideratge més sòlides, més mobilitat interna i una planificació de plantilles més ben informada."]}},
+ {id:"managers", g:"talent",
+  en:{t:"Manager enablement pathways",
+      s:["Growth and change depended on managers who were stretched and under-equipped.","Help managers grow their teams and carry the culture through change.","Embedded leadership, coaching and feedback skills into everyday practice, backed by change support.","Faster change adoption, with application and impact measured for each initiative."]},
+  es:{t:"Itinerarios de desarrollo de managers",
+      s:["El crecimiento y el cambio dependían de managers sobrecargados y sin herramientas suficientes.","Ayudar a los managers a hacer crecer a sus equipos y a sostener la cultura durante el cambio.","Integré habilidades de liderazgo, coaching y feedback en el día a día, con apoyo a la gestión del cambio.","Una adopción del cambio más rápida, midiendo la aplicación y el impacto de cada iniciativa."]},
+  ca:{t:"Itineraris de desenvolupament de managers",
+      s:["El creixement i el canvi depenien de managers sobrecarregats i sense prou eines.","Ajudar els managers a fer créixer els seus equips i a sostenir la cultura durant el canvi.","Vaig integrar habilitats de lideratge, coaching i feedback en el dia a dia, amb suport a la gestió del canvi.","Una adopció del canvi més ràpida, mesurant l'aplicació i l'impacte de cada iniciativa."]}},
+ {id:"airoadmap", g:"digital",
+  en:{t:"AI roadmap for learning & talent",
+      s:["New technology and ways of working, with scattered digital tools.","Build a scalable digital ecosystem and a pragmatic AI roadmap.","A chained strategy from reach to adoption to business value: analysed tasks and processes, ran pilots, and combined change management, manager support and people analytics.","Simpler work, faster autonomy, a better employee experience and measured application."]},
+  es:{t:"Hoja de ruta de IA para aprendizaje y talento",
+      s:["Nuevas tecnologías y formas de trabajar, con herramientas digitales dispersas.","Construir un ecosistema digital escalable y una hoja de ruta de IA pragmática.","Una estrategia encadenada del alcance a la adopción y al valor de negocio: analicé tareas y procesos, lancé pilotos y combiné gestión del cambio, apoyo a los managers y people analytics.","Un trabajo más sencillo, autonomía más rápida, mejor experiencia de empleado y aplicación medida."]},
+  ca:{t:"Full de ruta d'IA per a l'aprenentatge i el talent",
+      s:["Noves tecnologies i maneres de treballar, amb eines digitals disperses.","Construir un ecosistema digital escalable i un full de ruta d'IA pragmàtic.","Una estratègia encadenada de l'abast a l'adopció i al valor de negoci: vaig analitzar tasques i processos, vaig llançar pilots i vaig combinar gestió del canvi, suport als managers i people analytics.","Una feina més senzilla, autonomia més ràpida, millor experiència d'empleat i aplicació mesurada."]}},
+ {id:"analytics", g:"digital",
+  en:{t:"From attendance to application",
+      s:["Success was measured by completions, not by what changed at work.","Show the real application and business impact of learning.","Built people and learning analytics, including Power BI dashboards, combined with manager feedback.","Investment decisions based on evidence: scale what works, stop what doesn't."]},
+  es:{t:"De la asistencia a la aplicación",
+      s:["El éxito se medía por cursos completados, no por lo que cambiaba en el trabajo.","Demostrar la aplicación real y el impacto de negocio del aprendizaje.","Construí people analytics y analítica de aprendizaje, con cuadros de mando en Power BI, combinados con el feedback de los managers.","Decisiones de inversión basadas en evidencia: escalar lo que funciona y parar lo que no."]},
+  ca:{t:"De l'assistència a l'aplicació",
+      s:["L'èxit es mesurava per cursos completats, no pel que canviava a la feina.","Demostrar l'aplicació real i l'impacte de negoci de l'aprenentatge.","Vaig construir people analytics i analítica d'aprenentatge, amb quadres de comandament en Power BI, combinats amb el feedback dels managers.","Decisions d'inversió basades en evidència: escalar el que funciona i aturar el que no."]}},
+ {id:"academy", g:"academy",
+  en:{t:"EMEA Digital Academy",
+      s:["A multilingual tech-services business needing sales, service, AI and digital skills across EMEA.","Build an academy from scratch, in the flow of work, that the business would actually use.","Designed an academy-style model: competency-based journeys with clear levels, trainer enablement and shared standards.","Faster time-to-competency, readiness for critical roles and critical skills built across EMEA."]},
+  es:{t:"EMEA Digital Academy",
+      s:["Una empresa de servicios tecnológicos multilingüe que necesitaba competencias comerciales, de servicio, digitales y de IA en toda EMEA.","Crear desde cero una academia integrada en el flujo de trabajo que el negocio usara de verdad.","Diseñé un modelo tipo academia: itinerarios por competencias con niveles claros, capacitación de formadores y estándares compartidos.","Menor tiempo de capacitación, preparación para puestos críticos y competencias críticas desarrolladas en toda EMEA."]},
+  ca:{t:"EMEA Digital Academy",
+      s:["Una empresa de serveis tecnològics multilingüe que necessitava competències comercials, de servei, digitals i d'IA a tot EMEA.","Crear des de zero una acadèmia integrada en el flux de treball que el negoci fes servir de debò.","Vaig dissenyar un model tipus acadèmia: itineraris per competències amb nivells clars, capacitació de formadors i estàndards compartits.","Menys temps de capacitació, preparació per a llocs crítics i competències crítiques desenvolupades a tot EMEA."]}},
+ {id:"onboarding", g:"academy",
+  m:[{n:"500",t:{en:"frontline people at peak",es:"personas de primera línea en temporada alta",ca:"persones de primera línia en temporada alta"}}],
+  en:{t:"Onboarding while scaling up at peak",
+      s:["Seasonal peaks with a 500-person frontline workforce.","Hire fast and bring people to autonomy without losing service quality.","Planned the workforce on skills, built digital onboarding, and spotted and developed team leads.","Consistent service and performance through peak periods, with lower attrition and faster time to autonomy."]},
+  es:{t:"Onboarding para escalar en temporada alta",
+      s:["Picos de temporada con una plantilla de primera línea de 500 personas.","Contratar rápido y llevar a las personas a la autonomía sin perder calidad de servicio.","Planifiqué la plantilla por competencias, creé un onboarding digital y detecté y desarrollé jefes de equipo.","Servicio y rendimiento constantes en los picos, con menos rotación y autonomía más rápida."]},
+  ca:{t:"Onboarding per escalar en temporada alta",
+      s:["Pics de temporada amb una plantilla de primera línia de 500 persones.","Contractar ràpid i portar les persones a l'autonomia sense perdre qualitat de servei.","Vaig planificar la plantilla per competències, vaig crear un onboarding digital i vaig detectar i desenvolupar caps d'equip.","Servei i rendiment constants en els pics, amb menys rotació i autonomia més ràpida."]}}
+];
+const PG_ORDER=["global","gov","talent","digital","academy"];
+let projSel="global";
+function renderProjects(){
+  document.querySelectorAll(".proj-mount").forEach(mount=>{
+    const L=mount.dataset.l, p=PROJ.find(x=>x.id===projSel), c=p[L];
+    const rows=c.s.map((v,i)=>'<div class="star-row"><span class="star-k">'+STARK[L][i]+'</span><p>'+escH(v)+'</p></div>').join("");
+    const nums=(p.m||[]).map(m=>'<div><b>'+m.n+'</b>'+escH(m.t[L])+'</div>').join("");
+    let html='<div class="feature'+(nums?'':' no-nums')+'" id="proj-feature-'+L+'"><div><p class="label">'+escH(PG[p.g][L])+'</p><h3>'+escH(c.t)+'</h3><div class="star">'+rows+'</div></div>'+(nums?'<div class="nums">'+nums+'</div>':'')+'</div>';
+    PG_ORDER.forEach(g=>{
+      const items=PROJ.filter(x=>x.g===g&&x.id!==projSel); if(!items.length) return;
+      html+='<div class="group"><p class="label">'+escH(PG[g][L])+'</p><div class="grid">'+items.map(x=>
+        '<button type="button" class="card card-btn" data-proj="'+x.id+'"><p class="label">'+escH(PG[x.g][L])+'</p><h4>'+escH(x[L].t)+'</h4><p>'+escH(x[L].s[3])+'</p><span class="card-more">'+({en:"Read the story",es:"Leer la historia",ca:"Llegeix la història"})[L]+' ↑</span></button>').join("")+'</div></div>';
+    });
+    mount.innerHTML=html;
+    mount.querySelectorAll("[data-proj]").forEach(b=>b.addEventListener("click",()=>{
+      projSel=b.dataset.proj; renderProjects();
+      const f=document.getElementById("proj-feature-"+L); if(f) f.scrollIntoView({behavior:reduce.matches?"auto":"smooth",block:"start"});
+    }));
+  });
+}
+function escH(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+
 /* portrait parallax: wide, eased movement */
 (function(){
   const pts=[...document.querySelectorAll(".portrait")]; if(!pts.length||reduce.matches) return;
@@ -1059,7 +1098,7 @@ document.querySelectorAll(".js-linkedin").forEach(a=>a.href=CONTACT.linkedin);
   addEventListener("hashchange",()=>setTimeout(targets,30));
   targets();
 })();
-applyLang(); render();
+renderProjects(); applyLang(); render();
 </script>
 </body>
 </html>
