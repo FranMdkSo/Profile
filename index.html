@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Fran Mondaca — Global Learning & Talent Development Leader</title>
-<meta name="description" content="Fran Mondaca, Global Learning &amp; Talent Development Leader. Ask me about talent, leadership, learning and AI adoption. Every answer comes from my real experience.">
+<title>Fran Mondaca — Global Learning • Talent • Organisational Development Leader</title>
+<meta name="description" content="Fran Mondaca, Global Learning • Talent • Organisational Development Leader. Ask me about talent, leadership, learning and AI adoption. Every answer comes from my real experience.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -154,6 +154,14 @@ body.is-profile .portrait-ask,body:not(.is-profile) .portrait-profile{opacity:0;
 .msg .actions button.big{font-size:15px;padding:10px 16px;background:var(--signal);color:#fff}
 
 /* ---------- PROFILE view ---------- */
+.beyond-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:32px}
+.beyond-card{display:flex;flex-direction:column}
+.beyond-card .label{color:var(--signal)}
+.beyond-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:14px}
+.beyond-links a{font:600 13px var(--body);text-decoration:none;color:var(--signal);background:var(--signal-soft);border-radius:999px;padding:6px 11px}
+.beyond-links a:hover{background:var(--signal);color:#fff}
+@media (max-width:720px){.beyond-grid{grid-template-columns:1fr}}
+
 .vision-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin-top:32px;border-top:1px solid var(--rule)}
 .vq{padding:22px 22px 22px 0;border-bottom:1px solid var(--rule)}
 .vq:nth-child(even){padding-left:22px;border-left:1px solid var(--rule)}
@@ -320,8 +328,8 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
   <header class="hero">
     <div class="label"><span><i class="dot"></i>Optimistic and curious senior talent leader</span></div>
     <h1>Fran<span class="last">Mondaca</span></h1>
-    <p class="claim">Global Learning &amp; Talent Development Leader</p>
-    <p class="pitch">I design and scale learning, talent and organisational development that turns business priorities into stronger leadership, critical capabilities and internal career growth. Across healthcare, workplace technology and services, I connect workforce planning, skills, succession and governance, so that people are ready for what comes next and culture holds as the business scales. In the superworker era, that means moving from owning learning to enabling it, and building talent density rather than managing headcount. <em>Platforms and AI come second: they are the means, never the starting point.</em></p>
+    <p class="claim">Global Learning • Talent • Organisational Development Leader</p>
+    <p class="pitch">I design and scale learning, talent and organisational development that turns business priorities into stronger leadership, critical capabilities and internal career growth. Across healthcare, workplace technology and services industries, I connect workforce planning, skills, succession and governance, so that people are ready for what comes next and culture holds as the business scales. In the superworker era, that means moving from owning learning to enabling it, and building talent density rather than managing headcount. <em>Platforms, technology and AI grow together, because everything starts with the business and ends with the business.</em></p>
     <div class="stats">
       <div><b>15+</b><span>Years in talent &amp; learning</span></div>
       <div><b>15k</b><span>Employees in regional &amp; global scope</span></div>
@@ -329,17 +337,6 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
       <div><b class="word">AI × Talent</b><span>Pragmatic in practice, grounded in research</span></div>
     </div>
   </header>
-
-  <section id="vision" class="vision" aria-labelledby="h-vision">
-    <div class="sec-head"><p class="label">My vision</p><h2 id="h-vision">How I see it</h2><p>Where business performance and learner experience converge, in the age of the superworker.</p></div>
-    <div class="vision-grid">
-      <div class="vq"><span class="label">Learning</span><p>From course catalogues to capability pipelines.</p></div>
-      <div class="vq"><span class="label">Enablement</span><p>From scheduled training to always-on enablement.</p></div>
-      <div class="vq"><span class="label">Stagility</span><p>Stable enough to move fast.</p></div>
-      <div class="vq"><span class="label">Talent</span><p>If they can't grow here, they'll grow somewhere else.</p></div>
-    </div>
-    <p class="vision-ai">What we <b>automate</b> with GenAI, and what we <b>humanise</b> because of it.</p>
-  </section>
 
   <section id="capabilities" aria-labelledby="h-cap">
     <div class="sec-head">
@@ -355,6 +352,17 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
       <div class="card"><p class="label">05 · Leadership</p><h4>Leaders who grow their teams</h4><p>Leadership development and manager enablement: coaching, feedback and values that carry the culture as the business scales.</p></div>
       <div class="card"><p class="label">06 · Evidence</p><h4>People analytics &amp; change</h4><p>Learning analytics and Power BI dashboards, change management and continuous improvement, measuring application rather than attendance.</p></div>
     </div>
+  </section>
+
+  <section id="vision" class="vision" aria-labelledby="h-vision">
+    <div class="sec-head"><p class="label">My vision</p><h2 id="h-vision">How I see it</h2><p>Where business performance and learner experience converge, in the age of the superworker.</p></div>
+    <div class="vision-grid">
+      <div class="vq"><span class="label">Learning</span><p>From course catalogues to capability pipelines.</p></div>
+      <div class="vq"><span class="label">Enablement</span><p>From scheduled training to always-on enablement.</p></div>
+      <div class="vq"><span class="label">Stagility</span><p>Stable enough to move fast.</p></div>
+      <div class="vq"><span class="label">Talent</span><p>If they can't grow here, they'll grow somewhere else.</p></div>
+    </div>
+    <p class="vision-ai">What we <b>automate</b> with GenAI, and what we <b>humanise</b> because of it.</p>
   </section>
 
   <section id="route" aria-labelledby="h-route">
@@ -408,9 +416,9 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
 
   <section id="projects" aria-labelledby="h-proj">
     <div class="sec-head">
-      <p class="label">Projects</p>
+      <p class="label">Projects &amp; achievements</p>
       <h2 id="h-proj">What I've built</h2>
-      <p>Talent pipelines, academies built from scratch, governance that makes decisions clearer, and digital ecosystems that people actually use.</p>
+      <p>Every project here is also an achievement: talent pipelines, academies built from scratch, governance that makes decisions clearer, and digital ecosystems that people actually use.</p>
     </div>
     <div class="proj-mount" data-l="en"></div>
   </section>
@@ -435,6 +443,15 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
     </div>
   </section>
 
+  <section id="beyond" aria-labelledby="h-beyond">
+    <div class="sec-head"><p class="label">Beyond work</p><h2 id="h-beyond">What else moves me</h2></div>
+    <div class="beyond-grid">
+      <div class="card beyond-card"><p class="label">Music</p><h4>A Quiet Kind of Brave</h4><p>My album (2026): eight original songs. I compose and play several instruments.</p><div class="beyond-links"><a href="https://open.spotify.com/album/7vu070FPepBbaZ3eLvnkRF" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/search?term=Fran%20Mdk%20A%20Quiet%20Kind%20of%20Brave" target="_blank" rel="noopener">Apple Music</a><a href="https://music.youtube.com/search?q=Fran+Mdk+A+Quiet+Kind+of+Brave" target="_blank" rel="noopener">YouTube Music</a></div></div>
+      <div class="card beyond-card"><p class="label">Learning by building</p><h4>A Game of Life, built with AI</h4><p>A zero-player game inspired by John Conway: complexity from two simple rules, like a brain that learns. Years of learning to code, finally shipped with AI as the accelerator.</p><div class="beyond-links"><a href="https://www.linkedin.com/posts/franmondaca_aifirstlearning-peoplefirstlearning-conwaygameoflive-ugcPost-7387104585821376512-MslU/" target="_blank" rel="noopener">Read the post</a><a href="https://lnkd.in/d3HajY8k" target="_blank" rel="noopener">Play</a></div></div>
+      <div class="card beyond-card"><p class="label">Writing</p><h4>An illustrated book in progress</h4><p>Stories connecting neurodiversity with the future, using imagination and curiosity to explore what's coming.</p></div>
+    </div>
+  </section>
+
   <footer aria-labelledby="h-foot">
     <h2 id="h-foot">Shall we keep talking?</h2>
     <a class="cta js-linkedin" href="https://www.linkedin.com/in/franmondaca/">Write to me on LinkedIn →</a>
@@ -448,8 +465,8 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
   <header class="hero">
     <div class="label"><span><i class="dot"></i>Senior talent leader optimista i curiós</span></div>
     <h1>Fran<span class="last">Mondaca</span></h1>
-    <p class="claim">Global Learning &amp; Talent Development Leader</p>
-    <p class="pitch">Dissenyo i escalo estratègies d'aprenentatge, talent i desenvolupament organitzatiu que converteixen les prioritats del negoci en un lideratge més sòlid, capacitats crítiques i creixement intern. En salut, tecnologia i serveis, connecto la planificació de plantilles, les competències, la successió i la governança perquè les persones estiguin preparades per al que ve i la cultura es mantingui mentre el negoci creix. En l'era del superworker, això vol dir passar de posseir l'aprenentatge a habilitar-lo, i construir densitat de talent en lloc de gestionar plantilla. <em>Les plataformes i la IA van després: són el mitjà, mai el punt de partida.</em></p>
+    <p class="claim">Global Learning • Talent • Organisational Development Leader</p>
+    <p class="pitch">Dissenyo i escalo estratègies d'aprenentatge, talent i desenvolupament organitzatiu que converteixen les prioritats del negoci en un lideratge més sòlid, capacitats crítiques i creixement intern. En els sectors de salut, tecnologia i serveis, connecto la planificació de plantilles, les competències, la successió i la governança perquè les persones estiguin preparades per al que ve i la cultura es mantingui mentre el negoci creix. En l'era del superworker, això vol dir passar de posseir l'aprenentatge a habilitar-lo, i construir densitat de talent en lloc de gestionar plantilla. <em>Les plataformes, la tecnologia i la IA creixen juntes, perquè tot comença en el negoci i acaba en el negoci.</em></p>
     <div class="stats">
       <div><b>15+</b><span>Anys en talent i aprenentatge</span></div>
       <div><b>15k</b><span>Empleats en abast regional i global</span></div>
@@ -457,17 +474,6 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
       <div><b class="word">IA × Talent</b><span>Pragmàtica a la pràctica, fonamentada en la recerca</span></div>
     </div>
   </header>
-
-  <section id="vision-ca" class="vision" aria-labelledby="h-vision-ca">
-    <div class="sec-head"><p class="label">La meva visió</p><h2 id="h-vision-ca">Com ho veig</h2><p>On convergeixen el rendiment del negoci i l'experiència de qui aprèn, en l'era del superworker.</p></div>
-    <div class="vision-grid">
-      <div class="vq"><span class="label">Aprenentatge</span><p>Dels catàlegs de cursos a les pedreres de capacitats.</p></div>
-      <div class="vq"><span class="label">Capacitació</span><p>De la formació programada a la capacitació contínua.</p></div>
-      <div class="vq"><span class="label">Stagility</span><p>Prou estables per moure'ns de pressa.</p></div>
-      <div class="vq"><span class="label">Talent</span><p>Si no poden créixer aquí, creixeran en un altre lloc.</p></div>
-    </div>
-    <p class="vision-ai">Què <b>automatitzem</b> amb la IA generativa i què <b>humanitzem</b> gràcies a ella.</p>
-  </section>
 
   <section id="capabilities-ca" aria-labelledby="h-cap-ca">
     <div class="sec-head">
@@ -483,6 +489,17 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
       <div class="card"><p class="label">05 · Lideratge</p><h4>Líders que fan créixer els seus equips</h4><p>Desenvolupament de lideratge i de managers: coaching, feedback i valors que sostenen la cultura mentre el negoci creix.</p></div>
       <div class="card"><p class="label">06 · Evidència</p><h4>People analytics i gestió del canvi</h4><p>Analítica d'aprenentatge i quadres de comandament en Power BI, gestió del canvi i millora contínua: mesuro l'aplicació, no l'assistència.</p></div>
     </div>
+  </section>
+
+  <section id="vision-ca" class="vision" aria-labelledby="h-vision-ca">
+    <div class="sec-head"><p class="label">La meva visió</p><h2 id="h-vision-ca">Com ho veig</h2><p>On convergeixen el rendiment del negoci i l'experiència de qui aprèn, en l'era del superworker.</p></div>
+    <div class="vision-grid">
+      <div class="vq"><span class="label">Aprenentatge</span><p>Dels catàlegs de cursos a les pedreres de capacitats.</p></div>
+      <div class="vq"><span class="label">Capacitació</span><p>De la formació programada a la capacitació contínua.</p></div>
+      <div class="vq"><span class="label">Stagility</span><p>Prou estables per moure'ns de pressa.</p></div>
+      <div class="vq"><span class="label">Talent</span><p>Si no poden créixer aquí, creixeran en un altre lloc.</p></div>
+    </div>
+    <p class="vision-ai">Què <b>automatitzem</b> amb la IA generativa i què <b>humanitzem</b> gràcies a ella.</p>
   </section>
 
   <section id="route-ca" aria-labelledby="h-route-ca">
@@ -536,9 +553,9 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
 
   <section id="projects-ca" aria-labelledby="h-proj-ca">
     <div class="sec-head">
-      <p class="label">Projectes</p>
+      <p class="label">Projectes i fites</p>
       <h2 id="h-proj-ca">El que he construït</h2>
-      <p>Pedreres de talent, acadèmies creades des de zero, governança que aclareix les decisions i ecosistemes digitals que la gent fa servir de debò.</p>
+      <p>Cada projecte és també una fita: pedreres de talent, acadèmies creades des de zero, governança que aclareix les decisions i ecosistemes digitals que la gent fa servir de debò.</p>
     </div>
     <div class="proj-mount" data-l="ca"></div>
   </section>
@@ -563,6 +580,15 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
     </div>
   </section>
 
+  <section id="beyond-ca" aria-labelledby="h-beyond-ca">
+    <div class="sec-head"><p class="label">Més enllà de la feina</p><h2 id="h-beyond-ca">El que també em mou</h2></div>
+    <div class="beyond-grid">
+      <div class="card beyond-card"><p class="label">Música</p><h4>A Quiet Kind of Brave</h4><p>El meu disc (2026): vuit cançons originals. Compono i toco diversos instruments.</p><div class="beyond-links"><a href="https://open.spotify.com/album/7vu070FPepBbaZ3eLvnkRF" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/search?term=Fran%20Mdk%20A%20Quiet%20Kind%20of%20Brave" target="_blank" rel="noopener">Apple Music</a><a href="https://music.youtube.com/search?q=Fran+Mdk+A+Quiet+Kind+of+Brave" target="_blank" rel="noopener">YouTube Music</a></div></div>
+      <div class="card beyond-card"><p class="label">Aprendre construint</p><h4>Un Joc de la Vida, creat amb IA</h4><p>Un joc de zero jugadors inspirat en John Conway: complexitat a partir de dues regles senzilles, com un cervell que aprèn. Anys aprenent a programar, per fi llançats amb la IA com a acceleradora.</p><div class="beyond-links"><a href="https://www.linkedin.com/posts/franmondaca_aifirstlearning-peoplefirstlearning-conwaygameoflive-ugcPost-7387104585821376512-MslU/" target="_blank" rel="noopener">Llegeix el post</a><a href="https://lnkd.in/d3HajY8k" target="_blank" rel="noopener">Juga</a></div></div>
+      <div class="card beyond-card"><p class="label">Escriptura</p><h4>Un llibre il·lustrat en marxa</h4><p>Relats que connecten la neurodiversitat amb el futur, fent servir la imaginació i la curiositat per explorar el que ve.</p></div>
+    </div>
+  </section>
+
   <footer aria-labelledby="h-foot-ca">
     <h2 id="h-foot-ca">Continuem parlant?</h2>
     <a class="cta js-linkedin" href="https://www.linkedin.com/in/franmondaca/">Escriu-me a LinkedIn →</a>
@@ -576,8 +602,8 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
   <header class="hero">
     <div class="label"><span><i class="dot"></i>Senior talent leader optimista y curioso</span></div>
     <h1>Fran<span class="last">Mondaca</span></h1>
-    <p class="claim">Global Learning &amp; Talent Development Leader</p>
-    <p class="pitch">Diseño y escalo estrategias de aprendizaje, talento y desarrollo organizativo que convierten las prioridades del negocio en mejor liderazgo, capacidades críticas y crecimiento interno. En salud, tecnología y servicios, conecto la planificación de plantillas, las competencias, la sucesión y la gobernanza para que las personas estén preparadas para lo que viene y la cultura se mantenga mientras el negocio crece. En la era del superworker, eso significa pasar de poseer el aprendizaje a habilitarlo, y construir densidad de talento en lugar de gestionar plantilla. <em>Las plataformas y la IA van después: son el medio, nunca el punto de partida.</em></p>
+    <p class="claim">Global Learning • Talent • Organisational Development Leader</p>
+    <p class="pitch">Diseño y escalo estrategias de aprendizaje, talento y desarrollo organizativo que convierten las prioridades del negocio en mejor liderazgo, capacidades críticas y crecimiento interno. En los sectores de salud, tecnología y servicios, conecto la planificación de plantillas, las competencias, la sucesión y la gobernanza para que las personas estén preparadas para lo que viene y la cultura se mantenga mientras el negocio crece. En la era del superworker, eso significa pasar de poseer el aprendizaje a habilitarlo, y construir densidad de talento en lugar de gestionar plantilla. <em>Las plataformas, la tecnología y la IA crecen juntas, porque todo empieza en el negocio y acaba en el negocio.</em></p>
     <div class="stats">
       <div><b>15+</b><span>Años en talento y aprendizaje</span></div>
       <div><b>15k</b><span>Empleados en alcance regional y global</span></div>
@@ -585,17 +611,6 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
       <div><b class="word">IA × Talento</b><span>Pragmática en la práctica, fundamentada en la investigación</span></div>
     </div>
   </header>
-
-  <section id="vision-es" class="vision" aria-labelledby="h-vision-es">
-    <div class="sec-head"><p class="label">Mi visión</p><h2 id="h-vision-es">Cómo lo veo</h2><p>Donde convergen el rendimiento del negocio y la experiencia de quien aprende, en la era del superworker.</p></div>
-    <div class="vision-grid">
-      <div class="vq"><span class="label">Aprendizaje</span><p>De los catálogos de cursos a las canteras de capacidades.</p></div>
-      <div class="vq"><span class="label">Capacitación</span><p>De la formación programada a la capacitación continua.</p></div>
-      <div class="vq"><span class="label">Stagility</span><p>Lo bastante estables para movernos rápido.</p></div>
-      <div class="vq"><span class="label">Talento</span><p>Si no pueden crecer aquí, crecerán en otro sitio.</p></div>
-    </div>
-    <p class="vision-ai">Qué <b>automatizamos</b> con la IA generativa y qué <b>humanizamos</b> gracias a ella.</p>
-  </section>
 
   <section id="capabilities-es" aria-labelledby="h-cap-es">
     <div class="sec-head">
@@ -611,6 +626,17 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
       <div class="card"><p class="label">05 · Liderazgo</p><h4>Líderes que hacen crecer a sus equipos</h4><p>Desarrollo de liderazgo y de managers: coaching, feedback y valores que sostienen la cultura mientras el negocio crece.</p></div>
       <div class="card"><p class="label">06 · Evidencia</p><h4>People analytics y gestión del cambio</h4><p>Analítica de aprendizaje y cuadros de mando en Power BI, gestión del cambio y mejora continua: mido la aplicación, no la asistencia.</p></div>
     </div>
+  </section>
+
+  <section id="vision-es" class="vision" aria-labelledby="h-vision-es">
+    <div class="sec-head"><p class="label">Mi visión</p><h2 id="h-vision-es">Cómo lo veo</h2><p>Donde convergen el rendimiento del negocio y la experiencia de quien aprende, en la era del superworker.</p></div>
+    <div class="vision-grid">
+      <div class="vq"><span class="label">Aprendizaje</span><p>De los catálogos de cursos a las canteras de capacidades.</p></div>
+      <div class="vq"><span class="label">Capacitación</span><p>De la formación programada a la capacitación continua.</p></div>
+      <div class="vq"><span class="label">Stagility</span><p>Lo bastante estables para movernos rápido.</p></div>
+      <div class="vq"><span class="label">Talento</span><p>Si no pueden crecer aquí, crecerán en otro sitio.</p></div>
+    </div>
+    <p class="vision-ai">Qué <b>automatizamos</b> con la IA generativa y qué <b>humanizamos</b> gracias a ella.</p>
   </section>
 
   <section id="route-es" aria-labelledby="h-route-es">
@@ -664,9 +690,9 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
 
   <section id="projects-es" aria-labelledby="h-proj-es">
     <div class="sec-head">
-      <p class="label">Proyectos</p>
+      <p class="label">Proyectos y logros</p>
       <h2 id="h-proj-es">Lo que he construido</h2>
-      <p>Canteras de talento, academias creadas desde cero, gobernanza que aclara las decisiones y ecosistemas digitales que la gente usa de verdad.</p>
+      <p>Cada proyecto es también un logro: canteras de talento, academias creadas desde cero, gobernanza que aclara las decisiones y ecosistemas digitales que la gente usa de verdad.</p>
     </div>
     <div class="proj-mount" data-l="es"></div>
   </section>
@@ -691,6 +717,15 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
     </div>
   </section>
 
+  <section id="beyond-es" aria-labelledby="h-beyond-es">
+    <div class="sec-head"><p class="label">Más allá del trabajo</p><h2 id="h-beyond-es">Lo que también me mueve</h2></div>
+    <div class="beyond-grid">
+      <div class="card beyond-card"><p class="label">Música</p><h4>A Quiet Kind of Brave</h4><p>Mi disco (2026): ocho canciones originales. Compongo y toco varios instrumentos.</p><div class="beyond-links"><a href="https://open.spotify.com/album/7vu070FPepBbaZ3eLvnkRF" target="_blank" rel="noopener">Spotify</a><a href="https://music.apple.com/search?term=Fran%20Mdk%20A%20Quiet%20Kind%20of%20Brave" target="_blank" rel="noopener">Apple Music</a><a href="https://music.youtube.com/search?q=Fran+Mdk+A+Quiet+Kind+of+Brave" target="_blank" rel="noopener">YouTube Music</a></div></div>
+      <div class="card beyond-card"><p class="label">Aprender construyendo</p><h4>Un Juego de la Vida, creado con IA</h4><p>Un juego de cero jugadores inspirado en John Conway: complejidad a partir de dos reglas sencillas, como un cerebro que aprende. Años aprendiendo a programar, por fin lanzados con la IA como acelerador.</p><div class="beyond-links"><a href="https://www.linkedin.com/posts/franmondaca_aifirstlearning-peoplefirstlearning-conwaygameoflive-ugcPost-7387104585821376512-MslU/" target="_blank" rel="noopener">Leer el post</a><a href="https://lnkd.in/d3HajY8k" target="_blank" rel="noopener">Jugar</a></div></div>
+      <div class="card beyond-card"><p class="label">Escritura</p><h4>Un libro ilustrado en marcha</h4><p>Relatos que conectan la neurodiversidad con el futuro, usando la imaginación y la curiosidad para explorar lo que viene.</p></div>
+    </div>
+  </section>
+
   <footer aria-labelledby="h-foot-es">
     <h2 id="h-foot-es">¿Seguimos hablando?</h2>
     <a class="cta js-linkedin" href="https://www.linkedin.com/in/franmondaca/">Escríbeme en LinkedIn →</a>
@@ -705,12 +740,13 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
    1. CONTENT — edit here
    ========================================================= */
 const CONTACT = { linkedin: "https://www.linkedin.com/in/franmondaca/" };
+const LINKS = { post:"https://www.linkedin.com/posts/franmondaca_aifirstlearning-peoplefirstlearning-conwaygameoflive-ugcPost-7387104585821376512-MslU/", game:"https://lnkd.in/d3HajY8k", spotify:"https://open.spotify.com/album/7vu070FPepBbaZ3eLvnkRF", apple:"https://music.apple.com/search?term=Fran%20Mdk%20A%20Quiet%20Kind%20of%20Brave", ytm:"https://music.youtube.com/search?q=Fran+Mdk+A+Quiet+Kind+of+Brave" };
 const LANGS = { en:"en-GB", ca:"ca", es:"es" };
 
 /* Interface text */
 const UI = {
- en:{title:"Fran Mondaca — Global Learning & Talent Development Leader",
-     desc:"Fran Mondaca, Global Learning & Talent Development Leader. Ask me about talent, leadership, learning and AI adoption. Every answer comes from my real experience.",
+ en:{title:"Fran Mondaca — Global Learning • Talent • Organisational Development Leader",
+     desc:"Fran Mondaca, Global Learning • Talent • Organisational Development Leader. Ask me about talent, leadership, learning and AI adoption. Every answer comes from my real experience.",
      open:"Optimistic and curious senior talent leader", place:"Barcelona · Spain",
      h1:"Hi, I'm Fran's <em>professional profile.</em>",
      promise:"Ask me anything about talent, leadership, learning or AI adoption. <b>Every answer comes from my real experience.</b>",
@@ -719,9 +755,9 @@ const UI = {
      chips:{intro:"Introduction",path:"My journey",looking:"What I'm looking for",contact:"Contact"}, topics:"Explore by topic", seePath:"See my full path →",
      ask:"Ask me", profile:"Profile", light:"☀ Light", dark:"☾ Dark", themeLabel:"Toggle light or dark mode", langLabel:"Language",
      fallback:["I don't have a prepared answer for that one yet, and I'd rather not guess.","Try one of these questions, or ask me directly."],
-     openProfile:"Open full profile →", seeStory:"Read the full story →", email:"Email"},
- ca:{title:"Fran Mondaca — Global Learning & Talent Development Leader",
-     desc:"Fran Mondaca, Global Learning & Talent Development Leader. Pregunta'm sobre talent, lideratge, aprenentatge i adopció de la IA. Cada resposta surt de la meva experiència real.",
+     openProfile:"Open full profile →", seeStory:"Read the full story →", readPost:"Read the LinkedIn post →", playGame:"Play the game", email:"Email"},
+ ca:{title:"Fran Mondaca — Global Learning • Talent • Organisational Development Leader",
+     desc:"Fran Mondaca, Global Learning • Talent • Organisational Development Leader. Pregunta'm sobre talent, lideratge, aprenentatge i adopció de la IA. Cada resposta surt de la meva experiència real.",
      open:"Senior talent leader optimista i curiós", place:"Barcelona · Espanya",
      h1:"Hola, soc el <em>perfil professional</em> d'en Fran.",
      promise:"Pregunta'm el que vulguis sobre talent, lideratge, aprenentatge o adopció de la IA. <b>Cada resposta surt de la meva experiència real.</b>",
@@ -730,9 +766,9 @@ const UI = {
      chips:{intro:"Presentació",path:"El meu camí",looking:"Què busco",contact:"Contacte"}, topics:"Explora per temes", seePath:"Mira tot el meu camí →",
      ask:"Pregunta'm", profile:"Perfil", light:"☀ Clar", dark:"☾ Fosc", themeLabel:"Canvia entre mode clar i fosc", langLabel:"Idioma",
      fallback:["Encara no tinc una resposta preparada per a això, i prefereixo no endevinar.","Prova amb una d'aquestes preguntes o pregunta'm directament."],
-     openProfile:"Obre el perfil complet →", seeStory:"Llegeix la història completa →", email:"Correu"},
- es:{title:"Fran Mondaca — Global Learning & Talent Development Leader",
-     desc:"Fran Mondaca, Global Learning & Talent Development Leader. Pregúntame sobre talento, liderazgo, aprendizaje y adopción de IA. Cada respuesta sale de mi experiencia real.",
+     openProfile:"Obre el perfil complet →", seeStory:"Llegeix la història completa →", readPost:"Llegeix el post a LinkedIn →", playGame:"Juga", email:"Correu"},
+ es:{title:"Fran Mondaca — Global Learning • Talent • Organisational Development Leader",
+     desc:"Fran Mondaca, Global Learning • Talent • Organisational Development Leader. Pregúntame sobre talento, liderazgo, aprendizaje y adopción de IA. Cada respuesta sale de mi experiencia real.",
      open:"Senior talent leader optimista y curioso", place:"Barcelona · España",
      h1:"Hola, soy el <em>perfil profesional</em> de Fran.",
      promise:"Pregúntame lo que quieras sobre talento, liderazgo, aprendizaje o adopción de IA. <b>Cada respuesta sale de mi experiencia real.</b>",
@@ -741,7 +777,7 @@ const UI = {
      chips:{intro:"Presentación",path:"Mi camino",looking:"Qué busco",contact:"Contacto"}, topics:"Explora por temas", seePath:"Ver todo mi camino →",
      ask:"Pregúntame", profile:"Perfil", light:"☀ Claro", dark:"☾ Oscuro", themeLabel:"Cambiar entre modo claro y oscuro", langLabel:"Idioma",
      fallback:["Todavía no tengo una respuesta preparada para eso, y prefiero no adivinar.","Prueba con una de estas preguntas o pregúntame directamente."],
-     openProfile:"Abrir el perfil completo →", seeStory:"Leer la historia completa →", email:"Email"}
+     openProfile:"Abrir el perfil completo →", seeStory:"Leer la historia completa →", readPost:"Leer el post en LinkedIn →", playGame:"Jugar", email:"Email"}
 };
 
 /* Dimensions (topics) shown under "Explore by topic" and used for follow-ups */
@@ -901,11 +937,16 @@ const QA = [
      es:["Soy doctorando en Organización de Empresas en la UPC, con una línea de investigación sobre la relación entre la IA y el talento. Antes hice un MBA y un máster en Dirección de Recursos Humanos.","Mis bases son la pedagogía y la psicología del aprendizaje, en la Universidad Mayor y la UAB, y por eso las ciencias del aprendizaje marcan cómo lo diseño todo."]}},
 
  /* ---------- BEYOND WORK ---------- */
- {id:"outside", d:"beyond", k:["outside","hobby","hobbies","free","personal","music","musica","compos","instrument","write","writing","book","libro","llibre","story","stories","cuento","conte","relato","relat","neurodivers","escrib","escri","volunteer","voluntari","mentor","fuera","fora","aficion","aficio","lliure","libre","beyond","enlla","alla"],
+ {id:"outside", d:"beyond", k:["album","disco","disc","spotify","song","cancion","canco","outside","hobby","hobbies","free","personal","music","musica","compos","instrument","write","writing","book","libro","llibre","story","stories","cuento","conte","relato","relat","neurodivers","escrib","escri","volunteer","voluntari","mentor","fuera","fora","aficion","aficio","lliure","libre","beyond","enlla","alla"],
   q:{en:"And outside work?", ca:"I fora de la feina?", es:"¿Y fuera del trabajo?"},
-  a:{en:["Music is a big part of my life: I compose and play several instruments. I also write stories, and I'm working on an illustrated book that connects neurodiversity with the future, using imagination and curiosity as a way to project and explore what's coming.","I'm also a mentor and judge for Technovation Girls, which encourages girls into STEM, and I support students and families on AFS intercultural exchanges."],
-     ca:["La música és una part important de la meva vida: compono i toco diversos instruments. També escric contes i relats, i estic escrivint un llibre il·lustrat que relaciona la neurodiversitat amb el futur, fent servir la imaginació i la curiositat com a mètode per projectar i explorar el que ve.","A més, soc mentor i jurat de Technovation Girls, que anima les noies a estudiar STEM, i acompanyo estudiants i famílies en els intercanvis interculturals d'AFS."],
-     es:["La música es una parte importante de mi vida: compongo y toco varios instrumentos. También escribo cuentos y relatos, y estoy escribiendo un libro ilustrado que relaciona la neurodiversidad con el futuro, usando la imaginación y la curiosidad como método para proyectar y explorar lo que viene.","Además, soy mentor y jurado de Technovation Girls, que anima a las chicas a estudiar STEM, y acompaño a estudiantes y familias en los intercambios interculturales de AFS."]}}
+  a:{en:["Music is a big part of my life: I compose and play several instruments, and my album, A Quiet Kind of Brave, came out in 2026. I also write stories, and I'm working on an illustrated book that connects neurodiversity with the future, using imagination and curiosity as a way to project and explore what's coming.","I'm also a mentor and judge for Technovation Girls, which encourages girls into STEM, and I support students and families on AFS intercultural exchanges."],
+     ca:["La música és una part important de la meva vida: compono i toco diversos instruments, i el meu disc, A Quiet Kind of Brave, va sortir el 2026. També escric contes i relats, i estic escrivint un llibre il·lustrat que relaciona la neurodiversitat amb el futur, fent servir la imaginació i la curiositat com a mètode per projectar i explorar el que ve.","A més, soc mentor i jurat de Technovation Girls, que anima les noies a estudiar STEM, i acompanyo estudiants i famílies en els intercanvis interculturals d'AFS."],
+     es:["La música es una parte importante de mi vida: compongo y toco varios instrumentos, y mi disco, A Quiet Kind of Brave, salió en 2026. También escribo cuentos y relatos, y estoy escribiendo un libro ilustrado que relaciona la neurodiversidad con el futuro, usando la imaginación y la curiosidad como método para proyectar y explorar lo que viene.","Además, soy mentor y jurado de Technovation Girls, que anima a las chicas a estudiar STEM, y acompaño a estudiantes y familias en los intercambios interculturales de AFS."]},
+  actions:[{label:"Spotify", href:LINKS.spotify},{label:"Apple Music", href:LINKS.apple},{label:"YouTube Music", href:LINKS.ytm}]},
+ {id:"gameoflife", d:"beyond", k:["game","juego","joc","conway","code","coding","program","programar","build","construy","construeix","side project","fun","diversion","diversio","maths","matemat"],
+  q:{en:"What do you build for fun?", ca:"Què construeixes per diversió?", es:"¿Qué construyes por diversión?"},
+  a:{en:["A Game of Life: a zero-player game inspired by John Conway, where complex, living patterns emerge from just two simple rules, a bit like the brain when it learns.", "I'd been learning to code since around 2015, with books, courses and online labs, but never found the time to finish. AI gave me the speed and code quality to finally ship it. For me it's proof that AI doesn't take away from learning: it accelerates it and makes it productive."],ca:["Un Joc de la Vida: un joc de zero jugadors inspirat en John Conway, on patrons complexos i vius sorgeixen de només dues regles senzilles, una mica com el cervell quan aprèn.", "Feia anys que aprenia a programar, des del 2015, amb llibres, cursos i laboratoris en línia, però mai no trobava el temps per acabar-lo. La IA em va donar la velocitat i la qualitat de codi per llançar-lo per fi. Per a mi és la prova que la IA no treu res a l'aprenentatge: l'accelera i el fa productiu."],es:["Un Juego de la Vida: un juego de cero jugadores inspirado en John Conway, donde patrones complejos y vivos surgen de solo dos reglas sencillas, un poco como el cerebro cuando aprende.", "Llevaba aprendiendo a programar desde 2015, con libros, cursos y laboratorios en línea, pero nunca encontraba el tiempo para terminarlo. La IA me dio la velocidad y la calidad de código para lanzarlo por fin. Para mí es la prueba de que la IA no le quita nada al aprendizaje: lo acelera y lo hace productivo."]},
+  actions:[{label:"readPost", href:LINKS.post},{label:"playGame", href:LINKS.game}]}
 ];
 
 /* =========================================================
