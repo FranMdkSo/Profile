@@ -154,6 +154,15 @@ body.is-profile .portrait-ask,body:not(.is-profile) .portrait-profile{opacity:0;
 .msg .actions button.big{font-size:15px;padding:10px 16px;background:var(--signal);color:#fff}
 
 /* ---------- PROFILE view ---------- */
+.vision-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin-top:32px;border-top:1px solid var(--rule)}
+.vq{padding:22px 22px 22px 0;border-bottom:1px solid var(--rule)}
+.vq:nth-child(even){padding-left:22px;border-left:1px solid var(--rule)}
+.vq .label{color:var(--signal)}
+.vq p{font-family:var(--display);font-size:clamp(22px,2.8vw,28px);font-weight:500;line-height:1.2;margin-top:8px;text-wrap:balance}
+.vision-ai{margin-top:26px;font-family:var(--display);font-style:italic;font-size:clamp(20px,2.4vw,24px);color:var(--muted)}
+.vision-ai b{color:var(--signal);font-weight:700}
+@media (max-width:720px){.vision-grid{grid-template-columns:1fr}.vq:nth-child(even){padding-left:0;border-left:0}}
+
 .feature{scroll-margin-top:84px}
 .feature.no-nums{grid-template-columns:1fr}
 .feature h3{max-width:28ch}
@@ -321,6 +330,17 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
     </div>
   </header>
 
+  <section id="vision" class="vision" aria-labelledby="h-vision">
+    <div class="sec-head"><p class="label">My vision</p><h2 id="h-vision">How I see it</h2><p>Where business performance and learner experience converge.</p></div>
+    <div class="vision-grid">
+      <div class="vq"><span class="label">Learning</span><p>From course catalogues to capability pipelines.</p></div>
+      <div class="vq"><span class="label">Enablement</span><p>From scheduled training to always-on enablement.</p></div>
+      <div class="vq"><span class="label">Stagility</span><p>Stable enough to move fast.</p></div>
+      <div class="vq"><span class="label">Talent</span><p>If they can't grow here, they'll grow somewhere else.</p></div>
+    </div>
+    <p class="vision-ai">What we <b>automate</b> with GenAI, and what we <b>humanise</b> because of it.</p>
+  </section>
+
   <section id="capabilities" aria-labelledby="h-cap">
     <div class="sec-head">
       <p class="label">What I do</p>
@@ -438,6 +458,17 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
     </div>
   </header>
 
+  <section id="vision-ca" class="vision" aria-labelledby="h-vision-ca">
+    <div class="sec-head"><p class="label">La meva visió</p><h2 id="h-vision-ca">Com ho veig</h2><p>On convergeixen el rendiment del negoci i l'experiència de qui aprèn.</p></div>
+    <div class="vision-grid">
+      <div class="vq"><span class="label">Aprenentatge</span><p>Dels catàlegs de cursos a les pedreres de capacitats.</p></div>
+      <div class="vq"><span class="label">Capacitació</span><p>De la formació programada a la capacitació contínua.</p></div>
+      <div class="vq"><span class="label">Stagility</span><p>Prou estables per moure'ns de pressa.</p></div>
+      <div class="vq"><span class="label">Talent</span><p>Si no poden créixer aquí, creixeran en un altre lloc.</p></div>
+    </div>
+    <p class="vision-ai">Què <b>automatitzem</b> amb la IA generativa i què <b>humanitzem</b> gràcies a ella.</p>
+  </section>
+
   <section id="capabilities-ca" aria-labelledby="h-cap-ca">
     <div class="sec-head">
       <p class="label">Què faig</p>
@@ -554,6 +585,17 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
       <div><b class="word">IA × Talento</b><span>Pragmática en la práctica, fundamentada en la investigación</span></div>
     </div>
   </header>
+
+  <section id="vision-es" class="vision" aria-labelledby="h-vision-es">
+    <div class="sec-head"><p class="label">Mi visión</p><h2 id="h-vision-es">Cómo lo veo</h2><p>Donde convergen el rendimiento del negocio y la experiencia de quien aprende.</p></div>
+    <div class="vision-grid">
+      <div class="vq"><span class="label">Aprendizaje</span><p>De los catálogos de cursos a las canteras de capacidades.</p></div>
+      <div class="vq"><span class="label">Capacitación</span><p>De la formación programada a la capacitación continua.</p></div>
+      <div class="vq"><span class="label">Stagility</span><p>Lo bastante estables para movernos rápido.</p></div>
+      <div class="vq"><span class="label">Talento</span><p>Si no pueden crecer aquí, crecerán en otro sitio.</p></div>
+    </div>
+    <p class="vision-ai">Qué <b>automatizamos</b> con la IA generativa y qué <b>humanizamos</b> gracias a ella.</p>
+  </section>
 
   <section id="capabilities-es" aria-labelledby="h-cap-es">
     <div class="sec-head">
@@ -706,6 +748,7 @@ const UI = {
 const DIMS = [
  {id:"who",    l:{en:"Who I am", ca:"Qui soc", es:"Quién soy"}},
  {id:"gov",    l:{en:"Governance, Sponsors & Partnerships", ca:"Governança, Sponsors i Partnerships", es:"Gobernanza, Sponsors y Partnerships"}},
+ {id:"vision", l:{en:"My vision", ca:"La meva visió", es:"Mi visión"}},
  {id:"lead",   l:{en:"Senior talent & leadership", ca:"Talent i lideratge sènior", es:"Talento y liderazgo senior"}},
  {id:"org",    l:{en:"Organisation & change", ca:"Organització i canvi", es:"Organización y cambio"}},
  {id:"ai",     l:{en:"Technology & AI", ca:"Tecnologia i IA", es:"Tecnología e IA"}},
@@ -729,6 +772,11 @@ const QA = [
      ca:["Avui lidero l'aprenentatge i el talent a escala global. En la meva última etapa, per a unes 10.000 persones a Mölnlycke Health Care, amb un model de governança híbrid i un Capabilities Pipeline que connecta competències, carreres i successió.","Hi vaig arribar després de gairebé una dècada a Ricoh, construint talent, lideratge i capacitats digitals a Ibèria i EMEA, des d'una acadèmia creada des de zero fins a revisions regionals de talent. Pel camí he liderat equips grans amb reports directes presencials, híbrids i en remot, i he estat manager de managers.","Les meves arrels són a l'educació: fer classes, dissenyar currículums i dirigir programes, que continua sent la meva manera d'entendre el desenvolupament de les persones. Trobaràs tot el camí al meu perfil."],
      es:["Hoy lidero el aprendizaje y el talento a escala global. En mi última etapa, para unas 10.000 personas en Mölnlycke Health Care, con un modelo de gobernanza híbrido y un Capabilities Pipeline que conecta competencias, carreras y sucesión.","Llegué ahí tras casi una década en Ricoh, construyendo talento, liderazgo y capacidades digitales en Iberia y EMEA, desde una academia creada desde cero hasta revisiones regionales de talento. Por el camino he liderado equipos grandes con reportes directos presenciales, híbridos y en remoto, y he sido manager de managers.","Mis raíces están en la educación: dar clase, diseñar currículos y dirigir programas, que sigue siendo mi forma de entender el desarrollo de las personas. Tienes todo el camino en mi perfil."]},
   actions:[{label:"seePath", mode:"profile", anchor:"route"}]},
+ {id:"skills", d:"who", k:["strength","strong","fortaleza","fortalesa","key skill","habilidades clave","habilitats clau","competencias clave","best at","good at","superpower","complexity","complejidad","complexitat","vuca","regulated","regulad","regulat"],
+  q:{en:"What are your key strengths?", ca:"Quines són les teves fortaleses clau?", es:"¿Cuáles son tus fortalezas clave?"},
+  a:{en:["Four, working together: solving problems (evaluating, investigating and creating innovation), influencing people (building relationships, communicating and leading), adapting approaches (resilience, adjusting to change, giving support) and delivering results (detail, structure and drive).","I'm at my best operating in complexity: highly regulated, science-driven environments where you have to drive innovation while managing risk, and balance global strategy with local market needs."],
+     ca:["Quatre, que funcionen juntes: resoldre problemes (avaluar, investigar i crear innovació), influir en les persones (construir relacions, comunicar i liderar), adaptar enfocaments (resiliència, adaptació al canvi i suport als altres) i aconseguir resultats (detall, estructura i empenta).","Dono el millor de mi en entorns complexos: molt regulats i basats en la ciència, on cal impulsar la innovació gestionant el risc i equilibrar l'estratègia global amb les necessitats de cada mercat."],
+     es:["Cuatro, que funcionan juntas: resolver problemas (evaluar, investigar y crear innovación), influir en las personas (construir relaciones, comunicar y liderar), adaptar enfoques (resiliencia, adaptación al cambio y apoyo a los demás) y conseguir resultados (detalle, estructura y empuje).","Doy lo mejor de mí en entornos complejos: muy regulados y basados en la ciencia, donde hay que impulsar la innovación gestionando el riesgo y equilibrar la estrategia global con las necesidades de cada mercado."]}},
  {id:"looking", d:"who", k:["looking","next","search","seek","want","open","role","opportunit","busca","buscas","available","disponib","busques","busco","oportunitat","oportunidad"],
   q:{en:"What are you looking for now?", ca:"Què busques ara?", es:"¿Qué buscas ahora?"},
   a:{en:["A project to fall in love with. One that connects with what I do best (talent, leadership, learning governance and AI adoption), where the people agenda genuinely moves the business, and where I'm surrounded by people who want to give their best.","The format matters less than the challenge: it could be a leadership role, advisory work or a collaboration, in an organisation whose values show in how it behaves."],
@@ -746,13 +794,35 @@ const QA = [
      es:["Lo mejor es que me escribas por LinkedIn. Leo todos los mensajes y siempre me encanta hablar."]},
   actions:[{label:"LinkedIn →", href:CONTACT.linkedin}]},
 
+ /* ---------- MY VISION ---------- */
+ {id:"vision", d:"vision", k:["vision","visio","philosophy","filosofia","believe","catalog","catalogo","cataleg","enablement","capacitacion","capacitacio","always-on","flow of work","flujo","flux","maturity","madurez","maduresa","dynamic","dinamic","l&d future","future of learning","futuro del aprendizaje"],
+  q:{en:"What's your vision for learning and talent?", ca:"Quina és la teva visió de l'aprenentatge i el talent?", es:"¿Cuál es tu visión del aprendizaje y el talento?"},
+  a:{en:["Learning has to move from course catalogues to capability pipelines, and from scheduled training to always-on enablement. In practice that means L&D as a dynamic enablement engine, embedded in the flow of work and anchored to business-critical capabilities, rather than a reactive content factory.","It's where business performance and learner experience converge. And with GenAI the key question is twofold: what we automate with it, and what we humanise because of it."],
+     ca:["L'aprenentatge ha de passar dels catàlegs de cursos a les pedreres de capacitats, i de la formació programada a la capacitació contínua. A la pràctica, vol dir L&D com a motor de capacitació dinàmic, integrat en el flux de treball i ancorat a les capacitats crítiques del negoci, en lloc d'una fàbrica reactiva de continguts.","És on convergeixen el rendiment del negoci i l'experiència de qui aprèn. I amb la IA generativa, la pregunta clau és doble: què automatitzem amb ella i què humanitzem gràcies a ella."],
+     es:["El aprendizaje tiene que pasar de los catálogos de cursos a las canteras de capacidades, y de la formación programada a la capacitación continua. En la práctica, significa L&D como motor de capacitación dinámico, integrado en el flujo de trabajo y anclado a las capacidades críticas del negocio, en lugar de una fábrica reactiva de contenidos.","Es donde convergen el rendimiento del negocio y la experiencia de quien aprende. Y con la IA generativa, la pregunta clave es doble: qué automatizamos con ella y qué humanizamos gracias a ella."]}},
+ {id:"stagility", d:"vision", k:["stagility","stability","estabilidad","estabilitat","stable","estable","agility","agilidad","agilitat","agile","disrupt","principle","principio","principi","speed","velocidad","velocitat","fast","rapido","rapid"],
+  q:{en:"What does “stagility” mean to you?", ca:"Què significa per a tu la «stagility»?", es:"¿Qué significa para ti la «stagility»?"},
+  a:{en:["Being stable enough to move fast. People need a stable, trust-based foundation to move quickly, and change agility is the muscle that turns disruption into opportunity: not an event, but a continuous capability.","So my operating principles hold both truths at once: clarity before speed, ownership when it's needed, experimentation as a mindset, and judgement over perfection. I don't manage change; I lead it."],
+     ca:["Ser prou estable per moure's de pressa. Les persones necessiten una base estable i de confiança per avançar ràpid, i l'agilitat per al canvi és el múscul que converteix la disrupció en oportunitat: no un esdeveniment, sinó una capacitat contínua.","Per això els meus principis de treball sostenen les dues veritats alhora: claredat abans que velocitat, ownership quan cal, l'experimentació com a mentalitat i criteri abans que perfecció. El canvi no el gestiono; el lidero."],
+     es:["Ser lo bastante estable para moverse rápido. Las personas necesitan una base estable y de confianza para avanzar deprisa, y la agilidad para el cambio es el músculo que convierte la disrupción en oportunidad: no un evento, sino una capacidad continua.","Por eso mis principios de trabajo sostienen las dos verdades a la vez: claridad antes que velocidad, ownership cuando hace falta, la experimentación como mentalidad y criterio antes que perfección. El cambio no lo gestiono; lo lidero."]}},
+ {id:"pathways", d:"vision", k:["career pathway","pathway","itinerario","itinerari","mobility","movilidad","mobilitat","career","carrera","marketplace","internal","interna","future role","growth role","crecer","creixer","skills intelligence"],
+  q:{en:"How do you think about careers and internal mobility?", ca:"Com entens les carreres i la mobilitat interna?", es:"¿Cómo entiendes las carreras y la movilidad interna?"},
+  a:{en:["A career path tells you how to climb higher in the same place; a career pathway shows you how to get somewhere completely different. I design pathways around skills and adjacencies, not seniority, because jobs change and people must too.","My approach has five steps: understand future-critical roles, identify skills gaps, build the skilling plan, design pathways from declining to growth roles, and drive mobility through talent marketplaces and skills intelligence. If people can't grow here, they'll grow somewhere else."],
+     ca:["Un itinerari de carrera clàssic t'explica com pujar dins del mateix lloc; un pathway t'ensenya com arribar a un lloc completament diferent. Dissenyo els itineraris a partir de competències i afinitats, no de l'antiguitat, perquè les feines canvien i les persones també ho han de fer.","El meu enfocament té cinc passos: entendre els rols crítics del futur, identificar les mancances de competències, construir el pla de capacitació, dissenyar itineraris dels rols en declivi als rols en creixement i impulsar la mobilitat amb talent marketplaces i intel·ligència de competències. Si la gent no pot créixer aquí, creixerà en un altre lloc."],
+     es:["Una carrera clásica te dice cómo subir dentro del mismo sitio; un pathway te enseña cómo llegar a un lugar completamente distinto. Diseño los itinerarios a partir de competencias y afinidades, no de la antigüedad, porque los puestos cambian y las personas también tienen que hacerlo.","Mi enfoque tiene cinco pasos: entender los roles críticos del futuro, identificar las brechas de competencias, construir el plan de capacitación, diseñar itinerarios de los roles en declive a los roles en crecimiento e impulsar la movilidad con talent marketplaces e inteligencia de competencias. Si la gente no puede crecer aquí, crecerá en otro sitio."]}},
+
  /* ---------- SENIOR TALENT & LEADERSHIP ---------- */
  {id:"style", d:"lead", k:["style","estilo","estil","leadership style","estilo de liderazgo","estil de lideratge","team","equipo","equip","direct report","delegat","deleg","humanist","situational","situacional","distributed","distribuido","distribuit","manager of managers","manager de managers"],
   q:{en:"What's your leadership style?", ca:"Quin és el teu estil de lideratge?", es:"¿Cuál es tu estilo de liderazgo?"},
   a:{en:["Constructive and humanist, and focused on results achieved through people. I've led large teams with direct reports on-site, hybrid and remote, and I've been a manager of managers.","I believe in distributed leadership: I delegate with clarity, but above all I develop others, so the team grows beyond me. And I'm situational: I adapt my style to what each person and each moment needs."],
      ca:["Constructiu i humanista, orientat a resultats a través de les persones. He liderat equips grans amb reports directes presencials, híbrids i en remot, i he estat manager de managers.","Crec en el lideratge distribuït: delego amb claredat, però sobretot desenvolupo altres persones, perquè l'equip creixi més enllà de mi. I soc situacional: adapto el meu estil al que cada persona i cada moment necessiten."],
      es:["Constructivo y humanista, orientado a resultados a través de las personas. He liderado equipos grandes con reportes directos presenciales, híbridos y en remoto, y he sido manager de managers.","Creo en el liderazgo distribuido: delego con claridad, pero sobre todo desarrollo a otros, para que el equipo crezca más allá de mí. Y soy situacional: adapto mi estilo a lo que cada persona y cada momento necesitan."]}},
- {id:"talent", d:"lead", k:["talent","succession","sucesion","successio","pipeline","cantera","pedrera","career","carrera","mobility","movilidad","mobilitat","skill","competenc","workforce","plantilla","high potential","hipo","potencial","review","revision","leadership","liderazgo","lideratge","leader","lider","manager","coach","feedback"],
+ {id:"leaders", d:"lead", k:["develop leader","developing leader","leadership development","leadership programme","leadership program","desarrollo de liderazgo","desenvolupament de lideratge","develop","desarroll","desenvolup","programme","programa","think","relate","inspire","inspira"],
+  q:{en:"How do you develop leaders?", ca:"Com desenvolupes els líders?", es:"¿Cómo desarrollas a los líderes?"},
+  a:{en:["As people grow, the job shifts from management to leadership to business strategy: from authority to leadership. I build development around four dimensions: how leaders think, relate, are and inspire, from strategic agility and trust to authenticity and shared purpose.","For managers, I focus on the everyday roles that matter most in hybrid work: supervisor, communicator, coach, decision maker and learner. The teams that win are the ones that learn fastest."],
+     ca:["A mesura que les persones creixen, la feina passa de la gestió al lideratge i a l'estratègia de negoci: de l'autoritat al lideratge. Construeixo el desenvolupament al voltant de quatre dimensions: com els líders pensen, es relacionen, són i inspiren, des de l'agilitat estratègica i la confiança fins a l'autenticitat i el propòsit compartit.","Amb els managers, em centro en els rols del dia a dia que més compten en el treball híbrid: supervisor, comunicador, coach, qui pren decisions i aprenent. Els equips que guanyen són els que aprenen més de pressa."],
+     es:["A medida que las personas crecen, el trabajo pasa de la gestión al liderazgo y a la estrategia de negocio: de la autoridad al liderazgo. Construyo el desarrollo en torno a cuatro dimensiones: cómo los líderes piensan, se relacionan, son e inspiran, desde la agilidad estratégica y la confianza hasta la autenticidad y el propósito compartido.","Con los managers, me centro en los roles del día a día que más importan en el trabajo híbrido: supervisor, comunicador, coach, quien toma decisiones y aprendiz. Los equipos que ganan son los que aprenden más rápido."]}},
+ {id:"talent", d:"lead", k:["talent","succession","sucesion","successio","pipeline","cantera","pedrera","skill","competenc","workforce","plantilla","high potential","hipo","potencial","review","revision","leadership","liderazgo","lideratge","leader","lider","manager","coach","feedback"],
   q:{en:"What's your experience with talent and succession?", ca:"Quina experiència tens en talent i successió?", es:"¿Qué experiencia tienes en talento y sucesión?"},
   a:{en:["I treat talent as a business system, not an HR process. I've shaped enterprise talent strategy for around 10,000 people, connecting strategic workforce plans with skills architecture, executive and non-executive talent reviews, succession for critical roles and internal mobility.","With senior leaders, I make talent decisions explicit: who is ready, for what, and what it takes to close the gap. And I invest in managers, because they grow people every day and the culture travels through them."],
      ca:["Entenc el talent com un sistema de negoci, no com un procés de RH. He definit l'estratègia de talent per a unes 10.000 persones, connectant la planificació estratègica de plantilles amb l'arquitectura de competències, les revisions de talent de directius i no directius, la successió per a llocs crítics i la mobilitat interna.","Amb l'alta direcció, faig explícites les decisions de talent: qui està preparat, per a què i què cal per tancar la distància. I inverteixo en els managers, perquè són ells qui fan créixer les persones cada dia i la cultura viatja a través d'ells."],
@@ -803,7 +873,7 @@ const QA = [
      es:["La cultura cambia con lo que hacen los managers cada día, y ahí es donde pongo el esfuerzo: expectativas claras, habilidades de coaching y feedback y un patrocinio visible desde arriba.","Para integrar un nuevo modelo operativo, combino métodos de cambio estructurados, comunicación clara, pilotos que demuestran valor y datos de adopción, para que forme parte del día a día y no se quede en una política en un cajón."]}},
 
  /* ---------- TECHNOLOGY & AI ---------- */
- {id:"ai", d:"ai", k:["ai","artificial","ia","genai","automat","technolog","tecnolog","digital","platform","plataform","tool","eina","herramient","lms","knowledge","conocimiento","coneixement","vision","future","futuro","futur"],
+ {id:"ai", d:"ai", k:["ai","artificial","ia","genai","automat","technolog","tecnolog","digital","platform","plataform","tool","eina","herramient","lms","knowledge","conocimiento","coneixement"],
   q:{en:"Where does AI fit in?", ca:"On encaixa la IA?", es:"¿Dónde encaja la IA?"},
   a:{en:["AI is changing the work itself, not just how we learn. So I start with the work: which tasks will change, where value moves when parts of the work are automated, and which skills become critical.","From there I build AI-enabled learning and talent ecosystems: pilots, change management, AI-ready content, knowledge management and better visibility of skills. It's also my research field: my PhD explores the relationship between AI and talent."],
      ca:["La IA està canviant la feina en si, no només com aprenem. Per això començo per la feina: quines tasques canviaran, cap on es desplaça el valor quan s'automatitzen parts de la feina i quines competències esdevenen crítiques.","A partir d'aquí construeixo ecosistemes d'aprenentatge i talent amb IA: pilots, gestió del canvi, contingut preparat per a la IA, gestió del coneixement i més visibilitat de les competències. També és el meu camp de recerca: el meu doctorat estudia la relació entre la IA i el talent."],
