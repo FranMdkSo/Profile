@@ -1069,6 +1069,8 @@ let busy=false; const asked=new Set();
 
 let lang="en";
 try{const s=localStorage.getItem("lang"); if(s&&UI[s]) lang=s;}catch(e){}  /* English by default */
+/* a shared link can force the language: ?lang=es | ?lang=ca | ?lang=en */
+try{const q=(new URLSearchParams(location.search).get("lang")||"").toLowerCase().slice(0,2); if(UI[q]){lang=q; localStorage.setItem("lang",q)}}catch(e){}
 const T=()=>UI[lang];
 
 /* theme */
