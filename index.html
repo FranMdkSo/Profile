@@ -64,6 +64,24 @@ button{font:inherit}
 .mode-profile[aria-pressed="true"]{color:var(--ink);text-decoration:underline;text-decoration-color:var(--signal);text-decoration-thickness:2px;text-underline-offset:6px}
 .theme{width:34px;height:34px;display:inline-grid;place-items:center;font:500 15px var(--mono);letter-spacing:.06em;text-transform:uppercase;background:transparent;color:var(--muted);border:1px solid var(--rule);border-radius:999px;padding:0;cursor:pointer}
 
+
+/* ---------- landing ---------- */
+#net{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0;transition:opacity .6s ease}
+body.is-home #net{opacity:1}
+body.is-home .portrait{opacity:0;visibility:hidden}
+body.is-home .modes{visibility:hidden}
+#view-home{min-height:calc(100vh - 62px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-block:40px 56px}
+#view-home .label{color:var(--signal)}
+#view-home h1{font-size:clamp(40px,7vw,68px);font-weight:800;margin-top:14px;letter-spacing:-.01em}
+#view-home .lead{margin:16px auto 36px;max-width:560px;color:var(--muted);font-size:clamp(17px,2vw,19px)}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;width:100%;max-width:620px}
+.choice{display:block;text-align:left;text-decoration:none;background:var(--surface);border:1px solid var(--rule);border-radius:18px;padding:22px 24px;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+.choice:hover,.choice:focus-visible{border-color:var(--signal);transform:translateY(-3px);box-shadow:0 14px 30px -18px color-mix(in srgb,var(--signal) 70%,transparent);outline:none}
+.choice b{display:flex;align-items:center;gap:10px;font-family:var(--display);font-size:22px;font-weight:700;color:var(--ink)}
+.choice b svg{color:var(--signal);flex:none}
+.choice p{color:var(--muted);font-size:15.5px;margin:10px 0 16px;line-height:1.5}
+.choice > span{font-family:var(--mono);font-size:12.5px;color:var(--signal)}
+@media (max-width:560px){.choices{grid-template-columns:1fr}}
 /* ---------- ambient background ---------- */
 .ambient{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
 .ambient i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.75}
@@ -261,12 +279,13 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
 </head>
 <body>
 <div class="ambient" aria-hidden="true"><i></i><i></i></div>
+<canvas id="net" aria-hidden="true"></canvas>
 <div class="portrait portrait-ask" aria-hidden="true"><img src="fran.webp" alt="" width="379" height="1100" decoding="async"></div>
 <div class="portrait portrait-profile" aria-hidden="true"><img src="fran-laptop.webp" alt="" width="495" height="1100" decoding="async"></div>
 
 <div class="topbar">
   <div class="wrap">
-    <a class="brand" href="#ask" aria-label="Fran Mondaca, home"><i>FM</i><span>Fran Mondaca</span></a>
+    <a class="brand" href="#home" aria-label="Fran Mondaca, home"><i>FM</i><span>Fran Mondaca</span></a>
     <div class="modes" role="group" aria-label="Experience mode">
       <button type="button" class="mode-ask" data-mode="ask" aria-pressed="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></svg><span data-i18n="ask">Ask me</span></button>
       <button type="button" class="mode-profile" data-mode="profile" aria-pressed="false"><span data-i18n="profile">Profile</span></button>
@@ -281,6 +300,17 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
     </div>
   </div>
 </div>
+
+<!-- ================= HOME ================= -->
+<main id="view-home" class="wrap" aria-labelledby="h-home" hidden>
+  <p class="label"><span><i class="dot"></i> <span data-i18n="homeTag">Interactive profile</span></span></p>
+  <h1 id="h-home">Fran Mondaca</h1>
+  <p class="lead" data-i18n="homeLead">Learning, talent and organisational development. Choose how you'd like to get to know me.</p>
+  <div class="choices">
+    <a class="choice" href="#ask"><b><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></svg><span data-i18n="ask">Ask me</span></b><p data-i18n="homeAskD">Pick a question, get a straight answer. Quick and conversational.</p><span id="home-ask-meta"></span></a>
+    <a class="choice" href="#profile"><b><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg><span data-i18n="homeProfT">Read profile</span></b><p data-i18n="homeProfD">Career, results and PhD research, all on one page.</p><span data-i18n="homeProfM">About 3 minutes →</span></a>
+  </div>
+</main>
 
 <!-- ================= ASK ================= -->
 <main id="view-ask" class="wrap" aria-labelledby="h-ask">
@@ -744,7 +774,7 @@ const UI = {
      placeholder:"Ask me anything about my work…", hint:"Press Enter to send", left:n=>n+" characters left",
      send:"Send", question:"Your question", you:"You", typing:"Fran is typing",
      chips:{intro:"Introduction",path:"My journey",looking:"What I'm looking for",contact:"Contact"}, topics:"Explore by topic", seePath:"See my full path →",
-     ask:"Ask me", profile:"Profile", light:"☀ Light", dark:"☾ Dark", themeLabel:"Toggle light or dark mode", langLabel:"Language",
+     ask:"Ask me", profile:"Profile", homeTag:"Interactive profile", homeLead:"Learning, talent and organisational development. Choose how you'd like to get to know me.", homeAskD:"Pick a question, get a straight answer. Quick and conversational.", homeAskM:(q,t)=>q+" questions · "+t+" topics →", homeProfT:"Read profile", homeProfD:"Career, results and PhD research, all on one page.", homeProfM:"About 3 minutes →", light:"☀ Light", dark:"☾ Dark", themeLabel:"Toggle light or dark mode", langLabel:"Language",
      fallback:["I don't have a prepared answer for that one yet, and I'd rather not guess.","Try one of these questions, or ask me directly."],
      openProfile:"Open full profile →", seeStory:"Read the full story →", readPost:"Read the LinkedIn post →", playGame:"Play the game", email:"Email"},
  ca:{title:"Fran Mondaca — Global Learning • Talent • Organisational Development Leader",
@@ -755,7 +785,7 @@ const UI = {
      placeholder:"Pregunta'm el que vulguis sobre la meva feina…", hint:"Prem Retorn per enviar", left:n=>"Queden "+n+" caràcters",
      send:"Envia", question:"La teva pregunta", you:"Tu", typing:"En Fran està escrivint",
      chips:{intro:"Presentació",path:"El meu camí",looking:"Què busco",contact:"Contacte"}, topics:"Explora per temes", seePath:"Mira tot el meu camí →",
-     ask:"Pregunta'm", profile:"Perfil", light:"☀ Clar", dark:"☾ Fosc", themeLabel:"Canvia entre mode clar i fosc", langLabel:"Idioma",
+     ask:"Pregunta'm", profile:"Perfil", homeTag:"Perfil interactiu", homeLead:"Aprenentatge, talent i desenvolupament organitzatiu. Tria com vols conèixer-me.", homeAskD:"Tria una pregunta i rep una resposta directa. Ràpid i conversacional.", homeAskM:(q,t)=>q+" preguntes · "+t+" temes →", homeProfT:"Llegeix el perfil", homeProfD:"Trajectòria, resultats i recerca doctoral, tot en una pàgina.", homeProfM:"Uns 3 minuts →", light:"☀ Clar", dark:"☾ Fosc", themeLabel:"Canvia entre mode clar i fosc", langLabel:"Idioma",
      fallback:["Encara no tinc una resposta preparada per a això, i prefereixo no endevinar.","Prova amb una d'aquestes preguntes o pregunta'm directament."],
      openProfile:"Obre el perfil complet →", seeStory:"Llegeix la història completa →", readPost:"Llegeix el post a LinkedIn →", playGame:"Juga", email:"Correu"},
  es:{title:"Fran Mondaca — Global Learning • Talent • Organisational Development Leader",
@@ -766,7 +796,7 @@ const UI = {
      placeholder:"Pregúntame lo que quieras sobre mi trabajo…", hint:"Pulsa Intro para enviar", left:n=>"Quedan "+n+" caracteres",
      send:"Enviar", question:"Tu pregunta", you:"Tú", typing:"Fran está escribiendo",
      chips:{intro:"Presentación",path:"Mi camino",looking:"Qué busco",contact:"Contacto"}, topics:"Explora por temas", seePath:"Ver todo mi camino →",
-     ask:"Pregúntame", profile:"Perfil", light:"☀ Claro", dark:"☾ Oscuro", themeLabel:"Cambiar entre modo claro y oscuro", langLabel:"Idioma",
+     ask:"Pregúntame", profile:"Perfil", homeTag:"Perfil interactivo", homeLead:"Aprendizaje, talento y desarrollo organizacional. Elige cómo quieres conocerme.", homeAskD:"Elige una pregunta y recibe una respuesta directa. Rápido y conversacional.", homeAskM:(q,t)=>q+" preguntas · "+t+" temas →", homeProfT:"Lee el perfil", homeProfD:"Trayectoria, resultados e investigación doctoral, todo en una página.", homeProfM:"Unos 3 minutos →", light:"☀ Claro", dark:"☾ Oscuro", themeLabel:"Cambiar entre modo claro y oscuro", langLabel:"Idioma",
      fallback:["Todavía no tengo una respuesta preparada para eso, y prefiero no adivinar.","Prueba con una de estas preguntas o pregúntame directamente."],
      openProfile:"Abrir el perfil completo →", seeStory:"Leer la historia completa →", readPost:"Leer el post en LinkedIn →", playGame:"Jugar", email:"Email"}
 };
@@ -991,6 +1021,7 @@ function applyLang(){
   document.querySelectorAll("[data-lang-btn]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.langBtn===lang)));
   document.querySelectorAll(".l-block").forEach(b=>b.hidden=b.dataset.l!==lang);
   $("#lang-group").setAttribute("aria-label",t.langLabel); tb.setAttribute("aria-label",t.themeLabel);
+  $("#home-ask-meta").textContent=t.homeAskM(QA.length,DIMS.length);
   label(); ta.dispatchEvent(new Event("input"));
   if(thread.querySelector(".shortcuts")){clearFollowups(); offerFollowups()}
   renderTopics();
@@ -1072,9 +1103,9 @@ function goTo(mode,anchor,proj){
 }
 function setMode(mode){ if(location.hash!=="#"+mode) location.hash=mode; else render() }
 function render(){
-  const mode = location.hash==="#profile" ? "profile" : "ask";
-  $("#view-ask").hidden = mode!=="ask"; $("#view-profile").hidden = mode!=="profile";
-  document.body.classList.toggle("is-profile",mode==="profile");
+  const h=location.hash, mode = h==="#profile" ? "profile" : h==="#ask" ? "ask" : "home";
+  $("#view-home").hidden = mode!=="home"; $("#view-ask").hidden = mode!=="ask"; $("#view-profile").hidden = mode!=="profile";
+  document.body.classList.toggle("is-profile",mode==="profile"); document.body.classList.toggle("is-home",mode==="home"); netRun(mode==="home");
   document.querySelectorAll("[data-mode]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.mode===mode)));
   const img=document.querySelector(".portrait-"+mode+" img"); if(img&&!reduce.matches){img.style.animation="none"; void img.offsetWidth; img.style.animation=""}
   window.scrollTo(0,0); if(mode==="ask") setTimeout(()=>ta.focus({preventScroll:true}),50);
@@ -1190,6 +1221,24 @@ function renderProjects(){
   });
 }
 function escH(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+
+
+/* landing network background */
+let netRun=()=>{};
+(function(){
+  const c=$("#net"); if(!c) return; const x=c.getContext("2d"); let w,h,p=[],on=false,raf=0;
+  function rgb(v){const s=getComputedStyle(document.documentElement).getPropertyValue(v).trim().replace("#","");return[0,2,4].map(i=>parseInt(s.substr(i,2),16)).join(",")}
+  function size(){const d=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;c.width=w*d;c.height=h*d;x.setTransform(d,0,0,d,0,0);
+    const n=Math.min(110,Math.round(w*h/14000));p=Array.from({length:n},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()<.15?2.8:1.6}))}
+  function draw(){const S=rgb("--signal"),I=rgb("--ink"),L=Math.min(150,Math.max(100,w/9));x.clearRect(0,0,w,h);
+    for(const a of p){a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>w)a.vx*=-1;if(a.y<0||a.y>h)a.vy*=-1}
+    for(let i=0;i<p.length;i++)for(let j=i+1;j<p.length;j++){const dx=p[i].x-p[j].x,dy=p[i].y-p[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<L){x.strokeStyle="rgba("+S+","+((1-d/L)*.38).toFixed(3)+")";x.lineWidth=1;x.beginPath();x.moveTo(p[i].x,p[i].y);x.lineTo(p[j].x,p[j].y);x.stroke()}}
+    for(const a of p){x.fillStyle=a.r>2?"rgba("+S+",.9)":"rgba("+I+",.32)";x.beginPath();x.arc(a.x,a.y,a.r,0,7);x.fill()}}
+  function loop(){draw(); if(on) raf=requestAnimationFrame(loop)}
+  size(); addEventListener("resize",()=>{size(); if(!on||reduce.matches) draw()});
+  netRun=run=>{on=run&&!reduce.matches; cancelAnimationFrame(raf); if(run){ if(on) loop(); else draw() }};
+  new MutationObserver(()=>{if(!on&&document.body.classList.contains("is-home")) draw()}).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+})();
 
 /* portrait parallax: wide, eased movement */
 (function(){
