@@ -251,7 +251,7 @@ section{scroll-margin-top:76px;padding-block:64px;border-bottom:1px solid var(--
 .cols li span{display:block;font-family:var(--mono);font-size:12.5px;color:var(--muted);margin-top:4px}
 footer{padding-block:72px 56px}
 footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
-.cta{display:inline-flex;align-items:center;gap:10px;margin-top:24px;background:var(--signal);color:#fff;font-weight:600;padding:13px 22px;border-radius:999px;text-decoration:none}
+.cta{border:0;cursor:pointer;font:inherit;display:inline-flex;align-items:center;gap:10px;margin-top:24px;background:var(--signal);color:#fff;font-weight:600;padding:13px 22px;border-radius:999px;text-decoration:none}
 .cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink);margin-left:8px}
 .cta-alt{display:block;margin-top:14px;font-family:var(--mono);font-size:14px;color:var(--muted)}
 .langs{margin-top:28px;color:var(--muted);font-size:15px}
@@ -480,7 +480,8 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
 
   <footer aria-labelledby="h-foot">
     <h2 id="h-foot">Shall we keep talking?</h2>
-    <a class="cta js-linkedin" href="https://www.linkedin.com/in/franmondaca/">Write to me on LinkedIn →</a>
+    <button type="button" class="cta js-mail">Email me →</button>
+    <a class="cta ghost js-linkedin" href="https://www.linkedin.com/in/franmondaca/" target="_blank" rel="noopener">LinkedIn</a>
     <a class="cta ghost" href="#ask">Or ask me here</a>
     <p class="langs">English · Spanish (native) · Catalan</p>
   </footer>
@@ -614,7 +615,8 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
 
   <footer aria-labelledby="h-foot-ca">
     <h2 id="h-foot-ca">Continuem parlant?</h2>
-    <a class="cta js-linkedin" href="https://www.linkedin.com/in/franmondaca/">Escriu-me a LinkedIn →</a>
+    <button type="button" class="cta js-mail">Envia'm un correu →</button>
+    <a class="cta ghost js-linkedin" href="https://www.linkedin.com/in/franmondaca/" target="_blank" rel="noopener">LinkedIn</a>
     <a class="cta ghost" href="#ask">O pregunta'm aquí</a>
     <p class="langs">Anglès · Castellà (nadiu) · Català</p>
   </footer>
@@ -748,7 +750,8 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
 
   <footer aria-labelledby="h-foot-es">
     <h2 id="h-foot-es">¿Seguimos hablando?</h2>
-    <a class="cta js-linkedin" href="https://www.linkedin.com/in/franmondaca/">Escríbeme en LinkedIn →</a>
+    <button type="button" class="cta js-mail">Escríbeme un email →</button>
+    <a class="cta ghost js-linkedin" href="https://www.linkedin.com/in/franmondaca/" target="_blank" rel="noopener">LinkedIn</a>
     <a class="cta ghost" href="#ask">O pregúntame aquí</a>
     <p class="langs">Inglés · Castellano (nativo) · Catalán</p>
   </footer>
@@ -775,7 +778,7 @@ const UI = {
      chips:{intro:"Introduction",path:"My journey",looking:"What I'm looking for",contact:"Contact"}, topics:"Explore by topic", seePath:"See my full path →",
      ask:"Ask me", profile:"Profile", homeTag:"Interactive profile", homeLead:"Learning, talent and organisational development. Choose how you'd like to get to know me.", homeAskD:"Pick a question, get a straight answer. Quick and conversational.", homeAskM:(q,t)=>t+" topics →", homeProfT:"Read profile", homeProfD:"Career, results and PhD research, all on one page.", homeProfM:"About 2 minutes →", light:"☀ Light", dark:"☾ Dark", themeLabel:"Toggle light or dark mode", langLabel:"Language",
      fallback:["I don't have a prepared answer for that one yet, and I'd rather not guess.","Try one of these questions, or ask me directly."],
-     openProfile:"Open full profile →", seeStory:"Read the full story →", readPost:"Read the LinkedIn post →", playGame:"Play the game →", email:"Email"},
+     openProfile:"Open full profile →", seeStory:"Read the full story →", emailMe:"Email me →", mailSubject:"Hello Fran, from your profile site", mailBody:"Hi Fran,\n\n", readPost:"Read the LinkedIn post →", playGame:"Play the game →", email:"Email"},
  ca:{title:"Fran Mondaca — Global Learning • Talent • Organisational Development Leader",
      desc:"Fran Mondaca, Global Learning • Talent • Organisational Development Leader. Pregunta'm sobre talent, lideratge, aprenentatge i adopció de la IA. Cada resposta surt de la meva experiència real.",
      open:"Senior talent leader optimista i curiós", place:"Barcelona · Espanya",
@@ -786,7 +789,7 @@ const UI = {
      chips:{intro:"Presentació",path:"El meu camí",looking:"Què busco",contact:"Contacte"}, topics:"Explora per temes", seePath:"Mira tot el meu camí →",
      ask:"Pregunta'm", profile:"Perfil", homeTag:"Perfil interactiu", homeLead:"Aprenentatge, talent i desenvolupament organitzatiu. Tria com vols conèixer-me.", homeAskD:"Tria una pregunta i rep una resposta directa. Ràpid i conversacional.", homeAskM:(q,t)=>t+" temes →", homeProfT:"Llegeix el perfil", homeProfD:"Trajectòria, resultats i recerca doctoral, tot en una pàgina.", homeProfM:"Uns 2 minuts →", light:"☀ Clar", dark:"☾ Fosc", themeLabel:"Canvia entre mode clar i fosc", langLabel:"Idioma",
      fallback:["Encara no tinc una resposta preparada per a això, i prefereixo no endevinar.","Prova amb una d'aquestes preguntes o pregunta'm directament."],
-     openProfile:"Obre el perfil complet →", seeStory:"Llegeix la història completa →", readPost:"Llegeix el post a LinkedIn →", playGame:"Juga-hi →", email:"Correu"},
+     openProfile:"Obre el perfil complet →", seeStory:"Llegeix la història completa →", emailMe:"Envia'm un correu →", mailSubject:"Hola Fran, des del teu perfil web", mailBody:"Hola Fran,\n\n", readPost:"Llegeix el post a LinkedIn →", playGame:"Juga-hi →", email:"Correu"},
  es:{title:"Fran Mondaca — Global Learning • Talent • Organisational Development Leader",
      desc:"Fran Mondaca, Global Learning • Talent • Organisational Development Leader. Pregúntame sobre talento, liderazgo, aprendizaje y adopción de IA. Cada respuesta sale de mi experiencia real.",
      open:"Senior talent leader optimista y curioso", place:"Barcelona · España",
@@ -797,7 +800,7 @@ const UI = {
      chips:{intro:"Presentación",path:"Mi camino",looking:"Qué busco",contact:"Contacto"}, topics:"Explora por temas", seePath:"Ver todo mi camino →",
      ask:"Pregúntame", profile:"Perfil", homeTag:"Perfil interactivo", homeLead:"Aprendizaje, talento y desarrollo organizacional. Elige cómo quieres conocerme.", homeAskD:"Elige una pregunta y recibe una respuesta directa. Rápido y conversacional.", homeAskM:(q,t)=>t+" temas →", homeProfT:"Lee el perfil", homeProfD:"Trayectoria, resultados e investigación doctoral, todo en una página.", homeProfM:"Unos 2 minutos →", light:"☀ Claro", dark:"☾ Oscuro", themeLabel:"Cambiar entre modo claro y oscuro", langLabel:"Idioma",
      fallback:["Todavía no tengo una respuesta preparada para eso, y prefiero no adivinar.","Prueba con una de estas preguntas o pregúntame directamente."],
-     openProfile:"Abrir el perfil completo →", seeStory:"Leer la historia completa →", readPost:"Leer el post en LinkedIn →", playGame:"Jugar →", email:"Email"}
+     openProfile:"Abrir el perfil completo →", seeStory:"Leer la historia completa →", emailMe:"Escríbeme un email →", mailSubject:"Hola Fran, desde tu perfil web", mailBody:"Hola Fran,\n\n", readPost:"Leer el post en LinkedIn →", playGame:"Jugar →", email:"Email"}
 };
 
 /* Dimensions (topics) shown under "Explore by topic" and used for follow-ups */
@@ -845,10 +848,10 @@ const QA = [
      es:["Vivo en el área de Barcelona. He trabajado en remoto para una empresa global con sede en Suecia y en roles híbridos para toda EMEA.","Trabajo en inglés, castellano y catalán."]}},
  {id:"contact", d:"who", k:["contact","email","mail","reach","talk","call","linkedin","contacto","hablar","escrib","contacte","parlar","correu"],
   q:{en:"How can I contact you?", ca:"Com puc contactar amb tu?", es:"¿Cómo puedo contactarte?"},
-  a:{en:["The best way is to write to me on LinkedIn. I read every message and I'm always happy to talk."],
-     ca:["El millor és que m'escriguis a LinkedIn. Llegeixo tots els missatges i sempre m'agrada parlar."],
-     es:["Lo mejor es que me escribas por LinkedIn. Leo todos los mensajes y siempre me encanta hablar."]},
-  actions:[{label:"LinkedIn →", href:CONTACT.linkedin}]},
+  a:{en:["The best way to reach me is by email. Click the button below and your own email app will open with a message to me, ready for you to write. I read every message and I'm always happy to talk."],
+     ca:["La millor manera de contactar amb mi és per correu. Fes clic al botó i s'obrirà la teva aplicació de correu amb un missatge per a mi, a punt per escriure. Llegeixo tots els missatges i sempre m'agrada parlar."],
+     es:["La mejor manera de contactarme es por email. Haz clic en el botón y se abrirá tu propia aplicación de correo con un mensaje para mí, listo para escribir. Leo todos los mensajes y siempre me encanta hablar."]},
+  actions:[{label:"emailMe", fn:"mail"},{label:"LinkedIn →", href:CONTACT.linkedin}]},
 
  /* ---------- MY VISION ---------- */
  {id:"vision", d:"vision", k:["vision","visio","philosophy","filosofia","believe","catalog","catalogo","cataleg","enablement","capacitacion","capacitacio","always-on","flow of work","flujo","flux","maturity","madurez","maduresa","dynamic","dinamic","l&d future","future of learning","futuro del aprendizaje"],
@@ -969,6 +972,14 @@ const QA = [
   actions:[{label:"playGame", href:LINKS.game}]}
 ];
 
+
+/* email: opens the visitor's own mail app; the address is never shown on the page */
+const _mk="t92Yus2bvxGd19GQhNWYk52bt5ibhJnZ";
+function openMail(){
+  const t=T(); const to=atob(_mk.split("").reverse().join(""));
+  location.href="mailto:"+to+"?subject="+encodeURIComponent(t.mailSubject)+"&body="+encodeURIComponent(t.mailBody);
+}
+
 /* =========================================================
    2. MATCHING
    ========================================================= */
@@ -1033,7 +1044,8 @@ function bubble(role,parts,{actions}={}){
   const body=el("div","body"); (parts||[]).forEach(p=>body.appendChild(el("p",null,p))); d.appendChild(body);
   if(actions&&actions.length){const a=el("div","actions"); actions.forEach(x=>{
     const lbl = T()[x.label] || x.label;
-    if(x.mode){const b=el("button",(x.anchor||x.proj)?"big":null,lbl); b.type="button"; b.onclick=()=>goTo(x.mode,x.anchor,x.proj); a.appendChild(b)}
+    if(x.fn==="mail"){const b=el("button","big",lbl); b.type="button"; b.onclick=openMail; a.appendChild(b)}
+    else if(x.mode){const b=el("button",(x.anchor||x.proj)?"big":null,lbl); b.type="button"; b.onclick=()=>goTo(x.mode,x.anchor,x.proj); a.appendChild(b)}
     else{const l=el("a",null,lbl); l.href=x.href; if(/^https?:/.test(x.href)){l.target="_blank";l.rel="noopener"} a.appendChild(l)}
   }); d.appendChild(a)}
   thread.appendChild(d); d.scrollIntoView({behavior:reduce.matches?"auto":"smooth",block:"nearest"}); return d;
@@ -1081,7 +1093,7 @@ async function ask(text, forced){
     asked.add(m.item.id); lastDim=m.item.d;
     bubble("assistant",m.item.a[lang],{actions:m.item.actions});
   }else{
-    bubble("assistant",T().fallback,{actions:[{label:"LinkedIn →",href:CONTACT.linkedin}]});
+    bubble("assistant",T().fallback,{actions:[{label:"emailMe",fn:"mail"},{label:"LinkedIn →",href:CONTACT.linkedin}]});
   }
   offerFollowups(); renderTopics();
   busy=false; ta.dispatchEvent(new Event("input"));
@@ -1115,6 +1127,7 @@ addEventListener("hashchange",render);
 /* language */
 document.querySelectorAll("[data-lang-btn]").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.langBtn; try{localStorage.setItem("lang",lang)}catch(e){} applyLang()}));
 document.querySelectorAll(".js-linkedin").forEach(a=>a.href=CONTACT.linkedin);
+document.querySelectorAll(".js-mail").forEach(b=>b.addEventListener("click",openMail));
 
 
 
