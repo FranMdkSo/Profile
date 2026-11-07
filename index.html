@@ -97,7 +97,7 @@ body.is-profile .ambient{opacity:.35}
 
 
 /* ---------- portrait (Ask view) ---------- */
-.portrait{position:fixed;right:max(1vw,calc((100vw - 1320px)/2));bottom:-2vh;height:min(96vh,1020px);z-index:0;pointer-events:none;will-change:transform;transition:opacity .5s ease,visibility .5s}
+.portrait{position:fixed;right:max(1vw,calc((100vw - 1320px)/2));bottom:2vh;height:min(92vh,980px);z-index:0;pointer-events:none;will-change:transform;transform-origin:50% 100%;transition:opacity .5s ease,visibility .5s}
 .portrait img{height:100%;width:auto;display:block;opacity:.6;filter:blur(1.4px) saturate(.9) contrast(.96);
   -webkit-mask-image:linear-gradient(to bottom,#000 52%,rgba(0,0,0,.55) 74%,transparent 96%);mask-image:linear-gradient(to bottom,#000 52%,rgba(0,0,0,.55) 74%,transparent 96%)}
 .portrait::before{content:"";position:absolute;inset:8% -12% 20% -12%;background:radial-gradient(closest-side,var(--signal-soft),transparent 70%);z-index:-1;opacity:.9}
@@ -279,8 +279,8 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
 <body>
 <div class="ambient" aria-hidden="true"><i></i><i></i></div>
 <canvas id="net" aria-hidden="true"></canvas>
-<div class="portrait portrait-ask" aria-hidden="true"><img src="fran.webp" alt="" width="379" height="1100" decoding="async"></div>
-<div class="portrait portrait-profile" aria-hidden="true"><img src="fran-laptop.webp" alt="" width="495" height="1100" decoding="async"></div>
+<div class="portrait portrait-ask" aria-hidden="true"><img src="fran.webp" alt="" width="382" height="1100" decoding="async"></div>
+<div class="portrait portrait-profile" aria-hidden="true"><img src="fran-laptop.webp" alt="" width="497" height="1100" decoding="async"></div>
 
 <div class="topbar">
   <div class="wrap">
@@ -1319,7 +1319,7 @@ let netRun=()=>{};
   }
   addEventListener("scroll",targets,{passive:true});
   addEventListener("resize",targets,{passive:true});
-  addEventListener("pointermove",e=>{if(e.pointerType!=="mouse")return; mx=(e.clientX/innerWidth-.5)*-44; my=(e.clientY/innerHeight-.5)*-26; targets()},{passive:true});
+  addEventListener("pointermove",e=>{if(e.pointerType!=="mouse")return; mx=(e.clientX/innerWidth-.5)*-44; my=Math.min(0,(e.clientY/innerHeight-.5)*-26); targets()},{passive:true});
   addEventListener("hashchange",()=>setTimeout(targets,30));
   targets();
 })();
