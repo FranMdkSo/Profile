@@ -274,6 +274,29 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
   .job{grid-template-columns:1fr;gap:6px}
   .cta.ghost{margin-left:0}
 }
+/* ---------- key AI agents carousel ---------- */
+.ag-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
+.ag-head h2 em{font-style:italic;color:var(--signal);font-weight:500}
+.ag-nav{display:flex;gap:8px;flex-shrink:0}
+.ag-nav button{width:42px;height:42px;border-radius:50%;border:1px solid var(--rule);background:var(--surface);color:var(--ink);cursor:pointer;font-size:20px;line-height:1;transition:border-color .2s,color .2s}
+.ag-nav button:hover{border-color:var(--signal);color:var(--signal)}
+.ag-track{display:flex;gap:16px;overflow-x:auto;padding:28px 2px 10px;scrollbar-width:none;overscroll-behavior-x:contain}
+.ag-track::-webkit-scrollbar{display:none}
+.ag-card{flex:0 0 min(320px,82vw);background:var(--surface);border:1px solid var(--rule);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:14px}
+.ag-top{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.ag-pr{padding:3px 10px;border-radius:999px;background:var(--signal-soft);color:var(--signal)}
+.ag-pr.m{background:transparent;border:1px solid var(--rule);color:var(--muted)}
+.ag-card h3{font-size:22px;line-height:1.15;font-weight:500}
+.ag-card h3 span{display:inline-block;margin-top:6px;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--signal);background:var(--signal-soft);padding:3px 8px;border-radius:6px}
+.ag-k{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--signal);margin:0 0 4px}
+.ag-t{font-size:15px;line-height:1.5;margin:0}
+.ag-gap .ag-t{color:var(--muted)}
+.ag-sk{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:12px;border-top:1px solid var(--rule)}
+.ag-sk span{font-size:12.5px;padding:3px 10px;border-radius:999px;border:1px solid var(--rule);color:var(--muted)}
+.ag-dots{display:flex;gap:6px;justify-content:center;margin-top:12px}
+.ag-dots i{width:7px;height:7px;border-radius:50%;background:var(--rule);transition:width .2s,background .2s}
+.ag-dots i.on{background:var(--signal);width:22px;border-radius:4px}
+@media (max-width:720px){.ag-nav{display:none}}
 </style>
 </head>
 <body>
@@ -384,12 +407,11 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
     </div>
   </section>
 
-  <section id="vision" class="vision" aria-labelledby="h-vision">
-    <div class="sec-head"><p class="label">My vision</p><h2 id="h-vision">How I see it</h2><p class="vision-ai">What we <b>automate</b> with GenAI, and what we <b>humanise</b> because of it.</p></div>
-    <div class="vision-grid">
-      <div class="vq"><span class="label">Strategy stagility</span><p>Stable enough to move fast.</p></div>
-      <div class="vq"><span class="label">Learning enablement</span><p>From scheduled training to always-on enablement.</p></div>
-    </div>
+  <section id="vision" class="vision agents-sec" aria-labelledby="h-vision">
+    <div class="sec-head ag-head"><div><p class="label">My vision · Agentic AI</p><h2 id="h-vision">Key AI agents <em>adding real business value</em></h2><p class="vision-ai">How agentic AI can <b>transform</b> the learning and talent functions, and where the real value still is.</p></div>
+    <div class="ag-nav"><button type="button" class="ag-prev" aria-label="Previous">&#8249;</button><button type="button" class="ag-next" aria-label="Next">&#8250;</button></div></div>
+    <div class="ag-track" data-agents="en"></div>
+    <div class="ag-dots" aria-hidden="true"></div>
   </section>
 
   <section id="route" aria-labelledby="h-route">
@@ -520,12 +542,11 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
     </div>
   </section>
 
-  <section id="vision-ca" class="vision" aria-labelledby="h-vision-ca">
-    <div class="sec-head"><p class="label">La meva visió</p><h2 id="h-vision-ca">Com ho veig</h2><p class="vision-ai">Què <b>automatitzem</b> amb la IA generativa i què <b>humanitzem</b> gràcies a ella.</p></div>
-    <div class="vision-grid">
-      <div class="vq"><span class="label">Stagility estratègica</span><p>Prou estables per moure'ns de pressa.</p></div>
-      <div class="vq"><span class="label">Habilitar l'aprenentatge</span><p>De la formació programada a la capacitació contínua.</p></div>
-    </div>
+  <section id="vision-ca" class="vision agents-sec" aria-labelledby="h-vision-ca">
+    <div class="sec-head ag-head"><div><p class="label">La meva visió · IA agèntica</p><h2 id="h-vision-ca">Agents d'IA clau <em>que aporten valor real al negoci</em></h2><p class="vision-ai">Com la IA agèntica pot <b>transformar</b> les funcions d'aprenentatge i talent, i on hi ha encara el valor real.</p></div>
+    <div class="ag-nav"><button type="button" class="ag-prev" aria-label="Anterior">&#8249;</button><button type="button" class="ag-next" aria-label="Següent">&#8250;</button></div></div>
+    <div class="ag-track" data-agents="ca"></div>
+    <div class="ag-dots" aria-hidden="true"></div>
   </section>
 
   <section id="route-ca" aria-labelledby="h-route-ca">
@@ -656,12 +677,11 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
     </div>
   </section>
 
-  <section id="vision-es" class="vision" aria-labelledby="h-vision-es">
-    <div class="sec-head"><p class="label">Mi visión</p><h2 id="h-vision-es">Cómo lo veo</h2><p class="vision-ai">Qué <b>automatizamos</b> con la IA generativa y qué <b>humanizamos</b> gracias a ella.</p></div>
-    <div class="vision-grid">
-      <div class="vq"><span class="label">Stagility estratégica</span><p>Lo bastante estables para movernos rápido.</p></div>
-      <div class="vq"><span class="label">Habilitar el aprendizaje</span><p>De la formación programada a la capacitación continua.</p></div>
-    </div>
+  <section id="vision-es" class="vision agents-sec" aria-labelledby="h-vision-es">
+    <div class="sec-head ag-head"><div><p class="label">Mi visión · IA agéntica</p><h2 id="h-vision-es">Agentes de IA clave <em>que aportan valor real al negocio</em></h2><p class="vision-ai">Cómo la IA agéntica puede <b>transformar</b> las funciones de aprendizaje y talento, y dónde sigue estando el valor real.</p></div>
+    <div class="ag-nav"><button type="button" class="ag-prev" aria-label="Anterior">&#8249;</button><button type="button" class="ag-next" aria-label="Siguiente">&#8250;</button></div></div>
+    <div class="ag-track" data-agents="es"></div>
+    <div class="ag-dots" aria-hidden="true"></div>
   </section>
 
   <section id="route-es" aria-labelledby="h-route-es">
@@ -1323,6 +1343,74 @@ let netRun=()=>{};
   addEventListener("hashchange",()=>setTimeout(targets,30));
   targets();
 })();
+/* key AI agents carousel */
+const AGL={en:{does:"What it does",gap:"The gap it closes",tag:"AI agent",p:["High priority","Medium","Connector"]},
+ es:{does:"Qué hace",gap:"La brecha que cierra",tag:"Agente de IA",p:["Prioridad alta","Media","Conector"]},
+ ca:{does:"Què fa",gap:"La bretxa que tanca",tag:"Agent d'IA",p:["Prioritat alta","Mitjana","Connector"]}};
+const AGENTS=[
+ {p:0,
+  en:["L&D partnerships","Compares suppliers and business schools on impact, cost and skills covered, and prepares each partner review.","No agent on the market manages the learning partner portfolio today.",["Supplier portfolio","Partnership governance","Cost and value","Quality standards"]],
+  es:["Partnerships de L&D","Compara proveedores y escuelas de negocio por impacto, coste y skills cubiertas, y prepara la revisión con cada socio.","Hoy ningún agente del mercado gestiona la cartera de socios de aprendizaje.",["Cartera de proveedores","Gobierno de partnerships","Coste y valor","Estándares de calidad"]],
+  ca:["Partnerships de L&D","Compara proveïdors i escoles de negoci per impacte, cost i competències cobertes, i prepara la revisió amb cada soci.","Avui cap agent del mercat gestiona la cartera de socis d'aprenentatge.",["Cartera de proveïdors","Governança de partnerships","Cost i valor","Estàndards de qualitat"]]},
+ {p:0,
+  en:["Learning outcomes and experiments","Defines each outcome as who does what differently, writes the hypothesis, designs the smallest experiment and scores its value.","Outcome and experiment thinking exists for product teams, not yet for learning.",["Behavioural outcomes","Hypotheses","Experiment design","Learning analytics"]],
+  es:["Outcomes y experimentos de aprendizaje","Define cada outcome como quién hace qué de forma distinta, formula la hipótesis, diseña el experimento mínimo y puntúa su valor.","El enfoque de outcomes y experimentos existe en producto, pero aún no en aprendizaje.",["Outcomes de comportamiento","Hipótesis","Diseño de experimentos","Learning analytics"]],
+  ca:["Outcomes i experiments d'aprenentatge","Defineix cada outcome com qui fa què de manera diferent, formula la hipòtesi, dissenya l'experiment mínim i en puntua el valor.","L'enfocament d'outcomes i experiments existeix en producte, però encara no en aprenentatge.",["Outcomes de comportament","Hipòtesis","Disseny d'experiments","Learning analytics"]]},
+ {p:0,
+  en:["Learning governance","Reviews catalogue, suppliers and spend together, and proposes what to keep, merge or retire.","Today's agents look at content only, never at content, suppliers and spend at once.",["Federated governance","Portfolio rationalisation","Investment priorities"]],
+  es:["Gobierno del aprendizaje","Revisa catálogo, proveedores y gasto a la vez, y propone qué mantener, fusionar o retirar.","Los agentes actuales solo miran el contenido, nunca contenido, proveedores y gasto juntos.",["Gobierno federado","Racionalización del portfolio","Prioridades de inversión"]],
+  ca:["Governança de l'aprenentatge","Revisa catàleg, proveïdors i despesa alhora, i proposa què mantenir, fusionar o retirar.","Els agents actuals només miren el contingut, mai contingut, proveïdors i despesa junts.",["Governança federada","Racionalització del portfoli","Prioritats d'inversió"]]},
+ {p:0,
+  en:["Talent orchestrator","Chains agents together, from flight risk to development plan to mobility option, always with human approval.","Platforms orchestrate their own agents; governing agents across vendors is still open.",["Agent governance","Human in the loop","Data ethics","Change"]],
+  es:["Orquestador de talento","Encadena agentes, del riesgo de fuga al plan de desarrollo y a la opción de movilidad, siempre con aprobación humana.","Las plataformas orquestan sus propios agentes; gobernar agentes de distintos proveedores sigue abierto.",["Gobierno de agentes","Humano en el bucle","Ética de datos","Cambio"]],
+  ca:["Orquestrador de talent","Encadena agents, del risc de fuga al pla de desenvolupament i a l'opció de mobilitat, sempre amb aprovació humana.","Les plataformes orquestren els seus propis agents; governar agents de diferents proveïdors encara és obert.",["Governança d'agents","Humà en el bucle","Ètica de dades","Canvi"]]},
+ {p:1,
+  en:["Calibrated skills","Measures skill level before and after each learning path, using rubrics.","Linking the skill gain to impact and investment decisions.",["Skills taxonomies","Rubric design","Skills data"]],
+  es:["Skills calibradas","Mide el nivel de cada skill antes y después de cada itinerario, con rúbricas.","Conectar la mejora de skills con el impacto y las decisiones de inversión.",["Taxonomías de skills","Diseño de rúbricas","Datos de skills"]],
+  ca:["Competències calibrades","Mesura el nivell de cada competència abans i després de cada itinerari, amb rúbriques.","Connectar la millora de competències amb l'impacte i les decisions d'inversió.",["Taxonomies de competències","Disseny de rúbriques","Dades de competències"]]},
+ {p:1,
+  en:["Development and learning impact","Turns each appraisal into a development plan, then checks 60–90 days later whether it changed how people work.","Plans get created, but nobody closes the loop on impact.",["Development planning","Transfer to the job","Impact evaluation"]],
+  es:["Desarrollo e impacto del aprendizaje","Convierte cada evaluación en un plan de desarrollo y comprueba a los 60–90 días si cambió la forma de trabajar.","Los planes se crean, pero nadie cierra el ciclo del impacto.",["Planes de desarrollo","Transferencia al puesto","Evaluación de impacto"]],
+  ca:["Desenvolupament i impacte de l'aprenentatge","Converteix cada avaluació en un pla de desenvolupament i comprova als 60–90 dies si ha canviat la manera de treballar.","Els plans es creen, però ningú tanca el cercle de l'impacte.",["Plans de desenvolupament","Transferència al lloc","Avaluació d'impacte"]]},
+ {p:1,
+  en:["Organisational design","Simulates structure scenarios and their effect on skills and succession.","Tools model structure, but rarely connect it to learning and succession.",["Org design","Job architecture","Workforce planning"]],
+  es:["Diseño organizativo","Simula escenarios de estructura y su efecto en skills y sucesión.","Las herramientas modelan la estructura, pero rara vez la conectan con aprendizaje y sucesión.",["Diseño organizativo","Arquitectura de puestos","Planificación de plantillas"]],
+  ca:["Disseny organitzatiu","Simula escenaris d'estructura i el seu efecte en competències i successió.","Les eines modelen l'estructura, però rarament la connecten amb aprenentatge i successió.",["Disseny organitzatiu","Arquitectura de llocs","Planificació de plantilles"]]},
+ {p:2,
+  en:["Internal mobility","Looks inside before hiring outside and suggests learning paths to close the gap.","A mature space; the value is connecting it with skills and impact.",["Career pathways","Skills matching","Talent reviews"]],
+  es:["Movilidad interna","Busca dentro antes de contratar fuera y sugiere itinerarios para cerrar la brecha.","Un espacio maduro; el valor está en conectarlo con skills e impacto.",["Itinerarios de carrera","Matching de skills","Revisiones de talento"]],
+  ca:["Mobilitat interna","Busca a dins abans de contractar a fora i suggereix itineraris per tancar la bretxa.","Un espai madur; el valor és connectar-lo amb competències i impacte.",["Itineraris de carrera","Matching de competències","Revisions de talent"]]},
+ {p:2,
+  en:["1:1 preparation","Pulls goals, feedback and learning together and suggests the conversation for the manager.","Widely available; worth it when it feeds development and impact.",["Performance","Coaching and feedback","Manager enablement"]],
+  es:["Preparación del 1:1","Reúne objetivos, feedback y aprendizaje y propone la conversación al manager.","Muy extendido; vale la pena cuando alimenta el desarrollo y el impacto.",["Desempeño","Coaching y feedback","Capacitación de managers"]],
+  ca:["Preparació de l'1:1","Reuneix objectius, feedback i aprenentatge i proposa la conversa al manager.","Molt estès; val la pena quan alimenta el desenvolupament i l'impacte.",["Rendiment","Coaching i feedback","Capacitació de managers"]]}
+];
+(function(){
+  const esc=t=>t.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+  document.querySelectorAll("[data-agents]").forEach(track=>{
+    const lang=track.dataset.agents, L=AGL[lang], sec=track.closest("section"), dots=sec.querySelector(".ag-dots");
+    track.innerHTML=AGENTS.map((a,i)=>{const [n,does,gap,sk]=a[lang];
+      return '<article class="ag-card"><div class="ag-top"><span>'+String(i+1).padStart(2,"0")+'</span><span class="ag-pr'+(a.p?" m":"")+'">'+L.p[a.p]+'</span></div>'+
+      '<h3>'+esc(n)+'<br><span>'+esc(L.tag)+'</span></h3>'+
+      '<div><p class="ag-k">'+L.does+'</p><p class="ag-t">'+esc(does)+'</p></div>'+
+      '<div class="ag-gap"><p class="ag-k">'+L.gap+'</p><p class="ag-t">'+esc(gap)+'</p></div>'+
+      '<div class="ag-sk">'+sk.map(x=>'<span>'+esc(x)+'</span>').join("")+'</div></article>'}).join("");
+    const cards=[...track.children];
+    dots.innerHTML=cards.map(()=>"<i></i>").join("");
+    const step=()=>cards[0].offsetWidth+16;
+    const upd=()=>{const i=Math.min(cards.length-1,Math.round(track.scrollLeft/step()));[...dots.children].forEach((d,j)=>d.className=j===i?"on":"")};
+    sec.querySelector(".ag-next").onclick=()=>track.scrollBy({left:step(),behavior:"smooth"});
+    sec.querySelector(".ag-prev").onclick=()=>track.scrollBy({left:-step(),behavior:"smooth"});
+    track.addEventListener("scroll",upd,{passive:true}); upd();
+    if(reduce.matches) return;
+    let v=0,raf=0;
+    const loop=()=>{if(v){track.scrollLeft+=v;raf=requestAnimationFrame(loop)}else raf=0};
+    track.addEventListener("pointermove",e=>{if(e.pointerType!=="mouse")return;const r=track.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,dz=.15;
+      v=Math.abs(x)<dz?0:Math.sign(x)*Math.pow((Math.abs(x)-dz)/(.5-dz),1.6)*14; if(v&&!raf) raf=requestAnimationFrame(loop)},{passive:true});
+    track.addEventListener("pointerleave",()=>{v=0});
+  });
+})();
+
 renderProjects(); applyLang(); render();
 </script>
 </body>
