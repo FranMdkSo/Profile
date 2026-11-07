@@ -307,7 +307,7 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
   <p class="lead" data-i18n="homeLead">Learning, talent and organisational development. Choose how you'd like to get to know me.</p>
   <div class="choices">
     <a class="choice" href="#ask"><b><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></svg><span data-i18n="ask">Ask me</span></b><p data-i18n="homeAskD">Pick a question, get a straight answer. Quick and conversational.</p><span id="home-ask-meta"></span></a>
-    <a class="choice" href="#profile"><b><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg><span data-i18n="homeProfT">Read profile</span></b><p data-i18n="homeProfD">Career, results and PhD research, all on one page.</p><span data-i18n="homeProfM">About 3 minutes →</span></a>
+    <a class="choice" href="#profile"><b><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg><span data-i18n="homeProfT">Read profile</span></b><p data-i18n="homeProfD">Career, results and PhD research, all on one page.</p><span data-i18n="homeProfM">About 2 minutes →</span></a>
   </div>
 </main>
 
@@ -773,7 +773,7 @@ const UI = {
      placeholder:"Ask me anything about my work…", hint:"Press Enter to send", left:n=>n+" characters left",
      send:"Send", question:"Your question", you:"You", typing:"Fran is typing",
      chips:{intro:"Introduction",path:"My journey",looking:"What I'm looking for",contact:"Contact"}, topics:"Explore by topic", seePath:"See my full path →",
-     ask:"Ask me", profile:"Profile", homeTag:"Interactive profile", homeLead:"Learning, talent and organisational development. Choose how you'd like to get to know me.", homeAskD:"Pick a question, get a straight answer. Quick and conversational.", homeAskM:(q,t)=>q+" questions · "+t+" topics →", homeProfT:"Read profile", homeProfD:"Career, results and PhD research, all on one page.", homeProfM:"About 3 minutes →", light:"☀ Light", dark:"☾ Dark", themeLabel:"Toggle light or dark mode", langLabel:"Language",
+     ask:"Ask me", profile:"Profile", homeTag:"Interactive profile", homeLead:"Learning, talent and organisational development. Choose how you'd like to get to know me.", homeAskD:"Pick a question, get a straight answer. Quick and conversational.", homeAskM:(q,t)=>t+" topics →", homeProfT:"Read profile", homeProfD:"Career, results and PhD research, all on one page.", homeProfM:"About 2 minutes →", light:"☀ Light", dark:"☾ Dark", themeLabel:"Toggle light or dark mode", langLabel:"Language",
      fallback:["I don't have a prepared answer for that one yet, and I'd rather not guess.","Try one of these questions, or ask me directly."],
      openProfile:"Open full profile →", seeStory:"Read the full story →", readPost:"Read the LinkedIn post →", playGame:"Play the game →", email:"Email"},
  ca:{title:"Fran Mondaca — Global Learning • Talent • Organisational Development Leader",
@@ -784,7 +784,7 @@ const UI = {
      placeholder:"Pregunta'm el que vulguis sobre la meva feina…", hint:"Prem Retorn per enviar", left:n=>"Queden "+n+" caràcters",
      send:"Envia", question:"La teva pregunta", you:"Tu", typing:"En Fran està escrivint",
      chips:{intro:"Presentació",path:"El meu camí",looking:"Què busco",contact:"Contacte"}, topics:"Explora per temes", seePath:"Mira tot el meu camí →",
-     ask:"Pregunta'm", profile:"Perfil", homeTag:"Perfil interactiu", homeLead:"Aprenentatge, talent i desenvolupament organitzatiu. Tria com vols conèixer-me.", homeAskD:"Tria una pregunta i rep una resposta directa. Ràpid i conversacional.", homeAskM:(q,t)=>q+" preguntes · "+t+" temes →", homeProfT:"Llegeix el perfil", homeProfD:"Trajectòria, resultats i recerca doctoral, tot en una pàgina.", homeProfM:"Uns 3 minuts →", light:"☀ Clar", dark:"☾ Fosc", themeLabel:"Canvia entre mode clar i fosc", langLabel:"Idioma",
+     ask:"Pregunta'm", profile:"Perfil", homeTag:"Perfil interactiu", homeLead:"Aprenentatge, talent i desenvolupament organitzatiu. Tria com vols conèixer-me.", homeAskD:"Tria una pregunta i rep una resposta directa. Ràpid i conversacional.", homeAskM:(q,t)=>t+" temes →", homeProfT:"Llegeix el perfil", homeProfD:"Trajectòria, resultats i recerca doctoral, tot en una pàgina.", homeProfM:"Uns 2 minuts →", light:"☀ Clar", dark:"☾ Fosc", themeLabel:"Canvia entre mode clar i fosc", langLabel:"Idioma",
      fallback:["Encara no tinc una resposta preparada per a això, i prefereixo no endevinar.","Prova amb una d'aquestes preguntes o pregunta'm directament."],
      openProfile:"Obre el perfil complet →", seeStory:"Llegeix la història completa →", readPost:"Llegeix el post a LinkedIn →", playGame:"Juga-hi →", email:"Correu"},
  es:{title:"Fran Mondaca — Global Learning • Talent • Organisational Development Leader",
@@ -795,7 +795,7 @@ const UI = {
      placeholder:"Pregúntame lo que quieras sobre mi trabajo…", hint:"Pulsa Intro para enviar", left:n=>"Quedan "+n+" caracteres",
      send:"Enviar", question:"Tu pregunta", you:"Tú", typing:"Fran está escribiendo",
      chips:{intro:"Presentación",path:"Mi camino",looking:"Qué busco",contact:"Contacto"}, topics:"Explora por temas", seePath:"Ver todo mi camino →",
-     ask:"Pregúntame", profile:"Perfil", homeTag:"Perfil interactivo", homeLead:"Aprendizaje, talento y desarrollo organizacional. Elige cómo quieres conocerme.", homeAskD:"Elige una pregunta y recibe una respuesta directa. Rápido y conversacional.", homeAskM:(q,t)=>q+" preguntas · "+t+" temas →", homeProfT:"Lee el perfil", homeProfD:"Trayectoria, resultados e investigación doctoral, todo en una página.", homeProfM:"Unos 3 minutos →", light:"☀ Claro", dark:"☾ Oscuro", themeLabel:"Cambiar entre modo claro y oscuro", langLabel:"Idioma",
+     ask:"Pregúntame", profile:"Perfil", homeTag:"Perfil interactivo", homeLead:"Aprendizaje, talento y desarrollo organizacional. Elige cómo quieres conocerme.", homeAskD:"Elige una pregunta y recibe una respuesta directa. Rápido y conversacional.", homeAskM:(q,t)=>t+" temas →", homeProfT:"Lee el perfil", homeProfD:"Trayectoria, resultados e investigación doctoral, todo en una página.", homeProfM:"Unos 2 minutos →", light:"☀ Claro", dark:"☾ Oscuro", themeLabel:"Cambiar entre modo claro y oscuro", langLabel:"Idioma",
      fallback:["Todavía no tengo una respuesta preparada para eso, y prefiero no adivinar.","Prueba con una de estas preguntas o pregúntame directamente."],
      openProfile:"Abrir el perfil completo →", seeStory:"Leer la historia completa →", readPost:"Leer el post en LinkedIn →", playGame:"Jugar →", email:"Email"}
 };
