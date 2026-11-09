@@ -1173,6 +1173,19 @@ function renderTopics(){
 }
 function clearFollowups(){thread.querySelectorAll(".shortcuts").forEach(n=>n.remove())}
 
+/* agent suggestion clicked in the chat: explain it right there */
+const AGQ={en:{q:n=>"Tell me about the "+n+" AI agent",gap:"The gap it closes: ",sk:"Key skills: "},
+ es:{q:n=>"Cuéntame más sobre el agente de IA «"+n+"»",gap:"La brecha que cierra: ",sk:"Skills clave: "},
+ ca:{q:n=>"Explica'm més sobre l'agent d'IA «"+n+"»",gap:"La bretxa que tanca: ",sk:"Competències clau: "}};
+async function showAgent(i){
+  if(busy) return; const a=AGENTS[i][lang], Q=AGQ[lang];
+  busy=true; send.disabled=true; clearFollowups();
+  bubble("user",[Q.q(a[0])]);
+  const t=typing(); await wait(700); t.remove();
+  bubble("assistant",[a[1],Q.gap+a[2],Q.sk+a[3].join(" · ")],{actions:[{label:"seeAgents", mode:"profile", anchor:"vision"}]});
+  offerFollowups(); renderTopics();
+  busy=false; ta.dispatchEvent(new Event("input"));
+}
 async function ask(text, forced){
   text=(text||"").trim(); if(!text||busy) return;
   busy=true; send.disabled=true; clearFollowups(); viewAsk.classList.add("started");
@@ -1184,7 +1197,7 @@ async function ask(text, forced){
     const bb=bubble("assistant",m.item.a[lang],{actions:m.item.actions});
     if(m.item.ag&&typeof AGENTS!=="undefined"){const h=el("div","ag-hint");
       h.appendChild(el("p","ag-hint-l",T().agentHint));
-      const ul=el("div","ag-hint-list"); m.item.ag.forEach(i=>{const b=el("button",null,AGENTS[i][lang][0]+" · "+AGL[lang].tag); b.type="button"; b.onclick=()=>goTo("profile","vision"); ul.appendChild(b)});
+      const ul=el("div","ag-hint-list"); m.item.ag.forEach(i=>{const b=el("button",null,AGENTS[i][lang][0]+" · "+AGL[lang].tag); b.type="button"; b.onclick=()=>showAgent(i); ul.appendChild(b)});
       h.appendChild(ul); bb.appendChild(h)}
   }else{
     bubble("assistant",T().fallback,{actions:[{label:"emailMe",fn:"mail"},{label:"LinkedIn →",href:CONTACT.linkedin}]});
