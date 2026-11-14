@@ -146,7 +146,8 @@
   .cat .meta{display:flex;gap:8px;align-items:center;margin-bottom:12px;font-size:.8rem;color:var(--muted)}
   .cat .badge{background:var(--navy);color:#fff;border-radius:6px;padding:2px 8px;font-weight:700;font-size:.72rem;letter-spacing:.04em}
   .cat .card p{flex:1;margin-bottom:18px}
-  .cat .go{align-self:flex-start;padding:10px 18px;font-size:.92rem}
+  .cat .gos{display:flex;flex-wrap:wrap;gap:8px}
+  .cat .go{padding:10px 18px;font-size:.92rem}
   .cat .go.ask{background:none;border:1.5px solid var(--navy);color:var(--navy)}
   .cat-note{color:var(--muted);font-size:.95rem;margin-top:24px}
   @media (max-width:900px){.cat{grid-template-columns:1fr 1fr}}
@@ -414,14 +415,21 @@ function renderCat(){
   if (!catData) return;
   if (!catData.length) { box.innerHTML = `<p class="cat-note">${esc(dyn("_empty"))}</p>`; return; }
   const base = l => String(l || "").slice(0, 2);
-  const list = [...catData].sort((a, b) => (base(b.lang) === cur) - (base(a.lang) === cur) || (!!b.whatsapp - !!a.whatsapp));
+  const fams = catData.map(c => ({ ...c, versions: c.versions && c.versions.length ? c.versions : [c] }));
+  const pick = f => f.versions.find(v => base(v.lang) === cur) || f.versions.find(v => base(v.lang) === "en") || f.versions[0];
+  const has = f => f.versions.some(v => base(v.lang) === cur);
+  const live = f => f.versions.some(v => v.whatsapp);
+  const list = fams.sort((a, b) => has(b) - has(a) || live(b) - live(a));
   const lessons = n => { const f = dyn("_lessons"); return typeof f === "function" ? f(n) : f.replace("{n}", n); };
-  box.innerHTML = list.map(c => `<div class="card">
-    <div class="meta"><span class="badge">${esc(base(c.lang).toUpperCase())}</span><span>${esc(lessons(c.lessons))}</span></div>
-    <h3>${esc(c.title)}</h3><p>${esc(c.objective)}</p>
-    ${c.whatsapp ? `<a class="btn primary go" href="${esc(c.whatsapp)}" target="_blank" rel="noopener">${esc(dyn("_start"))}</a>`
-                 : `<a class="btn go ask" href="#contact" data-mail="${esc(c.title)}">${esc(dyn("_ask"))}</a>`}
-  </div>`).join("");
+  box.innerHTML = list.map(f => { const v = pick(f); const open = f.versions.filter(x => x.whatsapp);
+    const btns = open.length
+      ? open.map(x => `<a class="btn primary go" href="${esc(x.whatsapp)}" target="_blank" rel="noopener">${open.length > 1 ? "WhatsApp · " + esc(base(x.lang).toUpperCase()) : esc(dyn("_start"))}</a>`).join("")
+      : `<a class="btn go ask" href="#contact" data-mail="${esc(v.title)}">${esc(dyn("_ask"))}</a>`;
+    return `<div class="card">
+    <div class="meta">${f.versions.map(x => `<span class="badge">${esc(base(x.lang).toUpperCase())}</span>`).join("")}<span>${esc(lessons(v.lessons))}</span></div>
+    <h3>${esc(v.title)}</h3><p>${esc(v.objective)}</p>
+    <div class="gos">${btns}</div>
+  </div>`; }).join("");
 }
 fetch(CAT_URL).then(r => { if (!r.ok) throw 0; return r.json(); })
   .then(d => { catData = d.courses || []; renderCat(); })
