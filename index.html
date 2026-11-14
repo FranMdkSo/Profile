@@ -283,6 +283,15 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
 .copy{margin:28px 0 0;font-family:var(--mono);font-size:11.5px;letter-spacing:.02em;color:var(--muted);opacity:.85;max-width:none!important}
 .copy-home{position:fixed;left:max(20px,calc((100vw - 1320px)/2 + 20px));bottom:18px;margin:0;z-index:3;font-size:12.5px;opacity:1;color:var(--ink);background:color-mix(in srgb,var(--paper) 75%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:6px 12px;border-radius:999px;border:1px solid var(--rule)}
 @media (max-width:720px){.copy-home{position:static;margin-top:28px;display:inline-block}}
+.share-btn{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;margin-left:10px;vertical-align:middle;border-radius:50%;border:1px solid transparent;background:transparent;color:var(--muted);cursor:pointer;opacity:0;transition:opacity .2s,color .2s,border-color .2s}
+.has-share:hover .share-btn,.msg.a:hover .share-btn,.share-btn:focus-visible{opacity:.85}
+.share-btn:hover{color:var(--signal);border-color:var(--rule);opacity:1}
+.msg.a{position:relative}
+.msg.a > .share-btn{position:absolute;top:10px;right:10px;margin:0}
+.feature .share-btn{color:inherit}
+@media (hover:none){.share-btn{opacity:.55}}
+#toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,12px);background:var(--ink);color:var(--paper);font:600 13.5px var(--body);padding:9px 16px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:50}
+#toast.on{opacity:1;transform:translate(-50%,0)}
 /* ---------- key AI agents carousel ---------- */
 .ag-hint{margin-top:14px;padding:12px 14px;border:1px dashed color-mix(in srgb,var(--signal) 45%,var(--rule));border-radius:12px;background:color-mix(in srgb,var(--signal-soft) 45%,transparent)}
 .ag-hint-l{margin:0 0 8px;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--signal)}
@@ -852,7 +861,7 @@ const UI = {
      placeholder:"Ask me anything about my work…", hint:"Press Enter to send", left:n=>n+" characters left",
      send:"Send", question:"Your question", you:"You", typing:"Fran is typing",
      chips:{intro:"Introduction",path:"My journey",looking:"What I'm looking for",contact:"Contact"}, topics:"Explore by topic", seePath:"See my full path →",
-     ask:"Ask me", profile:"Profile", copy:"© 2026 Fran Mondaca · All rights reserved. Content and design may not be reproduced without permission.", homeTag:"Interactive profile", homeLead:"Learning, talent and organisational development. Choose how you'd like to get to know me.", homeAskD:"Pick a question, get a straight answer. Quick and conversational.", homeAskM:(q,t)=>t+" topics →", homeProfT:"Read profile", homeProfD:"Career, results and PhD research, all on one page.", homeProfM:"About 2 minutes →", light:"☀ Light", dark:"☾ Dark", themeLabel:"Toggle light or dark mode", langLabel:"Language",
+     ask:"Ask me", profile:"Profile", linkCopied:"Link copied", copyLink:"Copy link", copy:"© 2026 Fran Mondaca · All rights reserved. Content and design may not be reproduced without permission.", homeTag:"Interactive profile", homeLead:"Learning, talent and organisational development. Choose how you'd like to get to know me.", homeAskD:"Pick a question, get a straight answer. Quick and conversational.", homeAskM:(q,t)=>t+" topics →", homeProfT:"Read profile", homeProfD:"Career, results and PhD research, all on one page.", homeProfM:"About 2 minutes →", light:"☀ Light", dark:"☾ Dark", themeLabel:"Toggle light or dark mode", langLabel:"Language",
      fallback:["I don't have a prepared answer for that one yet, and I'd rather not guess.","Try one of these questions, or ask me directly."],
      openProfile:"Open full profile →", seeStory:"Read the full story →", seeAgents:"See the AI agents →", visitStudio:"Visit the Learning Studio →", seeStudio:"Read the full story →", agentHint:"AI agents that could help here:", emailMe:"Email me →", mailSubject:"Hello Fran, from your profile site", mailBody:"Hi Fran,\n\n", readPost:"Read the LinkedIn post →", playGame:"Play the game →", email:"Email"},
  ca:{title:"Fran Mondaca — Global Learning • Talent • Organisational Development Leader",
@@ -863,7 +872,7 @@ const UI = {
      placeholder:"Pregunta'm el que vulguis sobre la meva feina…", hint:"Prem Retorn per enviar", left:n=>"Queden "+n+" caràcters",
      send:"Envia", question:"La teva pregunta", you:"Tu", typing:"En Fran està escrivint",
      chips:{intro:"Presentació",path:"El meu camí",looking:"Què busco",contact:"Contacte"}, topics:"Explora per temes", seePath:"Mira tot el meu camí →",
-     ask:"Pregunta'm", profile:"Perfil", copy:"© 2026 Fran Mondaca · Tots els drets reservats. No es permet reproduir el contingut ni el disseny sense permís.", homeTag:"Perfil interactiu", homeLead:"Aprenentatge, talent i desenvolupament organitzatiu. Tria com vols conèixer-me.", homeAskD:"Tria una pregunta i rep una resposta directa. Ràpid i conversacional.", homeAskM:(q,t)=>t+" temes →", homeProfT:"Llegeix el perfil", homeProfD:"Trajectòria, resultats i recerca doctoral, tot en una pàgina.", homeProfM:"Uns 2 minuts →", light:"☀ Clar", dark:"☾ Fosc", themeLabel:"Canvia entre mode clar i fosc", langLabel:"Idioma",
+     ask:"Pregunta'm", profile:"Perfil", linkCopied:"Enllaç copiat", copyLink:"Copia l'enllaç", copy:"© 2026 Fran Mondaca · Tots els drets reservats. No es permet reproduir el contingut ni el disseny sense permís.", homeTag:"Perfil interactiu", homeLead:"Aprenentatge, talent i desenvolupament organitzatiu. Tria com vols conèixer-me.", homeAskD:"Tria una pregunta i rep una resposta directa. Ràpid i conversacional.", homeAskM:(q,t)=>t+" temes →", homeProfT:"Llegeix el perfil", homeProfD:"Trajectòria, resultats i recerca doctoral, tot en una pàgina.", homeProfM:"Uns 2 minuts →", light:"☀ Clar", dark:"☾ Fosc", themeLabel:"Canvia entre mode clar i fosc", langLabel:"Idioma",
      fallback:["Encara no tinc una resposta preparada per a això, i prefereixo no endevinar.","Prova amb una d'aquestes preguntes o pregunta'm directament."],
      openProfile:"Obre el perfil complet →", seeStory:"Llegeix la història completa →", seeAgents:"Mira els agents d'IA →", visitStudio:"Visita el Learning Studio →", seeStudio:"Llegeix la història completa →", agentHint:"Agents d'IA que hi poden ajudar:", emailMe:"Envia'm un correu →", mailSubject:"Hola Fran, des del teu perfil web", mailBody:"Hola Fran,\n\n", readPost:"Llegeix el post a LinkedIn →", playGame:"Juga-hi →", email:"Correu"},
  es:{title:"Fran Mondaca — Global Learning • Talent • Organisational Development Leader",
@@ -874,7 +883,7 @@ const UI = {
      placeholder:"Pregúntame lo que quieras sobre mi trabajo…", hint:"Pulsa Intro para enviar", left:n=>"Quedan "+n+" caracteres",
      send:"Enviar", question:"Tu pregunta", you:"Tú", typing:"Fran está escribiendo",
      chips:{intro:"Presentación",path:"Mi camino",looking:"Qué busco",contact:"Contacto"}, topics:"Explora por temas", seePath:"Ver todo mi camino →",
-     ask:"Pregúntame", profile:"Perfil", copy:"© 2026 Fran Mondaca · Todos los derechos reservados. No se permite reproducir el contenido ni el diseño sin permiso.", homeTag:"Perfil interactivo", homeLead:"Aprendizaje, talento y desarrollo organizacional. Elige cómo quieres conocerme.", homeAskD:"Elige una pregunta y recibe una respuesta directa. Rápido y conversacional.", homeAskM:(q,t)=>t+" temas →", homeProfT:"Lee el perfil", homeProfD:"Trayectoria, resultados e investigación doctoral, todo en una página.", homeProfM:"Unos 2 minutos →", light:"☀ Claro", dark:"☾ Oscuro", themeLabel:"Cambiar entre modo claro y oscuro", langLabel:"Idioma",
+     ask:"Pregúntame", profile:"Perfil", linkCopied:"Enlace copiado", copyLink:"Copiar enlace", copy:"© 2026 Fran Mondaca · Todos los derechos reservados. No se permite reproducir el contenido ni el diseño sin permiso.", homeTag:"Perfil interactivo", homeLead:"Aprendizaje, talento y desarrollo organizacional. Elige cómo quieres conocerme.", homeAskD:"Elige una pregunta y recibe una respuesta directa. Rápido y conversacional.", homeAskM:(q,t)=>t+" temas →", homeProfT:"Lee el perfil", homeProfD:"Trayectoria, resultados e investigación doctoral, todo en una página.", homeProfM:"Unos 2 minutos →", light:"☀ Claro", dark:"☾ Oscuro", themeLabel:"Cambiar entre modo claro y oscuro", langLabel:"Idioma",
      fallback:["Todavía no tengo una respuesta preparada para eso, y prefiero no adivinar.","Prueba con una de estas preguntas o pregúntame directamente."],
      openProfile:"Abrir el perfil completo →", seeStory:"Leer la historia completa →", seeAgents:"Ver los agentes de IA →", visitStudio:"Visita el Learning Studio →", seeStudio:"Leer la historia completa →", agentHint:"Agentes de IA que pueden ayudar aquí:", emailMe:"Escríbeme un email →", mailSubject:"Hola Fran, desde tu perfil web", mailBody:"Hola Fran,\n\n", readPost:"Leer el post en LinkedIn →", playGame:"Jugar →", email:"Email"}
 };
@@ -1216,7 +1225,7 @@ let lastDim="who";
 function offerFollowups(){
   const s=nextQuestions(lastDim,3); if(!s.length) return;
   const d=el("div","shortcuts"); d.style.marginTop="0";
-  s.forEach(x=>{const b=el("button","chip",x.q[lang]); b.type="button"; b.onclick=()=>{d.remove(); ask(x.q[lang],x)}; d.appendChild(b)});
+  s.forEach(x=>{const b=el("button","chip",x.q[lang]); b.type="button"; b.dataset.q=x.id; b.onclick=()=>{d.remove(); ask(x.q[lang],x)}; d.appendChild(b)});
   thread.appendChild(d);
 }
 /* topics */
@@ -1228,7 +1237,7 @@ function renderTopics(){
   const dim=DIMS.find(d=>d.id===openDim); $("#topic-current").textContent=dim?dim.l[lang]:"";
   qs.innerHTML="";
   QA.filter(x=>x.d===openDim).forEach(x=>{const b=el("button","chip"+(asked.has(x.id)?" done":""),x.q[lang]); b.type="button";
-    b.onclick=()=>ask(x.q[lang],x); qs.appendChild(b)});
+    b.dataset.q=x.id; b.onclick=()=>ask(x.q[lang],x); qs.appendChild(b)});
 }
 function clearFollowups(){thread.querySelectorAll(".shortcuts").forEach(n=>n.remove())}
 
@@ -1258,6 +1267,7 @@ async function ask(text, forced){
       h.appendChild(el("p","ag-hint-l",T().agentHint));
       const ul=el("div","ag-hint-list"); m.item.ag.forEach(i=>{const b=el("button"); b.appendChild(el("b",null,AGENTS[i][lang][0]+" · "+AGL[lang].tag)); b.appendChild(el("span",null,AGENTS[i][lang][1])); b.type="button"; b.onclick=()=>showAgent(i); ul.appendChild(b)});
       h.appendChild(ul); bb.appendChild(h)}
+    if(m.item&&m.item.id&&QA.includes(m.item)) addShare(bb,shareURL({q:m.item.id},"ask"));
   }else{
     bubble("assistant",T().fallback,{actions:[{label:"emailMe",fn:"mail"},{label:"LinkedIn →",href:CONTACT.linkedin}]});
   }
@@ -1398,6 +1408,7 @@ function renderProjects(){
         '<button type="button" class="card card-btn" data-proj="'+x.id+'"><p class="label">'+escH(PG[x.g][L])+'</p><h4>'+escH(x[L].t)+'</h4><p>'+escH(x[L].s[3])+'</p><span class="card-more">'+({en:"Read the story",es:"Leer la historia",ca:"Llegeix la història"})[L]+' ↑</span></button>').join("")+'</div></div>';
     });
     mount.innerHTML=html;
+    const fh=mount.querySelector(".feature h3"); if(fh&&window.__share){fh.classList.add("has-share"); const pid=projSel; addShare(fh,()=>shareURL({p:pid},"profile"))}
     mount.querySelectorAll("[data-proj]").forEach(b=>b.addEventListener("click",()=>{
       projSel=b.dataset.proj; renderProjects();
       const f=document.getElementById("proj-feature-"+L); if(f) f.scrollIntoView({behavior:reduce.matches?"auto":"smooth",block:"start"});
@@ -1608,6 +1619,37 @@ const TOPIC_ALIAS={who:"who",about:"who",gov:"gov",governance:"gov",partnerships
   if(!location.hash||location.hash==="#home") history.replaceState(null,"",location.pathname+location.search+"#ask");
 }catch(e){}})();
 renderProjects(); applyLang(); render();
+/* shareable links: right-click any question, or use the small link icon on answers and profile sections */
+const CANON="https://franmdkso.github.io/Profile/";
+function shareURL(params,mode){
+  const base=/github\.io$/.test(location.hostname)?location.origin+location.pathname:CANON;
+  const q=new URLSearchParams(Object.assign({lang:lang},params)); return base+"?"+q.toString()+"#"+mode;
+}
+let toastT=0;
+function toast(msg){let t=document.getElementById("toast"); if(!t){t=document.createElement("div"); t.id="toast"; t.setAttribute("role","status"); document.body.appendChild(t)}
+  t.textContent=msg; t.classList.add("on"); clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove("on"),1800)}
+async function copyLink(url){
+  try{await navigator.clipboard.writeText(url)}catch(e){const a=document.createElement("textarea"); a.value=url; a.style.position="absolute"; a.style.left="-9999px"; document.body.appendChild(a); a.select(); try{document.execCommand("copy")}catch(_){} a.remove()}
+  toast(T().linkCopied);
+}
+const LINK_SVG='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>';
+function addShare(host,url){const b=document.createElement("button"); b.type="button"; b.className="share-btn"; b.innerHTML=LINK_SVG; b.title=T().copyLink; b.setAttribute("aria-label",T().copyLink);
+  b.onclick=e=>{e.stopPropagation(); copyLink(typeof url==="function"?url():url)}; host.appendChild(b); return b}
+document.addEventListener("contextmenu",e=>{const b=e.target.closest("[data-q],[data-chip]"); if(!b) return;
+  e.preventDefault(); copyLink(shareURL({q:b.dataset.q||b.dataset.chip},"ask"))});
+document.querySelectorAll(".l-block").forEach(blk=>{blk.querySelectorAll("section[id] > .sec-head h2, section[id] h2").forEach(h=>{
+  if(h.querySelector(".share-btn")) return; const sec=h.closest("section"); const id=sec.id.replace(/-(ca|es)$/,"");
+  h.classList.add("has-share"); addShare(h,()=>shareURL({s:id},"profile"))})});
+window.__share=true; renderProjects();
+/* open what a shared link points to */
+(function(){try{
+  const P=new URLSearchParams(location.search), q=P.get("q"), sct=P.get("s"), pj=P.get("p"), ar=P.get("area");
+  if(q){const it=QA.find(x=>x.id===q); if(it){ if(location.hash!=="#ask"){history.replaceState(null,"",location.pathname+location.search+"#ask"); render()} setTimeout(()=>ask(it.q[lang],it),350)}}
+  if(pj&&PROJ.some(x=>x.id===pj)){history.replaceState(null,"",location.pathname+location.search+"#profile"); setTimeout(()=>goTo("profile",null,pj),350)}
+  else if(sct&&/^[a-z]+$/.test(sct)){history.replaceState(null,"",location.pathname+location.search+"#profile"); setTimeout(()=>goTo("profile",sct),350)}
+  if(ar){history.replaceState(null,"",location.pathname+location.search+"#profile"); setTimeout(()=>{const b=document.querySelector('.l-block[data-l="'+lang+'"] .ag-areas button[data-area="'+ar+'"]'); if(b){b.click(); goTo("profile","vision")}},400)}
+}catch(e){}})();
+
 </script>
 </body>
 </html>
