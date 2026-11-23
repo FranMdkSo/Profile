@@ -2,6 +2,13 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
+<meta name="build" content="20261123-1634">
+<script>
+/* always show the latest published version: if the server has a newer build than this cached copy, reload once */
+(function(){try{var m=document.querySelector('meta[name="build"]');if(!m||!window.fetch||location.protocol==="file:")return;var b=m.content;
+fetch(location.pathname+"?build-check="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(t){
+var x=t.match(/<meta name="build" content="([^"]+)"/);if(x&&x[1]!==b){var k="reloaded-"+x[1];try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}location.reload()}}).catch(function(){})}catch(e){}})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fran Mondaca — Global Learning • Talent • Organisational Development Leader</title>
 <link rel="icon" href="favicon.ico" sizes="any">
