@@ -8,12 +8,12 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<meta name="description" content="Maturity assessments for learning and talent functions in global, federated organisations, by Fran Mondaca. Start with LearnOps & Governance.">
+<meta name="description" content="Maturity assessments for learning and talent functions in global, federated organisations, by Fran Mondaca. LearnOps & Governance, Learning Culture, and Human × AI · Decision Making.">
 <!-- link preview: same thumbnail as Fran's profile -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Fran Mondaca">
 <meta property="og:title" content="Maturity Assessments — Fran Mondaca">
-<meta property="og:description" content="Where does your learning function stand? LearnOps & Governance maturity assessment, short or full.">
+<meta property="og:description" content="Where does your learning function stand? Three maturity assessments: LearnOps & Governance, Learning Culture, and Human × AI · Decision Making.">
 <meta property="og:url" content="https://franmdkso.github.io/Profile/maturity/">
 <meta property="og:image" content="https://franmdkso.github.io/Profile/apple-touch-icon.png">
 <meta property="og:image:width" content="180">
@@ -222,6 +222,29 @@ details li b{color:var(--ink)}
 .choice b{font-size:30px!important;line-height:1.1!important;align-items:center!important;margin-top:2px}
 .sc h1.aname{font-size:clamp(42px,6.4vw,66px)}
 .path b{font-size:30px!important}
+.owner{margin-top:8px;font-size:14px;color:var(--muted)}
+.owner b{color:var(--ink);font-weight:600}
+.opt.agree{grid-template-columns:28px 1fr;align-items:center;padding:12px 16px}
+.opt.agree b{grid-row:auto}
+.heat.h10{grid-template-columns:repeat(10,minmax(0,1fr))}
+details.others{margin-top:14px}
+details.others summary{font-family:var(--body);font-size:15px;font-weight:600;color:var(--muted)}
+details.others p{margin-top:8px;color:var(--muted);font-size:15.5px}
+#res h1.has-share .share-btn{width:34px;height:34px;vertical-align:.3em}
+/* headline questions and taglines */
+#view-home h1{max-width:900px}
+.qs{display:flex;flex-direction:column;align-items:center;gap:10px;margin:26px auto 40px}
+.qs a{display:inline-flex;align-items:baseline;gap:12px;font-family:var(--display);font-style:italic;font-size:clamp(21px,2.7vw,28px);color:var(--signal);text-decoration:none;padding:2px 6px;border-radius:10px;transition:background .2s}
+.qs a span{font-family:var(--mono);font-style:normal;font-size:13px;color:var(--muted)}
+.qs a i{font-style:normal;font-size:.75em;opacity:0;transform:translateX(-4px);transition:opacity .2s,transform .2s}
+.qs a:hover,.qs a:focus-visible{background:var(--signal-soft)}
+.qs a:hover i,.qs a:focus-visible i{opacity:1;transform:none}
+.tagline{font-family:var(--display);font-style:italic;color:var(--signal);font-size:19px;line-height:1.3;margin:12px 0 0!important}
+.choice p.tagline{color:var(--signal);font-size:19px;margin:10px 0 0}
+.choice .tagline + p{margin-top:10px}
+.tagline.big{font-size:clamp(23px,3.2vw,32px);margin-top:14px!important;max-width:760px}
+.sc .tagline.big + .lead{margin-top:16px;font-size:17px}
+#res .tagline.big{font-size:clamp(20px,2.6vw,26px);margin-bottom:6px!important}
 </style>
 </head>
 <body class="is-home">
@@ -247,13 +270,14 @@ details li b{color:var(--ink)}
 <!-- ================= HOME ================= -->
 <main id="view-home" class="wrap" aria-labelledby="h-home">
   <p class="label"><span><i class="dot"></i><span data-i18n="homeTag">Maturity assessments</span></span></p>
-  <h1 id="h-home" data-i18n="homeH1">Where does your learning function stand?</h1>
-  <p class="lead" data-i18n="homeLead"></p>
+  <h1 id="h-home" data-i18n="homeH1x">Three questions every people leader should be able to answer.</h1>
+  <nav class="qs" id="home-qs" aria-label="Assessments"></nav>
   <div class="choices">
     <div class="choice-wrap">
       <a class="choice" href="#learnops">
         <span class="tag" data-i18n="available">Available</span>
         <b><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg><span data-i18n="loName">LearnOps &amp; Governance</span></b>
+        <p class="tagline" data-i18n="loTag"></p>
         <p data-i18n="loDesc"></p>
         <ul id="lo-pills"></ul>
         <span class="go" data-i18n="startAssess">Start assessment →</span>
@@ -261,67 +285,36 @@ details li b{color:var(--ink)}
       <button class="share-btn card-share" type="button" data-share="learnops"></button>
     </div>
     <div class="choice-wrap">
-      <div class="choice soon" aria-disabled="true">
-        <span class="tag" data-i18n="soon">Coming soon</span>
+      <a class="choice" href="#culture">
+        <span class="tag" data-i18n="available">Available</span>
         <b><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22c4-3 7-6.5 7-11a7 7 0 0 0-14 0c0 4.5 3 8 7 11z"/><path d="M12 8v6M9 11h6"/></svg><span data-i18n="lcName">Learning Culture</span></b>
+        <p class="tagline" data-i18n="lcTag"></p>
         <p data-i18n="lcDesc"></p>
-        <ul><li data-i18n="orgLens">Organisation lens</li></ul>
-        <span class="go" data-i18n="inDev">In development</span>
-      </div>
+        <ul id="lc-pills"></ul>
+        <span class="go" data-i18n="startAssess">Start assessment →</span>
+      </a>
+      <button class="share-btn card-share" type="button" data-share="culture"></button>
     </div>
     <div class="choice-wrap">
-      <div class="choice soon" aria-disabled="true">
-        <span class="tag" data-i18n="soon">Coming soon</span>
-        <b><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg><span data-i18n="aiName">AI-era Leadership</span></b>
+      <a class="choice" href="#hx">
+        <span class="tag" data-i18n="available">Available</span>
+        <b><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg><span data-i18n="aiName">Human × AI · Decision Making</span></b>
+        <p class="tagline" data-i18n="aiTag"></p>
         <p data-i18n="aiDesc"></p>
-        <ul><li data-i18n="orgLens">Organisation lens</li></ul>
-        <span class="go" data-i18n="inDev">In development</span>
-      </div>
+        <ul id="hx-pills"></ul>
+        <span class="go" data-i18n="startAssess">Start assessment →</span>
+      </a>
+      <button class="share-btn card-share" type="button" data-share="hx"></button>
     </div>
   </div>
   <p class="copy" data-i18n="copy"></p>
 </main>
 
-<!-- ================= LEARNOPS: ONE SCREEN PER QUESTION ================= -->
-<main id="view-learnops" class="wrap screen" aria-live="polite" hidden><div id="wiz" class="sc"></div></main>
+<!-- ================= ASSESSMENT: ONE SCREEN PER QUESTION ================= -->
+<main id="view-wiz" class="wrap screen" aria-live="polite" hidden><div id="wiz" class="sc"></div></main>
 
 <!-- ================= RESULTS ================= -->
-<main id="view-results" class="wrap page" aria-labelledby="h-res" hidden>
-  <p class="label"><span><i class="dot"></i><span id="res-unit">Results</span></span></p>
-  <h1 id="h-res" data-i18n="resH1">Your LearnOps &amp; Governance profile</h1>
-  <div id="res-warn"></div>
-  <div class="tiles">
-    <div class="panel tile"><span class="label" data-i18n="loIndex">LearnOps index</span><div class="num" id="t-lo">–</div><div class="lvl" id="t-lo-l"></div></div>
-    <div class="panel tile"><span class="label" data-i18n="gvIndex">Governance index</span><div class="num" id="t-gv">–</div><div class="lvl" id="t-gv-l"></div></div>
-    <div class="panel tile profile"><span class="label" data-i18n="profileL">Profile</span><h3 id="t-pr">–</h3><p id="t-pr-d"></p></div>
-  </div>
-  <div class="two">
-    <div class="panel matrix"><h2 data-i18n="matrixH">Two-lens matrix</h2><p class="sub" data-i18n="matrixSub"></p><div id="matrix"></div><div class="fix" id="fix"></div></div>
-    <div class="panel"><h2 data-i18n="barsH">By pillar and group</h2><p class="sub" id="bars-sub"></p><div class="bars" id="bars"></div>
-      <div class="heat-l"><span id="heat-t"></span><span data-i18n="darker"></span></div>
-      <div class="heat" id="heat-a"></div><div class="heat" id="heat-g"></div></div>
-  </div>
-  <div class="panel" style="margin-top:14px">
-    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><h2 data-i18n="gapsH">Biggest gaps to target</h2>
-      <label class="tgt"><span data-i18n="target">Target level</span> <select id="target"><option>2</option><option>3</option><option selected>4</option><option>5</option></select></label></div>
-    <p class="sub" data-i18n="gapsSub"></p>
-    <div id="gaps"></div>
-  </div>
-  <div id="capped"></div>
-  <div id="upsell"></div>
-  <details class="panel">
-    <summary data-i18n="runH">Running it across the whole organisation</summary>
-    <p class="note" data-i18n="runIntro"></p>
-    <ol id="run-steps"></ol>
-  </details>
-  <div class="actions">
-    <button class="btn ghost" type="button" id="edit" data-i18n="review">Review answers</button>
-    <button class="btn ghost" type="button" id="restart" data-i18n="restart">Start again</button>
-    <a class="btn ghost" href="#home" data-i18n="allAssess">All assessments</a>
-  </div>
-  <p class="note" data-i18n="credit"></p>
-  <p class="copy" data-i18n="copy"></p>
-</main>
+<main id="view-res" class="wrap page" hidden><div id="res"></div></main>
 <div id="toast" role="status"></div>
 <script>
 const $=s=>document.querySelector(s);
@@ -426,7 +419,7 @@ G10:["Govern de la IA i del contingut","Hi ha regles per a la IA generativa, la 
 
 /* ---------- interface text ---------- */
 const UI={
-en:{assess:"Assessments",profile:"Profile",light:"Light mode",dark:"Dark mode",copyLink:"Copy link",linkCopied:"Link copied",
+en:{assess:"Assessments",homeH1x:"Three questions every people leader should be able to answer.",homeQs:["Does learning run well?", "Do people really learn?", "Who decides when AI is involved?"],loTag:"Run learning like a business. Govern it like a network.",lcTag:"Declared or lived? Find out what your culture really does.",aiTag:"Redesign the work. Keep the human in charge.",lcPills:["Short: 8 statements","Full: 20 statements","2 lenses"],profile:"Profile",light:"Light mode",dark:"Dark mode",copyLink:"Copy link",linkCopied:"Link copied",
 copy:"© 2026 Fran Mondaca · All rights reserved. Content and design may not be reproduced without permission.",
 homeTag:"Maturity assessments",homeH1:"Where does your learning function stand?",
 homeLead:"Practical maturity models for learning and talent teams in global, federated organisations. Each one turns a vague sense of \"we could do better\" into a scored, evidence-based starting point.",
@@ -434,7 +427,7 @@ available:"Available",soon:"Coming soon",inDev:"In development",startAssess:"Sta
 loName:"LearnOps & Governance",loDesc:"How well learning runs, and how well it is governed across the centre, regions, businesses and countries. Two lenses, scored separately.",
 loPills:["Short: 8 questions","Full: 21 questions","2 lenses"],
 lcName:"Learning Culture",lcDesc:"How far learning is part of everyday work: leaders who teach, safety to experiment, time to learn, and knowledge that is shared and recognised.",
-aiName:"AI-era Leadership",aiDesc:"How ready the organisation's leadership system is to lead human-AI work: leader development, role redesign, decision rules and incentives.",
+hxPills:["Short: 8 questions","Full: 20 questions","2 lenses"],aiName:"Human × AI · Decision Making",aiDesc:"How far work is being redesigned for people and AI together, and how clearly decisions and accountability are governed when AI is involved.",
 orgLens:"Organisation lens",
 startTag:"Maturity assessment",startLead:"Two lenses, scored separately: how well learning <b>runs</b>, and how well it is <b>governed</b> across the centre, regions, businesses and countries.",
 short:"Short",shortMeta:"8 questions · about 3 minutes",shortDesc:"A quick read on both lenses and where you sit on the matrix.",
@@ -469,7 +462,7 @@ slow:["Controlled but slow","Rules and forums exist, but delivery lags behind th
 int:["Integrated","Learning runs well and is governed as one system.","Keep it adaptive: use data and governed AI to rebalance the portfolio, and watch for units drifting apart."]},
 title:{home:"Maturity Assessments",learnops:"LearnOps & Governance assessment",results:"LearnOps & Governance results"}},
 
-es:{assess:"Evaluaciones",profile:"Perfil",light:"Modo claro",dark:"Modo oscuro",copyLink:"Copiar enlace",linkCopied:"Enlace copiado",
+es:{assess:"Evaluaciones",homeH1x:"Tres preguntas que todo líder de personas debería poder responder.",homeQs:["¿Funciona bien el aprendizaje?", "¿Aprenden de verdad las personas?", "¿Quién decide cuando interviene la IA?"],loTag:"Gestiona el aprendizaje como un negocio. Gobiérnalo como una red.",lcTag:"¿Declarada o vivida? Descubre qué hace de verdad tu cultura.",aiTag:"Rediseña el trabajo. Mantén a la persona al mando.",lcPills:["Corta: 8 afirmaciones","Completa: 20 afirmaciones","2 lentes"],profile:"Perfil",light:"Modo claro",dark:"Modo oscuro",copyLink:"Copiar enlace",linkCopied:"Enlace copiado",
 copy:"© 2026 Fran Mondaca · Todos los derechos reservados. No se permite reproducir el contenido ni el diseño sin autorización.",
 homeTag:"Evaluaciones de madurez",homeH1:"¿En qué punto está tu función de aprendizaje?",
 homeLead:"Modelos de madurez prácticos para equipos de aprendizaje y talento en organizaciones globales y federadas. Cada uno convierte la vaga sensación de «podríamos hacerlo mejor» en un punto de partida puntuado y basado en evidencias.",
@@ -477,7 +470,7 @@ available:"Disponible",soon:"Próximamente",inDev:"En desarrollo",startAssess:"E
 loName:"LearnOps y Gobierno",loDesc:"Lo bien que funciona el aprendizaje y lo bien que se gobierna entre el centro, las regiones, los negocios y los países. Dos lentes, puntuadas por separado.",
 loPills:["Corta: 8 preguntas","Completa: 21 preguntas","2 lentes"],
 lcName:"Cultura de aprendizaje",lcDesc:"Hasta qué punto el aprendizaje forma parte del trabajo diario: líderes que enseñan, seguridad para experimentar, tiempo para aprender y conocimiento que se comparte y se reconoce.",
-aiName:"Liderazgo en la era de la IA",aiDesc:"Lo preparado que está el sistema de liderazgo de la organización para dirigir el trabajo entre personas e IA: desarrollo de líderes, rediseño de roles, reglas de decisión e incentivos.",
+hxPills:["Corta: 8 preguntas","Completa: 20 preguntas","2 lentes"],aiName:"Humano × IA · Toma de decisiones",aiDesc:"Hasta qué punto se rediseña el trabajo para personas e IA juntas, y con qué claridad se gobiernan las decisiones y la rendición de cuentas cuando interviene la IA.",
 orgLens:"Lente de organización",
 startTag:"Evaluación de madurez",startLead:"Dos lentes, puntuadas por separado: lo bien que <b>funciona</b> el aprendizaje y lo bien que se <b>gobierna</b> entre el centro, las regiones, los negocios y los países.",
 short:"Corta",shortMeta:"8 preguntas · unos 3 minutos",shortDesc:"Una lectura rápida de las dos lentes y de tu posición en la matriz.",
@@ -512,7 +505,7 @@ slow:["Controlado pero lento","Existen reglas y foros, pero la entrega va por de
 int:["Integrado","El aprendizaje funciona bien y se gobierna como un solo sistema.","Mantenlo adaptativo: usa datos e IA gobernada para reequilibrar el portafolio y vigila que las unidades no se distancien."]},
 title:{home:"Evaluaciones de madurez",learnops:"Evaluación de LearnOps y Gobierno",results:"Resultados de LearnOps y Gobierno"}},
 
-ca:{assess:"Avaluacions",profile:"Perfil",light:"Mode clar",dark:"Mode fosc",copyLink:"Copiar l'enllaç",linkCopied:"Enllaç copiat",
+ca:{assess:"Avaluacions",homeH1x:"Tres preguntes que tot líder de persones hauria de poder respondre.",homeQs:["Funciona bé l'aprenentatge?", "Les persones aprenen de debò?", "Qui decideix quan hi intervé la IA?"],loTag:"Gestiona l'aprenentatge com un negoci. Governa'l com una xarxa.",lcTag:"Declarada o viscuda? Descobreix què fa de debò la teva cultura.",aiTag:"Redissenya la feina. Mantén la persona al comandament.",lcPills:["Curta: 8 afirmacions","Completa: 20 afirmacions","2 lents"],profile:"Perfil",light:"Mode clar",dark:"Mode fosc",copyLink:"Copiar l'enllaç",linkCopied:"Enllaç copiat",
 copy:"© 2026 Fran Mondaca · Tots els drets reservats. No es permet reproduir el contingut ni el disseny sense autorització.",
 homeTag:"Avaluacions de maduresa",homeH1:"En quin punt és la teva funció d'aprenentatge?",
 homeLead:"Models de maduresa pràctics per a equips d'aprenentatge i talent en organitzacions globals i federades. Cadascun converteix la vaga sensació de «ho podríem fer millor» en un punt de partida puntuat i basat en evidències.",
@@ -520,7 +513,7 @@ available:"Disponible",soon:"Properament",inDev:"En desenvolupament",startAssess
 loName:"LearnOps i Govern",loDesc:"Com de bé funciona l'aprenentatge i com de bé es governa entre el centre, les regions, els negocis i els països. Dues lents, puntuades per separat.",
 loPills:["Curta: 8 preguntes","Completa: 21 preguntes","2 lents"],
 lcName:"Cultura d'aprenentatge",lcDesc:"Fins a quin punt l'aprenentatge forma part de la feina diària: líders que ensenyen, seguretat per experimentar, temps per aprendre i coneixement que es comparteix i es reconeix.",
-aiName:"Lideratge a l'era de la IA",aiDesc:"Com de preparat està el sistema de lideratge de l'organització per dirigir la feina entre persones i IA: desenvolupament de líders, redisseny de rols, regles de decisió i incentius.",
+hxPills:["Curta: 8 preguntes","Completa: 20 preguntes","2 lents"],aiName:"Humà × IA · Presa de decisions",aiDesc:"Fins a quin punt es redissenya la feina per a persones i IA juntes, i amb quina claredat es governen les decisions i la rendició de comptes quan hi intervé la IA.",
 orgLens:"Lent d'organització",
 startTag:"Avaluació de maduresa",startLead:"Dues lents, puntuades per separat: com de bé <b>funciona</b> l'aprenentatge i com de bé es <b>governa</b> entre el centre, les regions, els negocis i els països.",
 short:"Curta",shortMeta:"8 preguntes · uns 3 minuts",shortDesc:"Una lectura ràpida de les dues lents i de la teva posició a la matriu.",
@@ -556,30 +549,341 @@ int:["Integrat","L'aprenentatge funciona bé i es governa com un sol sistema.","
 title:{home:"Avaluacions de maduresa",learnops:"Avaluació de LearnOps i Govern",results:"Resultats de LearnOps i Govern"}}
 };
 
+const gname=g=>UI[lang].grp[g]||g;
+/* ================= LEARNING CULTURE ================= */
+/* owners (after Bersin's finding that most culture practices sit with line managers): L = top leadership, M = line managers, H = L&D / HR */
+const CU_IDS=["C1","C2","C3","C4","C5","C6","C7","C8","C9","C10","B1","B2","B3","B4","B5","B6","B7","B8","B9","B10"];
+const CU_SHORT=["C1","C2","C3","C5","B1","B3","B4","B5"];
+const CU_OWNER={C1:"L",C2:"M",C3:"L",C4:"M",C5:"H",C6:"H",C7:"H",C8:"L",C9:"H",C10:"L",B1:"M",B2:"M",B3:"M",B4:"M",B5:"M",B6:"H",B7:"M",B8:"M",B9:"M",B10:"L"};
+/* [name, statement (completes "In my team, …" / "Across my organisation, …"), why it matters, learn more] */
+const CU={
+en:{
+C1:["Leaders model learning","senior leaders talk openly about what they are learning and what they got wrong.","People copy what leaders do, not what they say about learning.","When senior leaders share their own learning and mistakes, they signal that not knowing is normal. Bersin's research found that a small set of practices owned by top leadership sets the tone for the rest, and Edmondson's work shows that leader humility is one of the strongest drivers of psychological safety."],
+C2:["Managers develop people","managers make regular time to discuss people's development, not only their performance.","The manager is the strongest single influence on whether people grow.","Most of the practices behind a learning culture sit with line managers. Regular development conversations, separate from performance reviews, are where goals, stretch opportunities and feedback come together."],
+C3:["Time to learn","people have protected time to learn during working hours.","Without time, learning stays an intention.","Learning competes with delivery and usually loses. Protected time (a weekly slot, a learning day, time after a project) is a signal from leadership that learning is part of the job, not something for the evening."],
+C4:["Response to failure","when something goes wrong, the first question is what we can learn, not who is to blame.","How an organisation reacts to failure decides whether people hide problems or share them.","Edmondson distinguishes preventable failures from intelligent failures in new territory. A learning culture treats intelligent failures as information: discussed early, analysed without blame and shared so others don't repeat them."],
+C5:["Recognition","learning, sharing and helping others grow count in reviews and promotions.","What gets rewarded gets repeated.","If promotions only reward individual results, sharing knowledge and developing others become optional extras. Including them in performance and promotion criteria makes them part of the job."],
+C6:["Access","it is easy to find the learning, experts and knowledge needed for the work.","People learn more when the right resource is a minute away, not a week away.","Access means more than a learning platform: knowing who the experts are, finding past lessons and reaching useful content at the moment of need. Friction here quietly kills curiosity."],
+C7:["Growth opportunities","stretch assignments, projects and internal moves are open to people who want to grow.","Most development happens through experience, not courses.","Stretch roles, projects and internal mobility are where people build new capabilities. When they are visible and open, rather than handed out informally, learning becomes a path, not a privilege."],
+C8:["Strategic capabilities","people know which capabilities matter for the strategy, and why.","Learning has direction when people know what the business needs next.","A shared view of critical capabilities connects individual learning to strategy. Without it, people learn what is interesting or available rather than what makes the biggest difference."],
+C9:["Feedback channels","there are regular, simple ways to give and receive feedback.","Feedback is the fastest learning loop most people have.","Regular check-ins, after-action reviews and simple peer feedback make learning continuous. If feedback arrives once a year, it comes too late to change anything."],
+C10:["Permission to experiment","trying new ways of working is backed with time, budget or explicit permission.","People experiment when they know it is allowed, not only tolerated.","Experiments need a little time, a little money and clear permission. Small, bounded experiments with agreed learning goals let teams test ideas without betting the business."],
+B1:["Asking for help","people ask for help or admit they don't know, without fear.","Asking is the first act of learning, and the first one fear stops.","This is the everyday sign of psychological safety. Where people hide what they don't know, problems surface late and learning stays private."],
+B2:["Speaking up","people raise concerns and challenge ideas, including those of senior colleagues.","Teams that challenge each other catch mistakes earlier and learn faster.","Speaking up is the behaviour Edmondson's research links most directly to team learning. It depends heavily on how leaders react the first time someone disagrees."],
+B3:["Experimenting","teams test new ideas on a small scale before scaling them.","Small tests turn opinions into evidence.","Experimenting means a clear hypothesis, a small test and a decision based on what happened. It keeps the cost of being wrong low and the speed of learning high."],
+B4:["Reflecting","after projects or key moments, teams review what worked and what didn't.","Experience only becomes learning when someone reflects on it.","Short, regular reviews (what did we expect, what happened, what will we do differently) are one of the cheapest and most powerful learning habits. Bersin names encouraging reflection as one of the six pillars of a learning culture."],
+B5:["Sharing knowledge","people share what they know (lessons, documents, contacts) beyond their own team.","Knowledge that stays in one head or one team is a risk, not an asset.","Sharing turns individual learning into organisational learning. It grows when it is easy, expected and recognised, and shrinks when knowledge is treated as personal power."],
+B6:["Learning in the flow of work","people learn while working, from colleagues, practice and AI tools, not only in courses.","Most learning happens on the job; the question is whether it is deliberate.","Learning in the flow of work means picking up skills at the moment of need: asking a colleague, trying, using an AI assistant, checking a guide. Courses still matter, but they are a small part of how people grow."],
+B7:["Seeking feedback","people actively ask for feedback on their work.","Feedback people ask for is heard; feedback imposed on them is often defended against.","When people seek feedback themselves, they choose the moment and the question, which makes them far more likely to act on it. It is a strong sign of a growth mindset in a team."],
+B8:["Teaching others","experienced people coach and teach others as part of their role.","Teaching is how expertise scales, and how experts keep learning.","Leaders and experts as teachers are a hallmark of strong learning cultures. Teaching spreads knowledge quickly and in context, and it forces the teacher to sharpen their own understanding."],
+B9:["Applying learning","what people learn gets applied at work within weeks.","Learning that isn't applied fades within weeks.","Transfer is where learning creates value. It depends largely on the manager: agreeing how to apply new skills, creating the opportunity and following up."],
+B10:["Looking outward","people look beyond the team for ideas: customers, other functions, other companies.","New ideas usually come from outside the team.","Organisations that learn fast bring in outside perspectives on purpose: customer insights, other functions, partners and peers in other industries. Bersin linked learning culture to outcomes such as customer responsiveness and innovation."]
+},
+es:{
+C1:["Los líderes dan ejemplo","los líderes sénior hablan abiertamente de lo que están aprendiendo y de en qué se han equivocado.","Las personas copian lo que hacen los líderes, no lo que dicen sobre el aprendizaje.","Cuando los líderes sénior comparten su propio aprendizaje y sus errores, transmiten que no saber es normal. La investigación de Bersin mostró que un pequeño grupo de prácticas que dependen de la alta dirección marca el tono del resto, y el trabajo de Edmondson muestra que la humildad del líder es uno de los motores más fuertes de la seguridad psicológica."],
+C2:["Los managers desarrollan personas","los managers dedican tiempo con regularidad a hablar del desarrollo de las personas, no solo de su desempeño.","El manager es la mayor influencia individual en que las personas crezcan o no.","La mayoría de las prácticas de una cultura de aprendizaje dependen de los managers. Las conversaciones regulares de desarrollo, separadas de la evaluación del desempeño, son donde se juntan objetivos, oportunidades de reto y feedback."],
+C3:["Tiempo para aprender","las personas tienen tiempo protegido para aprender dentro de la jornada.","Sin tiempo, el aprendizaje se queda en intención.","El aprendizaje compite con la entrega y suele perder. El tiempo protegido (un hueco semanal, un día de aprendizaje, tiempo después de un proyecto) es una señal de la dirección de que aprender forma parte del trabajo, no algo para la noche."],
+C4:["Respuesta al error","cuando algo sale mal, la primera pregunta es qué podemos aprender, no quién tiene la culpa.","Cómo reacciona una organización ante el error decide si las personas esconden los problemas o los comparten.","Edmondson distingue entre errores evitables y errores inteligentes en terreno nuevo. Una cultura de aprendizaje trata los errores inteligentes como información: se hablan pronto, se analizan sin culpables y se comparten para que otros no los repitan."],
+C5:["Reconocimiento","aprender, compartir y ayudar a crecer a otros cuenta en las evaluaciones y en las promociones.","Lo que se recompensa se repite.","Si las promociones solo premian resultados individuales, compartir conocimiento y desarrollar a otros se vuelven extras opcionales. Incluirlos en los criterios de desempeño y promoción los convierte en parte del trabajo."],
+C6:["Acceso","es fácil encontrar el aprendizaje, los expertos y el conocimiento que se necesitan para el trabajo.","Se aprende más cuando el recurso adecuado está a un minuto, no a una semana.","Acceso es más que una plataforma de aprendizaje: saber quiénes son los expertos, encontrar lecciones anteriores y llegar a contenido útil en el momento de necesidad. La fricción aquí apaga la curiosidad sin hacer ruido."],
+C7:["Oportunidades de crecimiento","los proyectos de reto, las asignaciones y los movimientos internos están abiertos a quien quiere crecer.","La mayor parte del desarrollo ocurre a través de la experiencia, no de los cursos.","Los roles de reto, los proyectos y la movilidad interna son donde las personas construyen nuevas capacidades. Cuando son visibles y abiertos, en lugar de repartirse de forma informal, el aprendizaje se convierte en un camino, no en un privilegio."],
+C8:["Capacidades estratégicas","las personas saben qué capacidades importan para la estrategia, y por qué.","El aprendizaje tiene dirección cuando las personas saben qué necesitará el negocio.","Una visión compartida de las capacidades críticas conecta el aprendizaje individual con la estrategia. Sin ella, las personas aprenden lo que es interesante o está disponible, no lo que marca más diferencia."],
+C9:["Canales de feedback","hay formas regulares y sencillas de dar y recibir feedback.","El feedback es el ciclo de aprendizaje más rápido que tiene la mayoría de las personas.","Las conversaciones regulares, las revisiones después de la acción y el feedback sencillo entre compañeros hacen que el aprendizaje sea continuo. Si el feedback llega una vez al año, llega demasiado tarde para cambiar nada."],
+C10:["Permiso para experimentar","probar nuevas formas de trabajar cuenta con tiempo, presupuesto o permiso explícito.","Las personas experimentan cuando saben que está permitido, no solo tolerado.","Los experimentos necesitan algo de tiempo, algo de dinero y un permiso claro. Experimentos pequeños y acotados, con objetivos de aprendizaje acordados, permiten probar ideas sin jugarse el negocio."],
+B1:["Pedir ayuda","las personas piden ayuda o reconocen que no saben algo, sin miedo.","Preguntar es el primer acto de aprendizaje, y el primero que el miedo frena.","Es la señal cotidiana de la seguridad psicológica. Donde las personas esconden lo que no saben, los problemas aparecen tarde y el aprendizaje se queda en privado."],
+B2:["Alzar la voz","las personas plantean dudas y cuestionan ideas, también las de colegas sénior.","Los equipos que se cuestionan detectan antes los errores y aprenden más rápido.","Alzar la voz es el comportamiento que la investigación de Edmondson vincula más directamente con el aprendizaje en equipo. Depende mucho de cómo reaccionan los líderes la primera vez que alguien discrepa."],
+B3:["Experimentar","los equipos prueban ideas nuevas a pequeña escala antes de ampliarlas.","Las pruebas pequeñas convierten opiniones en evidencias.","Experimentar significa una hipótesis clara, una prueba pequeña y una decisión basada en lo que pasó. Mantiene bajo el coste de equivocarse y alta la velocidad de aprendizaje."],
+B4:["Reflexionar","después de proyectos o momentos clave, los equipos revisan qué funcionó y qué no.","La experiencia solo se convierte en aprendizaje cuando alguien reflexiona sobre ella.","Las revisiones breves y regulares (qué esperábamos, qué pasó, qué haremos distinto) son uno de los hábitos de aprendizaje más baratos y potentes. Bersin cita fomentar la reflexión como uno de los seis pilares de una cultura de aprendizaje."],
+B5:["Compartir conocimiento","las personas comparten lo que saben (lecciones, documentos, contactos) más allá de su equipo.","El conocimiento que se queda en una cabeza o en un equipo es un riesgo, no un activo.","Compartir convierte el aprendizaje individual en aprendizaje de la organización. Crece cuando es fácil, esperado y reconocido, y se reduce cuando el conocimiento se trata como poder personal."],
+B6:["Aprender en el flujo de trabajo","las personas aprenden mientras trabajan, de los compañeros, de la práctica y de herramientas de IA, no solo en cursos.","La mayor parte del aprendizaje ocurre en el trabajo; la cuestión es si es deliberado.","Aprender en el flujo de trabajo significa adquirir habilidades en el momento de necesidad: preguntar a un compañero, probar, usar un asistente de IA, consultar una guía. Los cursos siguen importando, pero son una pequeña parte de cómo crecen las personas."],
+B7:["Pedir feedback","las personas piden activamente feedback sobre su trabajo.","El feedback que se pide se escucha; el que se impone a menudo se rebate.","Cuando las personas piden feedback, eligen el momento y la pregunta, lo que hace mucho más probable que actúen sobre él. Es una señal clara de mentalidad de crecimiento en un equipo."],
+B8:["Enseñar a otros","las personas con experiencia acompañan y enseñan a otras como parte de su rol.","Enseñar es como escala la experiencia, y como los expertos siguen aprendiendo.","Los líderes y expertos que enseñan son un rasgo de las culturas de aprendizaje fuertes. Enseñar difunde el conocimiento rápido y en contexto, y obliga a quien enseña a afinar su propia comprensión."],
+B9:["Aplicar lo aprendido","lo que las personas aprenden se aplica en el trabajo en pocas semanas.","El aprendizaje que no se aplica se pierde en pocas semanas.","La transferencia es donde el aprendizaje crea valor. Depende en gran medida del manager: acordar cómo aplicar lo nuevo, crear la oportunidad y hacer seguimiento."],
+B10:["Mirar hacia fuera","las personas buscan ideas fuera del equipo: clientes, otras funciones, otras empresas.","Las ideas nuevas suelen venir de fuera del equipo.","Las organizaciones que aprenden rápido incorporan perspectivas externas a propósito: conocimiento del cliente, otras funciones, partners y colegas de otros sectores. Bersin vinculó la cultura de aprendizaje con resultados como la capacidad de respuesta al cliente y la innovación."]
+},
+ca:{
+C1:["Els líders donen exemple","els líders sèniors parlen obertament del que estan aprenent i d'on s'han equivocat.","Les persones copien el que fan els líders, no el que diuen sobre l'aprenentatge.","Quan els líders sèniors comparteixen el seu propi aprenentatge i els seus errors, transmeten que no saber és normal. La recerca de Bersin va mostrar que un petit grup de pràctiques que depenen de l'alta direcció marca el to de la resta, i el treball d'Edmondson mostra que la humilitat del líder és un dels motors més forts de la seguretat psicològica."],
+C2:["Els managers desenvolupen persones","els managers dediquen temps amb regularitat a parlar del desenvolupament de les persones, no només del seu acompliment.","El manager és la influència individual més gran en el fet que les persones creixin o no.","La majoria de les pràctiques d'una cultura d'aprenentatge depenen dels managers. Les converses regulars de desenvolupament, separades de l'avaluació de l'acompliment, són on s'ajunten objectius, oportunitats de repte i feedback."],
+C3:["Temps per aprendre","les persones tenen temps protegit per aprendre dins de la jornada.","Sense temps, l'aprenentatge es queda en intenció.","L'aprenentatge competeix amb el lliurament i sol perdre. El temps protegit (una franja setmanal, un dia d'aprenentatge, temps després d'un projecte) és un senyal de la direcció que aprendre forma part de la feina, no una cosa per a la nit."],
+C4:["Resposta a l'error","quan alguna cosa surt malament, la primera pregunta és què en podem aprendre, no qui en té la culpa.","Com reacciona una organització davant l'error decideix si les persones amaguen els problemes o els comparteixen.","Edmondson distingeix entre errors evitables i errors intel·ligents en terreny nou. Una cultura d'aprenentatge tracta els errors intel·ligents com a informació: se'n parla aviat, s'analitzen sense culpables i es comparteixen perquè altres no els repeteixin."],
+C5:["Reconeixement","aprendre, compartir i ajudar a créixer els altres compta en les avaluacions i les promocions.","El que es recompensa es repeteix.","Si les promocions només premien resultats individuals, compartir coneixement i desenvolupar els altres esdevenen extres opcionals. Incloure'ls en els criteris d'acompliment i promoció els converteix en part de la feina."],
+C6:["Accés","és fàcil trobar l'aprenentatge, els experts i el coneixement que calen per a la feina.","S'aprèn més quan el recurs adequat és a un minut, no a una setmana.","Accés és més que una plataforma d'aprenentatge: saber qui són els experts, trobar lliçons anteriors i arribar a contingut útil en el moment de necessitat. La fricció aquí apaga la curiositat sense fer soroll."],
+C7:["Oportunitats de creixement","els projectes de repte, les assignacions i els moviments interns estan oberts a qui vol créixer.","La major part del desenvolupament passa a través de l'experiència, no dels cursos.","Els rols de repte, els projectes i la mobilitat interna són on les persones construeixen noves capacitats. Quan són visibles i oberts, en lloc de repartir-se de manera informal, l'aprenentatge esdevé un camí, no un privilegi."],
+C8:["Capacitats estratègiques","les persones saben quines capacitats importen per a l'estratègia, i per què.","L'aprenentatge té direcció quan les persones saben què necessitarà el negoci.","Una visió compartida de les capacitats crítiques connecta l'aprenentatge individual amb l'estratègia. Sense ella, les persones aprenen el que és interessant o està disponible, no el que marca més diferència."],
+C9:["Canals de feedback","hi ha maneres regulars i senzilles de donar i rebre feedback.","El feedback és el cicle d'aprenentatge més ràpid que té la majoria de les persones.","Les converses regulars, les revisions després de l'acció i el feedback senzill entre companys fan que l'aprenentatge sigui continu. Si el feedback arriba un cop l'any, arriba massa tard per canviar res."],
+C10:["Permís per experimentar","provar noves maneres de treballar compta amb temps, pressupost o permís explícit.","Les persones experimenten quan saben que està permès, no només tolerat.","Els experiments necessiten una mica de temps, una mica de diners i un permís clar. Experiments petits i acotats, amb objectius d'aprenentatge acordats, permeten provar idees sense jugar-se el negoci."],
+B1:["Demanar ajuda","les persones demanen ajuda o reconeixen que no saben alguna cosa, sense por.","Preguntar és el primer acte d'aprenentatge, i el primer que la por atura.","És el senyal quotidià de la seguretat psicològica. On les persones amaguen el que no saben, els problemes apareixen tard i l'aprenentatge es queda en privat."],
+B2:["Alçar la veu","les persones plantegen dubtes i qüestionen idees, també les de companys sèniors.","Els equips que es qüestionen detecten abans els errors i aprenen més ràpid.","Alçar la veu és el comportament que la recerca d'Edmondson vincula més directament amb l'aprenentatge en equip. Depèn molt de com reaccionen els líders la primera vegada que algú discrepa."],
+B3:["Experimentar","els equips proven idees noves a petita escala abans d'ampliar-les.","Les proves petites converteixen opinions en evidències.","Experimentar vol dir una hipòtesi clara, una prova petita i una decisió basada en el que ha passat. Manté baix el cost d'equivocar-se i alta la velocitat d'aprenentatge."],
+B4:["Reflexionar","després de projectes o moments clau, els equips revisen què ha funcionat i què no.","L'experiència només es converteix en aprenentatge quan algú hi reflexiona.","Les revisions breus i regulars (què esperàvem, què ha passat, què farem diferent) són un dels hàbits d'aprenentatge més barats i potents. Bersin cita fomentar la reflexió com un dels sis pilars d'una cultura d'aprenentatge."],
+B5:["Compartir coneixement","les persones comparteixen el que saben (lliçons, documents, contactes) més enllà del seu equip.","El coneixement que es queda en un cap o en un equip és un risc, no un actiu.","Compartir converteix l'aprenentatge individual en aprenentatge de l'organització. Creix quan és fàcil, esperat i reconegut, i es redueix quan el coneixement es tracta com a poder personal."],
+B6:["Aprendre en el flux de treball","les persones aprenen mentre treballen, dels companys, de la pràctica i d'eines d'IA, no només en cursos.","La major part de l'aprenentatge passa a la feina; la qüestió és si és deliberat.","Aprendre en el flux de treball vol dir adquirir habilitats en el moment de necessitat: preguntar a un company, provar, fer servir un assistent d'IA, consultar una guia. Els cursos continuen important, però són una petita part de com creixen les persones."],
+B7:["Demanar feedback","les persones demanen activament feedback sobre la seva feina.","El feedback que es demana s'escolta; el que s'imposa sovint es rebat.","Quan les persones demanen feedback, trien el moment i la pregunta, i això fa molt més probable que hi actuïn. És un senyal clar de mentalitat de creixement en un equip."],
+B8:["Ensenyar els altres","les persones amb experiència acompanyen i ensenyen els altres com a part del seu rol.","Ensenyar és com escala l'experiència, i com els experts continuen aprenent.","Els líders i experts que ensenyen són un tret de les cultures d'aprenentatge fortes. Ensenyar difon el coneixement ràpidament i en context, i obliga qui ensenya a afinar la seva pròpia comprensió."],
+B9:["Aplicar el que s'aprèn","el que les persones aprenen s'aplica a la feina en poques setmanes.","L'aprenentatge que no s'aplica es perd en poques setmanes.","La transferència és on l'aprenentatge crea valor. Depèn en gran mesura del manager: acordar com aplicar el que és nou, crear l'oportunitat i fer-ne el seguiment."],
+B10:["Mirar enfora","les persones busquen idees fora de l'equip: clients, altres funcions, altres empreses.","Les idees noves solen venir de fora de l'equip.","Les organitzacions que aprenen ràpid incorporen perspectives externes a propòsit: coneixement del client, altres funcions, partners i col·legues d'altres sectors. Bersin va vincular la cultura d'aprenentatge amb resultats com la capacitat de resposta al client i la innovació."]
+}};
+
+/* interface text for Learning Culture */
+const CUI={
+en:{name:"Learning Culture",startLead:"Two lenses, scored separately: the <b>conditions</b> the organisation provides, and the <b>behaviours</b> people actually show. Together they tell a lived culture from a declared one.",
+shortMeta:"8 statements · about 2 minutes",shortDesc:"A quick read on both lenses and where you sit on the matrix.",fullMeta:"20 statements · about 6 minutes",fullDesc:"Every dimension, who owns each gap, and tips for your role.",
+roleQ:"What is your role?",roleWhy:"Culture looks different from each seat. Your role sets the wording and the tips you get.",
+roles:["Senior leader, HR or L&D","Manager","Employee"],prefixOrg:"Across my organisation, ",prefixTeam:"In my team, ",
+lens1H:"Conditions",lens1Lead:"What the organisation <b>provides</b>: leaders who model learning, managers who develop people, time, recognition, access and permission to try.",
+lens2H:"Behaviours",lens2Lead:"What people <b>actually do</b>: ask, speak up, experiment, reflect, share and apply what they learn.",
+scale:["Strongly disagree","Disagree","Neither","Agree","Strongly agree"],owner:"Owned mainly by",owners:{L:"Top leadership",M:"Line managers",H:"L&D and HR"},
+LV:["Incidental","Encouraged","Supported","Embedded","Self-sustaining"],
+resH1:"Your Learning Culture profile",idx1:"Conditions index",idx2:"Behaviours index",
+barsH:"Who owns it",barsSub:"Average score by the people who mainly own each dimension. Bersin found most culture practices sit with line managers.",
+tipsH:"What you can do",tipsSub:r=>"Next steps for your role: "+r+".",otherRoles:"Tips for other roles",
+gapsH:"Weakest statements",gapsSub:"Statements below your target, with who mainly owns them.",
+deeperSub:"The full version adds 12 statements. Your 8 answers carry over.",
+runH:"Running it as a pulse across teams",runIntro:"One person's view is a starting point. Culture shows up in the pattern across many people and teams.",
+runSteps:["<b>Ask widely.</b> Invite leaders, managers and employees from several teams to take the short version.","<b>Keep it anonymous.</b> Collect results by role and team, never by name.","<b>Compare lenses.</b> A gap between Conditions and Behaviours shows where the culture is declared but not lived, or lived without support.","<b>Look at owners.</b> Low scores owned by line managers call for manager enablement, not more courses.","<b>Act and repeat.</b> Pick two or three changes, then re-run the pulse in six months."],
+credit:"Independent design by Fran Mondaca, drawing on Bersin's High-Impact Learning Culture research, Garvin's learning organisation and Edmondson's work on psychological safety. A practical diagnostic, not a validated research instrument. Your answers stay in this browser.",
+P:{dormant:["Dormant","Learning happens by chance: little support from the system and few learning habits in teams.","Start small and visible: one leader who talks about what they are learning, and one team ritual such as a monthly review of what worked.",
+  ["Make learning visible from the top: share one thing you learned and one mistake at your next all-hands, and protect a fixed learning slot in the calendar.","Open your next team meeting with \"what did we learn this week?\" and admit one thing you don't know.","Pick one skill for this quarter, ask a colleague to teach you, and share what you learn with your team."]],
+ declared:["Declared","The organisation says the right things and provides support, but day-to-day behaviour hasn't changed.","Close the gap between policy and practice through line managers, the people who shape behaviour every day.",
+  ["Ask managers how their teams use the learning time and tools, reward those who develop people, and drop one initiative nobody uses.","Turn what already exists into habits: a ten-minute review after each project and one shared lesson per week.","Use what is already on offer: book the learning time and ask for feedback after your next piece of work."]],
+ grassroots:["Grassroots","People learn, share and experiment on their own initiative, often despite the system rather than because of it.","Back what already works: give it time, recognition and a place in performance conversations before the energy runs out.",
+  ["Find the teams already doing this, recognise them publicly and give them time and budget to spread it.","Protect your team's habits: shield learning time and raise what's missing (tools, recognition) with your leadership.","Keep sharing and make it visible: write down one lesson and tell your manager what support would help."]],
+ thriving:["Thriving","Strong conditions and strong habits reinforce each other.","Keep it alive: measure regularly, spread practices across teams and watch for pockets that fall behind.",
+  ["Use the culture as an advantage: link it to strategy, hiring and customer innovation, and re-run this pulse every year.","Coach other managers, and let your team teach other teams.","Teach others and look outward: bring in ideas from customers and other companies."]]},
+title:{wiz:"Learning Culture assessment",res:"Learning Culture results"}},
+
+es:{name:"Cultura de aprendizaje",startLead:"Dos lentes, puntuadas por separado: las <b>condiciones</b> que ofrece la organización y los <b>comportamientos</b> que las personas muestran de verdad. Juntas distinguen una cultura vivida de una cultura declarada.",
+shortMeta:"8 afirmaciones · unos 2 minutos",shortDesc:"Una lectura rápida de las dos lentes y de tu posición en la matriz.",fullMeta:"20 afirmaciones · unos 6 minutos",fullDesc:"Todas las dimensiones, quién es responsable de cada brecha y consejos para tu rol.",
+roleQ:"¿Cuál es tu rol?",roleWhy:"La cultura se ve distinta desde cada puesto. Tu rol define la redacción y los consejos que recibes.",
+roles:["Líder sénior, RR. HH. o L&D","Manager","Empleado/a"],prefixOrg:"En mi organización, ",prefixTeam:"En mi equipo, ",
+lens1H:"Condiciones",lens1Lead:"Lo que la organización <b>ofrece</b>: líderes que dan ejemplo, managers que desarrollan personas, tiempo, reconocimiento, acceso y permiso para probar.",
+lens2H:"Comportamientos",lens2Lead:"Lo que las personas <b>hacen de verdad</b>: preguntar, alzar la voz, experimentar, reflexionar, compartir y aplicar lo que aprenden.",
+scale:["Totalmente en desacuerdo","En desacuerdo","Ni de acuerdo ni en desacuerdo","De acuerdo","Totalmente de acuerdo"],owner:"Depende sobre todo de",owners:{L:"La alta dirección",M:"Los managers",H:"L&D y RR. HH."},
+LV:["Incidental","Fomentada","Apoyada","Arraigada","Autosostenida"],
+resH1:"Tu perfil de cultura de aprendizaje",idx1:"Índice de condiciones",idx2:"Índice de comportamientos",
+barsH:"De quién depende",barsSub:"Puntuación media según quién es el principal responsable de cada dimensión. Bersin encontró que la mayoría de las prácticas de cultura dependen de los managers.",
+tipsH:"Qué puedes hacer",tipsSub:r=>"Siguientes pasos para tu rol: "+r+".",otherRoles:"Consejos para otros roles",
+gapsH:"Afirmaciones más débiles",gapsSub:"Afirmaciones por debajo de tu objetivo, con quién es su principal responsable.",
+deeperSub:"La versión completa añade 12 afirmaciones. Tus 8 respuestas se mantienen.",
+runH:"Cómo usarla como pulso entre equipos",runIntro:"La visión de una persona es un punto de partida. La cultura aparece en el patrón entre muchas personas y equipos.",
+runSteps:["<b>Pregunta a mucha gente.</b> Invita a líderes, managers y empleados de varios equipos a hacer la versión corta.","<b>Mantenla anónima.</b> Recoge los resultados por rol y equipo, nunca por nombre.","<b>Compara las lentes.</b> Una brecha entre condiciones y comportamientos muestra dónde la cultura se declara pero no se vive, o se vive sin apoyo.","<b>Mira a los responsables.</b> Las puntuaciones bajas que dependen de los managers piden capacitar a los managers, no más cursos.","<b>Actúa y repite.</b> Elige dos o tres cambios y repite el pulso a los seis meses."],
+credit:"Diseño independiente de Fran Mondaca, basado en la investigación High-Impact Learning Culture de Bersin, la organización que aprende de Garvin y el trabajo de Edmondson sobre seguridad psicológica. Un diagnóstico práctico, no un instrumento de investigación validado. Tus respuestas se quedan en este navegador.",
+P:{dormant:["Dormida","El aprendizaje ocurre por casualidad: poco apoyo del sistema y pocos hábitos de aprendizaje en los equipos.","Empieza en pequeño y de forma visible: un líder que habla de lo que está aprendiendo y un ritual de equipo, como una revisión mensual de lo que funcionó.",
+  ["Haz visible el aprendizaje desde arriba: comparte algo que aprendiste y un error en la próxima reunión general, y protege un hueco fijo para aprender en la agenda.","Abre la próxima reunión de equipo con «¿qué hemos aprendido esta semana?» y reconoce algo que no sabes.","Elige una habilidad para este trimestre, pide a un compañero que te la enseñe y comparte lo aprendido con tu equipo."]],
+ declared:["Declarada","La organización dice lo correcto y ofrece apoyo, pero el comportamiento diario no ha cambiado.","Cierra la brecha entre la política y la práctica a través de los managers, las personas que moldean el comportamiento cada día.",
+  ["Pregunta a los managers cómo usan sus equipos el tiempo y las herramientas de aprendizaje, reconoce a quienes desarrollan personas y elimina una iniciativa que nadie usa.","Convierte lo que ya existe en hábitos: una revisión de diez minutos después de cada proyecto y una lección compartida por semana.","Aprovecha lo que ya se ofrece: reserva el tiempo de aprendizaje y pide feedback después de tu próximo trabajo."]],
+ grassroots:["De base","Las personas aprenden, comparten y experimentan por iniciativa propia, a menudo a pesar del sistema más que gracias a él.","Respalda lo que ya funciona: dale tiempo, reconocimiento y un lugar en las conversaciones de desempeño antes de que se agote la energía.",
+  ["Identifica a los equipos que ya lo hacen, reconócelos públicamente y dales tiempo y presupuesto para extenderlo.","Protege los hábitos de tu equipo: defiende el tiempo de aprendizaje y plantea a la dirección lo que falta (herramientas, reconocimiento).","Sigue compartiendo y hazlo visible: escribe una lección y cuéntale a tu manager qué apoyo te ayudaría."]],
+ thriving:["Floreciente","Las condiciones y los hábitos fuertes se refuerzan mutuamente.","Mantenla viva: mide con regularidad, extiende las prácticas entre equipos y vigila los focos que se quedan atrás.",
+  ["Usa la cultura como ventaja: vincúlala con la estrategia, la selección y la innovación con clientes, y repite este pulso cada año.","Acompaña a otros managers y deja que tu equipo enseñe a otros equipos.","Enseña a otros y mira hacia fuera: trae ideas de clientes y de otras empresas."]]},
+title:{wiz:"Evaluación de cultura de aprendizaje",res:"Resultados de cultura de aprendizaje"}},
+
+ca:{name:"Cultura d'aprenentatge",startLead:"Dues lents, puntuades per separat: les <b>condicions</b> que ofereix l'organització i els <b>comportaments</b> que les persones mostren de debò. Juntes distingeixen una cultura viscuda d'una cultura declarada.",
+shortMeta:"8 afirmacions · uns 2 minuts",shortDesc:"Una lectura ràpida de les dues lents i de la teva posició a la matriu.",fullMeta:"20 afirmacions · uns 6 minuts",fullDesc:"Totes les dimensions, qui és responsable de cada bretxa i consells per al teu rol.",
+roleQ:"Quin és el teu rol?",roleWhy:"La cultura es veu diferent des de cada lloc. El teu rol defineix la redacció i els consells que reps.",
+roles:["Líder sènior, RH o L&D","Manager","Empleat/da"],prefixOrg:"A la meva organització, ",prefixTeam:"Al meu equip, ",
+lens1H:"Condicions",lens1Lead:"El que l'organització <b>ofereix</b>: líders que donen exemple, managers que desenvolupen persones, temps, reconeixement, accés i permís per provar.",
+lens2H:"Comportaments",lens2Lead:"El que les persones <b>fan de debò</b>: preguntar, alçar la veu, experimentar, reflexionar, compartir i aplicar el que aprenen.",
+scale:["Totalment en desacord","En desacord","Ni d'acord ni en desacord","D'acord","Totalment d'acord"],owner:"Depèn sobretot de",owners:{L:"L'alta direcció",M:"Els managers",H:"L&D i RH"},
+LV:["Incidental","Fomentada","Recolzada","Arrelada","Autosostinguda"],
+resH1:"El teu perfil de cultura d'aprenentatge",idx1:"Índex de condicions",idx2:"Índex de comportaments",
+barsH:"De qui depèn",barsSub:"Puntuació mitjana segons qui és el principal responsable de cada dimensió. Bersin va trobar que la majoria de les pràctiques de cultura depenen dels managers.",
+tipsH:"Què pots fer",tipsSub:r=>"Passos següents per al teu rol: "+r+".",otherRoles:"Consells per a altres rols",
+gapsH:"Afirmacions més febles",gapsSub:"Afirmacions per sota del teu objectiu, amb qui n'és el principal responsable.",
+deeperSub:"La versió completa afegeix 12 afirmacions. Les teves 8 respostes es mantenen.",
+runH:"Com fer-la servir com a pols entre equips",runIntro:"La visió d'una persona és un punt de partida. La cultura apareix en el patró entre moltes persones i equips.",
+runSteps:["<b>Pregunta a molta gent.</b> Convida líders, managers i empleats de diversos equips a fer la versió curta.","<b>Mantén-la anònima.</b> Recull els resultats per rol i equip, mai per nom.","<b>Compara les lents.</b> Una bretxa entre condicions i comportaments mostra on la cultura es declara però no es viu, o es viu sense suport.","<b>Mira els responsables.</b> Les puntuacions baixes que depenen dels managers demanen capacitar els managers, no més cursos.","<b>Actua i repeteix.</b> Tria dos o tres canvis i repeteix el pols al cap de sis mesos."],
+credit:"Disseny independent de Fran Mondaca, basat en la recerca High-Impact Learning Culture de Bersin, l'organització que aprèn de Garvin i el treball d'Edmondson sobre seguretat psicològica. Un diagnòstic pràctic, no un instrument de recerca validat. Les teves respostes es queden en aquest navegador.",
+P:{dormant:["Adormida","L'aprenentatge passa per casualitat: poc suport del sistema i pocs hàbits d'aprenentatge als equips.","Comença petit i de manera visible: un líder que parla del que està aprenent i un ritual d'equip, com una revisió mensual del que ha funcionat.",
+  ["Fes visible l'aprenentatge des de dalt: comparteix una cosa que has après i un error a la propera reunió general, i protegeix una franja fixa per aprendre a l'agenda.","Obre la propera reunió d'equip amb «què hem après aquesta setmana?» i reconeix una cosa que no saps.","Tria una habilitat per a aquest trimestre, demana a un company que te l'ensenyi i comparteix el que has après amb el teu equip."]],
+ declared:["Declarada","L'organització diu el que cal i ofereix suport, però el comportament diari no ha canviat.","Tanca la bretxa entre la política i la pràctica a través dels managers, les persones que modelen el comportament cada dia.",
+  ["Pregunta als managers com fan servir els seus equips el temps i les eines d'aprenentatge, reconeix qui desenvolupa persones i elimina una iniciativa que ningú fa servir.","Converteix el que ja existeix en hàbits: una revisió de deu minuts després de cada projecte i una lliçó compartida per setmana.","Aprofita el que ja s'ofereix: reserva el temps d'aprenentatge i demana feedback després de la teva propera feina."]],
+ grassroots:["De base","Les persones aprenen, comparteixen i experimenten per iniciativa pròpia, sovint malgrat el sistema més que gràcies a ell.","Dona suport al que ja funciona: dona-li temps, reconeixement i un lloc a les converses d'acompliment abans que s'esgoti l'energia.",
+  ["Identifica els equips que ja ho fan, reconeix-los públicament i dona'ls temps i pressupost per estendre-ho.","Protegeix els hàbits del teu equip: defensa el temps d'aprenentatge i planteja a la direcció el que falta (eines, reconeixement).","Continua compartint i fes-ho visible: escriu una lliçó i explica al teu manager quin suport t'ajudaria."]],
+ thriving:["Florent","Les condicions i els hàbits forts es reforcen mútuament.","Mantén-la viva: mesura amb regularitat, estén les pràctiques entre equips i vigila els focus que es queden enrere.",
+  ["Fes servir la cultura com a avantatge: vincula-la amb l'estratègia, la selecció i la innovació amb clients, i repeteix aquest pols cada any.","Acompanya altres managers i deixa que el teu equip ensenyi altres equips.","Ensenya els altres i mira enfora: porta idees de clients i d'altres empreses."]]},
+title:{wiz:"Avaluació de cultura d'aprenentatge",res:"Resultats de cultura d'aprenentatge"}}
+};
+
+/* ================= HUMAN × AI · DECISION MAKING ================= */
+/* independent adaptation inspired by Deloitte's 2026 Global Human Capital Trends and its agentic AI research */
+const HX_IDS=["W1","W2","W3","W4","W5","W6","W7","W8","W9","W10","D1","D2","D3","D4","D5","D6","D7","D8","D9","D10"];
+const HX_SHORT=["W1","W2","W5","W7","D1","D2","D3","D5"];
+const HX_GRP={W1:"design",W2:"design",W3:"design",W4:"design",W5:"people",W6:"people",W7:"people",W8:"people",W9:"value",W10:"value",D1:"rights",D2:"rights",D3:"rights",D4:"risk",D6:"risk",D7:"risk",D8:"risk",D5:"gov",D9:"gov",D10:"gov"};
+/* [name, key question, [levels 1-5], why it matters, learn more] */
+const HX={
+en:{
+W1:["AI and work strategy","Is it clear where AI will change work, roles and value in this part of the organisation?",["No view; AI is seen as an IT topic","Tool-by-tool pilots, no view of the work","Priority work areas identified, with business owners","Workforce plan links AI to roles, skills and value","Strategy updated continuously from usage and market signals"],"AI creates value when the strategy starts from the work, not from the tool.","Deloitte's 2026 Human Capital Trends note that most organisations take a technology-focused approach to AI. A work-first strategy asks which tasks, roles and decisions will change, and where human judgment adds most value, before choosing tools."],
+W2:["Work redesign","Are tasks being broken down and rebuilt for humans and AI together, rather than tools added to old processes?",["Old processes, new tools on top","Individuals optimise their own tasks","Key processes redesigned task by task","Redesign is a standard method, owned by the business","Work is redesigned continuously as AI capability grows"],"Adding AI to an old process mostly speeds up the old process.","Work redesign breaks roles into tasks, decides which tasks AI should do, support or leave to people, and then rebuilds the workflow. Deloitte calls this the move from human + machine to human × machine: the value comes from redesign, not from adding tools."],
+W3:["Agents in the workflow","Are AI agents built into how work gets done, with clear roles alongside people?",["No agents","Isolated experiments","Agents in selected workflows with defined tasks","Agents managed as part of the workforce; hand-offs to people designed","Human-agent teams orchestrated across functions"],"Agents change the question from \"which tool?\" to \"who does which part of the work?\"","Deloitte describes agents as a silicon-based workforce that complements people. That only works when each agent has a defined task, clear hand-offs to people and someone who checks its work."],
+W4:["Roles and careers","Are roles and career paths being redefined for the AI era?",["Unchanged","Discussed, no changes yet","Priority roles redefined; new skills mapped","Career paths updated, including new roles such as AI orchestrators","Roles evolve continuously as work changes"],"If roles don't change, people can't see their future in an AI-enabled organisation.","When tasks move to AI, roles need to be rebuilt around judgment, relationships and orchestration. Clear new paths reduce fear and help people move into the work that grows."],
+W5:["AI-era skills","Are people building the skills to judge AI output and orchestrate human-AI work?",["No plan","Generic AI awareness training","Role-based AI skills, including judging AI output","Skills tracked and built in the flow of work; orchestration skills for key roles","Skills data steers hiring, mobility and learning"],"Using AI is easy; knowing when it is wrong is the real skill.","AI-era capability goes beyond prompting: checking AI output, knowing when human judgment is required and orchestrating work across people and agents. These skills belong in every role profile, not only in technical teams."],
+W6:["Managers of mixed teams","Are managers ready to lead teams of people and agents?",["Not addressed","Managers left to work it out","Guidance and training on AI-enabled teams","Managers redesign team work and coach people through the change","Managers orchestrate people and agents as one team, with data"],"Managers turn AI strategy into daily work, or quietly block it.","Leading a mixed team means allocating work between people and agents, reviewing agent output, protecting people's development and handling fears about jobs. Few managers have been prepared for it."],
+W7:["Workforce trust","Do employees understand and trust how AI is used in their work?",["Employees don't know how AI is used","Some communication, low trust","Transparent principles and two-way dialogue","Trust measured and acted on; employees involved in design","Employees co-own AI use; trust is high and monitored"],"Without trust, people either hide their AI use or resist it.","Deloitte's research highlights rising trust concerns where people and machines meet. Trust grows when people know what AI is used for, what it means for their jobs and how they can influence it."],
+W8:["Human connection","Is AI's effect on collaboration, belonging and human norms assessed?",["Not considered","Anecdotal concerns only","Checked for teamwork and belonging in major changes","Human norms designed into AI roll-outs and monitored","Human connection treated as a design goal and measured over time"],"AI can make work faster and lonelier at the same time.","Deloitte warns that many organisations don't assess AI's impact on human-to-human norms, which can erode trust, belonging and collaboration. Checking it deliberately protects the human advantage."],
+W9:["Adaptability","Do people and capacity move quickly to where AI creates new value?",["Fixed structures","Moves are slow and case by case","Internal mobility and reskilling used for AI-driven shifts","Capacity freed by AI is redeployed on purpose","Talent flows dynamically to emerging value"],"Time freed by AI only creates value if it goes somewhere useful.","Deloitte's 2026 trends found that 85% of leaders see adaptability at speed as critical, but only 7% say they lead in it. When AI frees capacity, adaptable organisations move people to growing work instead of letting the gain disappear."],
+W10:["Value, not just cost","Is AI's impact measured as value created, not only cost saved?",["Not measured","Usage and licences only","Productivity and cost savings tracked","Value measured: quality, growth, customer and employee outcomes","Value data steers AI investment continuously"],"Counting only savings pushes AI towards cutting rather than creating.","One of Deloitte's 2026 tipping points is the shift from cost efficiency to value creation. Measuring quality, innovation, customer impact and employee outcomes shows where AI amplifies people rather than replacing them."],
+D1:["Decision rights with AI","Is it defined which decisions AI informs, recommends or takes on its own?",["Unclear","Decided case by case","Documented for the main decision types","Applied consistently and reviewed when AI changes","Reviewed regularly against risk and performance data"],"If no one decides what AI may decide, AI ends up deciding by default.","A simple rule set (AI informs, AI recommends, AI decides within limits) applied to each type of decision makes autonomy explicit. It is the AI version of decision rights in any governance model."],
+D2:["Human oversight","Are there clear points where a person must review or approve?",["None defined","Depends on the individual","Human review defined for high-impact decisions","Oversight built into workflows and audited","Oversight adjusts automatically to the level of risk"],"Human oversight only works if it is designed in, not hoped for.","Human-in-the-loop means deciding in advance where a person must check, approve or can override. Without design, review becomes a rubber stamp, or disappears under time pressure."],
+D3:["Named accountability","Does every AI-assisted decision and every agent have a named human owner?",["No owners","Owners for some tools","Named owner for each AI use case and agent","Owners held to account in performance and risk reviews","Accountability transparent and updated as systems change"],"AI can't be accountable; a person always has to be.","Deloitte's 2026 trends stress quality, accountability and human agency in decision making. A named owner for each agent and use case answers the question that matters when something goes wrong: who answers for this?"],
+D4:["Decision quality","Are the data, evidence and outcomes of AI-assisted decisions reviewed?",["Not reviewed","Reviewed after problems","Regular review of key AI-assisted decisions","Outcomes tracked and compared with human decisions","Continuous feedback improves models and decisions"],"Faster decisions are only better if someone checks the outcomes.","Reviewing decision quality means checking the data used, the reasoning and what actually happened afterwards. Comparing AI-assisted and human decisions shows where AI helps and where it misleads."],
+D5:["Agent governance","Is there an inventory of AI agents with purpose, permissions and monitoring?",["Unknown","Partial list","Inventory with owner, purpose and permissions","Agents monitored for performance, cost and risk","Agents managed over their whole lifecycle and retired when no longer needed"],"You can't govern agents you don't know exist.","As agents multiply, each one needs an owner, a purpose, limited permissions, monitoring and an end date. Deloitte's agentic research finds that most organisations are not yet ready to manage this new kind of workforce."],
+D6:["Ethics and risk","Are bias, fairness and regulatory risk (e.g. the EU AI Act) assessed before AI is used?",["Not assessed","Ad hoc checks","Risk assessment before deploying high-impact uses","Systematic, documented assessment with Legal and HR","Ongoing monitoring; lessons feed policy"],"In people decisions, AI risk is human risk.","Uses of AI in hiring, performance, pay and access to learning are treated as high-risk under the EU AI Act. Assessing bias, fairness and compliance before deployment protects people and the organisation."],
+D7:["Transparency","Can people affected understand and challenge an AI-assisted decision?",["No","On request, inconsistently","People are told when AI is involved in decisions about them","Plain-language explanations and a clear route to challenge","Feedback from challenges improves decisions"],"A decision people can't question is a decision they won't trust.","Transparency means telling people when AI shaped a decision about them, explaining it in plain language and offering a way to challenge it. In many places it is also a legal expectation."],
+D8:["When AI gets it wrong","Are AI errors detected, escalated, corrected and learned from?",["Errors go unnoticed","Fixed when someone complains","Defined escalation path and incident log","Errors analysed; fixes and lessons shared","Early-warning signals catch issues before harm"],"Every AI system makes mistakes; mature organisations learn from them fast.","An incident process for AI (detect, escalate, correct, learn) turns errors into improvements. Without it, the same mistake repeats quietly and at scale."],
+D9:["Data and privacy","Is the data used by AI governed, of good quality and privacy-compliant?",["Unknown","Basic rules, many exceptions","Data standards and privacy checks for AI use","Integrated, governed data with clear ownership","A trusted data foundation feeds AI across the organisation"],"AI is only as good, and as safe, as the data behind it.","Deloitte surveys cite finding and reusing data as major barriers to AI. Governed, good-quality, privacy-compliant data is the base for both performance and trust, especially with employee data."],
+D10:["Governance forum","Does a cross-functional forum (business, HR, Legal, IT) oversee AI at work?",["None","IT-led only","Cross-functional forum with a set cadence","Forum decides priorities, risks and exceptions, and reports to leadership","Board-level oversight; the forum adapts with the technology"],"AI at work is a business, people and risk question at once, so all of them need a seat at the table.","A forum with business, HR, Legal, IT and data protection sets the rules, approves high-risk uses and resolves conflicts. It is the AI counterpart of a learning council or steering committee."]
+},
+es:{
+W1:["Estrategia de IA y trabajo","¿Está claro dónde cambiará la IA el trabajo, los roles y el valor en esta parte de la organización?",["Sin visión; la IA se ve como un tema de IT","Pilotos herramienta a herramienta, sin visión del trabajo","Áreas de trabajo prioritarias identificadas, con responsables de negocio","El plan de plantilla vincula la IA con roles, habilidades y valor","Estrategia actualizada de forma continua con datos de uso y de mercado"],"La IA crea valor cuando la estrategia parte del trabajo, no de la herramienta.","Las Human Capital Trends 2026 de Deloitte señalan que la mayoría de las organizaciones aborda la IA desde la tecnología. Una estrategia centrada en el trabajo pregunta qué tareas, roles y decisiones cambiarán, y dónde aporta más el juicio humano, antes de elegir herramientas."],
+W2:["Rediseño del trabajo","¿Se están desmontando y reconstruyendo las tareas para personas e IA juntas, en lugar de añadir herramientas a procesos antiguos?",["Procesos antiguos con herramientas nuevas encima","Cada persona optimiza sus propias tareas","Procesos clave rediseñados tarea a tarea","El rediseño es un método estándar, liderado por el negocio","El trabajo se rediseña de forma continua a medida que crece la IA"],"Añadir IA a un proceso antiguo sobre todo acelera el proceso antiguo.","Rediseñar el trabajo significa dividir los roles en tareas, decidir qué tareas debe hacer la IA, cuáles debe apoyar y cuáles quedan en manos de personas, y reconstruir el flujo. Deloitte lo llama pasar de humano + máquina a humano × máquina: el valor viene del rediseño, no de añadir herramientas."],
+W3:["Agentes en el flujo de trabajo","¿Están los agentes de IA integrados en cómo se hace el trabajo, con roles claros junto a las personas?",["Sin agentes","Experimentos aislados","Agentes en flujos concretos con tareas definidas","Agentes gestionados como parte de la plantilla; traspasos a personas diseñados","Equipos de personas y agentes orquestados entre funciones"],"Los agentes cambian la pregunta de «¿qué herramienta?» a «¿quién hace qué parte del trabajo?».","Deloitte describe a los agentes como una plantilla de silicio que complementa a las personas. Solo funciona cuando cada agente tiene una tarea definida, traspasos claros a personas y alguien que revisa su trabajo."],
+W4:["Roles y carreras","¿Se están redefiniendo los roles y las trayectorias profesionales para la era de la IA?",["Sin cambios","Se habla, aún sin cambios","Roles prioritarios redefinidos; nuevas habilidades mapeadas","Trayectorias actualizadas, con nuevos roles como orquestadores de IA","Los roles evolucionan de forma continua con el trabajo"],"Si los roles no cambian, las personas no ven su futuro en una organización con IA.","Cuando las tareas pasan a la IA, los roles deben reconstruirse en torno al juicio, las relaciones y la orquestación. Unas trayectorias nuevas y claras reducen el miedo y ayudan a las personas a moverse hacia el trabajo que crece."],
+W5:["Habilidades para la era de la IA","¿Están las personas desarrollando habilidades para evaluar lo que produce la IA y orquestar el trabajo entre personas e IA?",["Sin plan","Formación genérica de sensibilización en IA","Habilidades de IA por rol, incluida la evaluación de resultados de IA","Habilidades medidas y desarrolladas en el trabajo; orquestación en roles clave","Los datos de habilidades orientan la selección, la movilidad y el aprendizaje"],"Usar la IA es fácil; saber cuándo se equivoca es la verdadera habilidad.","Las capacidades de la era de la IA van más allá de escribir instrucciones: revisar lo que produce la IA, saber cuándo hace falta el juicio humano y orquestar el trabajo entre personas y agentes. Estas habilidades deben estar en todos los perfiles de rol, no solo en los equipos técnicos."],
+W6:["Managers de equipos mixtos","¿Están los managers preparados para liderar equipos de personas y agentes?",["No se aborda","Cada manager se las arregla","Orientación y formación sobre equipos con IA","Los managers rediseñan el trabajo del equipo y acompañan el cambio","Los managers orquestan personas y agentes como un solo equipo, con datos"],"Los managers convierten la estrategia de IA en trabajo diario, o la bloquean en silencio.","Liderar un equipo mixto significa repartir el trabajo entre personas y agentes, revisar lo que producen los agentes, proteger el desarrollo de las personas y gestionar los miedos sobre el empleo. Pocos managers han sido preparados para ello."],
+W7:["Confianza de la plantilla","¿Entienden las personas cómo se usa la IA en su trabajo y confían en ello?",["Las personas no saben cómo se usa la IA","Algo de comunicación, poca confianza","Principios transparentes y diálogo en ambos sentidos","Confianza medida y gestionada; las personas participan en el diseño","Las personas comparten la responsabilidad del uso de la IA; confianza alta y supervisada"],"Sin confianza, las personas esconden su uso de la IA o se resisten a ella.","La investigación de Deloitte destaca una creciente preocupación por la confianza donde se encuentran personas y máquinas. La confianza crece cuando las personas saben para qué se usa la IA, qué significa para su trabajo y cómo pueden influir."],
+W8:["Conexión humana","¿Se evalúa el efecto de la IA en la colaboración, la pertenencia y las normas entre personas?",["No se considera","Solo preocupaciones anecdóticas","Se revisa el trabajo en equipo y la pertenencia en los grandes cambios","Las normas humanas se diseñan en los despliegues de IA y se supervisan","La conexión humana es un objetivo de diseño, medido en el tiempo"],"La IA puede hacer el trabajo más rápido y más solitario a la vez.","Deloitte advierte que muchas organizaciones no evalúan el impacto de la IA en las normas entre personas, lo que puede erosionar la confianza, la pertenencia y la colaboración. Revisarlo de forma deliberada protege la ventaja humana."],
+W9:["Adaptabilidad","¿Se mueven las personas y la capacidad con rapidez hacia donde la IA crea nuevo valor?",["Estructuras fijas","Movimientos lentos y caso a caso","Movilidad interna y recualificación para los cambios que trae la IA","La capacidad liberada por la IA se reasigna de forma deliberada","El talento fluye de forma dinámica hacia el valor emergente"],"El tiempo que libera la IA solo crea valor si se dedica a algo útil.","Las tendencias 2026 de Deloitte muestran que el 85% de los líderes considera crítica la adaptabilidad rápida, pero solo el 7% dice liderarla. Cuando la IA libera capacidad, las organizaciones adaptables mueven a las personas hacia el trabajo que crece en lugar de dejar que la ganancia desaparezca."],
+W10:["Valor, no solo coste","¿Se mide el impacto de la IA como valor creado, no solo como coste ahorrado?",["No se mide","Solo uso y licencias","Se miden productividad y ahorro de costes","Se mide el valor: calidad, crecimiento, resultados para clientes y personas","Los datos de valor orientan la inversión en IA de forma continua"],"Contar solo ahorros empuja la IA hacia recortar en lugar de crear.","Uno de los puntos de inflexión de Deloitte en 2026 es pasar de la eficiencia en costes a la creación de valor. Medir calidad, innovación, impacto en clientes y resultados para las personas muestra dónde la IA amplifica a las personas en lugar de sustituirlas."],
+D1:["Derechos de decisión con IA","¿Está definido qué decisiones la IA informa, recomienda o toma por sí sola?",["Poco claro","Se decide caso a caso","Documentado para los principales tipos de decisión","Aplicado de forma coherente y revisado cuando cambia la IA","Revisado con regularidad con datos de riesgo y desempeño"],"Si nadie decide qué puede decidir la IA, la IA acaba decidiendo por defecto.","Un conjunto sencillo de reglas (la IA informa, la IA recomienda, la IA decide dentro de unos límites) aplicado a cada tipo de decisión hace explícita la autonomía. Es la versión IA de los derechos de decisión de cualquier modelo de gobierno."],
+D2:["Supervisión humana","¿Hay puntos claros en los que una persona debe revisar o aprobar?",["Ninguno definido","Depende de cada persona","Revisión humana definida para decisiones de alto impacto","Supervisión integrada en los flujos y auditada","La supervisión se ajusta automáticamente al nivel de riesgo"],"La supervisión humana solo funciona si se diseña, no si se espera.","Tener a una persona en el circuito significa decidir de antemano dónde debe revisar, aprobar o puede anular. Sin diseño, la revisión se convierte en un simple visto bueno, o desaparece con la presión del tiempo."],
+D3:["Responsable con nombre","¿Tiene cada decisión asistida por IA y cada agente un responsable humano con nombre?",["Sin responsables","Responsables para algunas herramientas","Responsable con nombre para cada caso de uso y cada agente","Los responsables rinden cuentas en revisiones de desempeño y riesgo","Responsabilidad transparente y actualizada cuando cambian los sistemas"],"La IA no puede rendir cuentas; siempre tiene que hacerlo una persona.","Las tendencias 2026 de Deloitte subrayan la calidad, la rendición de cuentas y la capacidad de decisión humana. Un responsable con nombre para cada agente y caso de uso responde a la pregunta que importa cuando algo sale mal: ¿quién responde de esto?"],
+D4:["Calidad de las decisiones","¿Se revisan los datos, las evidencias y los resultados de las decisiones asistidas por IA?",["No se revisan","Se revisan tras un problema","Revisión regular de las decisiones clave asistidas por IA","Resultados medidos y comparados con decisiones humanas","El feedback continuo mejora los modelos y las decisiones"],"Decidir más rápido solo es mejor si alguien revisa los resultados.","Revisar la calidad de las decisiones significa comprobar los datos usados, el razonamiento y lo que pasó después. Comparar decisiones asistidas por IA y decisiones humanas muestra dónde ayuda la IA y dónde confunde."],
+D5:["Gobierno de agentes","¿Existe un inventario de agentes de IA con propósito, permisos y supervisión?",["Se desconoce","Lista parcial","Inventario con responsable, propósito y permisos","Agentes supervisados en desempeño, coste y riesgo","Agentes gestionados en todo su ciclo de vida y retirados cuando ya no se necesitan"],"No se pueden gobernar agentes que no se sabe que existen.","A medida que se multiplican los agentes, cada uno necesita un responsable, un propósito, permisos limitados, supervisión y una fecha de fin. La investigación de Deloitte sobre IA agéntica muestra que la mayoría de las organizaciones aún no está preparada para gestionar este nuevo tipo de plantilla."],
+D6:["Ética y riesgo","¿Se evalúan el sesgo, la equidad y el riesgo regulatorio (p. ej. la Ley de IA de la UE) antes de usar la IA?",["No se evalúan","Comprobaciones puntuales","Evaluación de riesgos antes de desplegar usos de alto impacto","Evaluación sistemática y documentada con Legal y RR. HH.","Supervisión continua; las lecciones alimentan la política"],"En las decisiones sobre personas, el riesgo de la IA es un riesgo humano.","Los usos de la IA en selección, desempeño, retribución y acceso al aprendizaje se consideran de alto riesgo en la Ley de IA de la UE. Evaluar sesgo, equidad y cumplimiento antes del despliegue protege a las personas y a la organización."],
+D7:["Transparencia","¿Pueden las personas afectadas entender y cuestionar una decisión asistida por IA?",["No","A petición, de forma irregular","Se informa a las personas cuando la IA interviene en decisiones sobre ellas","Explicaciones claras y una vía definida para cuestionar","El feedback de las reclamaciones mejora las decisiones"],"Una decisión que no se puede cuestionar es una decisión en la que no se confía.","Transparencia significa decir a las personas cuándo la IA ha influido en una decisión sobre ellas, explicarla en lenguaje claro y ofrecer una forma de cuestionarla. En muchos lugares también es una exigencia legal."],
+D8:["Cuando la IA se equivoca","¿Se detectan, escalan, corrigen y aprovechan para aprender los errores de la IA?",["Los errores pasan desapercibidos","Se corrigen cuando alguien se queja","Vía de escalado definida y registro de incidencias","Errores analizados; soluciones y lecciones compartidas","Señales de alerta temprana detectan problemas antes de causar daño"],"Todo sistema de IA se equivoca; las organizaciones maduras aprenden rápido de ello.","Un proceso de incidencias para la IA (detectar, escalar, corregir, aprender) convierte los errores en mejoras. Sin él, el mismo error se repite en silencio y a escala."],
+D9:["Datos y privacidad","¿Están gobernados los datos que usa la IA, son de calidad y cumplen la normativa de privacidad?",["Se desconoce","Reglas básicas, muchas excepciones","Estándares de datos y controles de privacidad para el uso de IA","Datos integrados y gobernados, con responsables claros","Una base de datos fiable alimenta la IA en toda la organización"],"La IA solo es tan buena, y tan segura, como los datos que la alimentan.","Las encuestas de Deloitte citan la dificultad para encontrar y reutilizar datos como grandes barreras para la IA. Unos datos gobernados, de calidad y conformes con la privacidad son la base tanto del rendimiento como de la confianza, sobre todo con datos de empleados."],
+D10:["Foro de gobierno","¿Supervisa un foro transversal (negocio, RR. HH., Legal, IT) el uso de la IA en el trabajo?",["Ninguno","Solo liderado por IT","Foro transversal con cadencia fija","El foro decide prioridades, riesgos y excepciones, e informa a la dirección","Supervisión a nivel de consejo; el foro se adapta con la tecnología"],"La IA en el trabajo es a la vez una cuestión de negocio, de personas y de riesgo, así que todos necesitan un sitio en la mesa.","Un foro con negocio, RR. HH., Legal, IT y protección de datos fija las reglas, aprueba los usos de alto riesgo y resuelve conflictos. Es el equivalente en IA de un learning council o un comité de dirección."]
+},
+ca:{
+W1:["Estratègia d'IA i treball","Està clar on canviarà la IA la feina, els rols i el valor en aquesta part de l'organització?",["Sense visió; la IA es veu com un tema d'IT","Pilots eina a eina, sense visió de la feina","Àrees de feina prioritàries identificades, amb responsables de negoci","El pla de plantilla vincula la IA amb rols, habilitats i valor","Estratègia actualitzada contínuament amb dades d'ús i de mercat"],"La IA crea valor quan l'estratègia parteix de la feina, no de l'eina.","Les Human Capital Trends 2026 de Deloitte assenyalen que la majoria d'organitzacions aborda la IA des de la tecnologia. Una estratègia centrada en la feina pregunta quines tasques, rols i decisions canviaran, i on aporta més el judici humà, abans de triar eines."],
+W2:["Redisseny de la feina","S'estan desmuntant i reconstruint les tasques per a persones i IA juntes, en lloc d'afegir eines a processos antics?",["Processos antics amb eines noves al damunt","Cada persona optimitza les seves tasques","Processos clau redissenyats tasca a tasca","El redisseny és un mètode estàndard, liderat pel negoci","La feina es redissenya contínuament a mesura que creix la IA"],"Afegir IA a un procés antic sobretot accelera el procés antic.","Redissenyar la feina vol dir dividir els rols en tasques, decidir quines tasques ha de fer la IA, quines ha de donar suport i quines queden en mans de persones, i reconstruir el flux. Deloitte en diu passar d'humà + màquina a humà × màquina: el valor ve del redisseny, no d'afegir eines."],
+W3:["Agents en el flux de treball","Els agents d'IA estan integrats en com es fa la feina, amb rols clars al costat de les persones?",["Sense agents","Experiments aïllats","Agents en fluxos concrets amb tasques definides","Agents gestionats com a part de la plantilla; traspassos a persones dissenyats","Equips de persones i agents orquestrats entre funcions"],"Els agents canvien la pregunta de «quina eina?» a «qui fa quina part de la feina?».","Deloitte descriu els agents com una plantilla de silici que complementa les persones. Només funciona quan cada agent té una tasca definida, traspassos clars a persones i algú que revisa la seva feina."],
+W4:["Rols i carreres","S'estan redefinint els rols i les trajectòries professionals per a l'era de la IA?",["Sense canvis","Se'n parla, encara sense canvis","Rols prioritaris redefinits; noves habilitats mapades","Trajectòries actualitzades, amb nous rols com orquestradors d'IA","Els rols evolucionen contínuament amb la feina"],"Si els rols no canvien, les persones no veuen el seu futur en una organització amb IA.","Quan les tasques passen a la IA, els rols s'han de reconstruir al voltant del judici, les relacions i l'orquestració. Unes trajectòries noves i clares redueixen la por i ajuden les persones a moure's cap a la feina que creix."],
+W5:["Habilitats per a l'era de la IA","Les persones desenvolupen habilitats per avaluar el que produeix la IA i orquestrar la feina entre persones i IA?",["Sense pla","Formació genèrica de sensibilització en IA","Habilitats d'IA per rol, inclosa l'avaluació de resultats d'IA","Habilitats mesurades i desenvolupades a la feina; orquestració en rols clau","Les dades d'habilitats orienten la selecció, la mobilitat i l'aprenentatge"],"Fer servir la IA és fàcil; saber quan s'equivoca és la veritable habilitat.","Les capacitats de l'era de la IA van més enllà d'escriure instruccions: revisar el que produeix la IA, saber quan cal el judici humà i orquestrar la feina entre persones i agents. Aquestes habilitats han de ser a tots els perfils de rol, no només als equips tècnics."],
+W6:["Managers d'equips mixtos","Els managers estan preparats per liderar equips de persones i agents?",["No s'aborda","Cada manager s'espavila","Orientació i formació sobre equips amb IA","Els managers redissenyen la feina de l'equip i acompanyen el canvi","Els managers orquestren persones i agents com un sol equip, amb dades"],"Els managers converteixen l'estratègia d'IA en feina diària, o la bloquegen en silenci.","Liderar un equip mixt vol dir repartir la feina entre persones i agents, revisar el que produeixen els agents, protegir el desenvolupament de les persones i gestionar les pors sobre la feina. Pocs managers hi han estat preparats."],
+W7:["Confiança de la plantilla","Les persones entenen com s'utilitza la IA a la seva feina i hi confien?",["Les persones no saben com s'utilitza la IA","Una mica de comunicació, poca confiança","Principis transparents i diàleg en els dos sentits","Confiança mesurada i gestionada; les persones participen en el disseny","Les persones comparteixen la responsabilitat de l'ús de la IA; confiança alta i supervisada"],"Sense confiança, les persones amaguen el seu ús de la IA o s'hi resisteixen.","La recerca de Deloitte destaca una preocupació creixent per la confiança on es troben persones i màquines. La confiança creix quan les persones saben per a què s'utilitza la IA, què significa per a la seva feina i com hi poden influir."],
+W8:["Connexió humana","S'avalua l'efecte de la IA en la col·laboració, la pertinença i les normes entre persones?",["No es considera","Només preocupacions anecdòtiques","Es revisa el treball en equip i la pertinença en els grans canvis","Les normes humanes es dissenyen en els desplegaments d'IA i se supervisen","La connexió humana és un objectiu de disseny, mesurat en el temps"],"La IA pot fer la feina més ràpida i més solitària alhora.","Deloitte adverteix que moltes organitzacions no avaluen l'impacte de la IA en les normes entre persones, cosa que pot erosionar la confiança, la pertinença i la col·laboració. Revisar-ho de manera deliberada protegeix l'avantatge humà."],
+W9:["Adaptabilitat","Les persones i la capacitat es mouen ràpidament cap on la IA crea nou valor?",["Estructures fixes","Moviments lents i cas per cas","Mobilitat interna i requalificació per als canvis que porta la IA","La capacitat alliberada per la IA es reassigna de manera deliberada","El talent flueix de manera dinàmica cap al valor emergent"],"El temps que allibera la IA només crea valor si es dedica a alguna cosa útil.","Les tendències 2026 de Deloitte mostren que el 85% dels líders considera crítica l'adaptabilitat ràpida, però només el 7% diu que la lidera. Quan la IA allibera capacitat, les organitzacions adaptables mouen les persones cap a la feina que creix en lloc de deixar que el guany desaparegui."],
+W10:["Valor, no només cost","L'impacte de la IA es mesura com a valor creat, no només com a cost estalviat?",["No es mesura","Només ús i llicències","Es mesuren productivitat i estalvi de costos","Es mesura el valor: qualitat, creixement, resultats per a clients i persones","Les dades de valor orienten la inversió en IA contínuament"],"Comptar només estalvis empeny la IA a retallar en lloc de crear.","Un dels punts d'inflexió de Deloitte el 2026 és passar de l'eficiència en costos a la creació de valor. Mesurar qualitat, innovació, impacte en clients i resultats per a les persones mostra on la IA amplifica les persones en lloc de substituir-les."],
+D1:["Drets de decisió amb IA","Està definit quines decisions la IA informa, recomana o pren per si sola?",["Poc clar","Es decideix cas per cas","Documentat per als principals tipus de decisió","Aplicat de manera coherent i revisat quan canvia la IA","Revisat amb regularitat amb dades de risc i rendiment"],"Si ningú decideix què pot decidir la IA, la IA acaba decidint per defecte.","Un conjunt senzill de regles (la IA informa, la IA recomana, la IA decideix dins d'uns límits) aplicat a cada tipus de decisió fa explícita l'autonomia. És la versió IA dels drets de decisió de qualsevol model de govern."],
+D2:["Supervisió humana","Hi ha punts clars on una persona ha de revisar o aprovar?",["Cap de definit","Depèn de cada persona","Revisió humana definida per a decisions d'alt impacte","Supervisió integrada als fluxos i auditada","La supervisió s'ajusta automàticament al nivell de risc"],"La supervisió humana només funciona si es dissenya, no si s'espera.","Tenir una persona al circuit vol dir decidir per endavant on ha de revisar, aprovar o pot anul·lar. Sense disseny, la revisió es converteix en un simple vistiplau, o desapareix amb la pressió del temps."],
+D3:["Responsable amb nom","Cada decisió assistida per IA i cada agent té un responsable humà amb nom?",["Sense responsables","Responsables per a algunes eines","Responsable amb nom per a cada cas d'ús i cada agent","Els responsables reten comptes en revisions de rendiment i risc","Responsabilitat transparent i actualitzada quan canvien els sistemes"],"La IA no pot retre comptes; sempre ho ha de fer una persona.","Les tendències 2026 de Deloitte subratllen la qualitat, la rendició de comptes i la capacitat de decisió humana. Un responsable amb nom per a cada agent i cas d'ús respon la pregunta que importa quan alguna cosa surt malament: qui en respon?"],
+D4:["Qualitat de les decisions","Es revisen les dades, les evidències i els resultats de les decisions assistides per IA?",["No es revisen","Es revisen després d'un problema","Revisió regular de les decisions clau assistides per IA","Resultats mesurats i comparats amb decisions humanes","El feedback continu millora els models i les decisions"],"Decidir més ràpid només és millor si algú revisa els resultats.","Revisar la qualitat de les decisions vol dir comprovar les dades utilitzades, el raonament i el que va passar després. Comparar decisions assistides per IA i decisions humanes mostra on ajuda la IA i on confon."],
+D5:["Govern d'agents","Hi ha un inventari d'agents d'IA amb propòsit, permisos i supervisió?",["Es desconeix","Llista parcial","Inventari amb responsable, propòsit i permisos","Agents supervisats en rendiment, cost i risc","Agents gestionats en tot el seu cicle de vida i retirats quan ja no calen"],"No es poden governar agents que no se sap que existeixen.","A mesura que es multipliquen els agents, cadascun necessita un responsable, un propòsit, permisos limitats, supervisió i una data de fi. La recerca de Deloitte sobre IA agèntica mostra que la majoria d'organitzacions encara no està preparada per gestionar aquest nou tipus de plantilla."],
+D6:["Ètica i risc","S'avaluen el biaix, l'equitat i el risc regulador (p. ex. la Llei d'IA de la UE) abans de fer servir la IA?",["No s'avaluen","Comprovacions puntuals","Avaluació de riscos abans de desplegar usos d'alt impacte","Avaluació sistemàtica i documentada amb Legal i RH","Supervisió contínua; les lliçons alimenten la política"],"En les decisions sobre persones, el risc de la IA és un risc humà.","Els usos de la IA en selecció, rendiment, retribució i accés a l'aprenentatge es consideren d'alt risc a la Llei d'IA de la UE. Avaluar biaix, equitat i compliment abans del desplegament protegeix les persones i l'organització."],
+D7:["Transparència","Les persones afectades poden entendre i qüestionar una decisió assistida per IA?",["No","A petició, de manera irregular","S'informa les persones quan la IA intervé en decisions sobre elles","Explicacions clares i una via definida per qüestionar","El feedback de les reclamacions millora les decisions"],"Una decisió que no es pot qüestionar és una decisió en què no es confia.","Transparència vol dir dir a les persones quan la IA ha influït en una decisió sobre elles, explicar-la en llenguatge clar i oferir una manera de qüestionar-la. En molts llocs també és una exigència legal."],
+D8:["Quan la IA s'equivoca","Es detecten, escalen, corregeixen i aprofiten per aprendre els errors de la IA?",["Els errors passen desapercebuts","Es corregeixen quan algú es queixa","Via d'escalat definida i registre d'incidències","Errors analitzats; solucions i lliçons compartides","Senyals d'alerta primerenca detecten problemes abans de causar danys"],"Tot sistema d'IA s'equivoca; les organitzacions madures n'aprenen ràpid.","Un procés d'incidències per a la IA (detectar, escalar, corregir, aprendre) converteix els errors en millores. Sense ell, el mateix error es repeteix en silenci i a escala."],
+D9:["Dades i privacitat","Les dades que fa servir la IA estan governades, són de qualitat i compleixen la normativa de privacitat?",["Es desconeix","Regles bàsiques, moltes excepcions","Estàndards de dades i controls de privacitat per a l'ús d'IA","Dades integrades i governades, amb responsables clars","Una base de dades fiable alimenta la IA a tota l'organització"],"La IA només és tan bona, i tan segura, com les dades que l'alimenten.","Les enquestes de Deloitte citen la dificultat per trobar i reutilitzar dades com a grans barreres per a la IA. Unes dades governades, de qualitat i conformes amb la privacitat són la base tant del rendiment com de la confiança, sobretot amb dades d'empleats."],
+D10:["Fòrum de govern","Un fòrum transversal (negoci, RH, Legal, IT) supervisa l'ús de la IA a la feina?",["Cap","Només liderat per IT","Fòrum transversal amb cadència fixa","El fòrum decideix prioritats, riscos i excepcions, i informa la direcció","Supervisió a nivell de consell; el fòrum s'adapta amb la tecnologia"],"La IA a la feina és alhora una qüestió de negoci, de persones i de risc, així que tots necessiten un lloc a la taula.","Un fòrum amb negoci, RH, Legal, IT i protecció de dades fixa les regles, aprova els usos d'alt risc i resol conflictes. És l'equivalent en IA d'un learning council o un comitè de direcció."]
+}};
+
+/* interface text for Human × AI · Decision Making */
+const HXUI={
+en:{name:"Human × AI · Decision Making",startLead:"Two lenses, scored separately: how far <b>work</b> is being redesigned for people and AI together, and how clearly <b>decisions</b> and accountability are governed when AI is involved.",
+shortMeta:"8 questions · about 3 minutes",shortDesc:"A quick read on both lenses and where you sit on the matrix.",fullMeta:"20 questions · about 12 minutes",fullDesc:"Every dimension, with the evidence rule, your gaps and next steps.",
+lens1H:"Human × AI work",lens1Lead:"How <b>work</b> is being redesigned: strategy, tasks, agents, roles, skills, managers, trust, human connection, adaptability and value.",
+lens2H:"Decisions & accountability",lens2Lead:"Who <b>decides</b> and who answers for it: decision rights, human oversight, named owners, agent governance, risk, transparency and data.",
+LV:{W:["Ad hoc","Piloting","Redesigning","Integrated","Augmented"],D:["Unclear","Informal","Defined","Embedded","Adaptive"]},
+grp:{design:"Work design",people:"People",value:"Value",rights:"Decision rights",risk:"Quality and risk",gov:"Governance"},
+resH1:"Your Human × AI · Decision Making profile",idx1:"Human × AI work index",idx2:"Decisions & accountability index",
+runH:"Running it across the organisation",runIntro:"One leader's view is a starting point. The picture becomes useful when business, HR, Legal and IT score it together and compare units.",
+runSteps:["<b>Bring the right people.</b> Business leaders, HR and L&D, Legal and data protection, IT and data.","<b>Score with evidence.</b> One artefact per score above 2: a policy, an inventory, a decision log, a risk assessment.","<b>Compare units.</b> A unit far ahead on work redesign but behind on accountability is a risk to fix first.","<b>Agree owners.</b> Every gap gets a named owner and a review date.","<b>Re-run every six months.</b> AI moves fast; the assessment should too."],
+credit:"Independent adaptation by Fran Mondaca, inspired by Deloitte's 2026 Global Human Capital Trends (human × machine, decision quality and accountability) and its research on agentic AI and the adaptable organisation. Not a Deloitte tool. Your answers stay in this browser.",
+P:{wait:["Wait and see","AI is used at the edges; work hasn't changed and decision rules are unclear.","Start with both basics: pick two priority work areas to redesign, and write down who decides what when AI is involved."],
+ exposed:["Fast but exposed","Work is changing quickly, but decision rights, oversight and accountability lag behind.","Fix accountability before scaling further: name an owner for every agent and use case, define human review points and set up a cross-functional forum."],
+ stuck:["Safe but stuck","Decisions are well governed, but work and roles have barely changed.","Move from control to redesign: choose a few workflows, redesign them task by task with people and agents, and use your governance to approve faster."],
+ design:["Human × AI by design","Work is redesigned for people and AI together, and decisions stay clear and accountable.","Keep it adaptive: measure value, not only cost, watch trust and human connection, and review decision rights as AI capability grows."]},
+deeperSub:"The full version adds 12 questions and the evidence rule. Your 8 answers carry over.",title:{wiz:"Human × AI · Decision Making assessment",res:"Human × AI · Decision Making results"}},
+es:{name:"Humano × IA · Toma de decisiones",startLead:"Dos lentes, puntuadas por separado: hasta qué punto se está rediseñando el <b>trabajo</b> para personas e IA juntas, y con qué claridad se gobiernan las <b>decisiones</b> y la rendición de cuentas cuando interviene la IA.",
+shortMeta:"8 preguntas · unos 3 minutos",shortDesc:"Una lectura rápida de las dos lentes y de tu posición en la matriz.",fullMeta:"20 preguntas · unos 12 minutos",fullDesc:"Todas las dimensiones, con la regla de evidencia, tus brechas y los siguientes pasos.",
+lens1H:"Trabajo humano × IA",lens1Lead:"Cómo se está rediseñando el <b>trabajo</b>: estrategia, tareas, agentes, roles, habilidades, managers, confianza, conexión humana, adaptabilidad y valor.",
+lens2H:"Decisiones y rendición de cuentas",lens2Lead:"Quién <b>decide</b> y quién responde: derechos de decisión, supervisión humana, responsables con nombre, gobierno de agentes, riesgo, transparencia y datos.",
+LV:{W:["Ad hoc","Pilotando","Rediseñando","Integrado","Aumentado"],D:["Poco claro","Informal","Definido","Arraigado","Adaptativo"]},
+grp:{design:"Diseño del trabajo",people:"Personas",value:"Valor",rights:"Derechos de decisión",risk:"Calidad y riesgo",gov:"Gobierno"},
+resH1:"Tu perfil Humano × IA · Toma de decisiones",idx1:"Índice de trabajo humano × IA",idx2:"Índice de decisiones y rendición de cuentas",
+runH:"Cómo aplicarla en toda la organización",runIntro:"La visión de un líder es un punto de partida. La imagen se vuelve útil cuando negocio, RR. HH., Legal e IT puntúan juntos y comparan unidades.",
+runSteps:["<b>Reúne a las personas adecuadas.</b> Líderes de negocio, RR. HH. y L&D, Legal y protección de datos, IT y datos.","<b>Puntúa con evidencias.</b> Un documento por cada puntuación por encima de 2: una política, un inventario, un registro de decisiones, una evaluación de riesgos.","<b>Compara unidades.</b> Una unidad muy avanzada en rediseño del trabajo pero rezagada en rendición de cuentas es un riesgo que hay que corregir primero.","<b>Acuerda responsables.</b> Cada brecha tiene un responsable con nombre y una fecha de revisión.","<b>Repítela cada seis meses.</b> La IA avanza rápido; la evaluación también debe hacerlo."],
+credit:"Adaptación independiente de Fran Mondaca, inspirada en las Global Human Capital Trends 2026 de Deloitte (humano × máquina, calidad de las decisiones y rendición de cuentas) y en su investigación sobre IA agéntica y la organización adaptable. No es una herramienta de Deloitte. Tus respuestas se quedan en este navegador.",
+P:{wait:["A la espera","La IA se usa en los márgenes; el trabajo no ha cambiado y las reglas de decisión no están claras.","Empieza por lo básico en las dos lentes: elige dos áreas de trabajo prioritarias para rediseñar y deja por escrito quién decide qué cuando interviene la IA."],
+ exposed:["Rápido pero expuesto","El trabajo cambia rápido, pero los derechos de decisión, la supervisión y la rendición de cuentas van por detrás.","Arregla la rendición de cuentas antes de escalar: un responsable para cada agente y caso de uso, puntos de revisión humana definidos y un foro transversal."],
+ stuck:["Seguro pero estancado","Las decisiones están bien gobernadas, pero el trabajo y los roles apenas han cambiado.","Pasa del control al rediseño: elige algunos flujos de trabajo, rediséñalos tarea a tarea con personas y agentes, y usa tu gobierno para aprobar más rápido."],
+ design:["Humano × IA por diseño","El trabajo se rediseña para personas e IA juntas, y las decisiones siguen siendo claras y con responsables.","Mantenlo adaptativo: mide el valor, no solo el coste, vigila la confianza y la conexión humana, y revisa los derechos de decisión a medida que crece la IA."]},
+deeperSub:"La versión completa añade 12 preguntas y la regla de evidencia. Tus 8 respuestas se mantienen.",title:{wiz:"Evaluación Humano × IA · Toma de decisiones",res:"Resultados Humano × IA · Toma de decisiones"}},
+ca:{name:"Humà × IA · Presa de decisions",startLead:"Dues lents, puntuades per separat: fins a quin punt s'està redissenyant la <b>feina</b> per a persones i IA juntes, i amb quina claredat es governen les <b>decisions</b> i la rendició de comptes quan hi intervé la IA.",
+shortMeta:"8 preguntes · uns 3 minuts",shortDesc:"Una lectura ràpida de les dues lents i de la teva posició a la matriu.",fullMeta:"20 preguntes · uns 12 minuts",fullDesc:"Totes les dimensions, amb la regla d'evidència, les teves bretxes i els passos següents.",
+lens1H:"Feina humà × IA",lens1Lead:"Com s'està redissenyant la <b>feina</b>: estratègia, tasques, agents, rols, habilitats, managers, confiança, connexió humana, adaptabilitat i valor.",
+lens2H:"Decisions i rendició de comptes",lens2Lead:"Qui <b>decideix</b> i qui en respon: drets de decisió, supervisió humana, responsables amb nom, govern d'agents, risc, transparència i dades.",
+LV:{W:["Ad hoc","Pilotant","Redissenyant","Integrat","Augmentat"],D:["Poc clar","Informal","Definit","Arrelat","Adaptatiu"]},
+grp:{design:"Disseny de la feina",people:"Persones",value:"Valor",rights:"Drets de decisió",risk:"Qualitat i risc",gov:"Govern"},
+resH1:"El teu perfil Humà × IA · Presa de decisions",idx1:"Índex de feina humà × IA",idx2:"Índex de decisions i rendició de comptes",
+runH:"Com aplicar-la a tota l'organització",runIntro:"La visió d'un líder és un punt de partida. La imatge esdevé útil quan negoci, RH, Legal i IT puntuen junts i comparen unitats.",
+runSteps:["<b>Reuneix les persones adequades.</b> Líders de negoci, RH i L&D, Legal i protecció de dades, IT i dades.","<b>Puntua amb evidències.</b> Un document per cada puntuació per sobre de 2: una política, un inventari, un registre de decisions, una avaluació de riscos.","<b>Compara unitats.</b> Una unitat molt avançada en redisseny de la feina però endarrerida en rendició de comptes és un risc que cal corregir primer.","<b>Acorda responsables.</b> Cada bretxa té un responsable amb nom i una data de revisió.","<b>Repeteix-la cada sis mesos.</b> La IA avança ràpid; l'avaluació també ho ha de fer."],
+credit:"Adaptació independent de Fran Mondaca, inspirada en les Global Human Capital Trends 2026 de Deloitte (humà × màquina, qualitat de les decisions i rendició de comptes) i en la seva recerca sobre IA agèntica i l'organització adaptable. No és una eina de Deloitte. Les teves respostes es queden en aquest navegador.",
+P:{wait:["A l'espera","La IA es fa servir als marges; la feina no ha canviat i les regles de decisió no són clares.","Comença pel bàsic en les dues lents: tria dues àrees de feina prioritàries per redissenyar i deixa per escrit qui decideix què quan hi intervé la IA."],
+ exposed:["Ràpid però exposat","La feina canvia ràpid, però els drets de decisió, la supervisió i la rendició de comptes van endarrerits.","Arregla la rendició de comptes abans d'escalar: un responsable per a cada agent i cas d'ús, punts de revisió humana definits i un fòrum transversal."],
+ stuck:["Segur però encallat","Les decisions estan ben governades, però la feina i els rols amb prou feines han canviat.","Passa del control al redisseny: tria alguns fluxos de treball, redissenya'ls tasca a tasca amb persones i agents, i fes servir el teu govern per aprovar més ràpid."],
+ design:["Humà × IA per disseny","La feina es redissenya per a persones i IA juntes, i les decisions continuen sent clares i amb responsables.","Mantén-lo adaptatiu: mesura el valor, no només el cost, vigila la confiança i la connexió humana, i revisa els drets de decisió a mesura que creix la IA."]},
+deeperSub:"La versió completa afegeix 12 preguntes i la regla d'evidència. Les teves 8 respostes es mantenen.",title:{wiz:"Avaluació Humà × IA · Presa de decisions",res:"Resultats Humà × IA · Presa de decisions"}}
+};
+
 /* ---------- language ---------- */
 let lang="en";
 try{const s=localStorage.getItem("lang"); if(s&&UI[s]) lang=s}catch(e){}
 try{const q=(new URLSearchParams(location.search).get("lang")||"").toLowerCase().slice(0,2); if(UI[q]){lang=q; localStorage.setItem("lang",q)}}catch(e){}
 const t=k=>UI[lang][k];
-const SHORT=["A1","A4","A7","A9","A11","G2","G4","G6"];
+const c=k=>CUI[lang][k];
+const h=k=>HXUI[lang][k];
+const LO_SHORT=["A1","A4","A7","A9","A11","G2","G4","G6"];
 const DD=Object.fromEntries(D.map(d=>[d.id,d]));
-function dim(id){const d=DD[id]; if(lang==="en") return Object.assign({},d,{why:T[id][0],more:T[id][1]});
-  const x=DIMS[lang][id]; return Object.assign({},d,{name:x[0],q:x[1],lv:x[2],why:x[3],more:x[4]})}
-const gname=g=>t("grp")[g]||g;
-
-/* ---------- state (browser only) ---------- */
-const KEY="fm-maturity-learnops-v3";
-let S={mode:"short",unit:null,target:4,a:{},i:0};
-try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.a) S=Object.assign(S,s)}catch(e){}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
-const ids=()=>S.mode==="short"?SHORT:D.map(d=>d.id);
-function raw(id){const a=S.a[id]; return a&&a.s?a.s:0}
-function eff(id){const v=raw(id); if(!v) return 0; return S.mode==="full"&&v>2&&S.a[id].ev!==true?2:v}
-const avg=xs=>{const v=xs.filter(x=>x>0); return v.length?v.reduce((p,c)=>p+c,0)/v.length:0};
 const f1=v=>v?v.toFixed(1).replace(".",lang==="en"?".":","):"–";
-function lvName(lens,v){if(!v) return ""; const i=Math.min(5,Math.max(1,Math.floor(v+1e-9))); return t("level")+" "+i+" · "+t("LV")[lens][i-1]}
+const avg=xs=>{const v=xs.filter(x=>x>0); return v.length?v.reduce((p,q)=>p+q,0)/v.length:0};
 
-/* ---------- share links (like Ask me on the profile) ---------- */
+/* ---------- the two assessments ---------- */
+const AS={
+  learnops:{wiz:"learnops",res:"results",key:"fm-maturity-learnops-v3",lenses:["A","G"],
+    ids:m=>m==="short"?LO_SHORT:D.map(d=>d.id),
+    dim(id){const d=DD[id]; if(lang==="en") return Object.assign({},d,{why:T[id][0],more:T[id][1]});
+      const x=DIMS[lang][id]; return Object.assign({},d,{name:x[0],q:x[1],lv:x[2],why:x[3],more:x[4]})},
+    name:()=>t("loName"),lensName:l=>l==="A"?"LearnOps":t("lens2H"),
+    lensLabel:l=>l==="A"?t("lens1"):t("lens2"),lensLead:l=>l==="A"?t("lens1Lead"):t("lens2Lead"),
+    lvName:(lens,i)=>t("LV")[lens][i-1],
+    quad:{bl:"frag",br:"silo",tl:"slow",tr:"int"},prof:k=>t("P")[k],
+    tx:k=>k==="idx1"?t("loIndex"):k==="idx2"?t("gvIndex"):t(k)},
+  culture:{wiz:"culture",res:"culture-results",key:"fm-maturity-culture-v1",lenses:["C","B"],
+    ids:m=>m==="short"?CU_SHORT:CU_IDS,
+    dim(id){const x=CU[lang][id]; return {id,lens:id[0],name:x[0],q:x[1],why:x[2],more:x[3],owner:CU_OWNER[id]}},
+    name:()=>c("name"),lensName:l=>l==="C"?c("lens1H"):c("lens2H"),
+    lensLabel:l=>l==="C"?t("lens1"):t("lens2"),lensLead:l=>l==="C"?c("lens1Lead"):c("lens2Lead"),
+    lvName:(lens,i)=>c("LV")[i-1],
+    quad:{bl:"dormant",br:"declared",tl:"grassroots",tr:"thriving"},prof:k=>c("P")[k],tx:k=>c(k)},
+  hx:{wiz:"hx",res:"hx-results",key:"fm-maturity-hx-v1",lenses:["W","D"],
+    ids:m=>m==="short"?HX_SHORT:HX_IDS,
+    dim(id){const x=HX[lang][id]; return {id,lens:id[0],grp:h("grp")[HX_GRP[id]],name:x[0],q:x[1],lv:x[2],why:x[3],more:x[4]}},
+    name:()=>h("name"),lensName:l=>l==="W"?h("lens1H"):h("lens2H"),
+    lensLabel:l=>l==="W"?t("lens1"):t("lens2"),lensLead:l=>l==="W"?h("lens1Lead"):h("lens2Lead"),
+    lvName:(lens,i)=>h("LV")[lens][i-1],
+    quad:{bl:"wait",br:"exposed",tl:"stuck",tr:"design"},prof:k=>h("P")[k],
+    tx:k=>{const v=h(k); return v!==undefined?v:t(k)}}
+};
+const X=k=>cfg().tx(k);
+let A="learnops"; const cfg=()=>AS[A];
+
+/* ---------- state per assessment (browser only) ---------- */
+const ST={};
+function blank(){return {mode:"short",unit:null,role:null,target:4,a:{},i:0}}
+for(const k in AS){ST[k]=blank(); try{const s=JSON.parse(localStorage.getItem(AS[k].key)||"null"); if(s&&s.a) ST[k]=Object.assign(blank(),s)}catch(e){}}
+const S=()=>ST[A];
+function save(){try{localStorage.setItem(cfg().key,JSON.stringify(S()))}catch(e){}}
+const ids=()=>cfg().ids(S().mode);
+function raw(id){const a=S().a[id]; return a&&a.s?a.s:0}
+/* evidence rule: LearnOps full version only */
+const evRule=()=>A!=="culture"&&S().mode==="full";
+function eff(id){const v=raw(id); if(!v) return 0; return evRule()&&v>2&&S().a[id].ev!==true?2:v}
+function lvName(lens,v){if(!v) return ""; const i=Math.min(5,Math.max(1,Math.floor(v+1e-9))); return t("level")+" "+i+" · "+cfg().lvName(lens,i)}
+
+/* ---------- share links ---------- */
 const CANON="https://franmdkso.github.io/Profile/maturity/";
 function shareURL(params,hash){
   const base=/github\.io$/.test(location.hostname)?location.origin+location.pathname:CANON;
@@ -592,174 +896,228 @@ async function copyLink(url){
   try{await navigator.clipboard.writeText(url)}catch(e){const a=document.createElement("textarea"); a.value=url; a.style.position="absolute"; a.style.left="-9999px"; document.body.appendChild(a); a.select(); try{document.execCommand("copy")}catch(_){} a.remove()}
   toast(t("linkCopied"));
 }
-const SHARES={learnops:()=>shareURL({},"learnops"),short:()=>shareURL({v:"short"},"learnops"),full:()=>shareURL({v:"full"},"learnops")};
-function shareBtn(key){return `<button class="share-btn" type="button" data-share="${key}" title="${esc(t("copyLink"))}" aria-label="${esc(t("copyLink"))}">${LINK_SVG}</button>`}
-document.addEventListener("click",e=>{const b=e.target.closest("[data-share]"); if(!b) return; e.preventDefault(); e.stopPropagation(); copyLink(SHARES[b.dataset.share]())},true);
+function shareTarget(k){const [as,v]=k.split(":"); return shareURL(v?{v}:{},AS[as].wiz)}
+function shareBtn(k){return `<button class="share-btn" type="button" data-share="${k}" title="${esc(t("copyLink"))}" aria-label="${esc(t("copyLink"))}">${LINK_SVG}</button>`}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-share]"); if(!b) return; e.preventDefault(); e.stopPropagation(); copyLink(shareTarget(b.dataset.share))},true);
 
 /* ---------- wizard ---------- */
 function steps(){
-  const st=[{t:"start"}]; if(S.mode==="full") st.push({t:"unit"});
-  st.push({t:"lens",l:"A"}); ids().filter(i=>i[0]==="A").forEach(id=>st.push({t:"q",id}));
-  st.push({t:"lens",l:"G"}); ids().filter(i=>i[0]==="G").forEach(id=>st.push({t:"q",id}));
+  const st=[{t:"start"}];
+  if(A!=="culture"&&S().mode==="full") st.push({t:"unit"});
+  if(A==="culture") st.push({t:"role"});
+  const [l1,l2]=cfg().lenses;
+  st.push({t:"lens",l:l1}); ids().filter(i=>i[0]===l1).forEach(id=>st.push({t:"q",id}));
+  st.push({t:"lens",l:l2}); ids().filter(i=>i[0]===l2).forEach(id=>st.push({t:"q",id}));
   return st;
 }
-const needsEv=id=>S.mode==="full"&&raw(id)>2&&S.a[id].ev===undefined;
+const needsEv=id=>evRule()&&raw(id)>2&&S().a[id].ev===undefined;
 function begin(mode){
-  S.mode=mode; const st=steps();
+  S().mode=mode; const st=steps();
   let k=st.findIndex(x=>x.t==="q"&&(!raw(x.id)||needsEv(x.id)));
-  if(k<0){S.i=0;save();location.hash="#results";return}
-  if(mode==="full"&&S.unit==null) k=1; else if(st[k-1]&&st[k-1].t==="lens") k--;
-  S.i=k; save(); renderStep();
+  if(k<0){S().i=0;save();location.hash="#"+cfg().res;return}
+  if(A!=="culture"&&mode==="full"&&S().unit==null) k=1;
+  else if(A==="culture"&&S().role==null) k=1;
+  else if(st[k-1]&&st[k-1].t==="lens") k--;
+  S().i=k; save(); renderStep();
 }
-function go(n){const st=steps(); S.i=Math.max(0,n); save(); if(S.i>=st.length){location.hash="#results";return} renderStep()}
+function go(n){const st=steps(); S().i=Math.max(0,n); save(); if(S().i>=st.length){location.hash="#"+cfg().res;return} renderStep()}
 let evFor=null,timer=0;
+function stmt(d){return (S().role===0||d.owner==="L"?c("prefixOrg"):c("prefixTeam"))+d.q}
 function renderStep(focus=true){
   clearTimeout(timer); evFor=null;
-  const st=steps(), s=st[Math.min(S.i,st.length-1)], w=$("#wiz");
+  const st=steps(), s=st[Math.min(S().i,st.length-1)], w=$("#wiz"), cu=A==="culture";
   const qs=st.filter(x=>x.t==="q"), qi=s.t==="q"?qs.findIndex(x=>x.id===s.id)+1:0;
   const done=qs.filter(x=>raw(x.id)).length;
-  const top=s.t==="start"?"":`<div class="sc-top"><button class="back" type="button" data-act="back">${t("back")}</button><span class="label">${s.t==="q"?esc(gname(DD[s.id].grp))+" · "+qi+" / "+qs.length:S.mode==="short"?t("shortV"):t("fullV")}</span></div><div class="line" aria-hidden="true"><i style="width:${done/qs.length*100}%"></i></div>`;
+  const lab=s.t==="q"?(cu?cfg().lensName(s.id[0]):A==="learnops"?gname(DD[s.id].grp):cfg().dim(s.id).grp)+" · "+qi+" / "+qs.length:S().mode==="short"?t("shortV"):t("fullV");
+  const top=s.t==="start"?"":`<div class="sc-top"><button class="back" type="button" data-act="back">${t("back")}</button><span class="label">${esc(lab)}</span></div><div class="line" aria-hidden="true"><i style="width:${done/qs.length*100}%"></i></div>`;
   let h="";
   if(s.t==="start"){
-    const any=Object.keys(S.a).length;
+    const any=Object.keys(S().a).length;
     h=`<p class="label"><span><i class="dot"></i>${t("startTag")}</span></p>
-      <h1 class="aname has-share">${esc(t("loName"))}${shareBtn("learnops")}</h1>
-      <p class="lead">${t("startLead")}</p>
+      <h1 class="aname has-share">${esc(cfg().name())}${shareBtn(A)}</h1>
+      <p class="tagline big">${esc(t({learnops:"loTag",culture:"lcTag",hx:"aiTag"}[A]))}</p>
+      <p class="lead">${X("startLead")}</p>
       <div class="paths">
-        <div class="path-wrap"><button class="path" type="button" data-act="short"><b>${t("short")}</b><span class="meta">${t("shortMeta")}</span><p>${t("shortDesc")}</p><span class="go">${t("start")}</span></button>${shareBtn("short")}</div>
-        <div class="path-wrap"><button class="path" type="button" data-act="full"><b>${t("full")}</b><span class="meta">${t("fullMeta")}</span><p>${t("fullDesc")}</p><span class="go">${t("start")}</span></button>${shareBtn("full")}</div>
+        <div class="path-wrap"><button class="path" type="button" data-act="short"><b>${t("short")}</b><span class="meta">${X("shortMeta")}</span><p>${X("shortDesc")}</p><span class="go">${t("start")}</span></button>${shareBtn(A+":short")}</div>
+        <div class="path-wrap"><button class="path" type="button" data-act="full"><b>${t("full")}</b><span class="meta">${X("fullMeta")}</span><p>${X("fullDesc")}</p><span class="go">${t("start")}</span></button>${shareBtn(A+":full")}</div>
       </div>
       <p class="fine">${t("private")}${any?` <button class="more-btn" type="button" data-act="clear">${t("clearPrev")}</button>`:""}</p>`;
-  }else if(s.t==="unit"){
-    h=top+`<h2>${t("unitQ")}</h2><p class="why">${t("unitWhy")}</p>
-      <div class="opts" role="radiogroup">${t("units").map((u,i)=>`<button class="opt" type="button" role="radio" aria-checked="${S.unit===i}" data-unit="${i}"><b>${i+1}</b><span>${esc(u)}</span></button>`).join("")}</div>`;
+  }else if(s.t==="unit"||s.t==="role"){
+    const isU=s.t==="unit", list=isU?t("units"):c("roles"), sel=isU?S().unit:S().role;
+    h=top+`<h2>${isU?t("unitQ"):c("roleQ")}</h2><p class="why">${isU?t("unitWhy"):c("roleWhy")}</p>
+      <div class="opts" role="radiogroup">${list.map((u,i)=>`<button class="opt" type="button" role="radio" aria-checked="${sel===i}" data-pick="${i}"><b>${i+1}</b><span>${esc(u)}</span></button>`).join("")}</div>`;
   }else if(s.t==="lens"){
-    h=top+(s.l==="A"
-      ?`<p class="label">${t("lens1")}</p><h1 class="aname">LearnOps</h1><p class="lead">${t("lens1Lead")}</p>`
-      :`<p class="label">${t("lens2")}</p><h1 class="aname">${t("lens2H")}</h1><p class="lead">${t("lens2Lead")}</p>`)
-      +`<div class="actions"><button class="btn" type="button" data-act="next">${t("cont")}</button></div>`;
+    h=top+`<p class="label">${cfg().lensLabel(s.l)}</p><h1 class="aname">${esc(cfg().lensName(s.l))}</h1><p class="lead">${cfg().lensLead(s.l)}</p>
+      <div class="actions"><button class="btn" type="button" data-act="next">${t("cont")}</button></div>`;
   }else{
-    const d=dim(s.id), a=S.a[s.id]||{}, LVL=t("LV")[d.lens];
-    h=top+`<h2 id="qh">${esc(d.q)}</h2>
+    const d=cfg().dim(s.id), a=S().a[s.id]||{};
+    const opts=cu
+      ?c("scale").map((x,i)=>`<button class="opt agree" type="button" role="radio" aria-checked="${a.s===i+1}" data-v="${i+1}"><b>${i+1}</b><span>${esc(x)}</span></button>`).join("")
+      :d.lv.map((x,i)=>`<button class="opt" type="button" role="radio" aria-checked="${a.s===i+1}" data-v="${i+1}"><b>${i+1}</b><small>${cfg().lvName(d.lens,i+1)}</small><span>${esc(x)}</span></button>`).join("");
+    h=top+`<h2 id="qh">${esc(cu?stmt(d):d.q)}</h2>
       <p class="why">${esc(d.why)}</p>
-      <button class="more-btn" type="button" data-act="more" aria-expanded="false">${t("learnMore")}: ${esc(d.name.toLowerCase())}</button>
+      ${cu?`<p class="owner">${c("owner")}: <b>${esc(c("owners")[d.owner])}</b></p>`:""}
+      <button class="more-btn" type="button" data-act="more" aria-expanded="false">${t("learnMore")}: ${esc(d.name)}</button>
       <p class="more" id="more" hidden>${esc(d.more)}</p>
-      <div class="opts" role="radiogroup" aria-labelledby="qh">${d.lv.map((x,i)=>`<button class="opt" type="button" role="radio" aria-checked="${a.s===i+1}" data-v="${i+1}"><b>${i+1}</b><small>${LVL[i]}</small><span>${esc(x)}</span></button>`).join("")}</div>
+      <div class="opts${cu?" scale":""}" role="radiogroup" aria-labelledby="qh">${opts}</div>
       <div id="ev"></div>
       <p class="kbd">${t("keys")}</p>`;
   }
   w.innerHTML=h;
-  if(s.t==="q"&&S.mode==="full"&&raw(s.id)>2&&!needsEv(s.id)) askEv(s.id,true);
+  if(s.t==="q"&&evRule()&&raw(s.id)>2&&!needsEv(s.id)) askEv(s.id,true);
   if(focus){const f=w.querySelector('[aria-checked="true"]')||w.querySelector(".btn,.opt"); if(f&&s.t!=="start") f.focus({preventScroll:true}); window.scrollTo(0,0)}
 }
 function askEv(id,quiet){
-  evFor=id; const a=S.a[id];
+  evFor=id; const a=S().a[id];
   $("#ev").innerHTML=`<div class="ev"><p>${t("evQ")} <small>${t("evHint")}</small></p>
     <div class="actions"><button class="btn" type="button" data-ev="1">${a.ev===true&&quiet?"✓ ":""}${t("evYes")}</button><button class="btn ghost" type="button" data-ev="0">${a.ev===false&&quiet?"✓ ":""}${t("evNo")}</button></div></div>`;
   if(!quiet){const e=$("#ev"); e.querySelector("[data-ev]").focus({preventScroll:true}); e.scrollIntoView({behavior:reduce.matches?"auto":"smooth",block:"nearest"})}
 }
 function choose(v){
-  const s=steps()[S.i]; if(!s||s.t!=="q") return;
-  const a=S.a[s.id]||(S.a[s.id]={}); if(a.s!==v) delete a.ev; a.s=v; save();
+  const s=steps()[S().i]; if(!s||s.t!=="q") return;
+  const a=S().a[s.id]||(S().a[s.id]={}); if(a.s!==v) delete a.ev; a.s=v; save();
   $("#wiz").querySelectorAll(".opt").forEach(b=>b.setAttribute("aria-checked",String(+b.dataset.v===v)));
-  if(S.mode==="full"&&v>2){askEv(s.id); return}
-  $("#ev").innerHTML=""; timer=setTimeout(()=>go(S.i+1),reduce.matches?0:260);
+  if(evRule()&&v>2){askEv(s.id); return}
+  $("#ev").innerHTML=""; timer=setTimeout(()=>go(S().i+1),reduce.matches?0:260);
 }
 $("#wiz").addEventListener("click",e=>{
   const b=e.target.closest("button"); if(!b||b.dataset.share) return;
   const act=b.dataset.act;
   if(act==="short"||act==="full") return begin(act);
-  if(act==="clear"){S.a={};S.unit=null;save();return renderStep()}
-  if(act==="back") return go(S.i-1);
-  if(act==="next") return go(S.i+1);
+  if(act==="clear"){ST[A]=blank();save();return renderStep()}
+  if(act==="back") return go(S().i-1);
+  if(act==="next") return go(S().i+1);
   if(act==="more"){const m=$("#more"); m.hidden=!m.hidden; b.setAttribute("aria-expanded",String(!m.hidden)); return}
-  if(b.dataset.unit!==undefined){S.unit=+b.dataset.unit; save(); $("#wiz").querySelectorAll("[data-unit]").forEach(x=>x.setAttribute("aria-checked",String(x===b))); timer=setTimeout(()=>go(S.i+1),reduce.matches?0:220); return}
+  if(b.dataset.pick!==undefined){const s=steps()[S().i]; if(s.t==="unit") S().unit=+b.dataset.pick; else S().role=+b.dataset.pick; save();
+    $("#wiz").querySelectorAll("[data-pick]").forEach(x=>x.setAttribute("aria-checked",String(x===b))); timer=setTimeout(()=>go(S().i+1),reduce.matches?0:220); return}
   if(b.dataset.v) return choose(+b.dataset.v);
-  if(b.dataset.ev!==undefined&&evFor){S.a[evFor].ev=b.dataset.ev==="1"; save(); go(S.i+1)}
+  if(b.dataset.ev!==undefined&&evFor){S().a[evFor].ev=b.dataset.ev==="1"; save(); go(S().i+1)}
 });
 addEventListener("keydown",e=>{
-  if($("#view-learnops").hidden||e.metaKey||e.ctrlKey||e.altKey) return;
+  if($("#view-wiz").hidden||e.metaKey||e.ctrlKey||e.altKey) return;
   if(/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) return;
-  const s=steps()[S.i]; if(!s) return;
-  if(e.key==="ArrowLeft"&&S.i>0){e.preventDefault();go(S.i-1);return}
-  if(evFor&&/^[ynsj]$/i.test(e.key)){S.a[evFor].ev=/^[ys]$/i.test(e.key);save();go(S.i+1);return}
+  const s=steps()[S().i]; if(!s) return;
+  if(e.key==="ArrowLeft"&&S().i>0){e.preventDefault();go(S().i-1);return}
+  if(evFor&&/^[ynsj]$/i.test(e.key)){S().a[evFor].ev=/^[ys]$/i.test(e.key);save();go(S().i+1);return}
   const n=+e.key; if(!(n>=1&&n<=5)) return;
   if(s.t==="q") choose(n);
-  else if(s.t==="unit"){const b=$("#wiz").querySelectorAll("[data-unit]")[n-1]; if(b) b.click()}
+  else if(s.t==="unit"||s.t==="role"){const b=$("#wiz").querySelectorAll("[data-pick]")[n-1]; if(b) b.click()}
 });
 
 /* ---------- results ---------- */
-function profileKey(lo,gv){const hl=lo>=3,hg=gv>=3; return hl&&hg?"int":hl?"silo":hg?"slow":"frag"}
+function profileKey(x,y){const q=cfg().quad; return y>=3?(x>=3?q.tr:q.tl):(x>=3?q.br:q.bl)}
+function bar(label,v){return `<div class="row"><span>${esc(label)}</span><div class="track" role="img" aria-label="${esc(label)}: ${f1(v)} / 5"><div class="fill" style="width:${v/5*100}%"></div></div><span class="val">${f1(v)}</span></div>`}
+function heatCell(d){const v=eff(d.id); return v?`<div title="${d.id} ${esc(d.name)}: ${v}" style="background:color-mix(in srgb,var(--signal) ${Math.round(v/5*85)}%,var(--surface));${v>=3.5?"color:var(--paper)":""}">${d.id}</div>`:`<div class="na" title="${d.id}">${d.id}</div>`}
 function renderResults(){
-  const all=ids().map(dim), A=all.filter(d=>d.lens==="A"), G=all.filter(d=>d.lens==="G");
-  const lo=avg(A.map(d=>eff(d.id))), gv=avg(G.map(d=>eff(d.id)));
-  const miss=all.filter(d=>!raw(d.id)), full=S.mode==="full";
-  $("#res-unit").textContent=t("results")+" · "+(full?t("fullV"):t("shortV"))+(full&&S.unit!=null?" · "+t("units")[S.unit]:"");
-  $("#res-warn").innerHTML=miss.length?`<p class="warn">${t("miss")(miss.length,all.length)} <a href="#learnops" data-resume>${t("finish")}</a>.</p>`:"";
-  $("#t-lo").innerHTML=lo?f1(lo)+"<small> / 5</small>":"–"; $("#t-lo-l").textContent=lvName("A",lo);
-  $("#t-gv").innerHTML=gv?f1(gv)+"<small> / 5</small>":"–"; $("#t-gv-l").textContent=lvName("G",gv);
-  if(lo&&gv){const P=t("P")[profileKey(lo,gv)];
-    $("#t-pr").textContent=P[0]; $("#t-pr-d").textContent=P[1];
-    $("#fix").innerHTML=`<b>${t("fixFirst")}</b><p>${esc(P[2])}</p>`;
-  }else{$("#t-pr").textContent=t("notEnough"); $("#t-pr-d").textContent=t("notEnoughD"); $("#fix").innerHTML=""}
-  $("#matrix").innerHTML=matrixSVG(lo,gv);
-  $("#bars-sub").textContent=full?t("barsFull"):t("barsShort");
-  $("#bars").innerHTML=[["LearnOps",A],[t("lens2H"),G]].map(([ttl,xs])=>`<h4>${ttl}</h4>`+[...new Set(xs.map(d=>d.grp))].map(g=>{const v=avg(xs.filter(d=>d.grp===g).map(d=>eff(d.id)));
-      return `<div class="row"><span>${esc(gname(g))}</span><div class="track" role="img" aria-label="${esc(gname(g))}: ${f1(v)} / 5"><div class="fill" style="width:${v/5*100}%"></div></div><span class="val">${f1(v)}</span></div>`}).join("")).join("");
-  $("#heat-t").textContent=t("allDims")(all.length);
-  const cell=d=>{const v=eff(d.id); return v?`<div title="${d.id} ${esc(d.name)}: ${v}" style="background:color-mix(in srgb,var(--signal) ${Math.round(v/5*85)}%,var(--surface));${v>=3.5?"color:var(--paper)":""}">${d.id}</div>`:`<div class="na" title="${d.id}">${d.id}</div>`};
-  $("#heat-a").innerHTML=A.map(cell).join(""); $("#heat-g").innerHTML=G.map(cell).join("");
-  $("#target").value=S.target;
-  const gaps=all.filter(d=>raw(d.id)).map(d=>({d,c:eff(d.id)})).map(x=>({...x,g:S.target-x.c})).filter(x=>x.g>0).sort((a,b)=>b.g-a.g||a.c-b.c).slice(0,full?6:4);
-  $("#gaps").innerHTML=gaps.length?`<table><thead><tr><th>${t("thDim")}</th><th>${t("thNow")}</th><th>${t("thGap")}</th></tr></thead><tbody>${gaps.map(x=>{
-      const next=Math.min(5,Math.floor(x.c)+1);
-      return `<tr><td><b>${x.d.id} · ${esc(x.d.name)}</b><small>${t("nextStep")(next)}${esc(x.d.lv[next-1])}</small></td><td class="n">${x.c}</td><td class="n">${x.g}</td></tr>`}).join("")}</tbody></table>`
+  const C=cfg(), cu=A==="culture", full=S().mode==="full", [l1,l2]=C.lenses;
+  const all=ids().map(id=>C.dim(id)), L1=all.filter(d=>d.lens===l1), L2=all.filter(d=>d.lens===l2);
+  const x=avg(L1.map(d=>eff(d.id))), y=avg(L2.map(d=>eff(d.id)));
+  const miss=all.filter(d=>!raw(d.id));
+  const who=cu?(S().role!=null?" · "+c("roles")[S().role]:""):(full&&S().unit!=null?" · "+t("units")[S().unit]:"");
+  const P=x&&y?C.prof(profileKey(x,y)):null;
+  let h=`<p class="label"><span><i class="dot"></i>${t("results")} · ${full?t("fullV"):t("shortV")}${esc(who)}</span></p>
+    <h1 class="has-share">${esc(X("resH1"))}${shareBtn(A)}</h1>
+    <p class="tagline big">${esc(t({learnops:"loTag",culture:"lcTag",hx:"aiTag"}[A]))}</p>
+    ${miss.length?`<p class="warn">${t("miss")(miss.length,all.length)} <a href="#${C.wiz}" data-resume>${t("finish")}</a>.</p>`:""}
+    <div class="tiles">
+      <div class="panel tile"><span class="label">${esc(X("idx1"))}</span><div class="num">${x?f1(x)+"<small> / 5</small>":"–"}</div><div class="lvl">${esc(lvName(l1,x))}</div></div>
+      <div class="panel tile"><span class="label">${esc(X("idx2"))}</span><div class="num">${y?f1(y)+"<small> / 5</small>":"–"}</div><div class="lvl">${esc(lvName(l2,y))}</div></div>
+      <div class="panel tile profile"><span class="label">${t("profileL")}</span><h3>${esc(P?P[0]:t("notEnough"))}</h3><p>${esc(P?P[1]:t("notEnoughD"))}</p></div>
+    </div>
+    <div class="two">
+      <div class="panel matrix"><h2>${t("matrixH")}</h2><p class="sub">${t("matrixSub")}</p>${matrixSVG(x,y)}${P?`<div class="fix"><b>${t("fixFirst")}</b><p>${esc(P[2])}</p></div>`:""}</div>
+      <div class="panel">`;
+  if(cu){
+    const ow=["L","M","H"];
+    h+=`<h2>${c("barsH")}</h2><p class="sub">${c("barsSub")}</p><div class="bars">${ow.map(o=>bar(c("owners")[o],avg(all.filter(d=>d.owner===o).map(d=>eff(d.id))))).join("")}</div>`;
+  }else{
+    h+=`<h2>${t("barsH")}</h2><p class="sub">${full?t("barsFull"):t("barsShort")}</p><div class="bars">${[[l1,L1],[l2,L2]].map(([l,xs])=>`<h4>${esc(C.lensName(l))}</h4>`+[...new Set(xs.map(d=>d.grp))].map(g=>bar(gname(g),avg(xs.filter(d=>d.grp===g).map(d=>eff(d.id))))).join("")).join("")}</div>`;
+  }
+  h+=`<div class="heat-l"><span>${t("allDims")(all.length)}</span><span>${t("darker")}</span></div>
+      <div class="heat${cu?" h10":""}">${L1.map(heatCell).join("")}</div><div class="heat${cu?" h10":""}">${L2.map(heatCell).join("")}</div></div></div>`;
+  if(cu&&P){
+    const r=S().role!=null?S().role:1, roles=c("roles");
+    h+=`<div class="panel" style="margin-top:14px"><h2>${c("tipsH")}</h2><p class="sub">${esc(c("tipsSub")(roles[r]))}</p>
+      <div class="fix"><p style="color:var(--ink);font-size:17px">${esc(P[3][r])}</p></div>
+      <details class="others"><summary>${c("otherRoles")}</summary>${roles.map((n,i)=>i===r?"":`<p><b>${esc(n)}.</b> ${esc(P[3][i])}</p>`).join("")}</details></div>`;
+  }
+  const gaps=all.filter(d=>raw(d.id)).map(d=>({d,v:eff(d.id)})).map(o=>({...o,g:S().target-o.v})).filter(o=>o.g>0).sort((a,b)=>b.g-a.g||a.v-b.v).slice(0,full?6:4);
+  h+=`<div class="panel" style="margin-top:14px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><h2>${X("gapsH")}</h2>
+      <label class="tgt"><span>${t("target")}</span> <select id="target">${[2,3,4,5].map(n=>`<option${n===S().target?" selected":""}>${n}</option>`).join("")}</select></label></div>
+    <p class="sub">${X("gapsSub")}</p>`;
+  h+=gaps.length?`<table><thead><tr><th>${t("thDim")}</th><th>${t("thNow")}</th><th>${t("thGap")}</th></tr></thead><tbody>${gaps.map(o=>{
+      const sub=cu?`${c("owner")}: ${esc(c("owners")[o.d.owner])} · ${esc(o.d.why)}`:(()=>{const n=Math.min(5,Math.floor(o.v)+1); return t("nextStep")(n)+esc(o.d.lv[n-1])})();
+      return `<tr><td><b>${o.d.id} · ${esc(o.d.name)}</b><small>${sub}</small></td><td class="n">${o.v}</td><td class="n">${o.g}</td></tr>`}).join("")}</tbody></table>`
     :`<p class="note">${t("noGaps")}</p>`;
-  const capped=full?all.filter(d=>raw(d.id)>2&&S.a[d.id].ev!==true):[];
-  $("#capped").innerHTML=capped.length?`<div class="panel" style="margin-top:14px"><h2>${t("cappedH")}</h2><p class="sub">${t("cappedSub")}</p>
-    <table><tbody>${capped.map(d=>`<tr><td><b>${d.id} · ${esc(d.name)}</b></td><td class="n">${t("rated")(raw(d.id))}</td></tr>`).join("")}</tbody></table></div>`:"";
-  $("#upsell").innerHTML=full?"":`<div class="panel" style="margin-top:14px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap"><div><h2>${t("deeperH")}</h2><p class="sub" style="margin:4px 0 0">${t("deeperSub")}</p></div><button class="btn" type="button" id="to-full">${t("toFull")}</button></div>`;
-  const tf=$("#to-full"); if(tf) tf.onclick=()=>{location.hash="#learnops"; begin("full")};
+  h+=`</div>`;
+  const capped=evRule()?all.filter(d=>raw(d.id)>2&&S().a[d.id].ev!==true):[];
+  if(capped.length) h+=`<div class="panel" style="margin-top:14px"><h2>${t("cappedH")}</h2><p class="sub">${t("cappedSub")}</p>
+    <table><tbody>${capped.map(d=>`<tr><td><b>${d.id} · ${esc(d.name)}</b></td><td class="n">${t("rated")(raw(d.id))}</td></tr>`).join("")}</tbody></table></div>`;
+  if(!full) h+=`<div class="panel" style="margin-top:14px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap"><div><h2>${t("deeperH")}</h2><p class="sub" style="margin:4px 0 0">${X("deeperSub")}</p></div><button class="btn" type="button" id="to-full">${t("toFull")}</button></div>`;
+  h+=`<details class="panel"><summary>${X("runH")}</summary><p class="note">${X("runIntro")}</p><ol>${(X("runSteps")).map(s=>`<li>${s}</li>`).join("")}</ol></details>
+    <div class="actions"><button class="btn ghost" type="button" id="edit">${t("review")}</button><button class="btn ghost" type="button" id="restart">${t("restart")}</button><a class="btn ghost" href="#home">${t("allAssess")}</a></div>
+    <p class="note">${X("credit")}</p><p class="copy">${t("copy")}</p>`;
+  $("#res").innerHTML=h;
+  $("#target").onchange=e=>{S().target=+e.target.value;save();renderResults()};
+  $("#edit").onclick=()=>{S().i=1; save(); location.hash="#"+C.wiz; renderStep()};
+  $("#restart").onclick=()=>{ST[A]=blank(); save(); location.hash="#"+C.wiz; renderStep()};
+  const tf=$("#to-full"); if(tf) tf.onclick=()=>{location.hash="#"+C.wiz; begin("full")};
 }
-function matrixSVG(lo,gv){
-  const W=420,H=420,p=48,s=(W-p-16)/4, X=v=>p+(v-1)*s, Y=v=>H-p-(v-1)*s, P=t("P");
-  const q=(x,y,w,h,txt,on)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${on?"var(--signal-soft)":"transparent"}"/><text x="${x+w/2}" y="${y+24}" text-anchor="middle" dominant-baseline="middle" font-size="15" font-weight="600" fill="${on?"var(--signal)":"var(--muted)"}">${esc(txt)}</text>`;
-  const k=lo&&gv?profileKey(lo,gv):"";
-  let g=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="LearnOps ${f1(lo)}, ${esc(t("lens2H"))} ${f1(gv)}">`;
-  g+=q(X(1),Y(5),2*s,2*s,P.slow[0],k==="slow")+q(X(3),Y(5),2*s,2*s,P.int[0],k==="int")+q(X(1),Y(3),2*s,2*s,P.frag[0],k==="frag")+q(X(3),Y(3),2*s,2*s,P.silo[0],k==="silo");
+function matrixSVG(x,y){
+  const C=cfg(), W=420,H=420,p=48,s=(W-p-16)/4, X=v=>p+(v-1)*s, Y=v=>H-p-(v-1)*s, Q=C.quad;
+  const q=(qx,qy,w,hh,key,on)=>`<rect x="${qx}" y="${qy}" width="${w}" height="${hh}" fill="${on?"var(--signal-soft)":"transparent"}"/><text x="${qx+w/2}" y="${qy+24}" text-anchor="middle" dominant-baseline="middle" font-size="15" font-weight="600" fill="${on?"var(--signal)":"var(--muted)"}">${esc(C.prof(key)[0])}</text>`;
+  const k=x&&y?profileKey(x,y):"", [l1,l2]=C.lenses;
+  let g=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(C.lensName(l1))} ${f1(x)}, ${esc(C.lensName(l2))} ${f1(y)}">`;
+  g+=q(X(1),Y(5),2*s,2*s,Q.tl,k===Q.tl)+q(X(3),Y(5),2*s,2*s,Q.tr,k===Q.tr)+q(X(1),Y(3),2*s,2*s,Q.bl,k===Q.bl)+q(X(3),Y(3),2*s,2*s,Q.br,k===Q.br);
   g+=`<rect x="${X(1)}" y="${Y(5)}" width="${4*s}" height="${4*s}" fill="none" stroke="var(--rule)"/>`;
   g+=`<line x1="${X(3)}" y1="${Y(5)}" x2="${X(3)}" y2="${Y(1)}" stroke="var(--rule)"/><line x1="${X(1)}" y1="${Y(3)}" x2="${X(5)}" y2="${Y(3)}" stroke="var(--rule)"/>`;
   for(let i=1;i<=5;i++){g+=`<text x="${X(i)}" y="${H-p+18}" text-anchor="middle" font-size="12" fill="var(--muted)">${i}</text><text x="${p-12}" y="${Y(i)+4}" text-anchor="end" font-size="12" fill="var(--muted)">${i}</text>`}
-  g+=`<text x="${X(3)}" y="${H-8}" text-anchor="middle" font-size="13" fill="var(--ink)">LearnOps →</text><text transform="translate(14 ${Y(3)}) rotate(-90)" text-anchor="middle" font-size="13" fill="var(--ink)">${esc(t("lens2H"))} →</text>`;
-  if(lo&&gv) g+=`<circle cx="${X(lo)}" cy="${Y(gv)}" r="13" fill="var(--signal)" opacity=".2"/><circle cx="${X(lo)}" cy="${Y(gv)}" r="7" fill="var(--signal)" stroke="var(--surface)" stroke-width="2"/>`;
+  g+=`<text x="${X(3)}" y="${H-8}" text-anchor="middle" font-size="13" fill="var(--ink)">${esc(C.lensName(l1))} →</text><text transform="translate(14 ${Y(3)}) rotate(-90)" text-anchor="middle" font-size="13" fill="var(--ink)">${esc(C.lensName(l2))} →</text>`;
+  if(x&&y) g+=`<circle cx="${X(x)}" cy="${Y(y)}" r="13" fill="var(--signal)" opacity=".2"/><circle cx="${X(x)}" cy="${Y(y)}" r="7" fill="var(--signal)" stroke="var(--surface)" stroke-width="2"/>`;
   return g+"</svg>";
 }
-$("#target").addEventListener("change",e=>{S.target=+e.target.value;save();renderResults()});
-$("#edit").addEventListener("click",()=>{S.i=1; save(); location.hash="#learnops"; renderStep()});
-$("#restart").addEventListener("click",()=>{S={mode:"short",unit:null,target:4,a:{},i:0}; save(); location.hash="#learnops"; renderStep()});
-document.addEventListener("click",e=>{if(e.target.closest("[data-resume]")){e.preventDefault(); location.hash="#learnops"; begin(S.mode)}});
+document.addEventListener("click",e=>{if(e.target.closest("[data-resume]")){e.preventDefault(); location.hash="#"+cfg().wiz; begin(S().mode)}});
 
 /* ---------- theme ---------- */
 const root=document.documentElement,tb=$("#theme");
 function cur(){return root.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}
 function tlabel(){tb.textContent=cur()==="dark"?"☀":"☾"; tb.title=cur()==="dark"?t("light"):t("dark")}
 try{const s=localStorage.getItem("theme");if(s)root.dataset.theme=s}catch(e){}
-tb.addEventListener("click",()=>{root.dataset.theme=cur()==="dark"?"light":"dark";try{localStorage.setItem("theme",root.dataset.theme)}catch(e){}tlabel();if(location.hash==="#results")renderResults()});
+tb.addEventListener("click",()=>{root.dataset.theme=cur()==="dark"?"light":"dark";try{localStorage.setItem("theme",root.dataset.theme)}catch(e){}tlabel();if(VIEW.view==="res")renderResults()});
+
+/* ---------- routing ---------- */
+let VIEW={view:"home",as:null},lastView="";
+function parseHash(){const h=(location.hash||"#home").slice(1);
+  for(const k in AS){if(h===AS[k].wiz) return {view:"wiz",as:k}; if(h===AS[k].res) return {view:"res",as:k}}
+  return {view:"home",as:null}}
+function setTitle(){document.title=(VIEW.view==="home"?t("title").home:VIEW.as==="culture"?c("title")[VIEW.view]:VIEW.as==="hx"?h("title")[VIEW.view]:t("title")[VIEW.view==="wiz"?"learnops":"results"])+" — Fran Mondaca"}
+function route(){
+  VIEW=parseHash(); if(VIEW.as) A=VIEW.as;
+  ["home","wiz","res"].forEach(k=>$("#view-"+k).hidden=k!==VIEW.view);
+  document.body.classList.toggle("is-home",VIEW.view==="home");
+  const nav=document.querySelector('[data-nav="home"]'); if(VIEW.view==="home") nav.setAttribute("aria-current","page"); else nav.removeAttribute("aria-current");
+  if(VIEW.view==="wiz"){ if(lastView==="home") S().i=0; renderStep(); }
+  if(VIEW.view==="res") renderResults();
+  setTitle(); if(VIEW.view!=="wiz") window.scrollTo(0,0);
+  lastView=VIEW.view; netRun(true);
+}
 
 /* ---------- apply language ---------- */
 function applyLang(){
   root.lang=lang==="en"?"en-GB":lang;
   document.querySelectorAll("[data-i18n]").forEach(el=>{const v=t(el.dataset.i18n); if(typeof v==="string") el.innerHTML=v});
   $("#lo-pills").innerHTML=t("loPills").map(x=>`<li>${esc(x)}</li>`).join("");
-  $("#run-steps").innerHTML=t("runSteps").map(x=>`<li>${x}</li>`).join("");
+  $("#lc-pills").innerHTML=t("lcPills").map(x=>`<li>${esc(x)}</li>`).join("");
+  $("#home-qs").innerHTML=t("homeQs").map((q,i)=>`<a href="#${["learnops","culture","hx"][i]}"><span>${i+1}</span>${esc(q)}<i aria-hidden="true">→</i></a>`).join("");
+  $("#hx-pills").innerHTML=t("hxPills").map(x=>`<li>${esc(x)}</li>`).join("");
   document.querySelectorAll(".card-share").forEach(b=>{b.innerHTML=LINK_SVG; b.title=t("copyLink"); b.setAttribute("aria-label",t("copyLink"))});
   document.querySelectorAll("[data-lang-btn]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.langBtn===lang)));
   $("#to-profile").href="../?lang="+lang+"#profile";
   tlabel();
-  const v=currentView();
-  if(v==="learnops") renderStep(false);
-  if(v==="results") renderResults();
-  document.title=t("title")[v]+" — Fran Mondaca";
+  if(VIEW.view==="wiz") renderStep(false);
+  if(VIEW.view==="res") renderResults();
+  setTitle();
 }
 document.querySelectorAll("[data-lang-btn]").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.langBtn; try{localStorage.setItem("lang",lang)}catch(e){}
   try{const u=new URL(location.href); if(u.searchParams.has("lang")){u.searchParams.set("lang",lang); history.replaceState(null,"",u)}}catch(e){}
@@ -828,24 +1186,10 @@ let netRun=()=>{};
 
 
 
-/* ---------- routing ---------- */
-let lastView="";
-function currentView(){const v=(location.hash||"#home").slice(1); return ["home","learnops","results"].includes(v)?v:"home"}
-function route(){
-  const view=currentView();
-  ["home","learnops","results"].forEach(k=>$("#view-"+k).hidden=k!==view);
-  document.body.classList.toggle("is-home",view==="home");
-  const nav=document.querySelector('[data-nav="home"]'); if(view==="home") nav.setAttribute("aria-current","page"); else nav.removeAttribute("aria-current");
-  if(view==="learnops"){ if(lastView==="home") S.i=0; renderStep(); }
-  if(view==="results") renderResults();
-  document.title=t("title")[view]+" — Fran Mondaca";
-  if(view!=="learnops") window.scrollTo(0,0);
-  lastView=view; netRun(true);
-}
 addEventListener("hashchange",route);
 applyLang(); route();
 /* a shared link can open the short or full version directly: ?v=short | ?v=full */
-(function(){try{const v=new URLSearchParams(location.search).get("v"); if((v==="short"||v==="full")&&currentView()==="learnops"){
+(function(){try{const v=new URLSearchParams(location.search).get("v"); if((v==="short"||v==="full")&&VIEW.view==="wiz"){
   begin(v); const u=new URL(location.href); u.searchParams.delete("v"); history.replaceState(null,"",u)}}catch(e){}})();
 </script>
 </body>
