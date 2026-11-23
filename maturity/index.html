@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maturity Assessments — Fran Mondaca</title>
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta name="description" content="Maturity assessments for learning and talent functions in global, federated organisations, by Fran Mondaca. Start with LearnOps & Governance.">
+<!-- link preview: same thumbnail as Fran's profile -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fran Mondaca">
+<meta property="og:title" content="Maturity Assessments — Fran Mondaca">
+<meta property="og:description" content="Where does your learning function stand? LearnOps & Governance maturity assessment, short or full.">
+<meta property="og:url" content="https://franmdkso.github.io/Profile/maturity/">
+<meta property="og:image" content="https://franmdkso.github.io/Profile/apple-touch-icon.png">
+<meta property="og:image:width" content="180">
+<meta property="og:image:height" content="180">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://franmdkso.github.io/Profile/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F5F2EC;--surface:#FFFFFF;--ink:#1C2430;--muted:#5E6673;--rule:#DDD7CC;
+  --signal:#0E7C6B;--signal-soft:#DDEFEA;--warm:#A8572A;--warm-soft:#F6E6DA;
+  --blob1:#BFE3DA;--blob2:#F1D9C4;
+  --display:"Fraunces",Georgia,serif;
+  --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#11161D;--surface:#19202A;--ink:#ECE8E1;--muted:#A3AAB5;--rule:#2C3542;
+    --signal:#4CC7B0;--signal-soft:#16332E;--warm:#E39A6B;--warm-soft:#3A2A1E;
+    --blob1:#123C35;--blob2:#3A2A1E;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#11161D;--surface:#19202A;--ink:#ECE8E1;--muted:#A3AAB5;--rule:#2C3542;
+  --signal:#4CC7B0;--signal-soft:#16332E;--warm:#E39A6B;--warm-soft:#3A2A1E;
+  --blob1:#123C35;--blob2:#3A2A1E;color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px));position:relative;z-index:1}
+a{color:inherit;text-decoration-color:var(--signal);text-underline-offset:3px}
+h1,h2,h3,h4{font-family:var(--display);font-weight:500!important;margin:0;line-height:1.12;letter-spacing:0!important;text-wrap:balance}
+p{margin:0}
+button,select{font:inherit}
+.label{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--signal);display:inline-block;box-shadow:0 0 0 4px var(--signal-soft);margin-right:8px;vertical-align:1px}
+[hidden]{display:none!important}
+:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
+
+/* ---------- top bar ---------- */
+.topbar{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:color-mix(in srgb,var(--paper) 78%,transparent);border-bottom:1px solid color-mix(in srgb,var(--rule) 60%,transparent)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:62px}
+.brand{font-family:var(--display);font-weight:800;font-size:20px;text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+.brand i{width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--paper);display:inline-grid;place-items:center;font-style:normal;font-size:14px;letter-spacing:.02em}
+.tools{display:flex;align-items:center;gap:6px}
+.navlink{font-weight:600;font-size:14.5px;color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:999px;transition:color .2s,background .2s}
+.navlink:hover{color:var(--signal);background:var(--signal-soft)}
+.navlink[aria-current="page"]{color:var(--ink);text-decoration:underline;text-decoration-color:var(--signal);text-decoration-thickness:2px;text-underline-offset:6px}
+.theme{width:34px;height:34px;display:inline-grid;place-items:center;font:500 15px var(--mono);background:transparent;color:var(--muted);border:1px solid var(--rule);border-radius:999px;padding:0;cursor:pointer;margin-left:4px}
+@media (max-width:560px){.brand span{display:none}.navlink{padding:8px 9px;font-size:14px}}
+
+/* ---------- background (same as profile, no portrait) ---------- */
+#net{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.35;transition:opacity .6s ease}
+body.is-home #net{opacity:1}
+.ambient{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.ambient i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.75}
+.ambient i:nth-child(1){width:46vmax;height:46vmax;background:var(--blob1);top:-12vmax;left:-10vmax}
+.ambient i:nth-child(2){width:38vmax;height:38vmax;background:var(--blob2);bottom:-14vmax;right:-8vmax}
+@media (prefers-reduced-motion:no-preference){
+  .ambient i:nth-child(1){animation:drift1 26s ease-in-out infinite alternate}
+  .ambient i:nth-child(2){animation:drift2 32s ease-in-out infinite alternate}
+}
+@keyframes drift1{to{transform:translate(14vmax,10vmax) scale(1.1)}}
+@keyframes drift2{to{transform:translate(-12vmax,-8vmax) scale(1.15)}}
+body:not(.is-home) .ambient{opacity:.35}
+
+/* ---------- landing ---------- */
+#view-home{min-height:calc(100vh - 62px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-block:48px 56px}
+#view-home .label{color:var(--signal)}
+#view-home h1{font-size:clamp(36px,5.6vw,56px);font-weight:800;margin-top:14px;letter-spacing:-.01em}
+#view-home .lead{margin:16px auto 36px;max-width:600px;color:var(--muted);font-size:clamp(17px,2vw,19px)}
+.choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;width:100%}
+.choice{display:flex;flex-direction:column;text-align:left;text-decoration:none;background:var(--surface);border:1px solid var(--rule);border-radius:18px;padding:22px 24px;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease;position:relative}
+a.choice:hover,a.choice:focus-visible{border-color:var(--signal);transform:translateY(-3px);box-shadow:0 14px 30px -18px color-mix(in srgb,var(--signal) 70%,transparent);outline:none}
+.choice .tag{align-self:flex-start;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:999px;background:var(--signal-soft);color:var(--signal);margin-bottom:14px}
+.choice.soon{background:color-mix(in srgb,var(--surface) 62%,transparent);border-style:dashed}
+.choice.soon .tag{background:transparent;border:1px solid var(--rule);color:var(--muted)}
+.choice b{display:flex;align-items:flex-start;gap:10px;font-family:var(--display);font-size:22px;font-weight:500;color:var(--ink);line-height:1.15}
+.choice b svg{color:var(--signal);flex:none;margin-top:2px}
+.choice.soon b svg{color:var(--muted)}
+.choice p{color:var(--muted);font-size:15.5px;margin:10px 0 16px;line-height:1.5}
+.choice ul{margin:0 0 18px;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.choice li{font-size:13px;color:var(--muted);border:1px solid var(--rule);border-radius:999px;padding:2px 9px}
+.choice > span.go{margin-top:auto;font-family:var(--mono);font-size:12.5px;color:var(--signal)}
+.choice.soon > span.go{color:var(--muted)}
+@media (max-width:860px){.choices{grid-template-columns:1fr;max-width:560px}}
+.copy{margin:32px 0 0;font-family:var(--mono);font-size:11.5px;letter-spacing:.02em;color:var(--muted);opacity:.85}
+
+/* ---------- shared ---------- */
+.page{padding-block:44px 64px}
+.page h1{font-size:clamp(32px,4.6vw,46px);font-weight:800;margin-top:12px;letter-spacing:-.01em}
+.panel{background:var(--surface);border:1px solid var(--rule);border-radius:18px;padding:22px 24px}
+.btn{border:0;cursor:pointer;font-weight:600;border-radius:999px;display:inline-flex;align-items:center;gap:8px;background:var(--signal);color:#fff;font-size:15.5px;padding:10px 20px;text-decoration:none;box-shadow:0 6px 18px -8px color-mix(in srgb,var(--signal) 80%,transparent);transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+:root[data-theme="dark"] .btn:not(.ghost){color:#0B1A17}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn:not(.ghost){color:#0B1A17}}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule);box-shadow:none}
+.btn.ghost:hover{border-color:var(--signal);color:var(--signal)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+
+/* ---------- screens (one question per screen) ---------- */
+.screen{min-height:calc(100vh - 62px);display:flex;align-items:center;padding-block:40px 56px}
+.sc{max-width:680px;width:100%;margin:0 auto}
+@media (prefers-reduced-motion:no-preference){.sc{animation:rise .35s ease-out}}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}}
+.sc-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+.back{background:none;border:0;padding:6px 0;color:var(--muted);cursor:pointer;font-size:15px}
+.back:hover{color:var(--signal)}
+.back[disabled]{visibility:hidden}
+.line{height:3px;border-radius:99px;background:var(--rule);overflow:hidden;margin-bottom:34px}
+.line i{display:block;height:100%;background:var(--signal);transition:width .35s ease}
+.sc h1{font-size:clamp(34px,5vw,48px);font-weight:800;letter-spacing:-.01em;margin-top:12px}
+.sc h2{font-size:clamp(24px,3.2vw,30px);font-weight:700;line-height:1.15;margin-top:10px}
+.sc .lead{margin-top:14px;color:var(--muted);font-size:18.5px;max-width:600px}
+.why{margin-top:12px;color:var(--signal);font-family:var(--display);font-style:italic;font-size:18px;line-height:1.4}
+.more-btn{background:none;border:0;padding:0;margin-top:10px;color:var(--muted);cursor:pointer;font-size:14.5px;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:4px}
+.more-btn:hover{color:var(--ink);text-decoration-color:var(--signal)}
+.more{margin-top:10px;color:var(--muted);font-size:15.5px;border-left:2px solid var(--rule);padding-left:14px}
+.opts{margin-top:26px;display:grid;gap:8px}
+.opt{display:grid;grid-template-columns:28px 1fr;gap:2px 12px;align-items:baseline;text-align:left;background:var(--surface);color:var(--ink);border:1px solid var(--rule);border-radius:14px;padding:13px 16px;cursor:pointer;transition:border-color .15s,background .15s,transform .15s}
+.opt:hover{border-color:var(--signal);transform:translateX(2px)}
+.opt b{grid-row:span 2;font-family:var(--mono);font-size:15px;font-weight:500;color:var(--muted)}
+.opt small{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.opt span{font-size:16px;line-height:1.35}
+.opt[aria-checked="true"]{background:var(--signal-soft);border-color:var(--signal);box-shadow:inset 0 0 0 1px var(--signal)}
+.opt[aria-checked="true"] b,.opt[aria-checked="true"] small{color:var(--signal)}
+.ev{margin-top:16px;padding:16px 18px;border-radius:14px;background:var(--surface);border:1px dashed var(--signal)}
+.ev p{font-size:16px}
+.ev p small{display:block;color:var(--muted);font-size:14px;margin-top:2px}
+.ev .actions{margin-top:12px}
+.kbd{margin-top:22px;font-family:var(--mono);font-size:12px;color:var(--muted);opacity:.8}
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px}
+.path{display:flex;flex-direction:column;text-align:left;background:var(--surface);color:var(--ink);border:1px solid var(--rule);border-radius:18px;padding:22px 24px;cursor:pointer;transition:border-color .2s,transform .2s,box-shadow .2s}
+.path:hover{border-color:var(--signal);transform:translateY(-3px);box-shadow:0 14px 30px -18px color-mix(in srgb,var(--signal) 70%,transparent)}
+.path b{font-family:var(--display);font-size:24px;font-weight:500}
+.path .meta{font-family:var(--mono);font-size:12.5px;color:var(--signal);margin-top:6px}
+.path p{color:var(--muted);font-size:15.5px;margin-top:10px}
+.path .go{margin-top:16px;font-family:var(--mono);font-size:12.5px;color:var(--signal)}
+.fine{margin-top:22px;color:var(--muted);font-size:14px}
+.pill{display:inline-block;font-family:var(--mono);font-size:12px;color:var(--muted);border:1px solid var(--rule);border-radius:999px;padding:3px 10px;margin:14px 6px 0 0}
+@media (max-width:620px){.paths{grid-template-columns:1fr}}
+.tgt{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--muted)}
+.tgt select{background:var(--paper);color:var(--ink);border:1px solid var(--rule);border-radius:8px;padding:3px 8px}
+
+/* ---------- results ---------- */
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) 1.3fr;gap:14px;margin-top:28px}
+.tile .label{display:block}
+.tile .num{font-family:var(--display);font-weight:500;font-size:56px;line-height:1;margin-top:10px}
+.tile .num small{font-size:20px;color:var(--muted);font-weight:500}
+.tile .lvl{margin-top:6px;color:var(--signal);font-weight:600}
+.tile.profile h3{font-size:28px;margin-top:10px}
+.tile.profile p{margin-top:8px;color:var(--muted);font-size:15.5px}
+@media (max-width:860px){.tiles{grid-template-columns:1fr 1fr}.tile.profile{grid-column:1/-1}}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;margin-top:14px}
+@media (max-width:860px){.two{grid-template-columns:1fr}}
+.panel h2{font-size:24px;margin-bottom:4px}
+.panel .sub{color:var(--muted);font-size:15px;margin-bottom:14px}
+.matrix svg{width:100%;height:auto;display:block;max-width:440px;margin:0 auto}
+.matrix text{font-family:var(--body)}
+.fix{margin-top:14px;border-left:3px solid var(--signal);padding:4px 0 4px 14px}
+.fix b{display:block;margin-bottom:2px}
+.fix p{color:var(--muted);font-size:15.5px}
+.bars{display:grid;gap:12px}
+.bars .row{display:grid;grid-template-columns:150px 1fr 34px;gap:10px;align-items:center;font-size:15px}
+.bars .track{position:relative;height:10px;border-radius:99px;background:var(--rule)}
+.bars .fill{position:absolute;left:0;top:0;bottom:0;border-radius:99px;background:var(--signal)}
+.bars .val{font-family:var(--mono);font-size:13px;text-align:right}
+.bars h4{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-top:8px}
+.heat{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:4px;margin-top:6px}
+.heat div{aspect-ratio:1;border-radius:6px;display:grid;place-items:center;font-family:var(--mono);font-size:11px;color:var(--ink);border:1px solid var(--rule)}
+.heat div.na{background:transparent;color:var(--muted)}
+.heat-l{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-top:14px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500;text-align:left;padding:8px 8px 8px 0;border-bottom:1px solid var(--rule)}
+td{padding:11px 8px 11px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+td.n{font-family:var(--mono);white-space:nowrap}
+td small{display:block;color:var(--muted);font-size:13.5px;margin-top:3px}
+.note{margin-top:14px;color:var(--muted);font-size:15px}
+.warn{margin-top:18px;padding:12px 16px;border-radius:12px;background:var(--warm-soft);color:var(--ink);font-size:15.5px}
+details.panel{margin-top:14px}
+details summary{cursor:pointer;font-family:var(--display);font-size:22px;font-weight:500}
+details ol{margin:14px 0 0;padding-left:20px;color:var(--muted)}
+details li{margin:6px 0}
+details li b{color:var(--ink)}
+@media print{.topbar,.progress,#net,.ambient,.actions{display:none!important}body{background:#fff}}
+
+/* ---------- languages, share links, toast ---------- */
+.switch{display:inline-flex;background:var(--surface);border:1px solid var(--rule);border-radius:999px;padding:3px;margin-left:4px}
+.switch button{border:0;background:transparent;color:var(--muted);padding:6px 10px;border-radius:999px;cursor:pointer;font-weight:600;font-size:12.5px;font-family:var(--mono)}
+.switch button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+@media (max-width:560px){.switch button{padding:5px 7px;font-size:11.5px}.navlink[data-nav]{display:none}}
+.share-btn{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;margin-left:10px;vertical-align:middle;border-radius:50%;border:1px solid var(--rule);background:var(--surface);color:var(--muted);cursor:pointer;opacity:.7;transition:opacity .2s,color .2s,border-color .2s}
+.share-btn:hover,.share-btn:focus-visible{opacity:1;color:var(--signal);border-color:var(--signal)}
+.choice-wrap,.path-wrap{position:relative;display:flex}
+.choice-wrap > .choice,.path-wrap > .path{flex:1}
+.card-share,.path-wrap > .share-btn{position:absolute;top:16px;right:16px;margin:0}
+.aname .share-btn{width:34px;height:34px;vertical-align:.35em}
+#toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,12px);background:var(--ink);color:var(--paper);font:600 13.5px var(--body);padding:9px 16px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:50}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+/* bigger assessment names */
+.choice b{font-size:30px!important;line-height:1.1!important;align-items:center!important;margin-top:2px}
+.sc h1.aname{font-size:clamp(42px,6.4vw,66px)}
+.path b{font-size:30px!important}
+</style>
+</head>
+<body class="is-home">
+<div class="ambient" aria-hidden="true"><i></i><i></i></div>
+<canvas id="net" aria-hidden="true"></canvas>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="Fran Mondaca"><i>FM</i><span>Fran Mondaca</span></a>
+    <nav class="tools" aria-label="Main">
+      <a class="navlink" href="#home" data-nav="home" data-i18n="assess">Assessments</a>
+      <a class="navlink" href="../#profile" id="to-profile" data-i18n="profile">Profile</a>
+      <div class="switch langs-switch" role="group" aria-label="Language">
+        <button type="button" data-lang-btn="en" aria-pressed="true" lang="en">EN</button>
+        <button type="button" data-lang-btn="es" aria-pressed="false" lang="es">ES</button>
+        <button type="button" data-lang-btn="ca" aria-pressed="false" lang="ca">CA</button>
+      </div>
+      <button class="theme" id="theme" type="button" aria-label="Toggle light or dark mode">☾</button>
+    </nav>
+  </div>
+</div>
+
+<!-- ================= HOME ================= -->
+<main id="view-home" class="wrap" aria-labelledby="h-home">
+  <p class="label"><span><i class="dot"></i><span data-i18n="homeTag">Maturity assessments</span></span></p>
+  <h1 id="h-home" data-i18n="homeH1">Where does your learning function stand?</h1>
+  <p class="lead" data-i18n="homeLead"></p>
+  <div class="choices">
+    <div class="choice-wrap">
+      <a class="choice" href="#learnops">
+        <span class="tag" data-i18n="available">Available</span>
+        <b><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg><span data-i18n="loName">LearnOps &amp; Governance</span></b>
+        <p data-i18n="loDesc"></p>
+        <ul id="lo-pills"></ul>
+        <span class="go" data-i18n="startAssess">Start assessment →</span>
+      </a>
+      <button class="share-btn card-share" type="button" data-share="learnops"></button>
+    </div>
+    <div class="choice-wrap">
+      <div class="choice soon" aria-disabled="true">
+        <span class="tag" data-i18n="soon">Coming soon</span>
+        <b><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22c4-3 7-6.5 7-11a7 7 0 0 0-14 0c0 4.5 3 8 7 11z"/><path d="M12 8v6M9 11h6"/></svg><span data-i18n="lcName">Learning Culture</span></b>
+        <p data-i18n="lcDesc"></p>
+        <ul><li data-i18n="orgLens">Organisation lens</li></ul>
+        <span class="go" data-i18n="inDev">In development</span>
+      </div>
+    </div>
+    <div class="choice-wrap">
+      <div class="choice soon" aria-disabled="true">
+        <span class="tag" data-i18n="soon">Coming soon</span>
+        <b><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg><span data-i18n="aiName">AI-era Leadership</span></b>
+        <p data-i18n="aiDesc"></p>
+        <ul><li data-i18n="orgLens">Organisation lens</li></ul>
+        <span class="go" data-i18n="inDev">In development</span>
+      </div>
+    </div>
+  </div>
+  <p class="copy" data-i18n="copy"></p>
+</main>
+
+<!-- ================= LEARNOPS: ONE SCREEN PER QUESTION ================= -->
+<main id="view-learnops" class="wrap screen" aria-live="polite" hidden><div id="wiz" class="sc"></div></main>
+
+<!-- ================= RESULTS ================= -->
+<main id="view-results" class="wrap page" aria-labelledby="h-res" hidden>
+  <p class="label"><span><i class="dot"></i><span id="res-unit">Results</span></span></p>
+  <h1 id="h-res" data-i18n="resH1">Your LearnOps &amp; Governance profile</h1>
+  <div id="res-warn"></div>
+  <div class="tiles">
+    <div class="panel tile"><span class="label" data-i18n="loIndex">LearnOps index</span><div class="num" id="t-lo">–</div><div class="lvl" id="t-lo-l"></div></div>
+    <div class="panel tile"><span class="label" data-i18n="gvIndex">Governance index</span><div class="num" id="t-gv">–</div><div class="lvl" id="t-gv-l"></div></div>
+    <div class="panel tile profile"><span class="label" data-i18n="profileL">Profile</span><h3 id="t-pr">–</h3><p id="t-pr-d"></p></div>
+  </div>
+  <div class="two">
+    <div class="panel matrix"><h2 data-i18n="matrixH">Two-lens matrix</h2><p class="sub" data-i18n="matrixSub"></p><div id="matrix"></div><div class="fix" id="fix"></div></div>
+    <div class="panel"><h2 data-i18n="barsH">By pillar and group</h2><p class="sub" id="bars-sub"></p><div class="bars" id="bars"></div>
+      <div class="heat-l"><span id="heat-t"></span><span data-i18n="darker"></span></div>
+      <div class="heat" id="heat-a"></div><div class="heat" id="heat-g"></div></div>
+  </div>
+  <div class="panel" style="margin-top:14px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><h2 data-i18n="gapsH">Biggest gaps to target</h2>
+      <label class="tgt"><span data-i18n="target">Target level</span> <select id="target"><option>2</option><option>3</option><option selected>4</option><option>5</option></select></label></div>
+    <p class="sub" data-i18n="gapsSub"></p>
+    <div id="gaps"></div>
+  </div>
+  <div id="capped"></div>
+  <div id="upsell"></div>
+  <details class="panel">
+    <summary data-i18n="runH">Running it across the whole organisation</summary>
+    <p class="note" data-i18n="runIntro"></p>
+    <ol id="run-steps"></ol>
+  </details>
+  <div class="actions">
+    <button class="btn ghost" type="button" id="edit" data-i18n="review">Review answers</button>
+    <button class="btn ghost" type="button" id="restart" data-i18n="restart">Start again</button>
+    <a class="btn ghost" href="#home" data-i18n="allAssess">All assessments</a>
+  </div>
+  <p class="note" data-i18n="credit"></p>
+  <p class="copy" data-i18n="copy"></p>
+</main>
+<div id="toast" role="status"></div>
+<script>
+const $=s=>document.querySelector(s);
+const reduce=matchMedia("(prefers-reduced-motion: reduce)");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const LV={A:["Reactive","Managed","Strategic","Predictive","Adaptive"],G:["Absent","Informal","Defined","Embedded","Adaptive"]};
+const D=[
+["A","Align","A1","Strategic alignment","Can every programme be traced to a business priority, such as the company's strategic pillars or priority businesses?",["No link","Linked in narrative only","Each programme mapped to a priority","Spend and effort reported by priority","Portfolio rebalanced as priorities shift"]],
+["A","Align","A2","Demand intake","Do all requests enter through one front door with the same information?",["Email, chat, corridor","Form exists, often bypassed","Single intake, standard criteria","Intake scored on value, risk, urgency","Demand forecast from business signals"]],
+["A","Align","A3","Business partnering","Does L&D challenge requests and co-define the problem with the business?",["Builds what is asked","Clarifies scope case by case","Needs analysis standard for large requests","Partners in business planning cycles","Anticipates needs before requests"]],
+["A","Plan","A4","Portfolio prioritisation","Is there a ranked portfolio with explicit trade-offs?",["First come, loudest wins","Informal ranking by leader","Ranked portfolio, reviewed quarterly","Trade-offs shown to sponsors before commitment","Dynamic re-prioritisation with data"]],
+["A","Plan","A5","Capacity planning","Do you know where team hours go and what is free?",["Unknown","Headcount only","Hours planned by project","Capacity by work type, utilisation tracked","Capacity forecast and rebalanced across units"]],
+["A","Plan","A6","Budget and cost visibility","Can you show cost per programme, including vendors and internal time?",["Not tracked","Total budget only","Cost per programme, external spend","Full cost incl. internal time, variance managed","Cost-to-value used in every decision"]],
+["A","Execute","A7","Workflow and ownership","Are roles, approvals and hand-offs defined for every project?",["Depends on individuals","Owners named, steps vary","Standard workflow and RACI","Risks flagged early, tracked centrally","Workflow automated, AI-assisted routing"]],
+["A","Execute","A8","Quality and reuse","Are design standards applied and global assets reused before building locally?",["Each country builds its own","Some sharing, no standards","Design standards; catalogue checked first","Reuse rate tracked; localisation, not rebuild","Global assets adapted automatically by country"]],
+["A","Measure","A9","Outcome definition and impact","Is success agreed with the sponsor before delivery and measured after?",["Completion only","Satisfaction surveys","Outcome agreed upfront for key programmes","Business impact measured, ROI for top spend","Impact data drives funding decisions"]],
+["A","Measure","A10","Operational metrics","Are cycle time, on-time delivery, cost and stakeholder satisfaction reported?",["None","Ad hoc counts","Standard KPI set, quarterly","Live dashboard, benchmarked across units","Predictive alerts on delays and overruns"]],
+["A","Optimise","A11","Continuous improvement and AI","Is the operating model reviewed and improved, and AI used safely?",["No reviews","Post-mortems occasionally","Regular retrospectives, fixes tracked","Improvement backlog owned; AI pilots governed","AI agents run routine operations under rules"]],
+["G","Structure","G1","Governance bodies and cadence","Is there a working forum where business and L&D decide learning priorities together?",["None","Ad hoc meetings","Steering committee and learning council with set cadence","Bodies at global, region and business level, linked","Forums adjust agenda to business cycle and data"]],
+["G","Structure","G2","Decision rights","Is it clear what the global centre decides, what regions and businesses decide and what countries decide?",["Unclear, contested","Informal habits","Documented split (e.g. RAPID) for main decisions","Applied consistently, escalation path used","Reviewed yearly as strategy shifts"]],
+["G","Standards","G3","Policy and standards","Are there group-wide learning policies and design standards that units follow?",["None","Exist but unknown","Published and mostly applied","Compliance monitored, exceptions approved","Standards co-evolved with units"]],
+["G","Standards","G4","Portfolio governance","Is duplication controlled through a global catalogue and accreditation of local programmes?",["Each unit builds freely","Catalogue exists, rarely checked","Check-before-build rule; key programmes accredited","Duplication measured and reduced","Global/local mix optimised with data"]],
+["G","Investment & partners","G5","Funding model","Is it clear what is funded centrally versus locally, and on what basis?",["Historical budgets","Negotiated each year","Defined model (e.g. fixed global core, flexible local share)","Chargeback or allocation tied to usage and value","Funds shift dynamically to priorities"]],
+["G","Investment & partners","G6","Partner strategy","Is there a deliberate partner ecosystem (platforms, content, business schools, consultancies) by tier?",["Each unit buys alone","Preferred list, not enforced","Tiered partner strategy, global agreements","Consolidated ecosystem, roles clear per partner","Partners co-innovate on roadmap"]],
+["G","Investment & partners","G7","Vendor performance and contracts","Are suppliers selected, contracted and reviewed with Procurement and Legal against agreed KPIs?",["No reviews","Renewal by default","Selection criteria, annual review","SLAs and impact KPIs, quarterly business reviews","Performance data drives renewal and scale-up"]],
+["G","Risk & data","G8","Compliance and mandatory learning","Are regulatory and mandatory programmes (e.g. product safety, ethics) owned, tracked and auditable?",["Unknown coverage","Tracked locally","Owned centrally, completion tracked","Audit-ready, risk-based targeting","Risk signals trigger learning automatically"]],
+["G","Risk & data","G9","Data, privacy and technology","Is there one governed learning tech stack and data model, compliant with privacy rules?",["Many tools, no rules","Core LMS, many side tools","Approved stack, data standards, GDPR checks","Integrated with HR, finance and procurement data","Single source of truth feeds analytics and AI"]],
+["G","Risk & data","G10","AI and content governance","Are rules in place for generative AI, IP and content quality?",["No rules","Guidance only","Approved tools and review process","Monitored use, quality and IP controls","Governed AI embedded across the learning lifecycle"]]
+].map(([lens,grp,id,name,q,lv])=>({lens,grp,id,name,q,lv}));
+
+
+const T={
+A1:["Learning earns its budget when every programme points to a business priority.","Alignment is the first LearnOps pillar: before planning or building, each programme is linked to a strategic priority. That link lets you report effort and spend by priority, and move the portfolio when priorities change, instead of defending programmes one by one."],
+A2:["One front door makes demand visible, comparable and easier to say no to.","Requests that arrive by email, chat or in the corridor can't be compared. A single intake with the same fields (problem, audience, business outcome, urgency) is the raw material for prioritisation and capacity planning. At higher levels, intake is scored and demand is forecast from business signals."],
+A3:["Good partners co-define the problem before agreeing to build anything.","Many requests are a solution in disguise: \"we need a course\". Business partnering means asking what performance problem exists and whether learning is the right answer. Mature teams sit in business planning cycles, so needs surface before they become urgent requests."],
+A4:["Every yes is a no to something else. A ranked portfolio makes the trade-off explicit.","Without a ranked portfolio, the loudest stakeholder wins. LearnOps ranks work by value, effort and risk, reviews the ranking on a set cadence, and shows sponsors what will slip before new work is accepted."],
+A5:["You can't commit to new work without knowing where the team's hours already go.","Capacity planning moves from headcount to hours by type of work: design, delivery, administration, vendor management. Tracking utilisation reveals hidden load and lets you rebalance work across units instead of hiring by default."],
+A6:["Full cost per programme, including internal time, is the basis of any value conversation.","Most teams know their external spend but not the internal time each programme consumes. Full cost (vendors, platforms and people's hours) makes programmes comparable and turns funding debates into cost-to-value decisions."],
+A7:["Clear owners, approvals and hand-offs stop delivery depending on heroes.","A standard workflow and RACI make delivery repeatable: everyone knows who approves, who builds and what happens next. With central tracking, risks surface early. At level 5, routine routing and status updates are automated."],
+A8:["Reuse first, localise second, build last.","In federated organisations the same programme is often built several times in different countries. Design standards and a habit of checking the catalogue first turn rebuilds into localisation, and a tracked reuse rate shows the savings."],
+A9:["Agree what success looks like with the sponsor before delivery, not after.","Completion and satisfaction show activity, not impact. Mature teams agree a business outcome upfront for key programmes, measure it afterwards and calculate the return on the biggest investments, so impact data can steer funding."],
+A10:["Operational metrics show how well the learning engine runs, not just what it produces.","Cycle time, on-time delivery, cost and stakeholder satisfaction are LearnOps' own KPIs. Reported regularly and compared across units, they show where the process slows down. At level 5 they raise alerts before deadlines slip."],
+A11:["The operating model needs improving too, and AI helps only under clear rules.","Optimise is the fifth pillar: retrospectives feed an owned improvement backlog. AI fits here, first as governed pilots, then as agents that run routine operations such as intake triage or reporting within agreed rules."],
+G1:["Priorities that business and L&D set together stick; priorities L&D sets alone don't.","A steering committee or learning council with a fixed cadence is where trade-offs are decided. In a federated organisation these forums exist at global, regional and business level, and they are linked so that decisions cascade."],
+G2:["Most friction in a federation comes from unclear decision rights, not bad intent.","Which decisions belong to the global centre (standards, platforms, global partners), which to regions and businesses (priorities, adaptation) and which to countries (delivery)? A documented split, for example using RAPID, plus an escalation path, ends repeated debates."],
+G3:["Shared standards let units move fast without reinventing the basics.","Group-wide policies and design standards set minimum quality and the rules of the game. Maturity means they are known and applied, and exceptions are approved rather than improvised. At level 5, units help evolve them."],
+G4:["A global catalogue only controls duplication if people check it before building.","Portfolio governance combines a catalogue, a check-before-build rule and accreditation of local programmes against global standards. Measuring duplication turns it from an anecdote into a number you can reduce."],
+G5:["A clear funding model ends the yearly negotiation over who pays for what.","A common model funds a fixed global core centrally and leaves a flexible share to local units. More mature models allocate or charge back by usage and value, and move funds as priorities change."],
+G6:["A deliberate partner ecosystem buys more value than many units buying alone.","Platforms, content libraries, business schools and consultancies work best in tiers: a few strategic partners with global agreements, then preferred and local suppliers. Clear roles for each partner avoid overlap and strengthen negotiating power."],
+G7:["Suppliers should earn renewal through results, not by default.","Selection, contracts and reviews run jointly with Procurement and Legal. Mature teams hold quarterly business reviews against SLAs and impact KPIs, and use performance data to renew, scale up or exit."],
+G8:["Mandatory learning is where learning risk becomes company risk.","Regulatory and mandatory programmes, such as product safety or ethics, need a clear owner, tracked completion and audit-ready records. At higher levels, targeting is risk-based and risk signals trigger learning automatically."],
+G9:["One governed stack and data model make learning data trustworthy and usable.","Many side tools fragment data and create privacy exposure. An approved stack with data standards and GDPR checks is the base. Integration with HR, finance and procurement data turns it into a single source of truth for analytics and AI."],
+G10:["Generative AI multiplies content; governance protects quality and IP.","Approved tools, a review process and rules on IP and data use come first. Mature organisations monitor AI use and quality, and embed governed AI across needs analysis, design, delivery and measurement."]
+};
+
+/* ---------- translated dimensions: [name, question, [levels 1-5], why, learn more] ---------- */
+const DIMS={es:{
+A1:["Alineación estratégica","¿Puede cada programa vincularse a una prioridad del negocio, como los pilares estratégicos o los negocios prioritarios de la compañía?",["Sin vínculo","Vinculado solo en el discurso","Cada programa asignado a una prioridad","Gasto y esfuerzo reportados por prioridad","Portafolio reequilibrado cuando cambian las prioridades"],"El aprendizaje se gana su presupuesto cuando cada programa apunta a una prioridad del negocio.","La alineación es el primer pilar de LearnOps: antes de planificar o construir, cada programa se vincula a una prioridad estratégica. Ese vínculo permite reportar esfuerzo y gasto por prioridad, y mover el portafolio cuando cambian las prioridades, en lugar de defender los programas uno a uno."],
+A2:["Entrada de la demanda","¿Entran todas las solicitudes por una única puerta y con la misma información?",["Email, chat, pasillo","Existe un formulario, pero a menudo se salta","Entrada única, criterios estándar","Entrada puntuada por valor, riesgo y urgencia","Demanda prevista a partir de señales del negocio"],"Una única puerta hace la demanda visible, comparable y más fácil de rechazar.","Las solicitudes que llegan por email, chat o en el pasillo no se pueden comparar. Una entrada única con los mismos campos (problema, público, resultado de negocio, urgencia) es la materia prima para priorizar y planificar la capacidad. En niveles superiores, la entrada se puntúa y la demanda se prevé a partir de señales del negocio."],
+A3:["Partnering con el negocio","¿Cuestiona L&D las solicitudes y define el problema junto con el negocio?",["Construye lo que se pide","Aclara el alcance caso a caso","Análisis de necesidades estándar en solicitudes grandes","Participa en los ciclos de planificación del negocio","Anticipa necesidades antes de que lleguen las solicitudes"],"Un buen partner define el problema con el negocio antes de aceptar construir nada.","Muchas solicitudes son una solución disfrazada: «necesitamos un curso». Hacer partnering significa preguntar qué problema de desempeño existe y si el aprendizaje es la respuesta adecuada. Los equipos maduros participan en los ciclos de planificación del negocio, así que las necesidades aparecen antes de convertirse en urgencias."],
+A4:["Priorización del portafolio","¿Existe un portafolio priorizado con renuncias explícitas?",["El primero que llega o el que más grita","Ranking informal del responsable","Portafolio priorizado, revisado cada trimestre","Renuncias mostradas a los sponsors antes de comprometerse","Repriorización dinámica con datos"],"Cada sí es un no a otra cosa; un portafolio priorizado hace visible la renuncia.","Sin un portafolio priorizado, gana quien más grita. LearnOps ordena el trabajo por valor, esfuerzo y riesgo, revisa el orden con una cadencia fija y muestra a los sponsors qué se retrasará antes de aceptar trabajo nuevo."],
+A5:["Planificación de la capacidad","¿Sabes en qué se van las horas del equipo y qué capacidad queda libre?",["Se desconoce","Solo plantilla","Horas planificadas por proyecto","Capacidad por tipo de trabajo, utilización medida","Capacidad prevista y reequilibrada entre unidades"],"No puedes comprometer trabajo nuevo sin saber en qué se van ya las horas del equipo.","La planificación de la capacidad pasa de contar personas a contar horas por tipo de trabajo: diseño, impartición, administración, gestión de proveedores. Medir la utilización revela la carga oculta y permite reequilibrar el trabajo entre unidades en lugar de contratar por defecto."],
+A6:["Visibilidad de presupuesto y coste","¿Puedes mostrar el coste por programa, incluidos proveedores y tiempo interno?",["No se mide","Solo presupuesto total","Coste por programa, gasto externo","Coste completo con tiempo interno, desviaciones gestionadas","Coste frente a valor en cada decisión"],"El coste completo por programa, con el tiempo interno, es la base de cualquier conversación sobre valor.","La mayoría de equipos conoce su gasto externo, pero no el tiempo interno que consume cada programa. El coste completo (proveedores, plataformas y horas de las personas) hace comparables los programas y convierte los debates de financiación en decisiones de coste frente a valor."],
+A7:["Flujo de trabajo y responsables","¿Están definidos los roles, las aprobaciones y los traspasos en cada proyecto?",["Depende de las personas","Responsables nombrados, los pasos varían","Flujo estándar y RACI","Riesgos señalados pronto, seguimiento central","Flujo automatizado, enrutamiento asistido por IA"],"Responsables, aprobaciones y traspasos claros evitan depender de héroes.","Un flujo estándar y una matriz RACI hacen la entrega repetible: todos saben quién aprueba, quién construye y qué viene después. Con seguimiento central, los riesgos aparecen pronto. En el nivel 5, el enrutamiento rutinario y las actualizaciones de estado se automatizan."],
+A8:["Calidad y reutilización","¿Se aplican estándares de diseño y se reutilizan los recursos globales antes de construir en local?",["Cada país construye lo suyo","Algo se comparte, sin estándares","Estándares de diseño; primero se consulta el catálogo","Reutilización medida; se adapta, no se reconstruye","Recursos globales adaptados automáticamente por país"],"Primero reutilizar, después adaptar y, en último lugar, construir.","En organizaciones federadas, el mismo programa se construye a menudo varias veces en distintos países. Los estándares de diseño y el hábito de consultar primero el catálogo convierten las reconstrucciones en adaptaciones, y medir la reutilización muestra el ahorro."],
+A9:["Definición de resultados e impacto","¿Se acuerda el éxito con el sponsor antes de la entrega y se mide después?",["Solo finalización","Encuestas de satisfacción","Resultado acordado de antemano en programas clave","Impacto en el negocio medido, ROI en el mayor gasto","Los datos de impacto deciden la financiación"],"Acuerda con el sponsor cómo es el éxito antes de la entrega, no después.","La finalización y la satisfacción muestran actividad, no impacto. Los equipos maduros acuerdan de antemano un resultado de negocio para los programas clave, lo miden después y calculan el retorno de las mayores inversiones, para que los datos de impacto orienten la financiación."],
+A10:["Métricas operativas","¿Se reportan el tiempo de ciclo, la entrega a tiempo, el coste y la satisfacción de los stakeholders?",["Ninguna","Recuentos puntuales","KPI estándar, trimestrales","Panel en vivo, comparado entre unidades","Alertas predictivas de retrasos y sobrecostes"],"Las métricas operativas muestran lo bien que funciona el motor del aprendizaje, no solo lo que produce.","El tiempo de ciclo, la entrega a tiempo, el coste y la satisfacción de los stakeholders son los KPI propios de LearnOps. Reportados con regularidad y comparados entre unidades, muestran dónde se frena el proceso. En el nivel 5 generan alertas antes de que se incumplan los plazos."],
+A11:["Mejora continua e IA","¿Se revisa y mejora el modelo operativo, y se usa la IA de forma segura?",["Sin revisiones","Revisiones a posteriori ocasionales","Retrospectivas regulares, mejoras con seguimiento","Backlog de mejora con responsable; pilotos de IA gobernados","Agentes de IA gestionan operaciones rutinarias bajo reglas"],"El modelo operativo también necesita mejorar, y la IA solo ayuda con reglas claras.","Optimizar es el quinto pilar: las retrospectivas alimentan un backlog de mejora con responsable. La IA encaja aquí, primero como pilotos gobernados y después como agentes que gestionan operaciones rutinarias, como clasificar solicitudes o preparar informes, dentro de reglas acordadas."],
+G1:["Órganos de gobierno y cadencia","¿Existe un foro activo donde negocio y L&D deciden juntos las prioridades de aprendizaje?",["Ninguno","Reuniones puntuales","Comité de dirección y learning council con cadencia fija","Órganos a nivel global, regional y de negocio, conectados","Los foros ajustan su agenda al ciclo del negocio y a los datos"],"Las prioridades que negocio y L&D fijan juntos se mantienen; las que fija L&D solo, no.","Un comité de dirección o un learning council con una cadencia fija es donde se deciden las renuncias. En una organización federada, estos foros existen a nivel global, regional y de negocio, y están conectados para que las decisiones bajen en cascada."],
+G2:["Derechos de decisión","¿Está claro qué decide el centro global, qué deciden las regiones y los negocios, y qué deciden los países?",["Poco claro, disputado","Costumbres informales","Reparto documentado (p. ej. RAPID) en las decisiones principales","Aplicado de forma coherente, con vía de escalado","Revisado cada año según cambia la estrategia"],"La mayor parte de la fricción en una federación viene de derechos de decisión poco claros, no de mala intención.","¿Qué decisiones corresponden al centro global (estándares, plataformas, partners globales), cuáles a regiones y negocios (prioridades, adaptación) y cuáles a los países (entrega)? Un reparto documentado, por ejemplo con RAPID, y una vía de escalado acaban con los debates repetidos."],
+G3:["Políticas y estándares","¿Existen políticas de aprendizaje y estándares de diseño comunes que las unidades siguen?",["Ninguno","Existen, pero no se conocen","Publicados y aplicados en su mayoría","Cumplimiento supervisado, excepciones aprobadas","Estándares que evolucionan con las unidades"],"Los estándares comunes permiten a las unidades avanzar rápido sin reinventar lo básico.","Las políticas y los estándares de diseño comunes fijan la calidad mínima y las reglas del juego. Madurez significa que se conocen y se aplican, y que las excepciones se aprueban en lugar de improvisarse. En el nivel 5, las unidades ayudan a evolucionarlos."],
+G4:["Gobierno del portafolio","¿Se controla la duplicación con un catálogo global y la acreditación de los programas locales?",["Cada unidad construye libremente","Existe catálogo, rara vez se consulta","Regla de consultar antes de construir; programas clave acreditados","Duplicación medida y reducida","Mezcla global/local optimizada con datos"],"Un catálogo global solo controla la duplicación si se consulta antes de construir.","El gobierno del portafolio combina un catálogo, la regla de consultar antes de construir y la acreditación de los programas locales frente a estándares globales. Medir la duplicación la convierte de anécdota en un número que se puede reducir."],
+G5:["Modelo de financiación","¿Está claro qué se financia de forma central y qué en local, y con qué criterio?",["Presupuestos históricos","Negociado cada año","Modelo definido (p. ej. núcleo global fijo, parte local flexible)","Asignación o repercusión ligada al uso y al valor","Los fondos se mueven de forma dinámica hacia las prioridades"],"Un modelo de financiación claro acaba con la negociación anual sobre quién paga qué.","Un modelo habitual financia de forma central un núcleo global fijo y deja una parte flexible a las unidades locales. Los modelos más maduros asignan o repercuten el coste según uso y valor, y mueven los fondos cuando cambian las prioridades."],
+G6:["Estrategia de partners","¿Existe un ecosistema deliberado de partners (plataformas, contenidos, escuelas de negocio, consultoras) por niveles?",["Cada unidad compra por su cuenta","Lista preferente, sin aplicarse","Estrategia de partners por niveles, acuerdos globales","Ecosistema consolidado, rol claro de cada partner","Los partners co-innovan en la hoja de ruta"],"Un ecosistema de partners deliberado obtiene más valor que muchas unidades comprando por separado.","Plataformas, bibliotecas de contenido, escuelas de negocio y consultoras funcionan mejor por niveles: pocos partners estratégicos con acuerdos globales, y después proveedores preferentes y locales. Un rol claro para cada partner evita solapamientos y refuerza la capacidad de negociación."],
+G7:["Desempeño de proveedores y contratos","¿Se seleccionan, contratan y evalúan los proveedores con Compras y Legal frente a KPI acordados?",["Sin evaluaciones","Renovación por defecto","Criterios de selección, revisión anual","SLA y KPI de impacto, revisiones trimestrales de negocio","Los datos de desempeño deciden renovar y escalar"],"Los proveedores deben ganarse la renovación con resultados, no por defecto.","La selección, los contratos y las evaluaciones se hacen junto con Compras y Legal. Los equipos maduros mantienen revisiones trimestrales de negocio frente a SLA y KPI de impacto, y usan los datos de desempeño para renovar, ampliar o salir."],
+G8:["Cumplimiento y formación obligatoria","¿Los programas regulatorios y obligatorios (p. ej. seguridad de producto, ética) tienen responsable y seguimiento, y son auditables?",["Cobertura desconocida","Seguimiento local","Responsable central, finalización medida","Preparado para auditoría, segmentación por riesgo","Las señales de riesgo activan el aprendizaje automáticamente"],"La formación obligatoria es donde el riesgo del aprendizaje se convierte en riesgo de la empresa.","Los programas regulatorios y obligatorios, como seguridad de producto o ética, necesitan un responsable claro, seguimiento de la finalización y registros listos para auditoría. En niveles superiores, la segmentación se basa en el riesgo y las señales de riesgo activan el aprendizaje automáticamente."],
+G9:["Datos, privacidad y tecnología","¿Existe un único stack de aprendizaje gobernado y un modelo de datos que cumpla las normas de privacidad?",["Muchas herramientas, sin reglas","LMS principal, muchas herramientas paralelas","Stack aprobado, estándares de datos, controles RGPD","Integrado con datos de RR. HH., finanzas y compras","Fuente única de verdad que alimenta la analítica y la IA"],"Un único stack y un modelo de datos gobernados hacen que los datos de aprendizaje sean fiables y útiles.","Muchas herramientas paralelas fragmentan los datos y generan riesgos de privacidad. Un stack aprobado con estándares de datos y controles RGPD es la base. La integración con datos de RR. HH., finanzas y compras lo convierte en una fuente única de verdad para la analítica y la IA."],
+G10:["Gobierno de la IA y del contenido","¿Hay reglas para la IA generativa, la propiedad intelectual y la calidad del contenido?",["Sin reglas","Solo orientaciones","Herramientas aprobadas y proceso de revisión","Uso supervisado, controles de calidad y de PI","IA gobernada en todo el ciclo del aprendizaje"],"La IA generativa multiplica el contenido; el gobierno protege la calidad y la propiedad intelectual.","Primero vienen las herramientas aprobadas, un proceso de revisión y reglas sobre propiedad intelectual y uso de datos. Las organizaciones maduras supervisan el uso y la calidad de la IA, y la integran de forma gobernada en el análisis de necesidades, el diseño, la entrega y la medición."]
+},ca:{
+A1:["Alineació estratègica","Cada programa es pot vincular a una prioritat del negoci, com ara els pilars estratègics o els negocis prioritaris de la companyia?",["Sense vincle","Vinculat només en el discurs","Cada programa assignat a una prioritat","Despesa i esforç reportats per prioritat","Portafoli reequilibrat quan canvien les prioritats"],"L'aprenentatge es guanya el pressupost quan cada programa apunta a una prioritat del negoci.","L'alineació és el primer pilar de LearnOps: abans de planificar o construir, cada programa es vincula a una prioritat estratègica. Aquest vincle permet reportar esforç i despesa per prioritat, i moure el portafoli quan canvien les prioritats, en lloc de defensar els programes un per un."],
+A2:["Entrada de la demanda","Totes les sol·licituds entren per una única porta i amb la mateixa informació?",["Correu, xat, passadís","Hi ha un formulari, però sovint se salta","Entrada única, criteris estàndard","Entrada puntuada per valor, risc i urgència","Demanda prevista a partir de senyals del negoci"],"Una única porta fa la demanda visible, comparable i més fàcil de rebutjar.","Les sol·licituds que arriben per correu, xat o al passadís no es poden comparar. Una entrada única amb els mateixos camps (problema, públic, resultat de negoci, urgència) és la matèria primera per prioritzar i planificar la capacitat. En nivells superiors, l'entrada es puntua i la demanda es preveu a partir de senyals del negoci."],
+A3:["Partnering amb el negoci","L&D qüestiona les sol·licituds i defineix el problema conjuntament amb el negoci?",["Construeix el que es demana","Aclareix l'abast cas per cas","Anàlisi de necessitats estàndard en sol·licituds grans","Participa en els cicles de planificació del negoci","Anticipa necessitats abans que arribin les sol·licituds"],"Un bon partner defineix el problema amb el negoci abans d'acceptar construir res.","Moltes sol·licituds són una solució disfressada: «necessitem un curs». Fer partnering vol dir preguntar quin problema d'acompliment hi ha i si l'aprenentatge és la resposta adequada. Els equips madurs participen en els cicles de planificació del negoci, de manera que les necessitats apareixen abans de convertir-se en urgències."],
+A4:["Priorització del portafoli","Hi ha un portafoli prioritzat amb renúncies explícites?",["El primer que arriba o el que més crida","Rànquing informal del responsable","Portafoli prioritzat, revisat cada trimestre","Renúncies mostrades als sponsors abans de comprometre's","Repriorització dinàmica amb dades"],"Cada sí és un no a una altra cosa; un portafoli prioritzat fa visible la renúncia.","Sense un portafoli prioritzat, guanya qui més crida. LearnOps ordena la feina per valor, esforç i risc, revisa l'ordre amb una cadència fixa i mostra als sponsors què es retardarà abans d'acceptar feina nova."],
+A5:["Planificació de la capacitat","Saps en què se'n van les hores de l'equip i quina capacitat queda lliure?",["Es desconeix","Només plantilla","Hores planificades per projecte","Capacitat per tipus de feina, utilització mesurada","Capacitat prevista i reequilibrada entre unitats"],"No pots comprometre feina nova sense saber en què se'n van ja les hores de l'equip.","La planificació de la capacitat passa de comptar persones a comptar hores per tipus de feina: disseny, impartició, administració, gestió de proveïdors. Mesurar la utilització revela la càrrega oculta i permet reequilibrar la feina entre unitats en lloc de contractar per defecte."],
+A6:["Visibilitat de pressupost i cost","Pots mostrar el cost per programa, inclosos proveïdors i temps intern?",["No es mesura","Només pressupost total","Cost per programa, despesa externa","Cost complet amb temps intern, desviacions gestionades","Cost davant valor en cada decisió"],"El cost complet per programa, amb el temps intern, és la base de qualsevol conversa sobre valor.","La majoria d'equips coneix la despesa externa, però no el temps intern que consumeix cada programa. El cost complet (proveïdors, plataformes i hores de les persones) fa comparables els programes i converteix els debats de finançament en decisions de cost davant valor."],
+A7:["Flux de treball i responsables","Estan definits els rols, les aprovacions i els traspassos en cada projecte?",["Depèn de les persones","Responsables nomenats, els passos varien","Flux estàndard i RACI","Riscos assenyalats aviat, seguiment central","Flux automatitzat, encaminament assistit per IA"],"Responsables, aprovacions i traspassos clars eviten dependre d'herois.","Un flux estàndard i una matriu RACI fan el lliurament repetible: tothom sap qui aprova, qui construeix i què ve després. Amb seguiment central, els riscos apareixen aviat. Al nivell 5, l'encaminament rutinari i les actualitzacions d'estat s'automatitzen."],
+A8:["Qualitat i reutilització","S'apliquen estàndards de disseny i es reutilitzen els recursos globals abans de construir en local?",["Cada país construeix el seu","Es comparteix alguna cosa, sense estàndards","Estàndards de disseny; primer es consulta el catàleg","Reutilització mesurada; s'adapta, no es reconstrueix","Recursos globals adaptats automàticament per país"],"Primer reutilitzar, després adaptar i, en darrer lloc, construir.","En organitzacions federades, el mateix programa sovint es construeix diverses vegades en països diferents. Els estàndards de disseny i l'hàbit de consultar primer el catàleg converteixen les reconstruccions en adaptacions, i mesurar la reutilització mostra l'estalvi."],
+A9:["Definició de resultats i impacte","S'acorda l'èxit amb el sponsor abans del lliurament i es mesura després?",["Només finalització","Enquestes de satisfacció","Resultat acordat per endavant en programes clau","Impacte en el negoci mesurat, ROI en la despesa més gran","Les dades d'impacte decideixen el finançament"],"Acorda amb el sponsor com és l'èxit abans del lliurament, no després.","La finalització i la satisfacció mostren activitat, no impacte. Els equips madurs acorden per endavant un resultat de negoci per als programes clau, el mesuren després i calculen el retorn de les inversions més grans, perquè les dades d'impacte orientin el finançament."],
+A10:["Mètriques operatives","Es reporten el temps de cicle, el lliurament a temps, el cost i la satisfacció dels stakeholders?",["Cap","Recomptes puntuals","KPI estàndard, trimestrals","Tauler en directe, comparat entre unitats","Alertes predictives de retards i sobrecostos"],"Les mètriques operatives mostren com de bé funciona el motor de l'aprenentatge, no només què produeix.","El temps de cicle, el lliurament a temps, el cost i la satisfacció dels stakeholders són els KPI propis de LearnOps. Reportats amb regularitat i comparats entre unitats, mostren on s'alenteix el procés. Al nivell 5 generen alertes abans que s'incompleixin els terminis."],
+A11:["Millora contínua i IA","Es revisa i millora el model operatiu, i s'utilitza la IA de manera segura?",["Sense revisions","Revisions a posteriori ocasionals","Retrospectives regulars, millores amb seguiment","Backlog de millora amb responsable; pilots d'IA governats","Agents d'IA gestionen operacions rutinàries sota regles"],"El model operatiu també ha de millorar, i la IA només ajuda amb regles clares.","Optimitzar és el cinquè pilar: les retrospectives alimenten un backlog de millora amb responsable. La IA hi encaixa, primer com a pilots governats i després com a agents que gestionen operacions rutinàries, com classificar sol·licituds o preparar informes, dins de regles acordades."],
+G1:["Òrgans de govern i cadència","Hi ha un fòrum actiu on negoci i L&D decideixen junts les prioritats d'aprenentatge?",["Cap","Reunions puntuals","Comitè de direcció i learning council amb cadència fixa","Òrgans a nivell global, regional i de negoci, connectats","Els fòrums ajusten l'agenda al cicle del negoci i a les dades"],"Les prioritats que negoci i L&D fixen junts es mantenen; les que fixa L&D sol, no.","Un comitè de direcció o un learning council amb una cadència fixa és on es decideixen les renúncies. En una organització federada, aquests fòrums existeixen a nivell global, regional i de negoci, i estan connectats perquè les decisions baixin en cascada."],
+G2:["Drets de decisió","Està clar què decideix el centre global, què decideixen les regions i els negocis, i què decideixen els països?",["Poc clar, disputat","Costums informals","Repartiment documentat (p. ex. RAPID) en les decisions principals","Aplicat de manera coherent, amb via d'escalat","Revisat cada any segons canvia l'estratègia"],"La major part de la fricció en una federació ve de drets de decisió poc clars, no de mala intenció.","Quines decisions corresponen al centre global (estàndards, plataformes, partners globals), quines a regions i negocis (prioritats, adaptació) i quines als països (lliurament)? Un repartiment documentat, per exemple amb RAPID, i una via d'escalat acaben amb els debats repetits."],
+G3:["Polítiques i estàndards","Hi ha polítiques d'aprenentatge i estàndards de disseny comuns que les unitats segueixen?",["Cap","Existeixen, però no es coneixen","Publicats i aplicats majoritàriament","Compliment supervisat, excepcions aprovades","Estàndards que evolucionen amb les unitats"],"Els estàndards comuns permeten a les unitats avançar ràpid sense reinventar el bàsic.","Les polítiques i els estàndards de disseny comuns fixen la qualitat mínima i les regles del joc. Maduresa vol dir que es coneixen i s'apliquen, i que les excepcions s'aproven en lloc d'improvisar-se. Al nivell 5, les unitats ajuden a fer-los evolucionar."],
+G4:["Govern del portafoli","Es controla la duplicació amb un catàleg global i l'acreditació dels programes locals?",["Cada unitat construeix lliurement","Hi ha catàleg, rarament es consulta","Regla de consultar abans de construir; programes clau acreditats","Duplicació mesurada i reduïda","Combinació global/local optimitzada amb dades"],"Un catàleg global només controla la duplicació si es consulta abans de construir.","El govern del portafoli combina un catàleg, la regla de consultar abans de construir i l'acreditació dels programes locals segons estàndards globals. Mesurar la duplicació la converteix d'anècdota en un número que es pot reduir."],
+G5:["Model de finançament","Està clar què es finança de manera central i què en local, i amb quin criteri?",["Pressupostos històrics","Negociat cada any","Model definit (p. ex. nucli global fix, part local flexible)","Assignació o repercussió lligada a l'ús i al valor","Els fons es mouen de manera dinàmica cap a les prioritats"],"Un model de finançament clar acaba amb la negociació anual sobre qui paga què.","Un model habitual finança de manera central un nucli global fix i deixa una part flexible a les unitats locals. Els models més madurs assignen o repercuteixen el cost segons l'ús i el valor, i mouen els fons quan canvien les prioritats."],
+G6:["Estratègia de partners","Hi ha un ecosistema deliberat de partners (plataformes, continguts, escoles de negoci, consultores) per nivells?",["Cada unitat compra pel seu compte","Llista preferent, sense aplicar-se","Estratègia de partners per nivells, acords globals","Ecosistema consolidat, rol clar de cada partner","Els partners co-innoven en el full de ruta"],"Un ecosistema de partners deliberat obté més valor que moltes unitats comprant per separat.","Plataformes, biblioteques de contingut, escoles de negoci i consultores funcionen millor per nivells: pocs partners estratègics amb acords globals, i després proveïdors preferents i locals. Un rol clar per a cada partner evita solapaments i reforça la capacitat de negociació."],
+G7:["Rendiment de proveïdors i contractes","Els proveïdors se seleccionen, contracten i avaluen amb Compres i Legal segons KPI acordats?",["Sense avaluacions","Renovació per defecte","Criteris de selecció, revisió anual","SLA i KPI d'impacte, revisions trimestrals de negoci","Les dades de rendiment decideixen renovar i escalar"],"Els proveïdors s'han de guanyar la renovació amb resultats, no per defecte.","La selecció, els contractes i les avaluacions es fan conjuntament amb Compres i Legal. Els equips madurs mantenen revisions trimestrals de negoci segons SLA i KPI d'impacte, i utilitzen les dades de rendiment per renovar, ampliar o sortir."],
+G8:["Compliment i formació obligatòria","Els programes reguladors i obligatoris (p. ex. seguretat de producte, ètica) tenen responsable i seguiment, i són auditables?",["Cobertura desconeguda","Seguiment local","Responsable central, finalització mesurada","Preparat per a auditoria, segmentació per risc","Els senyals de risc activen l'aprenentatge automàticament"],"La formació obligatòria és on el risc de l'aprenentatge es converteix en risc de l'empresa.","Els programes reguladors i obligatoris, com seguretat de producte o ètica, necessiten un responsable clar, seguiment de la finalització i registres preparats per a auditoria. En nivells superiors, la segmentació es basa en el risc i els senyals de risc activen l'aprenentatge automàticament."],
+G9:["Dades, privacitat i tecnologia","Hi ha un únic stack d'aprenentatge governat i un model de dades que compleixi les normes de privacitat?",["Moltes eines, sense regles","LMS principal, moltes eines paral·leles","Stack aprovat, estàndards de dades, controls RGPD","Integrat amb dades de RH, finances i compres","Font única de veritat que alimenta l'analítica i la IA"],"Un únic stack i un model de dades governats fan que les dades d'aprenentatge siguin fiables i útils.","Moltes eines paral·leles fragmenten les dades i generen riscos de privacitat. Un stack aprovat amb estàndards de dades i controls RGPD és la base. La integració amb dades de RH, finances i compres el converteix en una font única de veritat per a l'analítica i la IA."],
+G10:["Govern de la IA i del contingut","Hi ha regles per a la IA generativa, la propietat intel·lectual i la qualitat del contingut?",["Sense regles","Només orientacions","Eines aprovades i procés de revisió","Ús supervisat, controls de qualitat i de PI","IA governada en tot el cicle de l'aprenentatge"],"La IA generativa multiplica el contingut; el govern protegeix la qualitat i la propietat intel·lectual.","Primer vénen les eines aprovades, un procés de revisió i regles sobre propietat intel·lectual i ús de dades. Les organitzacions madures supervisen l'ús i la qualitat de la IA, i la integren de manera governada en l'anàlisi de necessitats, el disseny, el lliurament i la mesura."]
+}};
+
+/* ---------- interface text ---------- */
+const UI={
+en:{assess:"Assessments",profile:"Profile",light:"Light mode",dark:"Dark mode",copyLink:"Copy link",linkCopied:"Link copied",
+copy:"© 2026 Fran Mondaca · All rights reserved. Content and design may not be reproduced without permission.",
+homeTag:"Maturity assessments",homeH1:"Where does your learning function stand?",
+homeLead:"Practical maturity models for learning and talent teams in global, federated organisations. Each one turns a vague sense of \"we could do better\" into a scored, evidence-based starting point.",
+available:"Available",soon:"Coming soon",inDev:"In development",startAssess:"Start assessment →",
+loName:"LearnOps & Governance",loDesc:"How well learning runs, and how well it is governed across the centre, regions, businesses and countries. Two lenses, scored separately.",
+loPills:["Short: 8 questions","Full: 21 questions","2 lenses"],
+lcName:"Learning Culture",lcDesc:"How far learning is part of everyday work: leaders who teach, safety to experiment, time to learn, and knowledge that is shared and recognised.",
+aiName:"AI-era Leadership",aiDesc:"How ready the organisation's leadership system is to lead human-AI work: leader development, role redesign, decision rules and incentives.",
+orgLens:"Organisation lens",
+startTag:"Maturity assessment",startLead:"Two lenses, scored separately: how well learning <b>runs</b>, and how well it is <b>governed</b> across the centre, regions, businesses and countries.",
+short:"Short",shortMeta:"8 questions · about 3 minutes",shortDesc:"A quick read on both lenses and where you sit on the matrix.",
+full:"Full",fullMeta:"21 questions · about 12 minutes",fullDesc:"Every dimension, with the evidence rule, your gaps and next steps.",
+start:"Start →",private:"Your answers stay in this browser.",clearPrev:"Clear previous answers",
+back:"← Back",shortV:"Short version",fullV:"Full version",
+unitQ:"Which part of the organisation are you assessing?",unitWhy:"Maturity varies across a federation; scoring each unit separately shows where.",
+units:["Global centre","Region","Business","Country","Whole organisation"],
+lens1:"Lens 1",lens1Lead:"How well learning <b>runs</b>. LearnOps treats learning as an operation with five pillars: Align, Plan, Execute, Measure and Optimise.",
+lens2:"Lens 2",lens2H:"Governance",lens2Lead:"How well learning is <b>governed</b>: who decides, by which rules, with which partners and money, and under which risk controls.",
+cont:"Continue →",learnMore:"Learn more",keys:"Keys 1–5 to answer · ← to go back",
+evQ:"Can you show evidence for this?",evHint:"A process document, dashboard, contract or meeting minutes. Without it, the score counts as 2.",evYes:"Yes, I can",evNo:"Not yet",
+results:"Results",resH1:"Your LearnOps & Governance profile",loIndex:"LearnOps index",gvIndex:"Governance index",profileL:"Profile",level:"Level",
+matrixH:"Two-lens matrix",matrixSub:"The profile, not the average, decides what to fix first.",fixFirst:"What to fix first",
+barsH:"By pillar and group",barsFull:"Average score on the 1–5 scale, after the evidence rule.",barsShort:"Average score on the 1–5 scale. The short version has one question per pillar.",
+allDims:n=>"All "+n+" dimensions",darker:"darker = more mature",
+gapsH:"Biggest gaps to target",target:"Target level",gapsSub:"The target is where this unit needs to be, not automatically 5. Each gap shows the next level to aim for.",
+thDim:"Dimension",thNow:"Now",thGap:"Gap",nextStep:n=>"Next step (level "+n+"): ",noGaps:"No gaps to this target among the questions you answered.",
+cappedH:"Scores held back by the evidence rule",cappedSub:"You rated these above 2 without evidence, so each counts as 2. Find one artefact for each and update your answer.",rated:(r)=>"rated "+r+" → counts as 2",
+deeperH:"Go deeper",deeperSub:"The full version adds 13 questions and the evidence rule. Your 8 answers carry over.",toFull:"Continue with the full version →",
+notEnough:"Not enough answers",notEnoughD:"Answer at least one question in each lens to see your profile.",
+miss:(m,n)=>m+" of "+n+" questions not answered yet. Results use the ones you answered.",finish:"Finish the assessment",
+runH:"Running it across the whole organisation",runIntro:"This gives one unit's view. The full exercise compares units side by side, so a 3 means the same everywhere and you can tell a federation problem from a capability problem.",
+runSteps:["<b>Sponsor and scope.</b> The learning council agrees the units in scope and the target level for each.","<b>Unit sessions.</b> About 90 minutes each: the global centre, each region and business, and a sample of countries.","<b>Evidence check.</b> One artefact per score. No evidence, no score above 2.","<b>Business validation.</b> A business partner reviews the scores; gaps of more than one level are discussed, not averaged.","<b>Calibration workshop.</b> Unit leads compare scores side by side.","<b>Outputs.</b> A heat map of dimensions by unit, each unit on the two-lens matrix, and three to five priorities per unit plus group-wide fixes. A spread of 2 or more between units on a dimension points to a federation problem.","<b>Re-run yearly</b> to track progress and reset targets."],
+review:"Review answers",restart:"Start again",allAssess:"All assessments",
+credit:"Independent adaptation of Cognota's LearnOps maturity model, extended with a governance and partnerships lens for federated organisations. Fran Mondaca's own design. Your answers stay in this browser.",
+LV:{A:["Reactive","Managed","Strategic","Predictive","Adaptive"],G:["Absent","Informal","Defined","Embedded","Adaptive"]},
+grp:{"Align":"Align","Plan":"Plan","Execute":"Execute","Measure":"Measure","Optimise":"Optimise","Structure":"Structure","Standards":"Standards","Investment & partners":"Investment & partners","Risk & data":"Risk & data"},
+P:{frag:["Fragmented","Learning depends on individual effort and each unit decides alone.","Start with the basics in both lenses: one front door for requests, named owners for every project, and a simple written split of who decides what between the centre and units."],
+silo:["Efficient silos","Units run learning well on their own, but as a whole the organisation duplicates programmes, scatters suppliers and argues over who decides.","Governance is the lever: decision rights, a check-before-build catalogue and partner tiers. Leave day-to-day operations with the units."],
+slow:["Controlled but slow","Rules and forums exist, but delivery lags behind them and the business feels the friction.","Fix operations: intake, capacity, workflow and metrics. Keep governance proportionate to the size of each decision."],
+int:["Integrated","Learning runs well and is governed as one system.","Keep it adaptive: use data and governed AI to rebalance the portfolio, and watch for units drifting apart."]},
+title:{home:"Maturity Assessments",learnops:"LearnOps & Governance assessment",results:"LearnOps & Governance results"}},
+
+es:{assess:"Evaluaciones",profile:"Perfil",light:"Modo claro",dark:"Modo oscuro",copyLink:"Copiar enlace",linkCopied:"Enlace copiado",
+copy:"© 2026 Fran Mondaca · Todos los derechos reservados. No se permite reproducir el contenido ni el diseño sin autorización.",
+homeTag:"Evaluaciones de madurez",homeH1:"¿En qué punto está tu función de aprendizaje?",
+homeLead:"Modelos de madurez prácticos para equipos de aprendizaje y talento en organizaciones globales y federadas. Cada uno convierte la vaga sensación de «podríamos hacerlo mejor» en un punto de partida puntuado y basado en evidencias.",
+available:"Disponible",soon:"Próximamente",inDev:"En desarrollo",startAssess:"Empezar la evaluación →",
+loName:"LearnOps y Gobierno",loDesc:"Lo bien que funciona el aprendizaje y lo bien que se gobierna entre el centro, las regiones, los negocios y los países. Dos lentes, puntuadas por separado.",
+loPills:["Corta: 8 preguntas","Completa: 21 preguntas","2 lentes"],
+lcName:"Cultura de aprendizaje",lcDesc:"Hasta qué punto el aprendizaje forma parte del trabajo diario: líderes que enseñan, seguridad para experimentar, tiempo para aprender y conocimiento que se comparte y se reconoce.",
+aiName:"Liderazgo en la era de la IA",aiDesc:"Lo preparado que está el sistema de liderazgo de la organización para dirigir el trabajo entre personas e IA: desarrollo de líderes, rediseño de roles, reglas de decisión e incentivos.",
+orgLens:"Lente de organización",
+startTag:"Evaluación de madurez",startLead:"Dos lentes, puntuadas por separado: lo bien que <b>funciona</b> el aprendizaje y lo bien que se <b>gobierna</b> entre el centro, las regiones, los negocios y los países.",
+short:"Corta",shortMeta:"8 preguntas · unos 3 minutos",shortDesc:"Una lectura rápida de las dos lentes y de tu posición en la matriz.",
+full:"Completa",fullMeta:"21 preguntas · unos 12 minutos",fullDesc:"Todas las dimensiones, con la regla de evidencia, tus brechas y los siguientes pasos.",
+start:"Empezar →",private:"Tus respuestas se quedan en este navegador.",clearPrev:"Borrar respuestas anteriores",
+back:"← Atrás",shortV:"Versión corta",fullV:"Versión completa",
+unitQ:"¿Qué parte de la organización estás evaluando?",unitWhy:"La madurez varía dentro de una federación; puntuar cada unidad por separado muestra dónde.",
+units:["Centro global","Región","Negocio","País","Toda la organización"],
+lens1:"Lente 1",lens1Lead:"Lo bien que <b>funciona</b> el aprendizaje. LearnOps trata el aprendizaje como una operación con cinco pilares: Alinear, Planificar, Ejecutar, Medir y Optimizar.",
+lens2:"Lente 2",lens2H:"Gobierno",lens2Lead:"Lo bien que se <b>gobierna</b> el aprendizaje: quién decide, con qué reglas, con qué partners y dinero, y con qué controles de riesgo.",
+cont:"Continuar →",learnMore:"Saber más",keys:"Teclas 1–5 para responder · ← para volver",
+evQ:"¿Puedes mostrar evidencias de esto?",evHint:"Un documento de proceso, un panel, un contrato o un acta de reunión. Sin evidencias, la puntuación cuenta como 2.",evYes:"Sí, puedo",evNo:"Todavía no",
+results:"Resultados",resH1:"Tu perfil de LearnOps y Gobierno",loIndex:"Índice LearnOps",gvIndex:"Índice de Gobierno",profileL:"Perfil",level:"Nivel",
+matrixH:"Matriz de dos lentes",matrixSub:"El perfil, no la media, decide qué arreglar primero.",fixFirst:"Qué arreglar primero",
+barsH:"Por pilar y grupo",barsFull:"Puntuación media en la escala 1–5, tras aplicar la regla de evidencia.",barsShort:"Puntuación media en la escala 1–5. La versión corta tiene una pregunta por pilar.",
+allDims:n=>"Las "+n+" dimensiones",darker:"más oscuro = más madurez",
+gapsH:"Mayores brechas respecto al objetivo",target:"Nivel objetivo",gapsSub:"El objetivo es donde necesita estar esta unidad, no automáticamente un 5. Cada brecha muestra el siguiente nivel al que aspirar.",
+thDim:"Dimensión",thNow:"Ahora",thGap:"Brecha",nextStep:n=>"Siguiente paso (nivel "+n+"): ",noGaps:"No hay brechas respecto a este objetivo en las preguntas respondidas.",
+cappedH:"Puntuaciones limitadas por la regla de evidencia",cappedSub:"Las valoraste por encima de 2 sin evidencias, así que cada una cuenta como 2. Busca un documento para cada una y actualiza tu respuesta.",rated:(r)=>"valorada "+r+" → cuenta como 2",
+deeperH:"Profundiza",deeperSub:"La versión completa añade 13 preguntas y la regla de evidencia. Tus 8 respuestas se mantienen.",toFull:"Continuar con la versión completa →",
+notEnough:"Faltan respuestas",notEnoughD:"Responde al menos una pregunta de cada lente para ver tu perfil.",
+miss:(m,n)=>m+" de "+n+" preguntas sin responder. Los resultados usan las que has respondido.",finish:"Terminar la evaluación",
+runH:"Cómo aplicarla en toda la organización",runIntro:"Esto da la visión de una unidad. El ejercicio completo compara las unidades entre sí, para que un 3 signifique lo mismo en todas partes y se distinga un problema de federación de un problema de capacidad.",
+runSteps:["<b>Sponsor y alcance.</b> El learning council acuerda las unidades incluidas y el nivel objetivo de cada una.","<b>Sesiones por unidad.</b> Unos 90 minutos cada una: el centro global, cada región y negocio, y una muestra de países.","<b>Revisión de evidencias.</b> Un documento por puntuación. Sin evidencia, ninguna puntuación por encima de 2.","<b>Validación con el negocio.</b> Un business partner revisa las puntuaciones; las diferencias de más de un nivel se discuten, no se promedian.","<b>Taller de calibración.</b> Los responsables de cada unidad comparan sus puntuaciones.","<b>Resultados.</b> Un mapa de calor de dimensiones por unidad, cada unidad en la matriz de dos lentes, y de tres a cinco prioridades por unidad más acciones para todo el grupo. Una diferencia de 2 o más entre unidades en una dimensión apunta a un problema de federación.","<b>Repetirla cada año</b> para medir el progreso y redefinir los objetivos."],
+review:"Revisar respuestas",restart:"Empezar de nuevo",allAssess:"Todas las evaluaciones",
+credit:"Adaptación independiente del modelo de madurez LearnOps de Cognota, ampliada con una lente de gobierno y partners para organizaciones federadas. Diseño propio de Fran Mondaca. Tus respuestas se quedan en este navegador.",
+LV:{A:["Reactivo","Gestionado","Estratégico","Predictivo","Adaptativo"],G:["Ausente","Informal","Definido","Arraigado","Adaptativo"]},
+grp:{"Align":"Alinear","Plan":"Planificar","Execute":"Ejecutar","Measure":"Medir","Optimise":"Optimizar","Structure":"Estructura","Standards":"Estándares","Investment & partners":"Inversión y partners","Risk & data":"Riesgo y datos"},
+P:{frag:["Fragmentado","El aprendizaje depende del esfuerzo individual y cada unidad decide por su cuenta.","Empieza por lo básico en las dos lentes: una única puerta para las solicitudes, un responsable para cada proyecto y un reparto escrito y sencillo de quién decide qué entre el centro y las unidades."],
+silo:["Silos eficientes","Las unidades gestionan bien el aprendizaje por su cuenta, pero en conjunto la organización duplica programas, dispersa proveedores y discute quién decide.","La palanca es el gobierno: derechos de decisión, un catálogo que se consulta antes de construir y partners por niveles. Deja la operación diaria en manos de las unidades."],
+slow:["Controlado pero lento","Existen reglas y foros, pero la entrega va por detrás y el negocio nota la fricción.","Arregla la operación: entrada de la demanda, capacidad, flujo de trabajo y métricas. Mantén el gobierno proporcional al tamaño de cada decisión."],
+int:["Integrado","El aprendizaje funciona bien y se gobierna como un solo sistema.","Mantenlo adaptativo: usa datos e IA gobernada para reequilibrar el portafolio y vigila que las unidades no se distancien."]},
+title:{home:"Evaluaciones de madurez",learnops:"Evaluación de LearnOps y Gobierno",results:"Resultados de LearnOps y Gobierno"}},
+
+ca:{assess:"Avaluacions",profile:"Perfil",light:"Mode clar",dark:"Mode fosc",copyLink:"Copiar l'enllaç",linkCopied:"Enllaç copiat",
+copy:"© 2026 Fran Mondaca · Tots els drets reservats. No es permet reproduir el contingut ni el disseny sense autorització.",
+homeTag:"Avaluacions de maduresa",homeH1:"En quin punt és la teva funció d'aprenentatge?",
+homeLead:"Models de maduresa pràctics per a equips d'aprenentatge i talent en organitzacions globals i federades. Cadascun converteix la vaga sensació de «ho podríem fer millor» en un punt de partida puntuat i basat en evidències.",
+available:"Disponible",soon:"Properament",inDev:"En desenvolupament",startAssess:"Començar l'avaluació →",
+loName:"LearnOps i Govern",loDesc:"Com de bé funciona l'aprenentatge i com de bé es governa entre el centre, les regions, els negocis i els països. Dues lents, puntuades per separat.",
+loPills:["Curta: 8 preguntes","Completa: 21 preguntes","2 lents"],
+lcName:"Cultura d'aprenentatge",lcDesc:"Fins a quin punt l'aprenentatge forma part de la feina diària: líders que ensenyen, seguretat per experimentar, temps per aprendre i coneixement que es comparteix i es reconeix.",
+aiName:"Lideratge a l'era de la IA",aiDesc:"Com de preparat està el sistema de lideratge de l'organització per dirigir la feina entre persones i IA: desenvolupament de líders, redisseny de rols, regles de decisió i incentius.",
+orgLens:"Lent d'organització",
+startTag:"Avaluació de maduresa",startLead:"Dues lents, puntuades per separat: com de bé <b>funciona</b> l'aprenentatge i com de bé es <b>governa</b> entre el centre, les regions, els negocis i els països.",
+short:"Curta",shortMeta:"8 preguntes · uns 3 minuts",shortDesc:"Una lectura ràpida de les dues lents i de la teva posició a la matriu.",
+full:"Completa",fullMeta:"21 preguntes · uns 12 minuts",fullDesc:"Totes les dimensions, amb la regla d'evidència, les teves bretxes i els passos següents.",
+start:"Començar →",private:"Les teves respostes es queden en aquest navegador.",clearPrev:"Esborrar les respostes anteriors",
+back:"← Enrere",shortV:"Versió curta",fullV:"Versió completa",
+unitQ:"Quina part de l'organització estàs avaluant?",unitWhy:"La maduresa varia dins d'una federació; puntuar cada unitat per separat mostra on.",
+units:["Centre global","Regió","Negoci","País","Tota l'organització"],
+lens1:"Lent 1",lens1Lead:"Com de bé <b>funciona</b> l'aprenentatge. LearnOps tracta l'aprenentatge com una operació amb cinc pilars: Alinear, Planificar, Executar, Mesurar i Optimitzar.",
+lens2:"Lent 2",lens2H:"Govern",lens2Lead:"Com de bé es <b>governa</b> l'aprenentatge: qui decideix, amb quines regles, amb quins partners i diners, i amb quins controls de risc.",
+cont:"Continuar →",learnMore:"Saber-ne més",keys:"Tecles 1–5 per respondre · ← per tornar",
+evQ:"Pots mostrar evidències d'això?",evHint:"Un document de procés, un tauler, un contracte o una acta de reunió. Sense evidències, la puntuació compta com a 2.",evYes:"Sí, puc",evNo:"Encara no",
+results:"Resultats",resH1:"El teu perfil de LearnOps i Govern",loIndex:"Índex LearnOps",gvIndex:"Índex de Govern",profileL:"Perfil",level:"Nivell",
+matrixH:"Matriu de dues lents",matrixSub:"El perfil, no la mitjana, decideix què s'ha d'arreglar primer.",fixFirst:"Què arreglar primer",
+barsH:"Per pilar i grup",barsFull:"Puntuació mitjana en l'escala 1–5, després d'aplicar la regla d'evidència.",barsShort:"Puntuació mitjana en l'escala 1–5. La versió curta té una pregunta per pilar.",
+allDims:n=>"Les "+n+" dimensions",darker:"més fosc = més maduresa",
+gapsH:"Bretxes més grans respecte a l'objectiu",target:"Nivell objectiu",gapsSub:"L'objectiu és on ha de ser aquesta unitat, no automàticament un 5. Cada bretxa mostra el nivell següent al qual aspirar.",
+thDim:"Dimensió",thNow:"Ara",thGap:"Bretxa",nextStep:n=>"Pas següent (nivell "+n+"): ",noGaps:"No hi ha bretxes respecte a aquest objectiu en les preguntes respostes.",
+cappedH:"Puntuacions limitades per la regla d'evidència",cappedSub:"Les vas valorar per sobre de 2 sense evidències, així que cadascuna compta com a 2. Busca un document per a cadascuna i actualitza la resposta.",rated:(r)=>"valorada "+r+" → compta com a 2",
+deeperH:"Aprofundeix",deeperSub:"La versió completa afegeix 13 preguntes i la regla d'evidència. Les teves 8 respostes es mantenen.",toFull:"Continuar amb la versió completa →",
+notEnough:"Falten respostes",notEnoughD:"Respon com a mínim una pregunta de cada lent per veure el teu perfil.",
+miss:(m,n)=>m+" de "+n+" preguntes sense respondre. Els resultats fan servir les que has respost.",finish:"Acabar l'avaluació",
+runH:"Com aplicar-la a tota l'organització",runIntro:"Això dona la visió d'una unitat. L'exercici complet compara les unitats entre si, perquè un 3 signifiqui el mateix a tot arreu i es distingeixi un problema de federació d'un problema de capacitat.",
+runSteps:["<b>Sponsor i abast.</b> El learning council acorda les unitats incloses i el nivell objectiu de cadascuna.","<b>Sessions per unitat.</b> Uns 90 minuts cadascuna: el centre global, cada regió i negoci, i una mostra de països.","<b>Revisió d'evidències.</b> Un document per puntuació. Sense evidència, cap puntuació per sobre de 2.","<b>Validació amb el negoci.</b> Un business partner revisa les puntuacions; les diferències de més d'un nivell es discuteixen, no es fa la mitjana.","<b>Taller de calibratge.</b> Els responsables de cada unitat comparen les puntuacions.","<b>Resultats.</b> Un mapa de calor de dimensions per unitat, cada unitat a la matriu de dues lents, i de tres a cinc prioritats per unitat més accions per a tot el grup. Una diferència de 2 o més entre unitats en una dimensió apunta a un problema de federació.","<b>Repetir-la cada any</b> per mesurar el progrés i redefinir els objectius."],
+review:"Revisar les respostes",restart:"Tornar a començar",allAssess:"Totes les avaluacions",
+credit:"Adaptació independent del model de maduresa LearnOps de Cognota, ampliada amb una lent de govern i partners per a organitzacions federades. Disseny propi de Fran Mondaca. Les teves respostes es queden en aquest navegador.",
+LV:{A:["Reactiu","Gestionat","Estratègic","Predictiu","Adaptatiu"],G:["Absent","Informal","Definit","Arrelat","Adaptatiu"]},
+grp:{"Align":"Alinear","Plan":"Planificar","Execute":"Executar","Measure":"Mesurar","Optimise":"Optimitzar","Structure":"Estructura","Standards":"Estàndards","Investment & partners":"Inversió i partners","Risk & data":"Risc i dades"},
+P:{frag:["Fragmentat","L'aprenentatge depèn de l'esforç individual i cada unitat decideix pel seu compte.","Comença pel bàsic en les dues lents: una única porta per a les sol·licituds, un responsable per a cada projecte i un repartiment escrit i senzill de qui decideix què entre el centre i les unitats."],
+silo:["Silos eficients","Les unitats gestionen bé l'aprenentatge pel seu compte, però en conjunt l'organització duplica programes, dispersa proveïdors i discuteix qui decideix.","La palanca és el govern: drets de decisió, un catàleg que es consulta abans de construir i partners per nivells. Deixa l'operació diària en mans de les unitats."],
+slow:["Controlat però lent","Hi ha regles i fòrums, però el lliurament va endarrerit i el negoci nota la fricció.","Arregla l'operació: entrada de la demanda, capacitat, flux de treball i mètriques. Mantén el govern proporcional a la mida de cada decisió."],
+int:["Integrat","L'aprenentatge funciona bé i es governa com un sol sistema.","Mantén-lo adaptatiu: fes servir dades i IA governada per reequilibrar el portafoli i vigila que les unitats no s'allunyin."]},
+title:{home:"Avaluacions de maduresa",learnops:"Avaluació de LearnOps i Govern",results:"Resultats de LearnOps i Govern"}}
+};
+
+/* ---------- language ---------- */
+let lang="en";
+try{const s=localStorage.getItem("lang"); if(s&&UI[s]) lang=s}catch(e){}
+try{const q=(new URLSearchParams(location.search).get("lang")||"").toLowerCase().slice(0,2); if(UI[q]){lang=q; localStorage.setItem("lang",q)}}catch(e){}
+const t=k=>UI[lang][k];
+const SHORT=["A1","A4","A7","A9","A11","G2","G4","G6"];
+const DD=Object.fromEntries(D.map(d=>[d.id,d]));
+function dim(id){const d=DD[id]; if(lang==="en") return Object.assign({},d,{why:T[id][0],more:T[id][1]});
+  const x=DIMS[lang][id]; return Object.assign({},d,{name:x[0],q:x[1],lv:x[2],why:x[3],more:x[4]})}
+const gname=g=>t("grp")[g]||g;
+
+/* ---------- state (browser only) ---------- */
+const KEY="fm-maturity-learnops-v3";
+let S={mode:"short",unit:null,target:4,a:{},i:0};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.a) S=Object.assign(S,s)}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const ids=()=>S.mode==="short"?SHORT:D.map(d=>d.id);
+function raw(id){const a=S.a[id]; return a&&a.s?a.s:0}
+function eff(id){const v=raw(id); if(!v) return 0; return S.mode==="full"&&v>2&&S.a[id].ev!==true?2:v}
+const avg=xs=>{const v=xs.filter(x=>x>0); return v.length?v.reduce((p,c)=>p+c,0)/v.length:0};
+const f1=v=>v?v.toFixed(1).replace(".",lang==="en"?".":","):"–";
+function lvName(lens,v){if(!v) return ""; const i=Math.min(5,Math.max(1,Math.floor(v+1e-9))); return t("level")+" "+i+" · "+t("LV")[lens][i-1]}
+
+/* ---------- share links (like Ask me on the profile) ---------- */
+const CANON="https://franmdkso.github.io/Profile/maturity/";
+function shareURL(params,hash){
+  const base=/github\.io$/.test(location.hostname)?location.origin+location.pathname:CANON;
+  return base+"?"+new URLSearchParams(Object.assign({lang},params)).toString()+"#"+hash;
+}
+const LINK_SVG='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>';
+let toastT=0;
+function toast(msg){const el=$("#toast"); el.textContent=msg; el.classList.add("on"); clearTimeout(toastT); toastT=setTimeout(()=>el.classList.remove("on"),1800)}
+async function copyLink(url){
+  try{await navigator.clipboard.writeText(url)}catch(e){const a=document.createElement("textarea"); a.value=url; a.style.position="absolute"; a.style.left="-9999px"; document.body.appendChild(a); a.select(); try{document.execCommand("copy")}catch(_){} a.remove()}
+  toast(t("linkCopied"));
+}
+const SHARES={learnops:()=>shareURL({},"learnops"),short:()=>shareURL({v:"short"},"learnops"),full:()=>shareURL({v:"full"},"learnops")};
+function shareBtn(key){return `<button class="share-btn" type="button" data-share="${key}" title="${esc(t("copyLink"))}" aria-label="${esc(t("copyLink"))}">${LINK_SVG}</button>`}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-share]"); if(!b) return; e.preventDefault(); e.stopPropagation(); copyLink(SHARES[b.dataset.share]())},true);
+
+/* ---------- wizard ---------- */
+function steps(){
+  const st=[{t:"start"}]; if(S.mode==="full") st.push({t:"unit"});
+  st.push({t:"lens",l:"A"}); ids().filter(i=>i[0]==="A").forEach(id=>st.push({t:"q",id}));
+  st.push({t:"lens",l:"G"}); ids().filter(i=>i[0]==="G").forEach(id=>st.push({t:"q",id}));
+  return st;
+}
+const needsEv=id=>S.mode==="full"&&raw(id)>2&&S.a[id].ev===undefined;
+function begin(mode){
+  S.mode=mode; const st=steps();
+  let k=st.findIndex(x=>x.t==="q"&&(!raw(x.id)||needsEv(x.id)));
+  if(k<0){S.i=0;save();location.hash="#results";return}
+  if(mode==="full"&&S.unit==null) k=1; else if(st[k-1]&&st[k-1].t==="lens") k--;
+  S.i=k; save(); renderStep();
+}
+function go(n){const st=steps(); S.i=Math.max(0,n); save(); if(S.i>=st.length){location.hash="#results";return} renderStep()}
+let evFor=null,timer=0;
+function renderStep(focus=true){
+  clearTimeout(timer); evFor=null;
+  const st=steps(), s=st[Math.min(S.i,st.length-1)], w=$("#wiz");
+  const qs=st.filter(x=>x.t==="q"), qi=s.t==="q"?qs.findIndex(x=>x.id===s.id)+1:0;
+  const done=qs.filter(x=>raw(x.id)).length;
+  const top=s.t==="start"?"":`<div class="sc-top"><button class="back" type="button" data-act="back">${t("back")}</button><span class="label">${s.t==="q"?esc(gname(DD[s.id].grp))+" · "+qi+" / "+qs.length:S.mode==="short"?t("shortV"):t("fullV")}</span></div><div class="line" aria-hidden="true"><i style="width:${done/qs.length*100}%"></i></div>`;
+  let h="";
+  if(s.t==="start"){
+    const any=Object.keys(S.a).length;
+    h=`<p class="label"><span><i class="dot"></i>${t("startTag")}</span></p>
+      <h1 class="aname has-share">${esc(t("loName"))}${shareBtn("learnops")}</h1>
+      <p class="lead">${t("startLead")}</p>
+      <div class="paths">
+        <div class="path-wrap"><button class="path" type="button" data-act="short"><b>${t("short")}</b><span class="meta">${t("shortMeta")}</span><p>${t("shortDesc")}</p><span class="go">${t("start")}</span></button>${shareBtn("short")}</div>
+        <div class="path-wrap"><button class="path" type="button" data-act="full"><b>${t("full")}</b><span class="meta">${t("fullMeta")}</span><p>${t("fullDesc")}</p><span class="go">${t("start")}</span></button>${shareBtn("full")}</div>
+      </div>
+      <p class="fine">${t("private")}${any?` <button class="more-btn" type="button" data-act="clear">${t("clearPrev")}</button>`:""}</p>`;
+  }else if(s.t==="unit"){
+    h=top+`<h2>${t("unitQ")}</h2><p class="why">${t("unitWhy")}</p>
+      <div class="opts" role="radiogroup">${t("units").map((u,i)=>`<button class="opt" type="button" role="radio" aria-checked="${S.unit===i}" data-unit="${i}"><b>${i+1}</b><span>${esc(u)}</span></button>`).join("")}</div>`;
+  }else if(s.t==="lens"){
+    h=top+(s.l==="A"
+      ?`<p class="label">${t("lens1")}</p><h1 class="aname">LearnOps</h1><p class="lead">${t("lens1Lead")}</p>`
+      :`<p class="label">${t("lens2")}</p><h1 class="aname">${t("lens2H")}</h1><p class="lead">${t("lens2Lead")}</p>`)
+      +`<div class="actions"><button class="btn" type="button" data-act="next">${t("cont")}</button></div>`;
+  }else{
+    const d=dim(s.id), a=S.a[s.id]||{}, LVL=t("LV")[d.lens];
+    h=top+`<h2 id="qh">${esc(d.q)}</h2>
+      <p class="why">${esc(d.why)}</p>
+      <button class="more-btn" type="button" data-act="more" aria-expanded="false">${t("learnMore")}: ${esc(d.name.toLowerCase())}</button>
+      <p class="more" id="more" hidden>${esc(d.more)}</p>
+      <div class="opts" role="radiogroup" aria-labelledby="qh">${d.lv.map((x,i)=>`<button class="opt" type="button" role="radio" aria-checked="${a.s===i+1}" data-v="${i+1}"><b>${i+1}</b><small>${LVL[i]}</small><span>${esc(x)}</span></button>`).join("")}</div>
+      <div id="ev"></div>
+      <p class="kbd">${t("keys")}</p>`;
+  }
+  w.innerHTML=h;
+  if(s.t==="q"&&S.mode==="full"&&raw(s.id)>2&&!needsEv(s.id)) askEv(s.id,true);
+  if(focus){const f=w.querySelector('[aria-checked="true"]')||w.querySelector(".btn,.opt"); if(f&&s.t!=="start") f.focus({preventScroll:true}); window.scrollTo(0,0)}
+}
+function askEv(id,quiet){
+  evFor=id; const a=S.a[id];
+  $("#ev").innerHTML=`<div class="ev"><p>${t("evQ")} <small>${t("evHint")}</small></p>
+    <div class="actions"><button class="btn" type="button" data-ev="1">${a.ev===true&&quiet?"✓ ":""}${t("evYes")}</button><button class="btn ghost" type="button" data-ev="0">${a.ev===false&&quiet?"✓ ":""}${t("evNo")}</button></div></div>`;
+  if(!quiet){const e=$("#ev"); e.querySelector("[data-ev]").focus({preventScroll:true}); e.scrollIntoView({behavior:reduce.matches?"auto":"smooth",block:"nearest"})}
+}
+function choose(v){
+  const s=steps()[S.i]; if(!s||s.t!=="q") return;
+  const a=S.a[s.id]||(S.a[s.id]={}); if(a.s!==v) delete a.ev; a.s=v; save();
+  $("#wiz").querySelectorAll(".opt").forEach(b=>b.setAttribute("aria-checked",String(+b.dataset.v===v)));
+  if(S.mode==="full"&&v>2){askEv(s.id); return}
+  $("#ev").innerHTML=""; timer=setTimeout(()=>go(S.i+1),reduce.matches?0:260);
+}
+$("#wiz").addEventListener("click",e=>{
+  const b=e.target.closest("button"); if(!b||b.dataset.share) return;
+  const act=b.dataset.act;
+  if(act==="short"||act==="full") return begin(act);
+  if(act==="clear"){S.a={};S.unit=null;save();return renderStep()}
+  if(act==="back") return go(S.i-1);
+  if(act==="next") return go(S.i+1);
+  if(act==="more"){const m=$("#more"); m.hidden=!m.hidden; b.setAttribute("aria-expanded",String(!m.hidden)); return}
+  if(b.dataset.unit!==undefined){S.unit=+b.dataset.unit; save(); $("#wiz").querySelectorAll("[data-unit]").forEach(x=>x.setAttribute("aria-checked",String(x===b))); timer=setTimeout(()=>go(S.i+1),reduce.matches?0:220); return}
+  if(b.dataset.v) return choose(+b.dataset.v);
+  if(b.dataset.ev!==undefined&&evFor){S.a[evFor].ev=b.dataset.ev==="1"; save(); go(S.i+1)}
+});
+addEventListener("keydown",e=>{
+  if($("#view-learnops").hidden||e.metaKey||e.ctrlKey||e.altKey) return;
+  if(/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) return;
+  const s=steps()[S.i]; if(!s) return;
+  if(e.key==="ArrowLeft"&&S.i>0){e.preventDefault();go(S.i-1);return}
+  if(evFor&&/^[ynsj]$/i.test(e.key)){S.a[evFor].ev=/^[ys]$/i.test(e.key);save();go(S.i+1);return}
+  const n=+e.key; if(!(n>=1&&n<=5)) return;
+  if(s.t==="q") choose(n);
+  else if(s.t==="unit"){const b=$("#wiz").querySelectorAll("[data-unit]")[n-1]; if(b) b.click()}
+});
+
+/* ---------- results ---------- */
+function profileKey(lo,gv){const hl=lo>=3,hg=gv>=3; return hl&&hg?"int":hl?"silo":hg?"slow":"frag"}
+function renderResults(){
+  const all=ids().map(dim), A=all.filter(d=>d.lens==="A"), G=all.filter(d=>d.lens==="G");
+  const lo=avg(A.map(d=>eff(d.id))), gv=avg(G.map(d=>eff(d.id)));
+  const miss=all.filter(d=>!raw(d.id)), full=S.mode==="full";
+  $("#res-unit").textContent=t("results")+" · "+(full?t("fullV"):t("shortV"))+(full&&S.unit!=null?" · "+t("units")[S.unit]:"");
+  $("#res-warn").innerHTML=miss.length?`<p class="warn">${t("miss")(miss.length,all.length)} <a href="#learnops" data-resume>${t("finish")}</a>.</p>`:"";
+  $("#t-lo").innerHTML=lo?f1(lo)+"<small> / 5</small>":"–"; $("#t-lo-l").textContent=lvName("A",lo);
+  $("#t-gv").innerHTML=gv?f1(gv)+"<small> / 5</small>":"–"; $("#t-gv-l").textContent=lvName("G",gv);
+  if(lo&&gv){const P=t("P")[profileKey(lo,gv)];
+    $("#t-pr").textContent=P[0]; $("#t-pr-d").textContent=P[1];
+    $("#fix").innerHTML=`<b>${t("fixFirst")}</b><p>${esc(P[2])}</p>`;
+  }else{$("#t-pr").textContent=t("notEnough"); $("#t-pr-d").textContent=t("notEnoughD"); $("#fix").innerHTML=""}
+  $("#matrix").innerHTML=matrixSVG(lo,gv);
+  $("#bars-sub").textContent=full?t("barsFull"):t("barsShort");
+  $("#bars").innerHTML=[["LearnOps",A],[t("lens2H"),G]].map(([ttl,xs])=>`<h4>${ttl}</h4>`+[...new Set(xs.map(d=>d.grp))].map(g=>{const v=avg(xs.filter(d=>d.grp===g).map(d=>eff(d.id)));
+      return `<div class="row"><span>${esc(gname(g))}</span><div class="track" role="img" aria-label="${esc(gname(g))}: ${f1(v)} / 5"><div class="fill" style="width:${v/5*100}%"></div></div><span class="val">${f1(v)}</span></div>`}).join("")).join("");
+  $("#heat-t").textContent=t("allDims")(all.length);
+  const cell=d=>{const v=eff(d.id); return v?`<div title="${d.id} ${esc(d.name)}: ${v}" style="background:color-mix(in srgb,var(--signal) ${Math.round(v/5*85)}%,var(--surface));${v>=3.5?"color:var(--paper)":""}">${d.id}</div>`:`<div class="na" title="${d.id}">${d.id}</div>`};
+  $("#heat-a").innerHTML=A.map(cell).join(""); $("#heat-g").innerHTML=G.map(cell).join("");
+  $("#target").value=S.target;
+  const gaps=all.filter(d=>raw(d.id)).map(d=>({d,c:eff(d.id)})).map(x=>({...x,g:S.target-x.c})).filter(x=>x.g>0).sort((a,b)=>b.g-a.g||a.c-b.c).slice(0,full?6:4);
+  $("#gaps").innerHTML=gaps.length?`<table><thead><tr><th>${t("thDim")}</th><th>${t("thNow")}</th><th>${t("thGap")}</th></tr></thead><tbody>${gaps.map(x=>{
+      const next=Math.min(5,Math.floor(x.c)+1);
+      return `<tr><td><b>${x.d.id} · ${esc(x.d.name)}</b><small>${t("nextStep")(next)}${esc(x.d.lv[next-1])}</small></td><td class="n">${x.c}</td><td class="n">${x.g}</td></tr>`}).join("")}</tbody></table>`
+    :`<p class="note">${t("noGaps")}</p>`;
+  const capped=full?all.filter(d=>raw(d.id)>2&&S.a[d.id].ev!==true):[];
+  $("#capped").innerHTML=capped.length?`<div class="panel" style="margin-top:14px"><h2>${t("cappedH")}</h2><p class="sub">${t("cappedSub")}</p>
+    <table><tbody>${capped.map(d=>`<tr><td><b>${d.id} · ${esc(d.name)}</b></td><td class="n">${t("rated")(raw(d.id))}</td></tr>`).join("")}</tbody></table></div>`:"";
+  $("#upsell").innerHTML=full?"":`<div class="panel" style="margin-top:14px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap"><div><h2>${t("deeperH")}</h2><p class="sub" style="margin:4px 0 0">${t("deeperSub")}</p></div><button class="btn" type="button" id="to-full">${t("toFull")}</button></div>`;
+  const tf=$("#to-full"); if(tf) tf.onclick=()=>{location.hash="#learnops"; begin("full")};
+}
+function matrixSVG(lo,gv){
+  const W=420,H=420,p=48,s=(W-p-16)/4, X=v=>p+(v-1)*s, Y=v=>H-p-(v-1)*s, P=t("P");
+  const q=(x,y,w,h,txt,on)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${on?"var(--signal-soft)":"transparent"}"/><text x="${x+w/2}" y="${y+24}" text-anchor="middle" dominant-baseline="middle" font-size="15" font-weight="600" fill="${on?"var(--signal)":"var(--muted)"}">${esc(txt)}</text>`;
+  const k=lo&&gv?profileKey(lo,gv):"";
+  let g=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="LearnOps ${f1(lo)}, ${esc(t("lens2H"))} ${f1(gv)}">`;
+  g+=q(X(1),Y(5),2*s,2*s,P.slow[0],k==="slow")+q(X(3),Y(5),2*s,2*s,P.int[0],k==="int")+q(X(1),Y(3),2*s,2*s,P.frag[0],k==="frag")+q(X(3),Y(3),2*s,2*s,P.silo[0],k==="silo");
+  g+=`<rect x="${X(1)}" y="${Y(5)}" width="${4*s}" height="${4*s}" fill="none" stroke="var(--rule)"/>`;
+  g+=`<line x1="${X(3)}" y1="${Y(5)}" x2="${X(3)}" y2="${Y(1)}" stroke="var(--rule)"/><line x1="${X(1)}" y1="${Y(3)}" x2="${X(5)}" y2="${Y(3)}" stroke="var(--rule)"/>`;
+  for(let i=1;i<=5;i++){g+=`<text x="${X(i)}" y="${H-p+18}" text-anchor="middle" font-size="12" fill="var(--muted)">${i}</text><text x="${p-12}" y="${Y(i)+4}" text-anchor="end" font-size="12" fill="var(--muted)">${i}</text>`}
+  g+=`<text x="${X(3)}" y="${H-8}" text-anchor="middle" font-size="13" fill="var(--ink)">LearnOps →</text><text transform="translate(14 ${Y(3)}) rotate(-90)" text-anchor="middle" font-size="13" fill="var(--ink)">${esc(t("lens2H"))} →</text>`;
+  if(lo&&gv) g+=`<circle cx="${X(lo)}" cy="${Y(gv)}" r="13" fill="var(--signal)" opacity=".2"/><circle cx="${X(lo)}" cy="${Y(gv)}" r="7" fill="var(--signal)" stroke="var(--surface)" stroke-width="2"/>`;
+  return g+"</svg>";
+}
+$("#target").addEventListener("change",e=>{S.target=+e.target.value;save();renderResults()});
+$("#edit").addEventListener("click",()=>{S.i=1; save(); location.hash="#learnops"; renderStep()});
+$("#restart").addEventListener("click",()=>{S={mode:"short",unit:null,target:4,a:{},i:0}; save(); location.hash="#learnops"; renderStep()});
+document.addEventListener("click",e=>{if(e.target.closest("[data-resume]")){e.preventDefault(); location.hash="#learnops"; begin(S.mode)}});
+
+/* ---------- theme ---------- */
+const root=document.documentElement,tb=$("#theme");
+function cur(){return root.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}
+function tlabel(){tb.textContent=cur()==="dark"?"☀":"☾"; tb.title=cur()==="dark"?t("light"):t("dark")}
+try{const s=localStorage.getItem("theme");if(s)root.dataset.theme=s}catch(e){}
+tb.addEventListener("click",()=>{root.dataset.theme=cur()==="dark"?"light":"dark";try{localStorage.setItem("theme",root.dataset.theme)}catch(e){}tlabel();if(location.hash==="#results")renderResults()});
+
+/* ---------- apply language ---------- */
+function applyLang(){
+  root.lang=lang==="en"?"en-GB":lang;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{const v=t(el.dataset.i18n); if(typeof v==="string") el.innerHTML=v});
+  $("#lo-pills").innerHTML=t("loPills").map(x=>`<li>${esc(x)}</li>`).join("");
+  $("#run-steps").innerHTML=t("runSteps").map(x=>`<li>${x}</li>`).join("");
+  document.querySelectorAll(".card-share").forEach(b=>{b.innerHTML=LINK_SVG; b.title=t("copyLink"); b.setAttribute("aria-label",t("copyLink"))});
+  document.querySelectorAll("[data-lang-btn]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.langBtn===lang)));
+  $("#to-profile").href="../?lang="+lang+"#profile";
+  tlabel();
+  const v=currentView();
+  if(v==="learnops") renderStep(false);
+  if(v==="results") renderResults();
+  document.title=t("title")[v]+" — Fran Mondaca";
+}
+document.querySelectorAll("[data-lang-btn]").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.langBtn; try{localStorage.setItem("lang",lang)}catch(e){}
+  try{const u=new URL(location.href); if(u.searchParams.has("lang")){u.searchParams.set("lang",lang); history.replaceState(null,"",u)}}catch(e){}
+  applyLang()}));
+
+/* landing network background: "second brain" graph (Obsidian-style) */
+let netRun=()=>{};
+(function(){
+  const c=document.getElementById("net"); if(!c) return; const x=c.getContext("2d");
+  let w,h,N=[],E=[],homes=[],on=false,raf=0,mx=-1e4,my=-1e4,hot=-1,glow=0,visible=false;
+  const R=Math.random;
+  function rgb(v){const s=getComputedStyle(document.documentElement).getPropertyValue(v).trim().replace("#","");return[0,2,4].map(i=>parseInt(s.substr(i,2),16)).join(",")}
+  function link(i,j){if(i===j||N[i].nb.has(j))return; N[i].nb.add(j);N[j].nb.add(i);E.push([i,j])}
+  function build(){
+    N=[];E=[];homes=[];
+    const n=Math.max(50,Math.min(150,Math.round(w*h/9500))), k0=Math.max(4,Math.min(9,Math.round(n/17)));
+    const cols=Math.max(1,Math.round(Math.sqrt(k0*w/h))), rows=Math.max(1,Math.ceil(k0/cols)), k=cols*rows;
+    for(let i=0;i<k;i++){const cx=(i%cols+.5)/cols, cy=(Math.floor(i/cols)+.5)/rows;
+      homes.push({x:w*(.04+.92*cx)+(R()-.5)*w/cols*.5, y:h*(.1+.86*cy)+(R()-.5)*h/rows*.5, p:R()*6.28})}
+    homes.forEach((hm,i)=>N.push({x:hm.x,y:hm.y,vx:0,vy:0,c:i,nb:new Set()}));
+    const mem=homes.map((_,i)=>[i]);
+    for(let i=k;i<n;i++){const cl=Math.floor(R()*k), hm=homes[cl];
+      N.push({x:hm.x+(R()-.5)*80,y:hm.y+(R()-.5)*80,vx:0,vy:0,c:cl,nb:new Set()});
+      const m=mem[cl]; link(i, R()<.45?cl:m[Math.floor(R()*m.length)]);
+      if(R()<.22) link(i,m[Math.floor(R()*m.length)]);
+      m.push(i)}
+    for(let i=0;i<k;i++){const d=homes.map((o,j)=>[Math.hypot(o.x-homes[i].x,o.y-homes[i].y),j]).sort((a,b)=>a[0]-b[0]); if(d[1])link(i,d[1][1]); if(d[2]&&R()<.5)link(i,d[2][1])}
+    for(let q=0;q<Math.round(k*1.6);q++){const a=k+Math.floor(R()*(n-k)),b=k+Math.floor(R()*(n-k)); if(N[a].c!==N[b].c) link(a,b)}
+    N.forEach(o=>{o.d=o.nb.size; o.r=1.3+Math.sqrt(o.d)*1.15});
+    for(let i=0;i<220;i++) step(0);
+  }
+  function step(t){
+    const n=N.length;
+    for(let i=0;i<n;i++){const A=N[i];
+      for(let j=i+1;j<n;j++){const B=N[j]; let dx=A.x-B.x,dy=A.y-B.y,d2=dx*dx+dy*dy; if(d2>16000)continue; if(d2<1)d2=1;
+        const f=Math.min(1.2,520/d2), d=Math.sqrt(d2); dx/=d;dy/=d; A.vx+=dx*f;A.vy+=dy*f;B.vx-=dx*f;B.vy-=dy*f}}
+    for(const [i,j] of E){const A=N[i],B=N[j],dx=B.x-A.x,dy=B.y-A.y,d=Math.hypot(dx,dy)||1, X=A.c!==B.c, L=X?d:26+5*Math.sqrt(Math.min(A.d,B.d)), f=X?0:(d-L)*.006;
+      A.vx+=dx/d*f;A.vy+=dy/d*f;B.vx-=dx/d*f;B.vy-=dy/d*f}
+    for(const o of N){const hm=homes[o.c], hx=hm.x+Math.sin(t*.00011+hm.p)*26, hy=hm.y+Math.cos(t*.00009+hm.p)*20;
+      o.vx+=(hx-o.x)*.0022+(R()-.5)*.03; o.vy+=(hy-o.y)*.0022+(R()-.5)*.03;
+      if(o.x<20)o.vx+=.05; if(o.x>w-20)o.vx-=.05; if(o.y<20)o.vy+=.05; if(o.y>h-20)o.vy-=.05;
+      o.vx*=.86;o.vy*=.86;o.x+=o.vx;o.y+=o.vy}
+  }
+  function draw(){
+    const S=rgb("--signal"),I=rgb("--ink"); x.clearRect(0,0,w,h);
+    hot=-1; let best=1600; N.forEach((o,i)=>{const d=(o.x-mx)**2+(o.y-my)**2; if(d<best){best=d;hot=i}});
+    glow+=((hot>=0?1:0)-glow)*.12; const H=hot>=0?N[hot]:null;
+    x.lineWidth=1;
+    for(const [i,j] of E){const A=N[i],B=N[j], lit=H&&(i===hot||j===hot);
+      x.strokeStyle="rgba("+S+","+(lit?.75:(.24-.12*glow)).toFixed(3)+")"; x.beginPath();x.moveTo(A.x,A.y);x.lineTo(B.x,B.y);x.stroke()}
+    N.forEach((o,i)=>{const lit=H&&(i===hot||H.nb.has(i)), hub=o.d>=6;
+      x.fillStyle=lit||hub?"rgba("+S+","+(lit?1:.9)+")":"rgba("+I+","+(.38-.18*glow).toFixed(3)+")";
+      x.beginPath();x.arc(o.x,o.y,o.r+(i===hot?2:0),0,7);x.fill()});
+  }
+  function loop(t){step(t);draw(); if(on) raf=requestAnimationFrame(loop)}
+  function size(){const d=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;c.width=w*d;c.height=h*d;x.setTransform(d,0,0,d,0,0);build()}
+  size();
+  let rt; addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(()=>{size(); if(visible&&!on) draw()},150)});
+  addEventListener("pointermove",e=>{if(e.pointerType!=="mouse")return; mx=e.clientX;my=e.clientY},{passive:true});
+  document.addEventListener("pointerleave",()=>{mx=my=-1e4});
+  netRun=run=>{visible=run; on=run&&!reduce.matches; cancelAnimationFrame(raf); if(run){ if(on) raf=requestAnimationFrame(loop); else draw() }};
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>{if(visible&&!on) draw()});
+  new MutationObserver(()=>{if(visible&&!on) draw()}).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+})();
+
+
+
+
+/* ---------- routing ---------- */
+let lastView="";
+function currentView(){const v=(location.hash||"#home").slice(1); return ["home","learnops","results"].includes(v)?v:"home"}
+function route(){
+  const view=currentView();
+  ["home","learnops","results"].forEach(k=>$("#view-"+k).hidden=k!==view);
+  document.body.classList.toggle("is-home",view==="home");
+  const nav=document.querySelector('[data-nav="home"]'); if(view==="home") nav.setAttribute("aria-current","page"); else nav.removeAttribute("aria-current");
+  if(view==="learnops"){ if(lastView==="home") S.i=0; renderStep(); }
+  if(view==="results") renderResults();
+  document.title=t("title")[view]+" — Fran Mondaca";
+  if(view!=="learnops") window.scrollTo(0,0);
+  lastView=view; netRun(true);
+}
+addEventListener("hashchange",route);
+applyLang(); route();
+/* a shared link can open the short or full version directly: ?v=short | ?v=full */
+(function(){try{const v=new URLSearchParams(location.search).get("v"); if((v==="short"||v==="full")&&currentView()==="learnops"){
+  begin(v); const u=new URL(location.href); u.searchParams.delete("v"); history.replaceState(null,"",u)}}catch(e){}})();
+</script>
+</body>
+</html>
