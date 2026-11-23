@@ -42,6 +42,7 @@ h1,h2,h3,h4{font-family:var(--display);margin:0;line-height:1;text-wrap:balance}
 p{margin:0}
 button{font:inherit}
 .label{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.stage-note{margin:6px 0 4px;font-family:var(--display);font-style:italic;font-size:17px;color:var(--signal)}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--signal);display:inline-block;box-shadow:0 0 0 4px var(--signal-soft)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 [hidden]{display:none!important}
@@ -491,6 +492,7 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
     </div>
     <div class="stage">
       <p class="label">Stage 1 · Teach, coordinate, deliver</p>
+      <p class="stage-note">Started in Latin America: coordinating learning across a large academic and clinical institution in Chile.</p>
       <div class="job"><p class="when">2010 – 2014</p><div>
         <h3>Training Coordinator, Sales &amp; Service</h3>
         <p class="org">Amalgama Agency / Temps de Lleure · Barcelona</p>
@@ -633,6 +635,7 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
     </div>
     <div class="stage">
       <p class="label">Etapa 1 · Ensenyar, coordinar, executar</p>
+      <p class="stage-note">Inicis a Llatinoamèrica: coordinant l'aprenentatge en una gran institució acadèmica i clínica a Xile.</p>
       <div class="job"><p class="when">2010 – 2014</p><div>
         <h3>Training Coordinator, Sales &amp; Service</h3>
         <p class="org">Amalgama Agency / Temps de Lleure · Barcelona</p>
@@ -775,6 +778,7 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
     </div>
     <div class="stage">
       <p class="label">Etapa 1 · Enseñar, coordinar, ejecutar</p>
+      <p class="stage-note">Comienzos en Latinoamérica: coordinando el aprendizaje en una gran institución académica y clínica en Chile.</p>
       <div class="job"><p class="when">2010 – 2014</p><div>
         <h3>Training Coordinator, Sales &amp; Service</h3>
         <p class="org">Amalgama Agency / Temps de Lleure · Barcelona</p>
@@ -892,6 +896,7 @@ const UI = {
 const DIMS = [
  {id:"who",    l:{en:"Who I am", ca:"Qui soc", es:"Quién soy"}},
  {id:"gov",    l:{en:"Governance, Sponsors & Partnerships", ca:"Governança, Sponsors i Partnerships", es:"Gobernanza, Sponsors y Partnerships"}},
+ {id:"regional", l:{en:"Regional & multi-country leadership", ca:"Lideratge regional i multipaís", es:"Liderazgo regional y multipaís"}},
  {id:"agents", l:{en:"Agentic AI in Talent", ca:"IA agèntica en el talent", es:"IA agéntica en el talento"}},
  {id:"vision", l:{en:"My vision", ca:"La meva visió", es:"Mi visión"}},
  {id:"lead",   l:{en:"Senior talent & leadership", ca:"Talent i lideratge sènior", es:"Talento y liderazgo senior"}},
@@ -945,6 +950,42 @@ const QA = [
   actions:[{label:"emailMe", fn:"mail"},{label:"LinkedIn →", href:CONTACT.linkedin}]},
 
  /* ---------- MY VISION ---------- */
+ {id:"scale", d:"regional", k:["scale","scope","scale of your","how big","regional scope","multi-country","multi country","multipais","15,000","15000","15k","regions","regiones","regions","alcance","abast"],
+  q:{en:"What's the scale of your regional and global leadership?", ca:"Quin abast ha tingut el teu lideratge regional i global?", es:"¿Qué alcance ha tenido tu liderazgo regional y global?"},
+  a:{en:["My scope has grown step by step: from country, to region, to global. At Ricoh I led learning and talent across Iberia and then EMEA, for around 15,000 people in many countries and languages. At Mölnlycke Health Care I led it globally, for around 10,000 people across regions.","The method stays the same at every scale: one clear framework set at the centre, adapted by each country, with shared standards and simple ways to decide and escalate."],
+     ca:["El meu abast ha crescut pas a pas: de país, a regió, a global. A Ricoh vaig liderar l'aprenentatge i el talent a Ibèria i després a EMEA, per a unes 15.000 persones en molts països i idiomes. A Mölnlycke Health Care el vaig liderar a escala global, per a unes 10.000 persones de diverses regions.","El mètode és el mateix a cada escala: un marc clar definit des del centre, adaptat per cada país, amb estàndards compartits i maneres senzilles de decidir i escalar."],
+     es:["Mi alcance ha crecido paso a paso: de país, a región, a global. En Ricoh lideré el aprendizaje y el talento en Iberia y después en EMEA, para unas 15.000 personas en muchos países e idiomas. En Mölnlycke Health Care lo lideré a nivel global, para unas 10.000 personas de distintas regiones.","El método es el mismo en cada escala: un marco claro definido desde el centro, adaptado por cada país, con estándares compartidos y formas sencillas de decidir y escalar."]},
+  actions:[{label:"seePath", mode:"profile", anchor:"route"}]},
+ {id:"latam", d:"regional", k:["latin america","latinoamerica","llatinoamerica","latam","chile","chilean","chileno","xile","hispanohablante","spanish-speaking","mexico","colombia","argentina","peru","brasil","brazil"],
+  q:{en:"What's your experience with Latin America?", ca:"Quina experiència tens amb Llatinoamèrica?", es:"¿Qué experiencia tienes con Latinoamérica?"},
+  a:{en:["My career began in Chile, coordinating extended learning at the University of Chile's School of Medicine: a large, complex institution with many departments, disciplines and stakeholders. I planned the programme portfolio, aligned academic and clinical teams, and managed delivery end to end. I also taught, which grounded my work in how adults really learn.","I've since led learning across Iberia, EMEA and globally in large, matrixed corporate organisations. That combination makes me a natural bridge between Europe and Latin America. I understand how decisions are made in Latin American organisations, I adapt programmes and communication to each country rather than simply translating them, and I can run Spain and Latin America as one Spanish-speaking learning community without losing local nuance."],
+     ca:["La meva carrera va començar a Xile, coordinant la formació continuada de la Facultat de Medicina de la Universidad de Chile: una institució gran i complexa, amb molts departaments, disciplines i stakeholders. Planificava el portafoli de programes, alineava els equips acadèmics i clínics i gestionava l'execució de principi a fi. També vaig ser docent, cosa que em va donar una base sòlida sobre com aprenen de debò els adults.","Des d'aleshores he liderat l'aprenentatge a Ibèria, EMEA i a escala global, en grans organitzacions corporatives matricials. Aquesta combinació em converteix en un pont natural entre Europa i Llatinoamèrica. Entenc com es prenen les decisions a les organitzacions llatinoamericanes, adapto els programes i la comunicació a cada país en lloc de limitar-me a traduir-los, i puc gestionar Espanya i Llatinoamèrica com una sola comunitat d'aprenentatge de parla hispana, sense perdre els matisos locals."],
+     es:["Mi carrera empezó en Chile, coordinando la formación continua de la Facultad de Medicina de la Universidad de Chile: una institución grande y compleja, con muchos departamentos, disciplinas y stakeholders. Planificaba el portafolio de programas, alineaba a los equipos académicos y clínicos y gestionaba la ejecución de principio a fin. También fui docente, lo que me dio una base sólida sobre cómo aprenden de verdad los adultos.","Desde entonces he liderado el aprendizaje en Iberia, EMEA y a nivel global, en grandes organizaciones corporativas matriciales. Esa combinación me convierte en un puente natural entre Europa y Latinoamérica. Entiendo cómo se toman las decisiones en las organizaciones latinoamericanas, adapto los programas y la comunicación a cada país en lugar de limitarme a traducirlos, y puedo gestionar España y Latinoamérica como una sola comunidad de aprendizaje hispanohablante, sin perder los matices locales."]},
+  actions:[{label:"seePath", mode:"profile", anchor:"route"}]},
+ {id:"rollout", ag:[2, 4], d:"regional", k:["roll out","rollout","consistent","consistency","across countries","entre paises","entre països","despliegue","desplegar","desplegament","coherencia","coherència"],
+  q:{en:"How do you roll out learning consistently across countries?", ca:"Com desplegues l'aprenentatge de manera coherent entre països?", es:"¿Cómo despliegas el aprendizaje de forma coherente entre países?"},
+  a:{en:["One design, shared standards, local adaptation. I build each programme once, with clear levels, quality criteria and the same way of measuring, and each country adapts language, examples and timing to its reality.","The EMEA Digital Academy worked exactly like that: one academy model, role-based pathways and the same standards in every country, which kept quality consistent while each market owned its delivery."],
+     ca:["Un sol disseny, estàndards compartits i adaptació local. Construeixo cada programa una vegada, amb nivells clars, criteris de qualitat i la mateixa manera de mesurar, i cada país n'adapta l'idioma, els exemples i el calendari a la seva realitat.","L'EMEA Digital Academy funcionava exactament així: un sol model d'acadèmia, itineraris per rol i els mateixos estàndards a cada país, cosa que mantenia la qualitat mentre cada mercat era responsable de la seva execució."],
+     es:["Un solo diseño, estándares compartidos y adaptación local. Construyo cada programa una vez, con niveles claros, criterios de calidad y la misma forma de medir, y cada país adapta el idioma, los ejemplos y el calendario a su realidad.","La EMEA Digital Academy funcionaba exactamente así: un solo modelo de academia, itinerarios por rol y los mismos estándares en cada país, lo que mantenía la calidad mientras cada mercado era dueño de su ejecución."]},
+  actions:[{label:"seePath", mode:"profile", anchor:"route"}]},
+ {id:"countryleads", ag:[2], d:"regional", k:["local leads","country leads","learning leads","local learning","responsables locales","responsables de pais","responsables de país","referentes","go-to","federated","federado","federat"],
+  q:{en:"How do you coordinate local learning leads in each country?", ca:"Com coordines els responsables locals d'aprenentatge de cada país?", es:"¿Cómo coordinas a los responsables locales de aprendizaje de cada país?"},
+  a:{en:["As a network, not a hierarchy. The centre sets the frame and the priorities; country leads adapt, deliver and feed back what works locally.","In practice that means clear decision rights, a regular forum to plan and share results, one place for materials and data, and a quick escalation path. I aim to be their go-to person: someone who removes obstacles and connects them, not someone who adds approvals."],
+     ca:["Com una xarxa, no com una jerarquia. El centre defineix el marc i les prioritats; els responsables de cada país adapten, executen i comparteixen el que funciona en local.","A la pràctica vol dir drets de decisió clars, un fòrum regular per planificar i compartir resultats, un sol lloc per a materials i dades, i una via ràpida d'escalat. Vull ser la seva persona de referència: algú que treu obstacles i els connecta, no algú que afegeix aprovacions."],
+     es:["Como una red, no como una jerarquía. El centro define el marco y las prioridades; los responsables de cada país adaptan, ejecutan y comparten lo que funciona en local.","En la práctica significa derechos de decisión claros, un foro regular para planificar y compartir resultados, un solo lugar para materiales y datos, y una vía rápida de escalado. Quiero ser su persona de referencia: alguien que quita obstáculos y los conecta, no alguien que añade aprobaciones."]},
+  actions:[{label:"seePath", mode:"profile", anchor:"route"}]},
+ {id:"execprog", ag:[0, 9, 12], d:"regional", k:["executive programme","executive programs","executive school","escuela ejecutiva","programas ejecutivos","programes executius","business school","escuelas de negocio","facilitators","facilitadores","speakers","ponentes"],
+  q:{en:"How do you run executive programmes and their vendors?", ca:"Com gestiones els programes executius i els seus proveïdors?", es:"¿Cómo gestionas los programas ejecutivos y sus proveedores?"},
+  a:{en:["I've managed portfolios of dozens of providers, from platforms and content to international business schools and expert facilitators, together with Procurement, Finance and IT Security, achieving a 37% saving in two years without losing quality.","For each programme there is one clear owner from design to close: the brief, the faculty and facilitators, the logistics and the participant experience, then a review of results that decides what we keep, improve or change."],
+     ca:["He gestionat carteres de desenes de proveïdors, des de plataformes i continguts fins a escoles de negoci internacionals i facilitadors experts, juntament amb Compres, Finances i Seguretat IT, amb un estalvi del 37% en dos anys sense perdre qualitat.","Cada programa té un responsable clar del disseny al tancament: el brief, el professorat i els facilitadors, la logística i l'experiència dels participants, i després una revisió de resultats que decideix què mantenim, millorem o canviem."],
+     es:["He gestionado carteras de decenas de proveedores, desde plataformas y contenidos hasta escuelas de negocio internacionales y facilitadores expertos, junto con Compras, Finanzas y Seguridad IT, con un ahorro del 37% en dos años sin perder calidad.","Cada programa tiene un responsable claro del diseño al cierre: el brief, el profesorado y los facilitadores, la logística y la experiencia de los participantes, y después una revisión de resultados que decide qué mantenemos, mejoramos o cambiamos."]},
+  actions:[{label:"seePath", mode:"profile", anchor:"route"}]},
+ {id:"matrix", ag:[3], d:"regional", k:["matrix","matrixed","matricial","matriz","matriu","complex organisation","complex organization","organizacion compleja","organització complexa","large organisation","grandes organizaciones"],
+  q:{en:"How do you work in large, matrixed organisations?", ca:"Com treballes en grans organitzacions matricials?", es:"¿Cómo trabajas en grandes organizaciones matriciales?"},
+  a:{en:["By making ownership explicit. In a matrix, the same initiative answers to a function, a region and a country at once, so I agree early who decides, who delivers and who needs to be consulted, and I keep it visible.","Then I lead through influence: shared priorities, evidence and options rather than requests, and regular moments where HR, the business and the countries look at the same data together."],
+     ca:["Fent explícita la responsabilitat. En una matriu, la mateixa iniciativa respon alhora a una funció, una regió i un país, així que acordo aviat qui decideix, qui executa i a qui cal consultar, i ho mantinc visible.","Després lidero amb influència: prioritats compartides, evidències i opcions en lloc de peticions, i moments regulars en què RH, el negoci i els països miren les mateixes dades junts."],
+     es:["Haciendo explícita la responsabilidad. En una matriz, la misma iniciativa responde a la vez a una función, una región y un país, así que acuerdo pronto quién decide, quién ejecuta y a quién hay que consultar, y lo mantengo visible.","Después lidero con influencia: prioridades compartidas, evidencias y opciones en lugar de peticiones, y momentos regulares en los que RR. HH., el negocio y los países miran los mismos datos juntos."]},
+  actions:[{label:"seePath", mode:"profile", anchor:"route"}]},
  {id:"agents", d:"agents", k:["agent","agentic ai","ia agentica","ai agent","agentes de ia","agents d'ia","agents d ia","agents dia","ia agentica"],
   q:{en:"Which AI agents add real business value in learning and talent?", ca:"Quins agents d'IA aporten valor real al negoci en aprenentatge i talent?", es:"¿Qué agentes de IA aportan valor real al negocio en aprendizaje y talento?"},
   a:{en:["Not the ones that only answer questions, but the ones that close loops a team cannot close alone. I've mapped around 65 agents vendors already ship across learning, talent, mobility, performance and organisational design, and the real gaps are clear.","The highest value, in my view: an L&D partnerships agent, a learning outcomes and experiments agent, a learning governance agent and a talent orchestrator that chains the others with human approval. Calibrated skills, development and learning impact, and organisational design come next. Mobility and 1:1 preparation already exist widely; their value is in connecting them."],
@@ -1610,7 +1651,7 @@ const AGENTS=[
 })();
 
 /* a shared link can open Ask me on a chosen topic first: ?topic=governance (see TOPIC_ALIAS) */
-const TOPIC_ALIAS={who:"who",about:"who",gov:"gov",governance:"gov",partnerships:"gov",sponsors:"gov",agents:"agents",agentic:"agents","agentic-ai":"agents",vision:"vision",lead:"lead",leadership:"lead",talent:"lead",org:"org",change:"org",od:"org",ai:"ai",technology:"ai",impact:"impact",wins:"wins",achievements:"wins",edu:"edu",education:"edu",research:"edu",academic:"academic",academia:"academic",teaching:"academic",beyond:"beyond"};
+const TOPIC_ALIAS={who:"who",about:"who",regional:"regional",regions:"regional",region:"regional",latam:"regional",emea:"regional",multicountry:"regional",gov:"gov",governance:"gov",partnerships:"gov",sponsors:"gov",agents:"agents",agentic:"agents","agentic-ai":"agents",vision:"vision",lead:"lead",leadership:"lead",talent:"lead",org:"org",change:"org",od:"org",ai:"ai",technology:"ai",impact:"impact",wins:"wins",achievements:"wins",edu:"edu",education:"edu",research:"edu",academic:"academic",academia:"academic",teaching:"academic",beyond:"beyond"};
 (function(){try{
   const t=(new URLSearchParams(location.search).get("topic")||"").toLowerCase(), id=TOPIC_ALIAS[t]||(DIMS.some(d=>d.id===t)?t:null);
   if(!id) return;
