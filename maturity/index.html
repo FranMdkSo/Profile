@@ -239,10 +239,10 @@ details.others p{margin-top:8px;color:var(--muted);font-size:15.5px}
 .qs a i{font-style:normal;font-size:.75em;opacity:0;transform:translateX(-4px);transition:opacity .2s,transform .2s}
 .qs a:hover,.qs a:focus-visible{background:var(--signal-soft)}
 .qs a:hover i,.qs a:focus-visible i{opacity:1;transform:none}
-.tagline{font-family:var(--display);font-style:italic;color:var(--signal);font-size:19px;line-height:1.3;margin:12px 0 0!important}
+.tagline{font-family:var(--display);font-style:normal;font-weight:500;letter-spacing:-.005em;color:var(--signal);font-size:19px;line-height:1.3;margin:12px 0 0!important;text-wrap:balance}
 .choice p.tagline{color:var(--signal);font-size:19px;margin:10px 0 0}
 .choice .tagline + p{margin-top:10px}
-.tagline.big{font-size:clamp(23px,3.2vw,32px);margin-top:14px!important;max-width:760px}
+.tagline.big{font-size:clamp(22px,2.9vw,29px);line-height:1.25;margin-top:14px!important;max-width:760px}
 .sc .tagline.big + .lead{margin-top:16px;font-size:17px}
 #res .tagline.big{font-size:clamp(20px,2.6vw,26px);margin-bottom:6px!important}
 </style>
@@ -920,7 +920,7 @@ function begin(mode){
   else if(st[k-1]&&st[k-1].t==="lens") k--;
   S().i=k; save(); renderStep();
 }
-function go(n){const st=steps(); S().i=Math.max(0,n); save(); if(S().i>=st.length){location.hash="#"+cfg().res;return} renderStep()}
+function go(n){const st=steps(); S().i=Math.max(0,n); save(); if(S().i>=st.length){S().i=0; save(); location.hash="#"+cfg().res;return} renderStep()}
 let evFor=null,timer=0;
 function stmt(d){return (S().role===0||d.owner==="L"?c("prefixOrg"):c("prefixTeam"))+d.q}
 function renderStep(focus=true){
@@ -1060,9 +1060,9 @@ function renderResults(){
     <p class="note">${X("credit")}</p><p class="copy">${t("copy")}</p>`;
   $("#res").innerHTML=h;
   $("#target").onchange=e=>{S().target=+e.target.value;save();renderResults()};
-  $("#edit").onclick=()=>{S().i=1; save(); location.hash="#"+C.wiz; renderStep()};
-  $("#restart").onclick=()=>{ST[A]=blank(); save(); location.hash="#"+C.wiz; renderStep()};
-  const tf=$("#to-full"); if(tf) tf.onclick=()=>{location.hash="#"+C.wiz; begin("full")};
+  $("#edit").onclick=()=>{S().i=1; save(); keepStep=true; location.hash="#"+C.wiz; renderStep()};
+  $("#restart").onclick=()=>{ST[A]=blank(); save(); keepStep=true; location.hash="#"+C.wiz; renderStep()};
+  const tf=$("#to-full"); if(tf) tf.onclick=()=>{keepStep=true; location.hash="#"+C.wiz; begin("full")};
 }
 function matrixSVG(x,y){
   const C=cfg(), W=420,H=420,p=48,s=(W-p-16)/4, X=v=>p+(v-1)*s, Y=v=>H-p-(v-1)*s, Q=C.quad;
@@ -1077,7 +1077,7 @@ function matrixSVG(x,y){
   if(x&&y) g+=`<circle cx="${X(x)}" cy="${Y(y)}" r="13" fill="var(--signal)" opacity=".2"/><circle cx="${X(x)}" cy="${Y(y)}" r="7" fill="var(--signal)" stroke="var(--surface)" stroke-width="2"/>`;
   return g+"</svg>";
 }
-document.addEventListener("click",e=>{if(e.target.closest("[data-resume]")){e.preventDefault(); location.hash="#"+cfg().wiz; begin(S().mode)}});
+document.addEventListener("click",e=>{if(e.target.closest("[data-resume]")){e.preventDefault(); keepStep=true; location.hash="#"+cfg().wiz; begin(S().mode)}});
 
 /* ---------- theme ---------- */
 const root=document.documentElement,tb=$("#theme");
@@ -1087,7 +1087,7 @@ try{const s=localStorage.getItem("theme");if(s)root.dataset.theme=s}catch(e){}
 tb.addEventListener("click",()=>{root.dataset.theme=cur()==="dark"?"light":"dark";try{localStorage.setItem("theme",root.dataset.theme)}catch(e){}tlabel();if(VIEW.view==="res")renderResults()});
 
 /* ---------- routing ---------- */
-let VIEW={view:"home",as:null},lastView="";
+let VIEW={view:"home",as:null},lastView="",lastAs=null,keepStep=false;
 function parseHash(){const h=(location.hash||"#home").slice(1);
   for(const k in AS){if(h===AS[k].wiz) return {view:"wiz",as:k}; if(h===AS[k].res) return {view:"res",as:k}}
   return {view:"home",as:null}}
@@ -1097,10 +1097,10 @@ function route(){
   ["home","wiz","res"].forEach(k=>$("#view-"+k).hidden=k!==VIEW.view);
   document.body.classList.toggle("is-home",VIEW.view==="home");
   const nav=document.querySelector('[data-nav="home"]'); if(VIEW.view==="home") nav.setAttribute("aria-current","page"); else nav.removeAttribute("aria-current");
-  if(VIEW.view==="wiz"){ if(lastView==="home") S().i=0; renderStep(); }
+  if(VIEW.view==="wiz"){ if(!keepStep&&(lastView!=="wiz"||VIEW.as!==lastAs)) S().i=0; keepStep=false; renderStep(); }
   if(VIEW.view==="res") renderResults();
   setTitle(); if(VIEW.view!=="wiz") window.scrollTo(0,0);
-  lastView=VIEW.view; netRun(true);
+  lastView=VIEW.view; lastAs=VIEW.as; netRun(true);
 }
 
 /* ---------- apply language ---------- */
