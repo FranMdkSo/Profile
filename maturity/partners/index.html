@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Partnership assessment — Fran Mondaca</title>
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,500&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F2EC;--surface:#FFFFFF;--ink:#1C2430;--muted:#5E6673;--rule:#DDD7CC;--signal:#0E7C6B;--signal-soft:#DDEFEA;--warm:#A8572A;--warm-soft:#F6E6DA;--amber:#9A6A00;--amber-soft:#F7ECD2;
+  --display:"Fraunces",Georgia,serif;--body:"Source Sans 3",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace}
+:root[data-theme="dark"]{--paper:#11161D;--surface:#19202A;--ink:#ECE8E1;--muted:#A3AAB5;--rule:#2C3542;--signal:#4CC7B0;--signal-soft:#16332E;--warm:#E39A6B;--warm-soft:#3A2A1E;--amber:#E2B65A;--amber-soft:#3A2F14}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#11161D;--surface:#19202A;--ink:#ECE8E1;--muted:#A3AAB5;--rule:#2C3542;--signal:#4CC7B0;--signal-soft:#16332E;--warm:#E39A6B;--warm-soft:#3A2A1E;--amber:#E2B65A;--amber-soft:#3A2F14}}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--signal)}
+button{font:inherit;color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.ambient{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.ambient i{position:absolute;width:60vw;height:60vw;border-radius:50%;filter:blur(90px);opacity:.5}
+.ambient i:first-child{background:#BFE3DA;left:-20vw;top:-25vw}
+.ambient i:last-child{background:#F1D9C4;right:-22vw;bottom:-28vw}
+:root[data-theme="dark"] .ambient i{opacity:.12}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ambient i{opacity:.12}}
+.topbar{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--display);font-weight:500;font-size:19px}
+.brand i{font-style:normal;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-size:13px;font-weight:700}
+.tools{display:flex;align-items:center;gap:14px}
+.navlink{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+.navlink:hover{color:var(--signal)}
+.switch{display:flex;border:1px solid var(--rule);border-radius:999px;padding:3px;background:var(--surface)}
+.switch button{border:0;background:transparent;border-radius:999px;padding:4px 10px;font:500 12.5px var(--mono);cursor:pointer;color:var(--muted)}
+.switch button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.theme{border:1px solid var(--rule);background:var(--surface);border-radius:50%;width:34px;height:34px;cursor:pointer}
+main{position:relative;z-index:1;padding:40px 0 70px}
+.label{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.label .dot{width:8px;height:8px;border-radius:50%;background:var(--signal);display:inline-block}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,5vw,52px);line-height:1.05;margin:0 0 14px;letter-spacing:-.01em}
+h1 em{font-style:italic;font-weight:500;color:var(--signal)}
+h2{font-family:var(--display);font-weight:500;font-size:26px;margin:0 0 6px}
+h3{font-family:var(--display);font-weight:500;font-size:21px;margin:34px 0 12px}
+.lead{font-size:19px;color:var(--muted);max-width:62ch;margin:0 0 22px}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:18px;padding:22px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:11px 20px;font-weight:600;font-size:15.5px;border:1px solid var(--rule);background:var(--surface);color:var(--ink);cursor:pointer;text-decoration:none}
+.btn:hover{border-color:var(--signal)}
+.btn.p{background:var(--signal);border-color:var(--signal);color:var(--paper)}
+.btn.p:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent}
+.row-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:26px 0}
+.steps .card b{display:block;font-family:var(--display);font-weight:500;font-size:19px;margin-bottom:4px}
+.steps .card span{font-family:var(--mono);font-size:12px;color:var(--signal)}
+.steps .card p{margin:4px 0 0;color:var(--muted);font-size:15px}
+.fams{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0;padding:0;list-style:none}
+.fams li{font-size:13.5px;padding:5px 12px;border-radius:999px;border:1px solid var(--rule);background:var(--surface);color:var(--muted)}
+/* progress */
+.prog{display:flex;gap:6px;margin:0 0 22px}
+.prog i{flex:1;height:5px;border-radius:9px;background:var(--rule)}
+.prog i.on{background:var(--signal)}
+.prog i.now{background:color-mix(in srgb,var(--signal) 45%,var(--rule))}
+/* batch screen */
+.cats{display:grid;gap:10px;margin-top:18px}
+.cat{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:14px 16px;transition:border-color .2s}
+.cat.on{border-color:var(--signal);box-shadow:0 0 0 1px var(--signal) inset}
+.cat label.top{display:flex;gap:12px;align-items:flex-start;cursor:pointer}
+.cat input[type=checkbox]{width:20px;height:20px;accent-color:var(--signal);margin-top:3px;flex-shrink:0}
+.cat b{display:block;font-weight:600}
+.cat small{display:block;color:var(--muted);font-size:14px}
+.cat .names{margin:10px 0 0 32px;display:none}
+.cat.on .names{display:block}
+.cat .names input{width:100%;border:1px solid var(--rule);border-radius:10px;padding:9px 12px;background:var(--paper);color:var(--ink);font:inherit;font-size:15px}
+.cat .names small{margin-top:4px;font-size:12.5px}
+.more{margin-top:12px;background:none;border:0;color:var(--signal);font-weight:600;cursor:pointer;padding:6px 0}
+.other{margin-top:16px}
+.other input{border:1px solid var(--rule);border-radius:10px;padding:9px 12px;background:var(--surface);color:var(--ink);font:inherit;font-size:15px}
+.other .pair{display:grid;grid-template-columns:1fr 1.4fr;gap:8px;margin-top:6px}
+.nav{display:flex;justify-content:space-between;align-items:center;margin-top:26px;gap:10px;flex-wrap:wrap}
+.hint{font-size:14px;color:var(--muted)}
+/* rating */
+.q{margin:18px 0 0}
+.q p{margin:0 0 8px;font-weight:600}
+.q p small{display:block;font-weight:400;color:var(--muted);font-size:14px}
+.scale{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.scale button{border:1px solid var(--rule);background:var(--surface);border-radius:10px;padding:9px 4px;cursor:pointer;font-weight:600}
+.scale button:hover{border-color:var(--signal)}
+.scale button[aria-pressed="true"]{background:var(--signal);border-color:var(--signal);color:var(--paper)}
+.ends{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin-top:4px}
+.axis{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--signal);margin:26px 0 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chips button{border:1px solid var(--rule);background:var(--surface);border-radius:999px;padding:6px 13px;cursor:pointer;font-size:14px}
+.chips button[aria-pressed="true"]{background:var(--signal-soft);border-color:var(--signal);color:var(--signal);font-weight:600}
+.pcats{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 0}
+.pcats span{font-size:12.5px;padding:3px 9px;border-radius:999px;background:var(--signal-soft);color:var(--signal)}
+.renew{margin-top:8px;border:1px solid var(--rule);border-radius:10px;padding:8px 12px;background:var(--surface);color:var(--ink);font:inherit}
+/* results */
+.kp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:22px 0 6px}
+.kp div{background:var(--surface);border:1px solid var(--rule);border-radius:16px;padding:16px}
+.kp b{display:block;font-family:var(--display);font-size:32px;font-weight:500;color:var(--signal);line-height:1.1}
+.kp span{font-size:14px;color:var(--muted)}
+.two{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:16px;margin-top:16px}
+.quad svg{width:100%;height:auto;display:block}
+.quad circle{cursor:pointer}
+.acts .grp{margin:0 0 14px}
+.acts .grp b{display:block;font-size:15.5px}
+.acts .grp p{margin:2px 0 4px;font-size:14.5px;color:var(--muted)}
+.acts .grp .who{font-size:14px}
+.acts .tag{display:inline-block;font-family:var(--mono);font-size:11px;padding:2px 7px;border-radius:6px;background:var(--amber-soft);color:var(--amber);margin-left:4px}
+.fam{display:grid;grid-template-columns:200px 1fr 56px;gap:12px;align-items:center;margin:8px 0;cursor:pointer;background:none;border:0;width:100%;text-align:left;padding:4px 0}
+.fam:hover span:first-child{color:var(--signal)}
+.track{height:10px;border-radius:99px;background:var(--rule);overflow:hidden}
+.track i{display:block;height:100%;background:var(--signal);border-radius:99px}
+.fam em{font-style:normal;font-family:var(--mono);font-size:12.5px;color:var(--muted);text-align:right}
+.famd{margin:0 0 10px 0;padding:10px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--rule);font-size:14.5px}
+.famd ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 16px}
+.famd li span{color:var(--muted)}
+.famd li.gap{color:var(--warm)}
+.al{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:12px;font-size:15px;line-height:1.45;margin:0 0 8px}
+.al.g{background:var(--amber-soft)} .al.d{background:var(--warm-soft)} .al.ok{background:var(--signal-soft)}
+.al b{font-weight:600}
+.dchips{display:flex;flex-wrap:wrap;gap:8px}
+.dchips span{font-size:14px;padding:5px 12px;border-radius:999px;border:1px solid var(--rule);color:var(--muted)}
+.dchips span.on{background:var(--signal-soft);color:var(--signal);border-color:transparent;font-weight:600}
+.copy{margin-top:40px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+#toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,12px);background:var(--ink);color:var(--paper);font:600 14px var(--body);padding:10px 18px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:50}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+@media (max-width:820px){.steps,.kp{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:1fr}.fam{grid-template-columns:130px 1fr 48px}.famd ul{grid-template-columns:1fr}.navlink.hide-m{display:none}}
+@media (prefers-reduced-motion:no-preference){.fade{animation:fade .35s ease-out}@keyframes fade{from{opacity:0;transform:translateY(6px)}}}
+</style>
+</head>
+<body>
+<div class="ambient" aria-hidden="true"><i></i><i></i></div>
+<div class="topbar"><div class="wrap">
+  <a class="brand" href="../../" aria-label="Fran Mondaca"><i>FM</i><span>Fran Mondaca</span></a>
+  <nav class="tools" aria-label="Main">
+    <a class="navlink hide-m" id="to-assess" href="../">Assessments</a>
+    <a class="navlink hide-m" id="to-profile" href="../../#profile">Profile</a>
+    <div class="switch" role="group" aria-label="Language">
+      <button type="button" data-lang-btn="en" lang="en">EN</button><button type="button" data-lang-btn="es" lang="es">ES</button><button type="button" data-lang-btn="ca" lang="ca">CA</button>
+    </div>
+    <button class="theme" id="theme" type="button" aria-label="Light or dark mode">☾</button>
+  </nav>
+</div></div>
+<main class="wrap" id="app" aria-live="polite"></main>
+<div id="toast" role="status"></div>
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+/* ---------- taxonomy: 8 families, 50 categories. First 4 of each family are the key ones (shown first, used for gaps) ---------- */
+const FAM=[
+ {id:"adv",n:{en:"Learning Strategy & Advisory",es:"Estrategia y asesoría de aprendizaje",ca:"Estratègia i assessorament d'aprenentatge"},c:[
+  ["adv1",{en:["Learning consultancies","Strategy, operating model, L&D transformation"],es:["Consultoras de aprendizaje","Estrategia, modelo operativo, transformación de L&D"],ca:["Consultores d'aprenentatge","Estratègia, model operatiu, transformació de L&D"]}],
+  ["adv2",{en:["Needs analysis & capability frameworks","Skills architecture, competency models, role profiles"],es:["Análisis de necesidades y marcos de capacidades","Arquitectura de skills, modelos de competencias, perfiles de rol"],ca:["Anàlisi de necessitats i marcs de capacitats","Arquitectura de competències, models competencials, perfils de rol"]}],
+  ["adv3",{en:["OD & change advisory","Organisational design, culture, change management"],es:["Asesoría de desarrollo organizativo y cambio","Diseño organizativo, cultura, gestión del cambio"],ca:["Assessorament de desenvolupament organitzatiu i canvi","Disseny organitzatiu, cultura, gestió del canvi"]}],
+  ["adv4",{en:["Workforce planning & skills advisory","Future skills, strategic workforce plans"],es:["Planificación de plantillas y asesoría de skills","Skills de futuro, planes estratégicos de plantilla"],ca:["Planificació de plantilles i assessorament de competències","Competències de futur, plans estratègics de plantilla"]}],
+  ["adv5",{en:["Research & benchmarking","Market studies, maturity benchmarks, industry analysts"],es:["Investigación y benchmarking","Estudios de mercado, benchmarks de madurez, analistas"],ca:["Recerca i benchmarking","Estudis de mercat, benchmarks de maduresa, analistes"]}]]},
+ {id:"cre",n:{en:"Learning Creation",es:"Creación de aprendizaje",ca:"Creació d'aprenentatge"},c:[
+  ["cre1",{en:["Instructional design agencies","Custom programme and journey design"],es:["Agencias de diseño instruccional","Diseño de programas e itinerarios a medida"],ca:["Agències de disseny instruccional","Disseny de programes i itineraris a mida"]}],
+  ["cre2",{en:["Content production","Video, e-learning, podcasts, simulations"],es:["Producción de contenidos","Vídeo, e-learning, pódcast, simulaciones"],ca:["Producció de continguts","Vídeo, e-learning, pòdcasts, simulacions"]}],
+  ["cre3",{en:["Localisation & translation","Language versions, cultural adaptation"],es:["Localización y traducción","Versiones de idioma, adaptación cultural"],ca:["Localització i traducció","Versions d'idioma, adaptació cultural"]}],
+  ["cre4",{en:["AI-assisted content creation","Generative AI tools and studios for content"],es:["Creación de contenidos con IA","Herramientas y estudios de IA generativa"],ca:["Creació de continguts amb IA","Eines i estudis d'IA generativa"]}],
+  ["cre5",{en:["Immersive learning","VR/AR, serious games, gamification"],es:["Aprendizaje inmersivo","RV/RA, juegos serios, gamificación"],ca:["Aprenentatge immersiu","RV/RA, jocs seriosos, gamificació"]}],
+  ["cre6",{en:["Accessibility","Inclusive design, captions, accessibility standards"],es:["Accesibilidad","Diseño inclusivo, subtítulos, estándares de accesibilidad"],ca:["Accessibilitat","Disseny inclusiu, subtítols, estàndards d'accessibilitat"]}]]},
+ {id:"con",n:{en:"Learning Content",es:"Contenidos de aprendizaje",ca:"Continguts d'aprenentatge"},c:[
+  ["con1",{en:["Off-the-shelf libraries","Generic skills catalogues"],es:["Bibliotecas de contenidos","Catálogos de skills genéricas"],ca:["Biblioteques de continguts","Catàlegs de competències genèriques"]}],
+  ["con2",{en:["Technical & certification providers","IT, engineering, professional certifications"],es:["Proveedores técnicos y de certificación","IT, ingeniería, certificaciones profesionales"],ca:["Proveïdors tècnics i de certificació","IT, enginyeria, certificacions professionals"]}],
+  ["con3",{en:["Compliance & mandatory content","Regulatory, safety, ethics, data protection"],es:["Contenidos de compliance y obligatorios","Regulatorio, seguridad, ética, protección de datos"],ca:["Continguts de compliment i obligatoris","Regulatori, seguretat, ètica, protecció de dades"]}],
+  ["con4",{en:["Language learning","Business languages, communication"],es:["Idiomas","Idiomas de negocio, comunicación"],ca:["Idiomes","Idiomes de negoci, comunicació"]}],
+  ["con5",{en:["Content curation","Curated feeds, newsletters, knowledge aggregators"],es:["Curación de contenidos","Feeds curados, newsletters, agregadores"],ca:["Curació de continguts","Feeds curats, butlletins, agregadors"]}],
+  ["con6",{en:["Book & microlearning summaries","Book summaries, short-format insights"],es:["Resúmenes de libros y microaprendizaje","Resúmenes de libros, ideas en formato corto"],ca:["Resums de llibres i microaprenentatge","Resums de llibres, idees en format curt"]}]]},
+ {id:"del",n:{en:"Learning Delivery & Experiences",es:"Impartición y experiencias de aprendizaje",ca:"Impartició i experiències d'aprenentatge"},c:[
+  ["del1",{en:["Business schools & executive education","Open and custom executive programmes"],es:["Escuelas de negocio y formación ejecutiva","Programas ejecutivos abiertos y a medida"],ca:["Escoles de negoci i formació executiva","Programes executius oberts i a mida"]}],
+  ["del2",{en:["Facilitators & trainers","Freelance and boutique delivery"],es:["Facilitadores y formadores","Impartición freelance y boutique"],ca:["Facilitadors i formadors","Impartició freelance i boutique"]}],
+  ["del3",{en:["Coaching","Executive, team and digital coaching"],es:["Coaching","Coaching ejecutivo, de equipos y digital"],ca:["Coaching","Coaching executiu, d'equips i digital"]}],
+  ["del4",{en:["Academies & bootcamps","Intensive programmes (digital, data, AI)"],es:["Academias y bootcamps","Programas intensivos (digital, datos, IA)"],ca:["Acadèmies i bootcamps","Programes intensius (digital, dades, IA)"]}],
+  ["del5",{en:["Universities & academic partnerships","Degrees, research collaboration, chairs"],es:["Universidades y alianzas académicas","Grados, colaboración en investigación, cátedras"],ca:["Universitats i aliances acadèmiques","Graus, col·laboració en recerca, càtedres"]}],
+  ["del6",{en:["Mentoring & peer learning","Mentoring programmes and platforms, communities"],es:["Mentoring y aprendizaje entre pares","Programas y plataformas de mentoring, comunidades"],ca:["Mentoria i aprenentatge entre iguals","Programes i plataformes de mentoria, comunitats"]}],
+  ["del7",{en:["Events, venues & logistics","Venues, travel, event management"],es:["Eventos, espacios y logística","Espacios, viajes, gestión de eventos"],ca:["Esdeveniments, espais i logística","Espais, viatges, gestió d'esdeveniments"]}]]},
+ {id:"tal",n:{en:"Talent & Workforce Programmes",es:"Programas de talento y plantilla",ca:"Programes de talent i plantilla"},c:[
+  ["tal1",{en:["Leadership development","Leadership journeys, high-potential programmes"],es:["Desarrollo de liderazgo","Itinerarios de liderazgo, programas de alto potencial"],ca:["Desenvolupament del lideratge","Itineraris de lideratge, programes d'alt potencial"]}],
+  ["tal2",{en:["Onboarding & induction","New-joiner and manager onboarding"],es:["Onboarding e incorporación","Incorporación de nuevas personas y managers"],ca:["Onboarding i incorporació","Incorporació de noves persones i managers"]}],
+  ["tal3",{en:["Sales & customer enablement","Sales methods, service excellence, product training"],es:["Capacitación comercial y de cliente","Métodos de venta, excelencia en servicio, producto"],ca:["Capacitació comercial i de client","Mètodes de venda, excel·lència en servei, producte"]}],
+  ["tal4",{en:["Early careers","Graduates, internships, apprenticeships"],es:["Primeros empleos","Graduados, prácticas, aprendices"],ca:["Primeres feines","Graduats, pràctiques, aprenents"]}],
+  ["tal5",{en:["DEI & inclusive leadership","Inclusion, bias, belonging"],es:["Diversidad e inclusión","Inclusión, sesgos, pertenencia"],ca:["Diversitat i inclusió","Inclusió, biaixos, pertinença"]}],
+  ["tal6",{en:["Wellbeing & resilience","Mental health, energy, resilience"],es:["Bienestar y resiliencia","Salud mental, energía, resiliencia"],ca:["Benestar i resiliència","Salut mental, energia, resiliència"]}],
+  ["tal7",{en:["Career transition & outplacement","Mobility, reskilling, outplacement"],es:["Transición de carrera y outplacement","Movilidad, recualificación, outplacement"],ca:["Transició de carrera i outplacement","Mobilitat, requalificació, outplacement"]}]]},
+ {id:"tec",n:{en:"Learning Technologies",es:"Tecnologías de aprendizaje",ca:"Tecnologies d'aprenentatge"},c:[
+  ["tec1",{en:["LMS","Administration, compliance, tracking"],es:["LMS","Administración, compliance, seguimiento"],ca:["LMS","Administració, compliment, seguiment"]}],
+  ["tec2",{en:["LXP & learning platforms","Experience, recommendations, curation"],es:["LXP y plataformas de aprendizaje","Experiencia, recomendaciones, curación"],ca:["LXP i plataformes d'aprenentatge","Experiència, recomanacions, curació"]}],
+  ["tec3",{en:["Skills & talent intelligence platforms","Skills inference, talent marketplaces"],es:["Plataformas de inteligencia de skills y talento","Inferencia de skills, marketplaces de talento"],ca:["Plataformes d'intel·ligència de competències i talent","Inferència de competències, marketplaces de talent"]}],
+  ["tec4",{en:["AI tutors & assistants","Learning agents and copilots"],es:["Tutores y asistentes de IA","Agentes de aprendizaje y copilotos"],ca:["Tutors i assistents d'IA","Agents d'aprenentatge i copilots"]}],
+  ["tec5",{en:["Authoring tools","Building courses in-house"],es:["Herramientas de autor","Crear cursos internamente"],ca:["Eines d'autor","Crear cursos internament"]}],
+  ["tec6",{en:["Virtual classroom & collaboration","Live online learning"],es:["Aula virtual y colaboración","Aprendizaje online en directo"],ca:["Aula virtual i col·laboració","Aprenentatge en línia en directe"]}],
+  ["tec7",{en:["Knowledge management","Knowledge bases, internal search"],es:["Gestión del conocimiento","Bases de conocimiento, búsqueda interna"],ca:["Gestió del coneixement","Bases de coneixement, cerca interna"]}],
+  ["tec8",{en:["Mobile & messaging learning","Learning through apps, WhatsApp, Teams"],es:["Aprendizaje móvil y por mensajería","Aprendizaje en apps, WhatsApp, Teams"],ca:["Aprenentatge mòbil i per missatgeria","Aprenentatge en apps, WhatsApp, Teams"]}]]},
+ {id:"ass",n:{en:"Assessment & Credentialing",es:"Evaluación y credenciales",ca:"Avaluació i credencials"},c:[
+  ["ass1",{en:["Psychometrics & assessment centres","Selection, potential, development"],es:["Psicometría y assessment centres","Selección, potencial, desarrollo"],ca:["Psicometria i assessment centres","Selecció, potencial, desenvolupament"]}],
+  ["ass2",{en:["360 & feedback tools","Multi-rater feedback, pulse surveys"],es:["Herramientas 360 y de feedback","Feedback multifuente, encuestas pulso"],ca:["Eines 360 i de feedback","Feedback multifont, enquestes pols"]}],
+  ["ass3",{en:["Skills assessments","Technical and digital skills tests"],es:["Evaluación de skills","Pruebas de skills técnicas y digitales"],ca:["Avaluació de competències","Proves de competències tècniques i digitals"]}],
+  ["ass4",{en:["Certifications & digital badges","Credentials, micro-credentials"],es:["Certificaciones e insignias digitales","Credenciales, microcredenciales"],ca:["Certificacions i insígnies digitals","Credencials, microcredencials"]}],
+  ["ass5",{en:["Accreditation bodies","Quality accreditation for programmes"],es:["Organismos de acreditación","Acreditación de calidad de programas"],ca:["Organismes d'acreditació","Acreditació de qualitat de programes"]}]]},
+ {id:"ops",n:{en:"Learning Operations & Measurement",es:"Operaciones y medición del aprendizaje",ca:"Operacions i mesura de l'aprenentatge"},c:[
+  ["ops1",{en:["Learning analytics & reporting","Dashboards, data integration"],es:["Analítica y reporting de aprendizaje","Cuadros de mando, integración de datos"],ca:["Analítica i informes d'aprenentatge","Quadres de comandament, integració de dades"]}],
+  ["ops2",{en:["Impact evaluation","ROI, transfer, business-impact studies"],es:["Evaluación de impacto","ROI, transferencia, estudios de impacto"],ca:["Avaluació d'impacte","ROI, transferència, estudis d'impacte"]}],
+  ["ops3",{en:["Managed learning services","Outsourced administration and operations"],es:["Servicios gestionados de aprendizaje","Administración y operaciones externalizadas"],ca:["Serveis gestionats d'aprenentatge","Administració i operacions externalitzades"]}],
+  ["ops4",{en:["Data privacy & security assurance","Supplier risk, data protection compliance"],es:["Privacidad y seguridad de datos","Riesgo de proveedor, cumplimiento de protección de datos"],ca:["Privacitat i seguretat de dades","Risc de proveïdor, compliment de protecció de dades"]}],
+  ["ops5",{en:["Administration & scheduling","Enrolment, logistics, calendars"],es:["Administración y planificación","Inscripciones, logística, calendarios"],ca:["Administració i planificació","Inscripcions, logística, calendaris"]}],
+  ["ops6",{en:["Procurement & marketplaces","Supplier marketplaces, purchasing platforms"],es:["Compras y marketplaces","Marketplaces de proveedores, plataformas de compra"],ca:["Compres i marketplaces","Marketplaces de proveïdors, plataformes de compra"]}]]}
+];
+const KEYN=4;
+const CAT={}; FAM.forEach(f=>f.c.forEach(([id,t],i)=>CAT[id]={id,fam:f.id,key:i<KEYN,t}));
+const DOM=[["lead",{en:"Leadership",es:"Liderazgo",ca:"Lideratge"}],["dig",{en:"Digital, data & AI",es:"Digital, datos e IA",ca:"Digital, dades i IA"}],["fun",{en:"Functional & technical",es:"Funcional y técnico",ca:"Funcional i tècnic"}],["sal",{en:"Sales & customer",es:"Ventas y cliente",ca:"Vendes i client"}],["cmp",{en:"Compliance & ethics",es:"Compliance y ética",ca:"Compliment i ètica"}],["wel",{en:"Wellbeing",es:"Bienestar",ca:"Benestar"}],["lan",{en:"Languages & communication",es:"Idiomas y comunicación",ca:"Idiomes i comunicació"}],["esg",{en:"Sustainability (ESG)",es:"Sostenibilidad (ESG)",ca:"Sostenibilitat (ESG)"}]];
+const QS=[
+ ["v1","v",{en:["Business impact","Their work shows a visible impact on business results or on how people work."],es:["Impacto en el negocio","Su trabajo tiene un impacto visible en los resultados o en cómo trabaja la gente."],ca:["Impacte en el negoci","La seva feina té un impacte visible en els resultats o en com treballa la gent."]}],
+ ["v2","v",{en:["Learner experience","Learners rate the experience highly and would recommend it."],es:["Experiencia del participante","Los participantes valoran muy bien la experiencia y la recomendarían."],ca:["Experiència del participant","Els participants valoren molt bé l'experiència i la recomanarien."]}],
+ ["v3","v",{en:["Real usage","What we pay for is actually used: licences, places and content."],es:["Uso real","Lo que pagamos se usa de verdad: licencias, plazas y contenidos."],ca:["Ús real","El que paguem es fa servir de debò: llicències, places i continguts."]}],
+ ["v4","v",{en:["Cost to value","The total cost is fair for the value we get."],es:["Coste frente a valor","El coste total es justo para el valor que obtenemos."],ca:["Cost davant valor","El cost total és just per al valor que obtenim."]}],
+ ["s1","s",{en:["Alignment","They are aligned with our capability priorities and skills framework."],es:["Alineación","Están alineados con nuestras prioridades de capacidades y nuestro marco de skills."],ca:["Alineació","Estan alineats amb les nostres prioritats de capacitats i el nostre marc de competències."]}],
+ ["s2","s",{en:["Innovation & AI","They bring innovation and a credible AI roadmap."],es:["Innovación e IA","Aportan innovación y una hoja de ruta de IA creíble."],ca:["Innovació i IA","Aporten innovació i un full de ruta d'IA creïble."]}],
+ ["s3","s",{en:["Scale","They can scale across our countries, languages and regions."],es:["Escala","Pueden escalar en nuestros países, idiomas y regiones."],ca:["Escala","Poden escalar als nostres països, idiomes i regions."]}],
+ ["s4","s",{en:["Relationship & governance","The relationship is well governed: data, service levels and collaboration."],es:["Relación y gobierno","La relación está bien gobernada: datos, niveles de servicio y colaboración."],ca:["Relació i governança","La relació està ben governada: dades, nivells de servei i col·laboració."]}]
+];
+const QUAD={tr:{en:["Strategic partners","Invest and co-create: joint roadmap, multi-year agreements, shared impact measures."],es:["Socios estratégicos","Invertir y co-crear: hoja de ruta conjunta, acuerdos plurianuales, medidas de impacto compartidas."],ca:["Socis estratègics","Invertir i cocrear: full de ruta conjunt, acords plurianuals, mesures d'impacte compartides."]},
+ br:{en:["Reliable suppliers","Optimise cost and keep service levels; consolidate where possible."],es:["Proveedores fiables","Optimizar coste y mantener niveles de servicio; consolidar donde sea posible."],ca:["Proveïdors fiables","Optimitzar el cost i mantenir els nivells de servei; consolidar on sigui possible."]},
+ tl:{en:["Develop","Right fit, not yet delivering: an improvement plan with clear targets within six months."],es:["Desarrollar","Encajan, pero aún no rinden: plan de mejora con objetivos claros en seis meses."],ca:["Desenvolupar","Encaixen, però encara no rendeixen: pla de millora amb objectius clars en sis mesos."]},
+ bl:{en:["Review or exit","Decide at renewal: renegotiate, consolidate or exit."],es:["Revisar o salir","Decidir en la renovación: renegociar, consolidar o salir."],ca:["Revisar o sortir","Decidir a la renovació: renegociar, consolidar o sortir."]}};
+const UI={
+ en:{assess:"Assessments",profile:"Profile",tag:"Partnership assessment",h1:"Map your learning partners. <em>Decide with evidence.</em>",lead:"Go through eight families of learning partners, from strategy to technology, rate each partner on value delivered and strategic fit, and see your whole partner landscape on one map: who to invest in, who to develop and what to review at renewal.",
+  s1t:"1 · Map",s1:"Tick the categories you buy and name your partners, family by family.",s2t:"2 · Rate",s2:"Eight quick questions per partner: value delivered and strategic fit.",s3t:"3 · Decide",s3:"Quadrant, gaps, duplications and actions for each partner.",
+  families:"8 families · 50 categories",start:"Start the assessment →",resume:"Continue where you left off →",example:"See an example result",reset:"Start again",private:"Your answers stay in this browser. Nothing is sent anywhere.",
+  family:"Family",of:"of",names:"Partner name(s), separated by commas",namesPh:"e.g. Partner A, Partner B",showMore:n=>"Show "+n+" more categories",showLess:"Show fewer",other:"Other in this family",otherCat:"Category",otherNames:"Partner name(s)",back:"← Back",next:"Next →",toRate:"Rate your partners →",
+  noPartners:"Add at least one partner in any family to continue.",rate:"Rate",partner:"Partner",value:"Value delivered",fit:"Strategic fit",domains:"Skill domains it covers",renewal:"Next renewal date (optional)",covers:"Covers",ends:["Not at all","Fully"],seeRes:"See results →",
+  needAll:"Rate all eight questions to continue.",resTag:"Results · Partnership assessment",resH1:"Your learning partner <em>landscape</em>",kAssessed:"partners assessed",kCovered:"categories covered",kGaps:"gaps in key categories",kDup:"duplications",
+  quad:"Where your partners sit",acts:"What to do with each group",renewSoon:"renews in ≤ 90 days",coverage:"Coverage by family",coverHint:"Click a family to see its categories.",gapW:"no partner",attention:"What needs your attention",gapA:(c,f)=>"<b>Gaps in "+f+":</b> no partner for "+c+".",dupA:(c,n,p)=>"<b>Duplication:</b> "+n+" partners cover "+c+" ("+p+"). Consolidating could cut cost and complexity.",riskA:(c,p)=>"<b>Risk:</b> "+c+" relies only on "+p+", a partner to review or exit.",allGood:"No gaps, duplications or risks in key categories. Keep reviewing at every renewal.",
+  domTitle:"Skill domains covered",copyLink:"Copy link to results",csv:"Download as CSV",edit:"Edit partners",copied:"Link copied",sharedView:"You're viewing shared results.",makeOwn:"Start your own assessment",
+  xVal:"Value delivered →",yFit:"Strategic fit →",none:"None",copy:"© 2026 Fran Mondaca · All rights reserved. Content and design may not be reproduced without permission.",csvH:["Partner","Value","Strategic fit","Quadrant","Categories","Skill domains","Next renewal"]},
+ es:{assess:"Evaluaciones",profile:"Perfil",tag:"Evaluación de partners",h1:"Mapea tus partners de aprendizaje. <em>Decide con evidencia.</em>",lead:"Recorre ocho familias de partners de aprendizaje, de la estrategia a la tecnología, valora cada partner por el valor que aporta y su encaje estratégico, y ve todo tu ecosistema en un solo mapa: en quién invertir, a quién desarrollar y qué revisar en la renovación.",
+  s1t:"1 · Mapear",s1:"Marca las categorías que compras y nombra a tus partners, familia por familia.",s2t:"2 · Valorar",s2:"Ocho preguntas rápidas por partner: valor aportado y encaje estratégico.",s3t:"3 · Decidir",s3:"Cuadrante, brechas, duplicidades y acciones para cada partner.",
+  families:"8 familias · 50 categorías",start:"Empezar la evaluación →",resume:"Continuar donde lo dejaste →",example:"Ver un resultado de ejemplo",reset:"Empezar de nuevo",private:"Tus respuestas se quedan en este navegador. No se envía nada.",
+  family:"Familia",of:"de",names:"Nombre(s) de partner, separados por comas",namesPh:"p. ej. Partner A, Partner B",showMore:n=>"Ver "+n+" categorías más",showLess:"Ver menos",other:"Otros en esta familia",otherCat:"Categoría",otherNames:"Nombre(s) de partner",back:"← Atrás",next:"Siguiente →",toRate:"Valorar tus partners →",
+  noPartners:"Añade al menos un partner en alguna familia para continuar.",rate:"Valorar",partner:"Partner",value:"Valor aportado",fit:"Encaje estratégico",domains:"Dominios de skills que cubre",renewal:"Próxima renovación (opcional)",covers:"Cubre",ends:["Nada","Totalmente"],seeRes:"Ver resultados →",
+  needAll:"Valora las ocho preguntas para continuar.",resTag:"Resultados · Evaluación de partners",resH1:"Tu ecosistema de <em>partners de aprendizaje</em>",kAssessed:"partners evaluados",kCovered:"categorías cubiertas",kGaps:"brechas en categorías clave",kDup:"duplicidades",
+  quad:"Dónde están tus partners",acts:"Qué hacer con cada grupo",renewSoon:"renueva en ≤ 90 días",coverage:"Cobertura por familia",coverHint:"Haz clic en una familia para ver sus categorías.",gapW:"sin partner",attention:"Lo que necesita tu atención",gapA:(c,f)=>"<b>Brechas en "+f+":</b> ningún partner para "+c+".",dupA:(c,n,p)=>"<b>Duplicidad:</b> "+n+" partners cubren "+c+" ("+p+"). Consolidar podría reducir coste y complejidad.",riskA:(c,p)=>"<b>Riesgo:</b> "+c+" depende solo de "+p+", un partner a revisar o dejar.",allGood:"Sin brechas, duplicidades ni riesgos en las categorías clave. Sigue revisando en cada renovación.",
+  domTitle:"Dominios de skills cubiertos",copyLink:"Copiar enlace a los resultados",csv:"Descargar CSV",edit:"Editar partners",copied:"Enlace copiado",sharedView:"Estás viendo resultados compartidos.",makeOwn:"Haz tu propia evaluación",
+  xVal:"Valor aportado →",yFit:"Encaje estratégico →",none:"Ninguno",copy:"© 2026 Fran Mondaca · Todos los derechos reservados. No se permite reproducir el contenido ni el diseño sin permiso.",csvH:["Partner","Valor","Encaje estratégico","Cuadrante","Categorías","Dominios de skills","Próxima renovación"]},
+ ca:{assess:"Avaluacions",profile:"Perfil",tag:"Avaluació de partners",h1:"Mapeja els teus partners d'aprenentatge. <em>Decideix amb evidència.</em>",lead:"Recorre vuit famílies de partners d'aprenentatge, de l'estratègia a la tecnologia, valora cada partner pel valor que aporta i l'encaix estratègic, i veu tot el teu ecosistema en un sol mapa: en qui invertir, a qui desenvolupar i què revisar a la renovació.",
+  s1t:"1 · Mapejar",s1:"Marca les categories que compres i anomena els teus partners, família per família.",s2t:"2 · Valorar",s2:"Vuit preguntes ràpides per partner: valor aportat i encaix estratègic.",s3t:"3 · Decidir",s3:"Quadrant, bretxes, duplicitats i accions per a cada partner.",
+  families:"8 famílies · 50 categories",start:"Començar l'avaluació →",resume:"Continuar on ho vas deixar →",example:"Veure un resultat d'exemple",reset:"Tornar a començar",private:"Les teves respostes es queden en aquest navegador. No s'envia res.",
+  family:"Família",of:"de",names:"Nom(s) de partner, separats per comes",namesPh:"p. ex. Partner A, Partner B",showMore:n=>"Veure "+n+" categories més",showLess:"Veure'n menys",other:"Altres en aquesta família",otherCat:"Categoria",otherNames:"Nom(s) de partner",back:"← Enrere",next:"Següent →",toRate:"Valorar els teus partners →",
+  noPartners:"Afegeix almenys un partner en alguna família per continuar.",rate:"Valorar",partner:"Partner",value:"Valor aportat",fit:"Encaix estratègic",domains:"Dominis de competències que cobreix",renewal:"Propera renovació (opcional)",covers:"Cobreix",ends:["Gens","Totalment"],seeRes:"Veure resultats →",
+  needAll:"Valora les vuit preguntes per continuar.",resTag:"Resultats · Avaluació de partners",resH1:"El teu ecosistema de <em>partners d'aprenentatge</em>",kAssessed:"partners avaluats",kCovered:"categories cobertes",kGaps:"bretxes en categories clau",kDup:"duplicitats",
+  quad:"On són els teus partners",acts:"Què fer amb cada grup",renewSoon:"renova en ≤ 90 dies",coverage:"Cobertura per família",coverHint:"Fes clic en una família per veure'n les categories.",gapW:"sense partner",attention:"El que necessita la teva atenció",gapA:(c,f)=>"<b>Bretxes a "+f+":</b> cap partner per a "+c+".",dupA:(c,n,p)=>"<b>Duplicitat:</b> "+n+" partners cobreixen "+c+" ("+p+"). Consolidar podria reduir cost i complexitat.",riskA:(c,p)=>"<b>Risc:</b> "+c+" depèn només de "+p+", un partner a revisar o deixar.",allGood:"Sense bretxes, duplicitats ni riscos en les categories clau. Continua revisant a cada renovació.",
+  domTitle:"Dominis de competències coberts",copyLink:"Copiar l'enllaç als resultats",csv:"Descarregar CSV",edit:"Editar partners",copied:"Enllaç copiat",sharedView:"Estàs veient resultats compartits.",makeOwn:"Fes la teva pròpia avaluació",
+  xVal:"Valor aportat →",yFit:"Encaix estratègic →",none:"Cap",copy:"© 2026 Fran Mondaca · Tots els drets reservats. No es permet reproduir el contingut ni el disseny sense permís.",csvH:["Partner","Valor","Encaix estratègic","Quadrant","Categories","Dominis de competències","Propera renovació"]}
+};
+/* ---------- state ---------- */
+let lang="en";
+try{const s=localStorage.getItem("lang"); if(UI[s]) lang=s}catch(e){}
+try{const q=(new URLSearchParams(location.search).get("lang")||"").slice(0,2); if(UI[q]){lang=q; localStorage.setItem("lang",q)}}catch(e){}
+const T=()=>UI[lang];
+const KEY="fm-partners-v1";
+let ST={sel:{},names:{},other:{},rat:{},dom:{},ren:{},open:{},b:0,p:0};
+let SHARED=null;
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.sel) ST=Object.assign(ST,s)}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(ST))}catch(e){}}
+const split=s=>String(s||"").split(",").map(x=>x.trim()).filter(Boolean);
+/* partners derived from the map: name -> categories (ids, or "o:<text>" for other) */
+function partners(src){
+  const S=src||ST, map=new Map();
+  const add=(nm,cat)=>{const k=nm.toLowerCase(); if(!map.has(k)) map.set(k,{key:k,name:nm,cats:[]}); const p=map.get(k); if(!p.cats.includes(cat)) p.cats.push(cat)};
+  Object.keys(S.sel).forEach(id=>{if(S.sel[id]) split(S.names[id]).forEach(n=>add(n,id))});
+  Object.keys(S.other||{}).forEach(f=>{const o=S.other[f]; if(o&&o.c&&o.n) split(o.n).forEach(n=>add(n,"o:"+f+":"+o.c))});
+  return [...map.values()];
+}
+const catName=id=>id.startsWith("o:")?id.split(":").slice(2).join(":"):CAT[id].t[lang][0];
+const avg=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:0;
+function scores(p,S){const r=(S||ST).rat[p.key]||{}; const v=QS.filter(q=>q[1]==="v").map(q=>r[q[0]]).filter(Boolean), s=QS.filter(q=>q[1]==="s").map(q=>r[q[0]]).filter(Boolean);
+  return {v:avg(v),s:avg(s),done:v.length===4&&s.length===4}}
+const quadOf=(v,s)=>s>=3?(v>=3?"tr":"tl"):(v>=3?"br":"bl");
+const f1=x=>(Math.round(x*10)/10).toFixed(1);
+/* ---------- render ---------- */
+const app=$("#app");
+function view(){const h=(location.hash||"#home").slice(1); return h}
+function render(){
+  const h=view(); document.documentElement.lang=lang==="en"?"en-GB":lang;
+  $("#to-assess").textContent=T().assess; $("#to-assess").href="../?lang="+lang; $("#to-profile").textContent=T().profile; $("#to-profile").href="../../?lang="+lang+"#profile";
+  document.querySelectorAll("[data-lang-btn]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.langBtn===lang?"true":"false"));
+  if(h.startsWith("map")) renderMap(+h.slice(3)||0);
+  else if(h.startsWith("rate")) renderRate(+h.slice(4)||0);
+  else if(h==="results") renderResults();
+  else renderHome();
+  document.title=T().tag+" — Fran Mondaca";
+}
+function renderHome(){
+  const t=T(), has=partners().length>0;
+  app.innerHTML=`<div class="fade"><p class="label"><i class="dot"></i>${t.tag}</p><h1>${t.h1}</h1><p class="lead">${t.lead}</p>
+  <div class="steps"><div class="card"><span>${t.s1t}</span><p>${t.s1}</p></div><div class="card"><span>${t.s2t}</span><p>${t.s2}</p></div><div class="card"><span>${t.s3t}</span><p>${t.s3}</p></div></div>
+  <p class="label">${t.families}</p><ul class="fams">${FAM.map(f=>`<li>${esc(f.n[lang])}</li>`).join("")}</ul>
+  <div class="row-btns"><a class="btn p" href="#map${has?ST.b:0}">${has?t.resume:t.start}</a><button class="btn" id="ex">${t.example}</button>${has?`<button class="btn ghost" id="rs">${t.reset}</button>`:""}</div>
+  <p class="hint" style="margin-top:14px">${t.private}</p><p class="copy">${t.copy}</p></div>`;
+  $("#ex").onclick=()=>{SHARED=EXAMPLE; location.hash="#results"; if(view()==="results") render()};
+  const rs=$("#rs"); if(rs) rs.onclick=()=>{ST={sel:{},names:{},other:{},rat:{},dom:{},ren:{},open:{},b:0,p:0}; save(); render()};
+}
+function progress(i,n){return `<div class="prog" aria-hidden="true">${Array.from({length:n},(_,k)=>`<i class="${k<i?"on":k===i?"now":""}"></i>`).join("")}</div>`}
+function renderMap(i){
+  SHARED=null; i=Math.max(0,Math.min(FAM.length-1,i)); ST.b=i; save();
+  const t=T(), f=FAM[i], open=!!ST.open[f.id];
+  const cats=f.c.map(([id],k)=>{const on=!!ST.sel[id], c=CAT[id].t[lang]; if(k>=KEYN&&!open&&!on) return "";
+    return `<div class="cat ${on?"on":""}" data-id="${id}"><label class="top"><input type="checkbox" ${on?"checked":""} data-cb="${id}"><span><b>${esc(c[0])}</b><small>${esc(c[1])}</small></span></label>
+      <div class="names"><input type="text" data-nm="${id}" value="${esc(ST.names[id]||"")}" placeholder="${esc(t.namesPh)}" aria-label="${esc(t.names)}"><small>${t.names}</small></div></div>`}).join("");
+  const hidden=f.c.slice(KEYN).filter(([id])=>!ST.sel[id]).length;
+  const o=ST.other[f.id]||{c:"",n:""};
+  app.innerHTML=`<div class="fade">${progress(i,FAM.length)}<p class="label">${t.family} ${i+1} ${t.of} ${FAM.length}</p><h2>${esc(f.n[lang])}</h2>
+   <div class="cats">${cats}</div>
+   ${hidden?`<button class="more" id="more">${open?t.showLess:t.showMore(hidden)}</button>`:(open?`<button class="more" id="more">${t.showLess}</button>`:"")}
+   <div class="other"><p class="label" style="margin:14px 0 0">${t.other}</p><div class="pair"><input id="oc" placeholder="${esc(t.otherCat)}" value="${esc(o.c)}"><input id="on" placeholder="${esc(t.otherNames)}" value="${esc(o.n)}"></div></div>
+   <div class="nav"><a class="btn ghost" href="${i?"#map"+(i-1):"#home"}">${t.back}</a><span class="hint" id="msg"></span>${i<FAM.length-1?`<a class="btn p" href="#map${i+1}">${t.next}</a>`:`<button class="btn p" id="go">${t.toRate}</button>`}</div></div>`;
+  app.querySelectorAll("[data-cb]").forEach(cb=>cb.onchange=()=>{ST.sel[cb.dataset.cb]=cb.checked; save(); const c=cb.closest(".cat"); c.classList.toggle("on",cb.checked); if(cb.checked) c.querySelector("[data-nm]").focus()});
+  app.querySelectorAll("[data-nm]").forEach(inp=>inp.oninput=()=>{ST.names[inp.dataset.nm]=inp.value; save()});
+  const oc=$("#oc"),on=$("#on"); const so=()=>{ST.other[f.id]={c:oc.value.trim(),n:on.value}; save()}; oc.oninput=so; on.oninput=so;
+  const m=$("#more"); if(m) m.onclick=()=>{ST.open[f.id]=!open; save(); renderMap(i)};
+  const go=$("#go"); if(go) go.onclick=()=>{if(!partners().length){$("#msg").textContent=t.noPartners; return} location.hash="#rate0"};
+}
+function renderRate(i){
+  SHARED=null; const t=T(), P=partners(); if(!P.length){location.hash="#map0"; return}
+  i=Math.max(0,Math.min(P.length-1,i)); const p=P[i]; ST.p=i; save();
+  const r=ST.rat[p.key]||(ST.rat[p.key]={}), d=ST.dom[p.key]||[];
+  const qhtml=ax=>QS.filter(q=>q[1]===ax).map(([id,,tx])=>`<div class="q"><p>${esc(tx[lang][0])}<small>${esc(tx[lang][1])}</small></p><div class="scale" role="group" aria-label="${esc(tx[lang][0])}">${[1,2,3,4,5].map(n=>`<button type="button" data-q="${id}" data-n="${n}" aria-pressed="${r[id]===n}">${n}</button>`).join("")}</div><div class="ends"><span>${t.ends[0]}</span><span>${t.ends[1]}</span></div></div>`).join("");
+  app.innerHTML=`<div class="fade">${progress(i,P.length)}<p class="label">${t.rate} · ${t.partner} ${i+1} ${t.of} ${P.length}</p><h2>${esc(p.name)}</h2>
+   <div class="pcats">${p.cats.map(c=>`<span>${esc(catName(c))}</span>`).join("")}</div>
+   <p class="axis">${t.value}</p>${qhtml("v")}<p class="axis">${t.fit}</p>${qhtml("s")}
+   <p class="axis">${t.domains}</p><div class="chips">${DOM.map(([id,n])=>`<button type="button" data-d="${id}" aria-pressed="${d.includes(id)}">${esc(n[lang])}</button>`).join("")}</div>
+   <p class="axis">${t.renewal}</p><input class="renew" type="date" id="ren" value="${esc(ST.ren[p.key]||"")}">
+   <div class="nav"><a class="btn ghost" href="${i?"#rate"+(i-1):"#map"+(FAM.length-1)}">${t.back}</a><span class="hint" id="msg"></span><button class="btn p" id="nx">${i<P.length-1?t.next:t.seeRes}</button></div></div>`;
+  app.querySelectorAll("[data-q]").forEach(b=>b.onclick=()=>{r[b.dataset.q]=+b.dataset.n; save(); b.parentNode.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b?"true":"false"))});
+  app.querySelectorAll("[data-d]").forEach(b=>b.onclick=()=>{const a=ST.dom[p.key]||(ST.dom[p.key]=[]); const k=a.indexOf(b.dataset.d); if(k<0) a.push(b.dataset.d); else a.splice(k,1); save(); b.setAttribute("aria-pressed",k<0?"true":"false")});
+  $("#ren").onchange=e=>{ST.ren[p.key]=e.target.value; save()};
+  $("#nx").onclick=()=>{if(!scores(p).done){$("#msg").textContent=t.needAll; return} location.hash=i<P.length-1?"#rate"+(i+1):"#results"};
+}
+function quadSVG(list,t){
+  const W=420,H=400,L=52,TP=16,S=330,X=v=>L+(v-1)/4*S,Y=s=>TP+(4-(s-1))/4*S;
+  const qn=k=>QUAD[k][lang][0];
+  let g=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(t.quad)}">`;
+  const cell=(x,y,k,fill,col)=>`<rect x="${x}" y="${y}" width="${S/2}" height="${S/2}" fill="${fill}" stroke="var(--rule)"/><text x="${x+S/4}" y="${k[0]==="t"?y+20:y+S/2-12}" text-anchor="middle" font-family="var(--body)" font-size="13" font-weight="600" fill="${col}">${esc(qn(k))}</text>`;
+  g+=cell(L,TP,"tl","transparent","var(--muted)")+cell(L+S/2,TP,"tr","var(--signal-soft)","var(--signal)")+cell(L,TP+S/2,"bl","var(--warm-soft)","var(--warm)")+cell(L+S/2,TP+S/2,"br","transparent","var(--muted)");
+  for(let n=1;n<=5;n++){g+=`<text x="${X(n)}" y="${TP+S+16}" text-anchor="middle" font-size="11" fill="var(--muted)" font-family="var(--mono)">${n}</text><text x="${L-10}" y="${Y(n)+4}" text-anchor="end" font-size="11" fill="var(--muted)" font-family="var(--mono)">${n}</text>`}
+  g+=`<text x="${L+S/2}" y="${H-4}" text-anchor="middle" font-size="13" fill="var(--ink)" font-family="var(--body)">${esc(t.xVal)}</text><text transform="translate(14 ${TP+S/2}) rotate(-90)" text-anchor="middle" font-size="13" fill="var(--ink)" font-family="var(--body)">${esc(t.yFit)}</text>`;
+  const seen={}, pts=[], boxes=[];
+  list.forEach(p=>{let x=X(p.v),y=Y(p.s); const k=Math.round(x)+","+Math.round(y); const n=seen[k]=(seen[k]||0)+1; if(n>1){x+=(n-1)*10; y-=(n-1)*8} pts.push({p,x,y})});
+  const hit=(b)=>boxes.some(o=>b.x<o.x+o.w&&b.x+b.w>o.x&&b.y<o.y+o.h&&b.y+b.h>o.y)||pts.some(q=>q.x>b.x-6&&q.x<b.x+b.w+6&&q.y>b.y-6&&q.y<b.y+b.h+6&&!(b.own===q));
+  pts.forEach(q=>{const name=q.p.name.length>22?q.p.name.slice(0,21)+"…":q.p.name, w=name.length*6.6, h=14;
+    const opts=[[q.x+11,q.y-7,"start"],[q.x-11-w,q.y-7,"end"],[q.x-w/2,q.y-22,"middle"],[q.x-w/2,q.y+9,"middle"]];
+    let pick=null;
+    for(let dy=0;dy<=56&&!pick;dy+=14){for(const [bx,by,a] of opts){const b={x:bx,y:by+(dy?(dy%28?dy:-dy):0),w,h,own:q,a}; if(b.x>=2&&b.x+b.w<=W-2&&b.y>=2&&b.y+b.h<=H-20&&!hit(b)){pick=b;break}}}
+    if(!pick) pick={x:q.x+11,y:q.y-7,w,h,a:"start"};
+    boxes.push(pick);
+    const tx=pick.a==="start"?pick.x:pick.a==="end"?pick.x+w:pick.x+w/2, lead=Math.abs((pick.y+7)-q.y)>9;
+    g+=`<g><title>${esc(q.p.name)} · ${esc(t.value)} ${f1(q.p.v)} · ${esc(t.fit)} ${f1(q.p.s)}</title>${lead?`<line x1="${q.x}" y1="${q.y}" x2="${pick.a==="start"?pick.x-2:pick.a==="end"?pick.x+w+2:tx}" y2="${pick.y+7}" stroke="var(--muted)" stroke-width=".6"/>`:""}<circle cx="${q.x}" cy="${q.y}" r="7" fill="var(--signal)" stroke="var(--surface)" stroke-width="2"/><text x="${tx}" y="${pick.y+11}" text-anchor="${pick.a}" font-size="12" font-family="var(--body)" fill="var(--ink)">${esc(name)}</text></g>`});
+  return g+"</svg>";
+}
+function analyse(S){
+  const P=partners(S).map(p=>Object.assign(p,scores(p,S))).filter(p=>p.done).map(p=>Object.assign(p,{q:quadOf(p.v,p.s)}));
+  const byCat={}; P.forEach(p=>p.cats.forEach(c=>{(byCat[c]=byCat[c]||[]).push(p)}));
+  const allCats=Object.keys(CAT), covered=allCats.filter(c=>byCat[c]), gaps=allCats.filter(c=>CAT[c].key&&!byCat[c]), dups=Object.keys(byCat).filter(c=>byCat[c].length>1);
+  const risks=Object.keys(byCat).filter(c=>byCat[c].every(p=>p.q==="bl"));
+  const doms={}; P.forEach(p=>((S.dom||{})[p.key]||[]).forEach(d=>doms[d]=1));
+  return {P,byCat,covered,gaps,dups,risks,doms};
+}
+function renderResults(){
+  const t=T(), S=SHARED||ST, A=analyse(S);
+  if(!A.P.length&&!SHARED){location.hash=partners().length?"#rate0":"#map0"; return}
+  const soon=k=>{const d=(S.ren||{})[k]; if(!d) return false; const days=(new Date(d)-new Date())/864e5; return days>=0&&days<=90};
+  const grp=k=>{const L=A.P.filter(p=>p.q===k); return `<div class="grp"><b style="${k==="tr"?"color:var(--signal)":k==="bl"?"color:var(--warm)":""}">${esc(QUAD[k][lang][0])} · ${L.length}</b><p>${esc(QUAD[k][lang][1])}</p><div class="who">${L.length?L.map(p=>esc(p.name)+(soon(p.key)?`<span class="tag">${t.renewSoon}</span>`:"")).join(" · "):`<span class="hint">${t.none}</span>`}</div></div>`};
+  const fams=FAM.map(f=>{const ids=f.c.map(c=>c[0]), n=ids.filter(id=>A.byCat[id]).length;
+    return `<button class="fam" data-f="${f.id}" aria-expanded="false"><span>${esc(f.n[lang])}</span><div class="track"><i style="width:${n/ids.length*100}%"></i></div><em>${n} / ${ids.length}</em></button>
+     <div class="famd" id="fd-${f.id}" hidden><ul>${ids.map(id=>{const L=A.byCat[id]; return `<li class="${!L&&CAT[id].key?"gap":""}">${esc(CAT[id].t[lang][0])}: <span>${L?esc(L.map(p=>p.name).join(", ")):t.gapW}</span></li>`}).join("")}</ul></div>`}).join("");
+  const fname=c=>FAM.find(f=>f.id===CAT[c].fam).n[lang];
+  const gapFams=FAM.map(f=>[f,A.gaps.filter(c=>CAT[c].fam===f.id)]).filter(x=>x[1].length);
+  const alerts=[...gapFams.map(([f,L])=>`<div class="al g"><span>●</span><span>${t.gapA(esc(L.map(catName).join(", ")),esc(f.n[lang]))}</span></div>`),
+    ...A.dups.map(c=>`<div class="al d"><span>●</span><span>${t.dupA(esc(catName(c)),A.byCat[c].length,esc(A.byCat[c].map(p=>p.name).join(", ")))}</span></div>`),
+    ...A.risks.map(c=>`<div class="al d"><span>●</span><span>${t.riskA(esc(catName(c)),esc(A.byCat[c].map(p=>p.name).join(", ")))}</span></div>`)];
+  app.innerHTML=`<div class="fade">${SHARED&&SHARED!==ST?`<p class="al ok" style="display:block">${SHARED===EXAMPLE?"":t.sharedView} <a href="#map0" id="own">${t.makeOwn} →</a></p>`:""}
+   <p class="label"><i class="dot"></i>${t.resTag}</p><h1>${t.resH1}</h1>
+   <div class="kp"><div><b>${A.P.length}</b><span>${t.kAssessed}</span></div><div><b>${A.covered.length} / 50</b><span>${t.kCovered}</span></div><div><b>${A.gaps.length}</b><span>${t.kGaps}</span></div><div><b>${A.dups.length}</b><span>${t.kDup}</span></div></div>
+   <div class="two"><div class="card quad"><h2 style="font-size:19px;margin-bottom:8px">${t.quad}</h2>${quadSVG(A.P,t)}</div><div class="card acts"><h2 style="font-size:19px;margin-bottom:12px">${t.acts}</h2>${["tr","br","tl","bl"].map(grp).join("")}</div></div>
+   <h3>${t.coverage}</h3><p class="hint" style="margin:-6px 0 8px">${t.coverHint}</p>${fams}
+   <h3>${t.attention}</h3>${alerts.length?alerts.join(""):`<div class="al ok"><span>●</span><span>${t.allGood}</span></div>`}
+   <h3>${t.domTitle}</h3><div class="dchips">${DOM.map(([id,n])=>`<span class="${A.doms[id]?"on":""}">${esc(n[lang])}</span>`).join("")}</div>
+   <div class="row-btns"><button class="btn p" id="cp">${t.copyLink}</button><button class="btn" id="csv">${t.csv}</button>${SHARED?"":`<a class="btn" href="#map0">${t.edit}</a><button class="btn ghost" id="rs">${t.reset}</button>`}</div>
+   <p class="copy">${t.copy}</p></div>`;
+  app.querySelectorAll(".fam").forEach(b=>b.onclick=()=>{const d=$("#fd-"+b.dataset.f); d.hidden=!d.hidden; b.setAttribute("aria-expanded",String(!d.hidden))});
+  $("#cp").onclick=()=>copyLink(S);
+  $("#csv").onclick=()=>downloadCSV(A,S);
+  const rs=$("#rs"); if(rs) rs.onclick=()=>{ST={sel:{},names:{},other:{},rat:{},dom:{},ren:{},open:{},b:0,p:0}; save(); location.hash="#home"};
+  const own=$("#own"); if(own) own.onclick=()=>{SHARED=null};
+}
+/* ---------- share + export ---------- */
+const CANON="https://franmdkso.github.io/Profile/maturity/partners/";
+function encodeState(S){const o={sel:S.sel,names:S.names,other:S.other,rat:S.rat,dom:S.dom,ren:S.ren}; const s=JSON.stringify(o); return btoa(unescape(encodeURIComponent(s))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}
+function decodeState(d){const s=decodeURIComponent(escape(atob(d.replace(/-/g,"+").replace(/_/g,"/")))); const o=JSON.parse(s); return Object.assign({sel:{},names:{},other:{},rat:{},dom:{},ren:{}},o)}
+let toastT=0;
+function toast(m){const e=$("#toast"); e.textContent=m; e.classList.add("on"); clearTimeout(toastT); toastT=setTimeout(()=>e.classList.remove("on"),1800)}
+async function copyLink(S){
+  const base=/github\.io$/.test(location.hostname)?location.origin+location.pathname:CANON;
+  const url=base+"?lang="+lang+"&d="+encodeState(S)+"#results";
+  try{await navigator.clipboard.writeText(url)}catch(e){const a=document.createElement("textarea"); a.value=url; a.style.position="absolute"; a.style.left="-9999px"; document.body.appendChild(a); a.select(); try{document.execCommand("copy")}catch(_){} a.remove()}
+  toast(T().copied);
+}
+function downloadCSV(A,S){
+  const t=T(), q=s=>'"'+String(s).replace(/"/g,'""')+'"';
+  const rows=[t.csvH].concat(A.P.map(p=>[p.name,f1(p.v),f1(p.s),QUAD[p.q][lang][0],p.cats.map(catName).join("; "),((S.dom||{})[p.key]||[]).map(d=>DOM.find(x=>x[0]===d)[1][lang]).join("; "),(S.ren||{})[p.key]||""]));
+  const blob=new Blob(["﻿"+rows.map(r=>r.map(q).join(",")).join("\n")],{type:"text/csv;charset=utf-8"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="learning-partners.csv"; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove()},500);
+}
+/* ---------- example (fictional partners) ---------- */
+const EXAMPLE={sel:{del1:1,del3:1,con1:1,con3:1,tec1:1,tec2:1,cre1:1,cre3:1,del4:1,ass1:1,ass2:1,tal1:1,adv2:1,con4:1,del2:1},
+ names:{del1:"Business School A",del3:"Coaching Co. B",tal1:"Business School A",con1:"Content Library C, Content Library F",con3:"Compliance E",tec1:"LMS G",tec2:"Content Library C",cre1:"Design Studio H",cre3:"Design Studio H",del4:"AI Academy D",ass1:"Talent Lab I",ass2:"Talent Lab I",adv2:"Advisory J",con4:"Language K",del2:"Coaching Co. B"},
+ other:{},rat:{"business school a":{v1:5,v2:5,v3:4,v4:3,s1:5,s2:4,s3:4,s4:5},"coaching co. b":{v1:4,v2:5,v3:4,v4:4,s1:4,s2:3,s3:3,s4:4},"content library c":{v1:3,v2:4,v3:4,v4:4,s1:3,s2:2,s3:3,s4:2},"content library f":{v1:2,v2:3,v3:2,v4:2,s1:2,s2:2,s3:2,s4:3},
+ "compliance e":{v1:2,v2:2,v3:3,v4:2,s1:2,s2:1,s3:2,s4:2},"lms g":{v1:3,v2:3,v3:4,v4:4,s1:3,s2:2,s3:4,s4:2},"design studio h":{v1:4,v2:4,v3:3,v4:4,s1:3,s2:3,s3:2,s4:3},"ai academy d":{v1:2,v2:3,v3:2,v4:2,s1:5,s2:5,s3:3,s4:4},"talent lab i":{v1:3,v2:3,v3:3,v4:3,s1:4,s2:3,s3:4,s4:3},"advisory j":{v1:2,v2:3,v3:3,v4:2,s1:2,s2:2,s3:3,s4:2},"language k":{v1:4,v2:4,v3:4,v4:4,s1:2,s2:2,s3:4,s4:3}},
+ dom:{"business school a":["lead"],"coaching co. b":["lead"],"content library c":["dig","fun"],"content library f":["fun"],"compliance e":["cmp"],"ai academy d":["dig"],"language k":["lan"]},ren:{}};
+(function(){const d=new Date(Date.now()+45*864e5).toISOString().slice(0,10); EXAMPLE.ren["compliance e"]=d})();
+/* ---------- boot ---------- */
+try{const d=new URLSearchParams(location.search).get("d"); if(d){SHARED=decodeState(d); if(!location.hash) history.replaceState(null,"",location.pathname+location.search+"#results")}}catch(e){SHARED=null}
+document.querySelectorAll("[data-lang-btn]").forEach(b=>b.onclick=()=>{lang=b.dataset.langBtn; try{localStorage.setItem("lang",lang)}catch(e){} render()});
+(function(){const r=document.documentElement; let th=null; try{th=localStorage.getItem("theme")}catch(e){} if(th==="dark"||th==="light") r.dataset.theme=th;
+  $("#theme").onclick=()=>{const dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches; r.dataset.theme=dark?"light":"dark"; try{localStorage.setItem("theme",r.dataset.theme)}catch(e){}}})();
+addEventListener("hashchange",()=>{if(view()!=="results"&&SHARED&&!new URLSearchParams(location.search).get("d")) SHARED=null; render(); scrollTo(0,0)});
+render();
+</script>
+</body>
+</html>
