@@ -2,7 +2,7 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
-<meta name="build" content="20261124-1125">
+<meta name="build" content="20261124-1317">
 <script>
 /* always show the latest published version: if the server has a newer build than this cached copy, reload once */
 (function(){try{var m=document.querySelector('meta[name="build"]');if(!m||!window.fetch||location.protocol==="file:")return;var b=m.content;
@@ -22,11 +22,11 @@ var x=t.match(/<meta name="build" content="([^"]+)"/);if(x&&x[1]!==b){var k="rel
 <meta property="og:title" content="Maturity Assessments — Fran Mondaca">
 <meta property="og:description" content="Where does your learning function stand? Four maturity assessments: LearnOps & Governance, Learning Partnership Landscape, Co-Intelligence AI Decision Making and Corporate Learning Culture.">
 <meta property="og:url" content="https://franmdkso.github.io/Profile/maturity/">
-<meta property="og:image" content="https://franmdkso.github.io/Profile/apple-touch-icon.png">
-<meta property="og:image:width" content="180">
-<meta property="og:image:height" content="180">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://franmdkso.github.io/Profile/apple-touch-icon.png">
+<meta property="og:image" content="https://franmdkso.github.io/Profile/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://franmdkso.github.io/Profile/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -111,6 +111,7 @@ a.choice:hover,a.choice:focus-visible{border-color:var(--signal);transform:trans
 .choice li{font-size:13px;color:var(--muted);border:1px solid var(--rule);border-radius:999px;padding:2px 9px}
 .choice > span.go{margin-top:auto;font-family:var(--mono);font-size:12.5px;color:var(--signal)}
 .choice.soon > span.go{color:var(--muted)}
+.choice-wrap.wide{grid-column:1/-1}
 @media (max-width:860px){.choices{grid-template-columns:1fr;max-width:560px}}
 .copy{margin:32px 0 0;font-family:var(--mono);font-size:11.5px;letter-spacing:.02em;color:var(--muted);opacity:.85}
 
@@ -342,6 +343,15 @@ details.others p{margin-top:8px;color:var(--muted);font-size:15.5px}
       </a>
       <button class="share-btn card-share" type="button" data-share="culture"></button>
     </div>
+    <div class="choice-wrap wide">
+      <div class="choice soon" aria-disabled="true">
+        <span class="tag" data-i18n="soon">Coming soon</span>
+        <b><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg><span data-i18n="esName">Engagement Survey</span></b>
+        <p class="tagline" data-i18n="esTag"></p>
+        <p data-i18n="esDesc"></p>
+        <span class="go" data-i18n="inDev">In development</span>
+      </div>
+    </div>
     </div>
     <p class="copy" data-i18n="copy"></p>
 </main>
@@ -459,7 +469,7 @@ en:{assess:"Assessments",homeH1x:"Four questions every people leader should be a
 copy:"© 2026 Fran Mondaca · All rights reserved. Content and design may not be reproduced without permission.",
 homeTag:"Maturity assessments",homeH1:"Where does your learning function stand?",
 homeLead:"Practical maturity models for learning and talent teams in global, federated organisations. Each one turns a vague sense of \"we could do better\" into a scored, evidence-based starting point.",
-available:"Available",soon:"Coming soon",inDev:"In development",startAssess:"Start assessment →",
+esName:"Engagement Survey",esTag:"Listen at scale. Act where it matters.",esDesc:"Measure engagement and what drives it, then turn the results into action, team by team.",available:"Available",soon:"Coming soon",inDev:"In development",startAssess:"Start assessment →",
 loName:"LearnOps & Governance",loDesc:"How well learning runs, and how well it is governed across the centre, regions, businesses and countries. Two lenses, scored separately.",
 loPills:["Short: 8 questions","Full: 21 questions","2 lenses"],
 lcName:"Corporate Learning Culture",lcDesc:"How far learning is part of everyday work: leaders who teach, safety to experiment, time to learn, and knowledge that is shared and recognised.",
@@ -502,7 +512,7 @@ es:{assess:"Evaluaciones",homeH1x:"Cuatro preguntas que todo líder de personas 
 copy:"© 2026 Fran Mondaca · Todos los derechos reservados. No se permite reproducir el contenido ni el diseño sin autorización.",
 homeTag:"Evaluaciones de madurez",homeH1:"¿En qué punto está tu función de aprendizaje?",
 homeLead:"Modelos de madurez prácticos para equipos de aprendizaje y talento en organizaciones globales y federadas. Cada uno convierte la vaga sensación de «podríamos hacerlo mejor» en un punto de partida puntuado y basado en evidencias.",
-available:"Disponible",soon:"Próximamente",inDev:"En desarrollo",startAssess:"Empezar la evaluación →",
+esName:"Encuesta de engagement",esTag:"Escucha a escala. Actúa donde importa.",esDesc:"Mide el engagement y lo que lo impulsa, y convierte los resultados en acción, equipo a equipo.",available:"Disponible",soon:"Próximamente",inDev:"En desarrollo",startAssess:"Empezar la evaluación →",
 loName:"LearnOps y Gobierno",loDesc:"Lo bien que funciona el aprendizaje y lo bien que se gobierna entre el centro, las regiones, los negocios y los países. Dos lentes, puntuadas por separado.",
 loPills:["Corta: 8 preguntas","Completa: 21 preguntas","2 lentes"],
 lcName:"Cultura corporativa de aprendizaje",lcDesc:"Hasta qué punto el aprendizaje forma parte del trabajo diario: líderes que enseñan, seguridad para experimentar, tiempo para aprender y conocimiento que se comparte y se reconoce.",
@@ -545,7 +555,7 @@ ca:{assess:"Avaluacions",homeH1x:"Quatre preguntes que tot líder de persones ha
 copy:"© 2026 Fran Mondaca · Tots els drets reservats. No es permet reproduir el contingut ni el disseny sense autorització.",
 homeTag:"Avaluacions de maduresa",homeH1:"En quin punt és la teva funció d'aprenentatge?",
 homeLead:"Models de maduresa pràctics per a equips d'aprenentatge i talent en organitzacions globals i federades. Cadascun converteix la vaga sensació de «ho podríem fer millor» en un punt de partida puntuat i basat en evidències.",
-available:"Disponible",soon:"Properament",inDev:"En desenvolupament",startAssess:"Començar l'avaluació →",
+esName:"Enquesta d'engagement",esTag:"Escolta a escala. Actua on importa.",esDesc:"Mesura l'engagement i el que l'impulsa, i converteix els resultats en acció, equip a equip.",available:"Disponible",soon:"Properament",inDev:"En desenvolupament",startAssess:"Començar l'avaluació →",
 loName:"LearnOps i Govern",loDesc:"Com de bé funciona l'aprenentatge i com de bé es governa entre el centre, les regions, els negocis i els països. Dues lents, puntuades per separat.",
 loPills:["Curta: 8 preguntes","Completa: 21 preguntes","2 lents"],
 lcName:"Cultura corporativa d'aprenentatge",lcDesc:"Fins a quin punt l'aprenentatge forma part de la feina diària: líders que ensenyen, seguretat per experimentar, temps per aprendre i coneixement que es comparteix i es reconeix.",

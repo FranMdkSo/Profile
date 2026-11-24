@@ -2,7 +2,7 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
-<meta name="build" content="20261124-1050">
+<meta name="build" content="20261124-1317">
 <script>
 /* always show the latest published version: if the server has a newer build than this cached copy, reload once */
 (function(){try{var m=document.querySelector('meta[name="build"]');if(!m||!window.fetch||location.protocol==="file:")return;var b=m.content;
@@ -16,6 +16,17 @@ var x=t.match(/<meta name="build" content="([^"]+)"/);if(x&&x[1]!==b){var k="rel
 <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="description" content="Fran Mondaca, Global Learning • Talent • Organisational Development Leader. Ask me about talent, leadership, learning and AI adoption. Every answer comes from my real experience.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fran Mondaca">
+<meta property="og:title" content="Fran Mondaca — Global Learning • Talent • Organisational Development Leader">
+<meta property="og:description" content="Ask me about talent, leadership, learning and AI adoption. Every answer comes from my real experience. Plus maturity assessments and playbooks for leaders.">
+<meta property="og:url" content="https://franmdkso.github.io/Profile/">
+<meta property="og:image" content="https://franmdkso.github.io/Profile/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fran Mondaca">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://franmdkso.github.io/Profile/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -57,7 +68,7 @@ button{font:inherit}
 /* ---------- top bar ---------- */
 .topbar{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:color-mix(in srgb,var(--paper) 78%,transparent);border-bottom:1px solid color-mix(in srgb,var(--rule) 60%,transparent)}
 .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:62px}
-.brand{font-family:var(--display);font-weight:800;font-size:20px;text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+.brand{font-family:var(--display);font-weight:800;font-size:20px;text-decoration:none;display:inline-flex;align-items:center;gap:10px;white-space:nowrap;flex:none}
 .brand i{width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--paper);display:inline-grid;place-items:center;font-style:normal;font-size:14px;letter-spacing:.02em}
 .switch{display:inline-flex;background:var(--surface);border:1px solid var(--rule);border-radius:999px;padding:3px}
 .switch button{border:0;background:transparent;color:var(--muted);padding:7px 16px;border-radius:999px;cursor:pointer;font-weight:600;font-size:14.5px}
@@ -79,7 +90,7 @@ button{font:inherit}
 
 .nav-assess{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:14px;color:var(--muted);text-decoration:none;padding:7px 10px;border-radius:999px;transition:color .2s,background .2s}
 .nav-assess:hover{color:var(--signal);background:var(--signal-soft)}
-@media (max-width:720px){.nav-assess span{display:none}.nav-assess{padding:7px}}
+@media (max-width:980px){.nav-assess span{display:none}.nav-assess{padding:7px}}
 @media (max-width:560px){.nav-assess{display:none}}
 /* ---------- landing ---------- */
 #net{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.4;transition:opacity .6s ease}
@@ -365,6 +376,7 @@ footer h2{font-size:clamp(40px,7vw,60px);font-weight:800}
     </div>
     <div class="tools">
       <a class="nav-assess" id="nav-assess" href="maturity/" title="Maturity assessments"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg><span data-i18n="navAssess">Assessments</span></a>
+      <a class="nav-assess" id="nav-play" href="playbooks/" title="Playbooks"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><span>Playbooks</span></a>
       <div class="switch langs-switch" id="lang-group" role="group" aria-label="Language">
         <button type="button" data-lang-btn="en" aria-pressed="true" lang="en">EN</button>
         <button type="button" data-lang-btn="es" aria-pressed="false" lang="es">ES</button>
@@ -1246,6 +1258,7 @@ function applyLang(){
   document.querySelector('meta[name="description"]').setAttribute("content",t.desc);
   document.querySelectorAll("[data-i18n]").forEach(n=>{const v=t[n.dataset.i18n]; if(typeof v==="string") n.innerHTML=v});
   {const na=document.getElementById("nav-assess"); if(na){na.href="maturity/?lang="+lang; na.title=t.navAssess||"Assessments"}}
+  {const np=document.getElementById("nav-play"); if(np){np.href="playbooks/?lang="+lang}}
   document.querySelectorAll("[data-chip]").forEach(n=>{n.querySelector("span").textContent=t.chips[n.dataset.chip]});
   ta.placeholder=t.placeholder; send.setAttribute("aria-label",t.send); $("#q-label").textContent=t.question;
   document.querySelectorAll("[data-lang-btn]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.langBtn===lang)));
