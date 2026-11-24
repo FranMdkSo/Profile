@@ -2,7 +2,7 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
-<meta name="build" content="20261124-1201">
+<meta name="build" content="20261124-1125">
 <script>
 /* always show the latest published version: if the server has a newer build than this cached copy, reload once */
 (function(){try{var m=document.querySelector('meta[name="build"]');if(!m||!window.fetch||location.protocol==="file:")return;var b=m.content;
@@ -281,6 +281,7 @@ details.others p{margin-top:8px;color:var(--muted);font-size:15.5px}
     <a class="brand" href="../" aria-label="Fran Mondaca"><i>FM</i><span>Fran Mondaca</span></a>
     <nav class="tools" aria-label="Main">
       <a class="navlink" href="#home" data-nav="home" data-i18n="assess">Assessments</a>
+      <a class="navlink" href="../playbooks/" id="to-playbooks">Playbooks</a>
       <a class="navlink" href="../#profile" id="to-profile" data-i18n="profile">Profile</a>
       <div class="switch langs-switch" role="group" aria-label="Language">
         <button type="button" data-lang-btn="en" aria-pressed="true" lang="en">EN</button>
@@ -1178,7 +1179,7 @@ function applyLang(){
   {const pp=$("#pa-pills"); if(pp) pp.innerHTML=t("paPills").map(x=>`<li>${esc(x)}</li>`).join(""); const pl=$("#pa-link"); if(pl) pl.href="partners/?lang="+lang}
   document.querySelectorAll(".card-share").forEach(b=>{b.innerHTML=LINK_SVG; b.title=t("copyLink"); b.setAttribute("aria-label",t("copyLink"))});
   document.querySelectorAll("[data-lang-btn]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.langBtn===lang)));
-  $("#to-profile").href="../?lang="+lang+"#profile";
+  $("#to-profile").href="../?lang="+lang+"#profile"; $("#to-playbooks").href="../playbooks/?lang="+lang;
   tlabel();
   if(VIEW.view==="wiz") renderStep(false);
   if(VIEW.view==="res") renderResults();
